@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Locanda dei Gemelli | Ristorante e Pizzeria a Dimaro Folgarida, Val di Sole",
+    "description": "Osteria moderna in Val di Sole: cucina trentina con ingredienti a km zero e pizza del maestro pizzaiolo. Pranzo e cena a Dimaro Folgarida, chiuso il martedì.",
+    "locale": "it_IT"
+  },
+  "nav": {
+    "skip": "Vai al contenuto",
+    "label": "Navigazione principale",
+    "kitchen": "Cucina",
+    "pizza": "Pizza",
+    "services": "Servizi",
+    "visit": "Orari e dove siamo",
+    "languages": "Lingua",
+    "open": "Apri il menu"
+  },
+  "cta": {
+    "book": "Prenota un tavolo",
+    "visit": "Orari e indirizzo"
+  },
+  "hero": {
+    "eyebrow": "Ristorante e pizzeria · Dimaro Folgarida, Val di Sole",
+    "title": "Cucina trentina vera. Pizza da maestro. Zero scorciatoie.",
+    "lead": "L'osteria moderna della Val di Sole: ingredienti delle nostre valli, ricette della tradizione solandra e una pizza che vale il viaggio. A pranzo e a cena."
+  },
+  "proof": {
+    "label": "Perché sceglierci",
+    "0": { "title": "Km zero", "text": "Fornitori di Val di Sole, Val di Non e Valle dell'Adige" },
+    "1": { "title": "Maestro pizzaiolo", "text": "Impasti curati e ingredienti di stagione" },
+    "2": { "title": "Pranzo e cena", "text": "Aperti 6 giorni su 7, chiusi il martedì" }
+  },
+  "manifesto": {
+    "eyebrow": "Osteria moderna",
+    "title": "Se non lo serviremmo alla nostra famiglia, non arriva al tuo tavolo.",
+    "text": "Un ristorante non si giudica dall'arredamento. Si giudica dal piatto. Per questo partiamo dalla materia prima: prodotti di montagna, stagionali e tracciabili, scelti dai produttori delle nostre valli. Poi li trattiamo con rispetto, con le ricette della tradizione solandra e trentina e la tecnica di oggi."
+  },
+  "pillars": {
+    "0": { "title": "Radici", "text": "Le ricette con cui siamo cresciuti, dalla tradizione solandra e trentina. È da lì che parte ogni piatto." },
+    "1": { "title": "Stagione", "text": "Il menu segue la montagna. Usiamo quello che le valli danno in quel momento, al suo meglio." },
+    "2": { "title": "Mestiere", "text": "Tecnica moderna al servizio del sapore, non dell'effetto. Niente di superfluo nel piatto." }
+  },
+  "kitchen": {
+    "eyebrow": "Il ristorante",
+    "title": "La tradizione, fatta oggi.",
+    "text": "Piatti della cucina trentina riletti con mano moderna, e qualche proposta internazionale per chi vuole uscire dal sentiero. Ingredienti freschi, porzioni oneste, sapori netti. È il pranzo che ti serve tra una pista e l'altra e la cena che ricordi a fine vacanza.",
+    "hours": "Pranzo 12:00 – 14:00 · Cena 18:00 – 22:30",
+    "menu": "Il menu completo sarà presto disponibile su questa pagina.",
+    "alt": "La sala del ristorante"
+  },
+  "pizza": {
+    "eyebrow": "La pizzeria",
+    "title": "La pizza è un mestiere. Il nostro maestro lo sa.",
+    "text": "Ogni pizza esce dalle mani del nostro maestro pizzaiolo. Impasti curati, ingredienti di stagione e di qualità, abbinamenti studiati. Trovi le classiche che ami e le combinazioni speciali nate nella nostra cucina, che non trovi altrove.",
+    "hours": "Tutte le sere 18:00 – 23:00, martedì escluso",
+    "alt": "Pizza della Locanda dei Gemelli"
+  },
+  "services": {
+    "eyebrow": "Oltre la cena",
+    "title": "Lo stesso standard, ovunque tu voglia mangiare.",
+    "0": { "title": "Asporto e consegna a domicilio", "text": "La nostra cucina e la nostra pizza, a casa tua o nel tuo appartamento in vacanza. Stessa cura, stesso sapore." },
+    "1": { "title": "Giardino ed eventi", "text": "Serate estive all'aperto, compleanni, cene di gruppo e feste. Il giardino è pronto ad accogliere il tuo evento." },
+    "2": { "title": "Pranzi e meeting di lavoro", "text": "Sala riservata, tecnologia per presentare, coffee break, buffet o light lunch. Tu pensi alla riunione, al resto pensiamo noi." }
+  },
+  "quote": {
+    "text": "Le valli forniscono gli ingredienti. Noi ci mettiamo il mestiere."
+  },
+  "visit": {
+    "eyebrow": "Vieni a trovarci",
+    "title": "Nel cuore della Val di Sole.",
+    "text": "Siamo a Dimaro Folgarida, a pochi minuti dagli impianti di Folgarida-Marilleva e lungo la ciclabile della Val di Sole. Il posto giusto dopo una giornata sugli sci, in bici o in quota.",
+    "map": "Apri in Google Maps",
+    "hoursTitle": "Orari",
+    "restaurant": "Ristorante",
+    "pizzeria": "Pizzeria",
+    "closedDay": "Martedì",
+    "closed": "Chiuso"
+  },
+  "book": {
+    "eyebrow": "Prenotazioni",
+    "title": "Il tuo tavolo ti aspetta.",
+    "text": "A breve potrai prenotare online con TheFork o scriverci su WhatsApp in un attimo. Nel frattempo, ti aspettiamo in Via Campiglio 59.",
+    "thefork": "TheFork · in arrivo",
+    "whatsapp": "WhatsApp · in arrivo"
+  },
+  "footer": {
+    "hours": "Ristorante 12–14 e 18–22:30 · Pizzeria 18–23 · Chiuso il martedì"
+  }
+}

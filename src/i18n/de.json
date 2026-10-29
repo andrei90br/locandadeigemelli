@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Locanda dei Gemelli | Restaurant und Pizzeria in Dimaro Folgarida, Val di Sole",
+    "description": "Moderne Osteria im Val di Sole: Trentiner Küche mit regionalen Zutaten und Pizza vom Meister-Pizzaiolo. Mittag- und Abendessen in Dimaro Folgarida, dienstags Ruhetag.",
+    "locale": "de_DE"
+  },
+  "nav": {
+    "skip": "Zum Inhalt springen",
+    "label": "Hauptnavigation",
+    "kitchen": "Küche",
+    "pizza": "Pizza",
+    "services": "Angebot",
+    "visit": "Öffnungszeiten und Anfahrt",
+    "languages": "Sprache",
+    "open": "Menü öffnen"
+  },
+  "cta": {
+    "book": "Tisch reservieren",
+    "visit": "Öffnungszeiten und Adresse"
+  },
+  "hero": {
+    "eyebrow": "Restaurant und Pizzeria · Dimaro Folgarida, Val di Sole",
+    "title": "Echte Trentiner Küche. Pizza vom Meister. Keine Abkürzungen.",
+    "lead": "Die moderne Osteria im Val di Sole: Zutaten aus unseren Tälern, Rezepte aus der Tradition des Sulzbergs und eine Pizza, für die sich der Weg lohnt. Mittags und abends."
+  },
+  "proof": {
+    "label": "Warum zu uns",
+    "0": { "title": "Regional", "text": "Erzeuger aus Val di Sole, Val di Non und dem Etschtal" },
+    "1": { "title": "Meister-Pizzaiolo", "text": "Sorgfältige Teige und saisonale Zutaten" },
+    "2": { "title": "Mittag- und Abendessen", "text": "6 Tage die Woche geöffnet, dienstags Ruhetag" }
+  },
+  "manifesto": {
+    "eyebrow": "Moderne Osteria",
+    "title": "Was wir nicht unserer eigenen Familie servieren würden, kommt nicht auf Ihren Tisch.",
+    "text": "Ein Restaurant beurteilt man nicht nach der Einrichtung, sondern nach dem Teller. Deshalb beginnen wir beim Rohstoff: saisonale, rückverfolgbare Bergprodukte von den Erzeugern unserer Täler. Wir behandeln sie mit Respekt, mit den Rezepten der Trentiner Tradition und der Technik von heute."
+  },
+  "pillars": {
+    "0": { "title": "Wurzeln", "text": "Die Rezepte, mit denen wir aufgewachsen sind, aus der Tradition des Val di Sole und des Trentino. Dort beginnt jedes Gericht." },
+    "1": { "title": "Saison", "text": "Unsere Karte folgt den Bergen. Wir verwenden, was die Täler gerade bieten, wenn es am besten ist." },
+    "2": { "title": "Handwerk", "text": "Moderne Technik im Dienst des Geschmacks, nicht des Effekts. Nichts Überflüssiges auf dem Teller." }
+  },
+  "kitchen": {
+    "eyebrow": "Das Restaurant",
+    "title": "Tradition, für heute gekocht.",
+    "text": "Trentiner Gerichte mit moderner Handschrift und einige internationale Teller für alle, die den Weg verlassen möchten. Frische Zutaten, ehrliche Portionen, klare Aromen. Das Mittagessen zwischen zwei Abfahrten und das Abendessen, an das Sie sich nach dem Urlaub erinnern.",
+    "hours": "Mittag 12:00 – 14:00 · Abend 18:00 – 22:30",
+    "menu": "Die vollständige Speisekarte finden Sie bald auf dieser Seite.",
+    "alt": "Der Speisesaal des Restaurants"
+  },
+  "pizza": {
+    "eyebrow": "Die Pizzeria",
+    "title": "Pizza ist Handwerk. Unser Meister beherrscht es.",
+    "text": "Jede Pizza kommt aus den Händen unseres Meister-Pizzaiolo. Sorgfältig geführte Teige, hochwertige saisonale Zutaten, durchdachte Kombinationen. Sie finden die Klassiker, die Sie lieben, und besondere Kreationen aus unserer Küche, die es nirgendwo sonst gibt.",
+    "hours": "Jeden Abend 18:00 – 23:00, außer dienstags",
+    "alt": "Pizza der Locanda dei Gemelli"
+  },
+  "services": {
+    "eyebrow": "Mehr als Abendessen",
+    "title": "Derselbe Anspruch, wo immer Sie essen möchten.",
+    "0": { "title": "Abholung und Lieferung", "text": "Unsere Küche und unsere Pizza bei Ihnen zu Hause oder in Ihrer Ferienwohnung. Gleiche Sorgfalt, gleicher Geschmack." },
+    "1": { "title": "Garten und Veranstaltungen", "text": "Sommerabende im Freien, Geburtstage, Gruppenessen und Feiern. Der Garten ist bereit für Ihr Fest." },
+    "2": { "title": "Geschäftsessen und Meetings", "text": "Separater Raum, Präsentationstechnik, Kaffeepause, Buffet oder leichtes Mittagessen. Sie konzentrieren sich auf das Meeting, wir kümmern uns um den Rest." }
+  },
+  "quote": {
+    "text": "Die Täler liefern die Zutaten. Wir liefern das Handwerk."
+  },
+  "visit": {
+    "eyebrow": "Besuchen Sie uns",
+    "title": "Im Herzen des Val di Sole.",
+    "text": "Sie finden uns in Dimaro Folgarida, wenige Minuten von den Liften Folgarida-Marilleva und direkt am Radweg des Val di Sole. Der richtige Ort nach einem Tag auf der Piste, auf dem Rad oder in den Bergen.",
+    "map": "In Google Maps öffnen",
+    "hoursTitle": "Öffnungszeiten",
+    "restaurant": "Restaurant",
+    "pizzeria": "Pizzeria",
+    "closedDay": "Dienstag",
+    "closed": "Ruhetag"
+  },
+  "book": {
+    "eyebrow": "Reservierung",
+    "title": "Ihr Tisch wartet auf Sie.",
+    "text": "Bald können Sie online über TheFork reservieren oder uns schnell per WhatsApp schreiben. Bis dahin freuen wir uns auf Ihren Besuch in der Via Campiglio 59.",
+    "thefork": "TheFork · demnächst",
+    "whatsapp": "WhatsApp · demnächst"
+  },
+  "footer": {
+    "hours": "Restaurant 12–14 und 18–22:30 · Pizzeria 18–23 · Dienstags Ruhetag"
+  }
+}

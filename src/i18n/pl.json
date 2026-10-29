@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Locanda dei Gemelli | Restauracja i pizzeria w Dimaro Folgarida, Val di Sole",
+    "description": "Nowoczesna osteria w Val di Sole: kuchnia trentyńska z lokalnych składników i pizza od mistrza pizzaiolo. Obiady i kolacje w Dimaro Folgarida, nieczynne we wtorki.",
+    "locale": "pl_PL"
+  },
+  "nav": {
+    "skip": "Przejdź do treści",
+    "label": "Nawigacja główna",
+    "kitchen": "Kuchnia",
+    "pizza": "Pizza",
+    "services": "Usługi",
+    "visit": "Godziny i dojazd",
+    "languages": "Język",
+    "open": "Otwórz menu"
+  },
+  "cta": {
+    "book": "Zarezerwuj stolik",
+    "visit": "Godziny i adres"
+  },
+  "hero": {
+    "eyebrow": "Restauracja i pizzeria · Dimaro Folgarida, Val di Sole",
+    "title": "Prawdziwa kuchnia trentyńska. Pizza od mistrza. Bez skrótów.",
+    "lead": "Nowoczesna osteria w Val di Sole: składniki z naszych dolin, przepisy z lokalnej tradycji i pizza warta podróży. Na obiad i na kolację."
+  },
+  "proof": {
+    "label": "Dlaczego my",
+    "0": { "title": "Lokalne składniki", "text": "Dostawcy z Val di Sole, Val di Non i doliny Adygi" },
+    "1": { "title": "Mistrz pizzaiolo", "text": "Starannie przygotowane ciasto i sezonowe składniki" },
+    "2": { "title": "Obiad i kolacja", "text": "Otwarte 6 dni w tygodniu, we wtorki nieczynne" }
+  },
+  "manifesto": {
+    "eyebrow": "Nowoczesna osteria",
+    "title": "Czego nie podalibyśmy własnej rodzinie, tego nie podamy Tobie.",
+    "text": "Restauracji nie ocenia się po wystroju, tylko po tym, co jest na talerzu. Dlatego zaczynamy od surowca: sezonowych, sprawdzonych produktów górskich od producentów z naszych dolin. Traktujemy je z szacunkiem, według przepisów tradycji Val di Sole i Trentino, z dzisiejszą techniką."
+  },
+  "pillars": {
+    "0": { "title": "Korzenie", "text": "Przepisy, na których się wychowaliśmy, z tradycji Val di Sole i Trentino. Od nich zaczyna się każde danie." },
+    "1": { "title": "Sezon", "text": "Nasze menu podąża za górami. Używamy tego, co doliny dają w danej chwili, w najlepszej formie." },
+    "2": { "title": "Rzemiosło", "text": "Nowoczesna technika w służbie smaku, nie efektu. Nic zbędnego na talerzu." }
+  },
+  "kitchen": {
+    "eyebrow": "Restauracja",
+    "title": "Tradycja w dzisiejszym wydaniu.",
+    "text": "Dania kuchni trentyńskiej w nowoczesnym ujęciu i kilka propozycji międzynarodowych dla tych, którzy chcą zejść ze szlaku. Świeże składniki, uczciwe porcje, wyraziste smaki. Obiad, którego potrzebujesz między zjazdami, i kolacja, którą zapamiętasz po urlopie.",
+    "hours": "Obiad 12:00 – 14:00 · Kolacja 18:00 – 22:30",
+    "menu": "Pełne menu wkrótce pojawi się na tej stronie.",
+    "alt": "Sala restauracji"
+  },
+  "pizza": {
+    "eyebrow": "Pizzeria",
+    "title": "Pizza to rzemiosło. Nasz mistrz zna je na wylot.",
+    "text": "Każda pizza wychodzi spod rąk naszego mistrza pizzaiolo. Starannie przygotowane ciasto, wysokiej jakości sezonowe składniki, przemyślane połączenia. Znajdziesz klasyki, które kochasz, i wyjątkowe kompozycje z naszej kuchni, których nie zjesz nigdzie indziej.",
+    "hours": "Codziennie 18:00 – 23:00, oprócz wtorku",
+    "alt": "Pizza w Locanda dei Gemelli"
+  },
+  "services": {
+    "eyebrow": "Nie tylko kolacja",
+    "title": "Ten sam standard, gdziekolwiek chcesz zjeść.",
+    "0": { "title": "Na wynos i z dostawą", "text": "Nasza kuchnia i nasza pizza u Ciebie w domu lub w apartamencie wakacyjnym. Ta sama staranność, ten sam smak." },
+    "1": { "title": "Ogród i wydarzenia", "text": "Letnie wieczory na świeżym powietrzu, urodziny, kolacje grupowe i przyjęcia. Ogród czeka na Twoje wydarzenie." },
+    "2": { "title": "Lunche i spotkania biznesowe", "text": "Osobna sala, sprzęt do prezentacji, przerwa kawowa, bufet lub lekki lunch. Ty skupiasz się na spotkaniu, my zajmujemy się resztą." }
+  },
+  "quote": {
+    "text": "Doliny dają składniki. My dajemy rzemiosło."
+  },
+  "visit": {
+    "eyebrow": "Odwiedź nas",
+    "title": "W sercu Val di Sole.",
+    "text": "Jesteśmy w Dimaro Folgarida, kilka minut od wyciągów Folgarida-Marilleva i tuż przy ścieżce rowerowej Val di Sole. Idealne miejsce po dniu na nartach, na rowerze lub w górach.",
+    "map": "Otwórz w Google Maps",
+    "hoursTitle": "Godziny otwarcia",
+    "restaurant": "Restauracja",
+    "pizzeria": "Pizzeria",
+    "closedDay": "Wtorek",
+    "closed": "Nieczynne"
+  },
+  "book": {
+    "eyebrow": "Rezerwacje",
+    "title": "Twój stolik na Ciebie czeka.",
+    "text": "Wkrótce zarezerwujesz online przez TheFork lub napiszesz do nas szybko na WhatsAppie. Tymczasem zapraszamy na Via Campiglio 59.",
+    "thefork": "TheFork · wkrótce",
+    "whatsapp": "WhatsApp · wkrótce"
+  },
+  "footer": {
+    "hours": "Restauracja 12–14 i 18–22:30 · Pizzeria 18–23 · We wtorki nieczynne"
+  }
+}
