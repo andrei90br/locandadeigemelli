@@ -74,8 +74,12 @@ p { margin: 0 0 1em; }
 }
 .site-header.is-scrolled, .site-header.is-open { background: var(--ink); box-shadow: 0 1px 0 rgba(255,255,255,0.06); }
 .header-inner { display: flex; align-items: center; gap: 28px; height: 96px; }
-.brand { text-decoration: none; display: flex; align-items: center; margin-right: auto; }
-.brand-logo { height: 82px; width: auto; }
+.brand { text-decoration: none; display: flex; align-items: center; gap: 14px; margin-right: auto; }
+.brand-mono { height: 52px; width: auto; }
+.brand-text { white-space: nowrap; display: flex; flex-direction: column; line-height: 1; padding-left: 14px; border-left: 1px solid rgba(255,255,255,0.4); }
+.brand-small { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.32em; text-transform: uppercase; opacity: 0.9; }
+.brand-big { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 1.85rem; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 4px; }
+.brand-tagline { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500; font-size: 1.35rem; opacity: 1 !important; }
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav > a {
   font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.08em;
@@ -91,7 +95,11 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 920px) {
   .header-inner { gap: 12px; height: 66px; }
-  .brand-logo { height: 54px; }
+  .brand-mono { height: 40px; }
+  .brand { gap: 10px; }
+  .brand-text { padding-left: 10px; }
+  .brand-small { font-size: 0.72rem; letter-spacing: 0.26em; }
+  .brand-big { font-size: 1.3rem; letter-spacing: 0.1em; }
   .header-cta { min-height: 38px; padding: 0 14px; font-size: 0.8rem; }
   .menu-toggle {
     display: inline-flex; flex-direction: column; justify-content: center; gap: 6px;
@@ -111,6 +119,10 @@ p { margin: 0 0 1em; }
   .nav .langs { border: 0; padding: 12px 0 0; font-size: 1rem; gap: 18px; }
 }
 
+
+@media (max-width: 520px) {
+  .header-cta { display: none; }
+}
 
 /* Hero */
 .hero {
@@ -223,7 +235,9 @@ p { margin: 0 0 1em; }
 /* Footer */
 .site-footer { background: var(--ink); color: var(--paper); padding: 64px 0 28px; font-size: 0.95rem; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 0.6fr; gap: 32px; }
-.footer-logo { width: 150px; height: auto; margin-bottom: 1.2em; }
+.site-footer .brand-footer { margin: 0 0 0.6em; opacity: 1; }
+.brand-footer .brand-mono { height: clamp(48px, 14vw, 64px); }
+.brand-footer .brand-big { font-size: clamp(1.45rem, 6.4vw, 2.1rem); }
 .site-footer p { opacity: 0.8; }
 .footer-title { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.85rem; color: #e58a63; opacity: 1 !important; }
 .footer-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.85rem; }
