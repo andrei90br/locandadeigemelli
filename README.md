@@ -21,4 +21,4 @@ Sito del ristorante e pizzeria Locanda dei Gemelli, Dimaro Folgarida (TN). Pubbl
 - Prenotazioni TheFork e WhatsApp
 - Foto definitive (ora sono prese da locandaelisa.it, vedi `IMG` in `build.mjs`)
 - Ragione sociale, P.IVA, Privacy e Cookie Policy
-- Dominio `locandadeigemelli.com` (file `CNAME` e DNS)
+- Dominio `locandadeigemelli.com`: DNS su IONOS (A su GitHub Pages, CNAME www), dominio impostato in Settings → Pages
