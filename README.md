@@ -22,3 +22,12 @@ Sito del ristorante e pizzeria Locanda dei Gemelli, Dimaro Folgarida (TN). Pubbl
 - Foto definitive (ora sono prese da locandaelisa.it, vedi `IMG` in `build.mjs`)
 - Ragione sociale, P.IVA, Privacy e Cookie Policy
 - Dominio `locandadeigemelli.com`: DNS su IONOS (A su GitHub Pages, CNAME www), dominio impostato in Settings → Pages
+
+## Logo
+
+In `assets/img/`:
+- `logo.svg`: logo vettoriale bianco (usato nel sito), nitido a qualsiasi dimensione
+- `logo-nero.svg`: stesso logo in nero, per sfondi chiari
+- `logo.png`: PNG trasparente ad alta risoluzione (2365 × 2495)
+- `logo-sfondo-nero.png`: PNG su sfondo nero
+- `favicon.png`, `apple-touch-icon.png`: monogramma AH
