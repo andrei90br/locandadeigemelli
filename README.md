@@ -31,3 +31,5 @@ In `assets/img/`:
 - `logo.png`: PNG trasparente ad alta risoluzione (2365 × 2495)
 - `logo-sfondo-nero.png`: PNG su sfondo nero
 - `favicon.png`, `apple-touch-icon.png`: monogramma AH
+- `prodotti-genuini.jpg`: illustrazione ingredienti con il logo al centro (usata nella sezione Pizzeria)
+- `prodotti-genuini-senza-logo.jpg`: la stessa illustrazione con il cerchio bianco vuoto, per usi futuri
