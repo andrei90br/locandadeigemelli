@@ -16,13 +16,12 @@ const LANGS = [
 // Foto provvisorie prese da locandaelisa.it: da sostituire con file locali in assets/img/.
 const SRC = 'https://locandaelisa.it/wp-content/uploads/';
 const IMG = {
-  hero: SRC + '2024/03/132-Locanda-Elisa-Dic-2023-jpg.webp',
+  hero: SRC + '2024/01/161-Locanda-Elisa-Dic-2023-jpg.webp',
   kitchen: SRC + '2022/06/bistrot.png',
-  pizza: SRC + '2024/01/161-Locanda-Elisa-Dic-2023-jpg.webp',
+  pizza: SRC + '2022/06/img-prodotti-genuini.png',
   takeaway: SRC + '2022/06/Asporto-e-consegna-a-domicilio.jpg',
   garden: SRC + '2022/07/servizio-giardino-eventi.jpg',
   business: SRC + '2022/06/Business-Locanda-Elisa-2.jpg',
-  quote: SRC + '2022/06/img-prodotti-genuini.png',
 };
 
 const template = readFileSync('src/template.html', 'utf8');
