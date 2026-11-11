@@ -64,7 +64,7 @@
   "apartments": {
     "eyebrow": "Apartamenty",
     "title": "Śpij kilka kroków od swojego stolika.",
-    "text": "Sześć niezależnych apartamentów, każdy z kuchnią i własną łazienką, aby przeżyć Val di Sole w pełni na własnych zasadach. Od 46 do 60 m², od 4 do 7 miejsc do spania. Zwierzęta mile widziane, obiekt dla niepalących. A gdy nie masz ochoty gotować, restauracja i pizzeria są kilka kroków dalej.",
+    "text": "Sześć niezależnych apartamentów, każdy z kuchnią i własną łazienką, aby przeżyć Val di Sole w pełni na własnych zasadach. Od 46 do 60 m², od 4 do 7 miejsc do spania. Zwierzęta mile widziane, obiekt dla niepalących. A gdy nie masz ochoty gotować, restauracja i pizzeria są na parterze.",
     "alt": "Apartament",
     "beds": "miejsca do spania: {n}",
     "book": "Zapytaj",
@@ -83,7 +83,7 @@
       "Część dzienna",
       "TV",
       "Parking publiczny (bez rezerwacji)",
-      "Restauracja i pizzeria kilka kroków dalej",
+      "Restauracja i pizzeria na parterze",
       "Dodatkowe łóżka polowe na życzenie"
     ],
     "times": "Zameldowanie 14:00 – 23:00 · Wymeldowanie do 11:00",

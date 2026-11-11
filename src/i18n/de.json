@@ -64,7 +64,7 @@
   "apartments": {
     "eyebrow": "Die Ferienwohnungen",
     "title": "Schlafen, nur ein paar Schritte vom Tisch entfernt.",
-    "text": "Sechs unabhängige Ferienwohnungen, alle mit Küche und eigenem Bad, um das Val di Sole ganz nach Ihrem Rhythmus zu erleben. 46 bis 60 m², 4 bis 7 Schlafplätze. Haustiere willkommen, Nichtraucher-Unterkunft. Und wenn Sie keine Lust zu kochen haben, sind Restaurant und Pizzeria nur ein paar Schritte entfernt.",
+    "text": "Sechs unabhängige Ferienwohnungen, alle mit Küche und eigenem Bad, um das Val di Sole ganz nach Ihrem Rhythmus zu erleben. 46 bis 60 m², 4 bis 7 Schlafplätze. Haustiere willkommen, Nichtraucher-Unterkunft. Und wenn Sie keine Lust zu kochen haben, finden Sie Restaurant und Pizzeria direkt im Erdgeschoss.",
     "alt": "Ferienwohnung",
     "beds": "{n} Schlafplätze",
     "book": "Anfragen",
@@ -83,7 +83,7 @@
       "Wohnbereich",
       "TV",
       "Öffentlicher Parkplatz (nicht reservierbar)",
-      "Restaurant und Pizzeria nur ein paar Schritte entfernt",
+      "Restaurant und Pizzeria im Erdgeschoss",
       "Zusatzbetten auf Anfrage"
     ],
     "times": "Check-in 14:00 – 23:00 · Check-out bis 11:00",

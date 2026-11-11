@@ -64,7 +64,7 @@
   "apartments": {
     "eyebrow": "The apartments",
     "title": "Sleep a few steps from your table.",
-    "text": "Six self-contained apartments, each with its own kitchen and private bathroom, so you can enjoy Val di Sole on your own terms. From 46 to 60 m², sleeping 4 to 7. Pets welcome, non-smoking throughout. And when you don't feel like cooking, the restaurant and pizzeria are a few steps away.",
+    "text": "Six self-contained apartments, each with its own kitchen and private bathroom, so you can enjoy Val di Sole on your own terms. From 46 to 60 m², sleeping 4 to 7. Pets welcome, non-smoking throughout. And when you don't feel like cooking, the restaurant and pizzeria are on the ground floor.",
     "alt": "Apartment",
     "beds": "sleeps {n}",
     "book": "Enquire",
@@ -83,7 +83,7 @@
       "Living area",
       "TV",
       "Public parking (cannot be reserved)",
-      "Restaurant and pizzeria a few steps away",
+      "Restaurant and pizzeria on the ground floor",
       "Extra folding beds on request"
     ],
     "times": "Check-in 14:00 – 23:00 · Check-out by 11:00",
