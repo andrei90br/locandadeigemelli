@@ -25,10 +25,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node build.mjs
+      # Sito in lavorazione sul branch "sviluppo": online c'è solo la pagina "in arrivo".
+      # Al lancio: fondere "sviluppo" in main e ripristinare build + path: . qui sotto.
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: in-arrivo
       - id: deployment
         uses: actions/deploy-pages@v4
