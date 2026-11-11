@@ -151,6 +151,7 @@ function bookingBar(c) {
       <label class="bb-field"><span>${e(b.departure)}</span><input type="text" name="partenza" placeholder="–" data-date data-departure required></label>
       <label class="bb-field bb-small"><span>${e(b.adults)}</span><select name="adulti">${adults}</select></label>
       <label class="bb-field bb-small"><span>${e(b.children)}</span><select name="bambini">${kids}</select></label>
+      <label class="bb-field bb-apt"><span>${e(c.t.request.form.apartment)}</span><select name="apt"><option value="">${e(c.t.request.form.any)}</option>${APARTMENTS.map((a) => `<option>${e(a.name)}</option>`).join('')}</select></label>
       <button class="btn btn-accent bb-submit" type="submit">${e(b.submit)}</button>
     </form>`;
 }
