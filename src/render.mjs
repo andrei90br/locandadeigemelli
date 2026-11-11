@@ -1,9 +1,13 @@
 // Layout e pagine del sito. Ogni funzione riceve il contesto della lingua e restituisce HTML.
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 import { SITE_URL, REQUEST_EMAIL, MAPS_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
 
 export const e = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const fill = (s, vars) => s.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? `{${k}}`);
+// Versione dei file per evitare che il browser usi CSS/JS vecchi dalla cache.
+const ver = (f) => createHash('md5').update(readFileSync(f)).digest('hex').slice(0, 8);
 const isExternal = (src) => /^https?:/.test(src);
 
 // Contesto: lingua, profondità della pagina e funzioni per i link.
@@ -117,12 +121,12 @@ ${alternates}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="${c.root}assets/css/style.css">
+  <link rel="stylesheet" href="${c.root}assets/css/style.css?v=${ver('assets/css/style.css')}">
 ${jsonld ? `  <script type="application/ld+json">${JSON.stringify(jsonld)}</script>\n` : ''}</head>
 <body>${header(c)}
   <main id="main">${body}
   </main>${footer(c)}
-  <script src="${c.root}assets/js/main.js" defer></script>
+  <script src="${c.root}assets/js/main.js?v=${ver('assets/js/main.js')}" defer></script>
 </body>
 </html>
 `;
