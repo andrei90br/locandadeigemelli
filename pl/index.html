@@ -202,24 +202,38 @@
           <p>Podaj daty, liczbę gości i, jeśli chcesz, wybrany apartament. Odpowiemy e-mailem, podając dostępność i cenę. Zapytanie nie jest wiążące.</p>
         </div>
         <p class="request-sent" role="status" hidden data-request-sent>Dziękujemy! Otrzymaliśmy Twoje zapytanie i wkrótce odpowiemy e-mailem.</p>
-        <form class="request-form" action="https://formsubmit.co/lalocandadeigemelli@gmail.com" method="POST" data-request-form>
+        <form class="booking" action="https://formsubmit.co/lalocandadeigemelli@gmail.com" method="POST" data-request-form>
           <input type="hidden" name="_subject" value="Zapytanie o rezerwację apartamentu – strona Locanda dei Gemelli">
           <input type="hidden" name="_next" value="https://locandadeigemelli.com/pl/?richiesta=inviata">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="Lingua" value="pl">
+          <input type="hidden" name="Notti" data-nights-input>
           <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <label>Imię i nazwisko *<input type="text" name="Nome" required autocomplete="name"></label>
-          <label>E-mail *<input type="email" name="email" required autocomplete="email"></label>
-          <label>Telefon<input type="tel" name="Telefono" autocomplete="tel"></label>
-          <label>Apartament<select name="Appartamento" data-apt-select><option value="">Bez preferencji</option><option>Jonagold</option><option>Pink Lady</option><option>Renetta</option><option>Fuji</option><option>Golden</option><option>Morgana</option></select></label>
-          <label>Przyjazd *<input type="date" name="Arrivo" required></label>
-          <label>Wyjazd *<input type="date" name="Partenza" required></label>
-          <label>Liczba gości *<input type="number" name="Ospiti" min="1" max="7" required></label>
-          <label>Zwierzęta<select name="Animali"><option>Nie</option><option>Tak</option></select></label>
-          <label class="full">Dodatkowe życzenia<textarea name="Messaggio" rows="4"></textarea></label>
-          <button class="btn btn-accent full" type="submit">Wyślij zapytanie</button>
-          <p class="full request-note">Twoje dane wykorzystamy wyłącznie do odpowiedzi na zapytanie.</p>
+
+          <div class="booking-bar" data-step-stay>
+            <label class="bk-cell"><span class="bk-label">Przyjazd</span><input type="date" name="Arrivo" required data-arrival></label>
+            <label class="bk-cell"><span class="bk-label">Wyjazd</span><input type="date" name="Partenza" required data-departure></label>
+            <div class="bk-cell bk-nights"><span class="bk-label">Noce</span><span class="bk-value" data-nights>–</span></div>
+            <label class="bk-cell bk-small"><span class="bk-label">Dorośli</span><select name="Adulti" data-adults><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></label>
+            <label class="bk-cell bk-small"><span class="bk-label">Dzieci</span><select name="Bambini" data-children><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+            <label class="bk-cell"><span class="bk-label">Apartament</span><select name="Appartamento" data-apt-select><option value="">Bez preferencji</option><option>Jonagold</option><option>Pink Lady</option><option>Renetta</option><option>Fuji</option><option>Golden</option><option>Morgana</option></select></label>
+            <button class="btn btn-accent bk-go" type="button" data-continue>Sprawdź dostępność</button>
+          </div>
+
+          <div class="booking-details" data-step-details>
+            <p class="booking-summary" data-summary></p>
+            <div class="booking-grid">
+              <label>Imię i nazwisko *<input type="text" name="Nome" required autocomplete="name"></label>
+              <label>E-mail *<input type="email" name="email" required autocomplete="email"></label>
+              <label>Telefon<input type="tel" name="Telefono" autocomplete="tel"></label>
+              <label>Zwierzęta<select name="Animali"><option>Nie</option><option>Tak</option></select></label>
+              <label class="full">Dodatkowe życzenia<textarea name="Messaggio" rows="3"></textarea></label>
+              <label class="full check"><input type="checkbox" name="Privacy" value="ok" required> <span>Wyrażam zgodę na przetwarzanie moich danych w celu odpowiedzi na to zapytanie. *</span></label>
+              <button class="btn btn-accent full" type="submit">Wyślij zapytanie</button>
+              <p class="full request-note">Twoje dane wykorzystamy wyłącznie do odpowiedzi na zapytanie.</p>
+            </div>
+          </div>
         </form>
       </div>
     </section>
