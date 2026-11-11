@@ -51,7 +51,7 @@
         <p class="lead">{{hero.lead}}</p>
         <div class="actions">
           <a class="btn btn-accent" href="#prenota">{{cta.book}}</a>
-          <a class="btn btn-ghost" href="#visita">{{cta.visit}}</a>
+          <a class="btn btn-ghost" href="#appartamenti">{{cta.apartments}}</a>
         </div>
       </div>
     </section>
@@ -61,7 +61,34 @@
         <li><strong>{{proof.0.title}}</strong><span>{{proof.0.text}}</span></li>
         <li><strong>{{proof.1.title}}</strong><span>{{proof.1.text}}</span></li>
         <li><strong>{{proof.2.title}}</strong><span>{{proof.2.text}}</span></li>
+        <li><strong>{{proof.3.title}}</strong><span>{{proof.3.text}}</span></li>
       </ul>
+    </section>
+
+    <section class="duo">
+      <div class="wrap narrow">
+        <p class="eyebrow">{{duo.eyebrow}}</p>
+        <h2>{{duo.title}}</h2>
+        <p class="lead">{{duo.text}}</p>
+      </div>
+      <div class="wrap duo-grid">
+        <a class="duo-card" href="#cucina">
+          <img src="{{img.kitchen}}" alt="" loading="lazy">
+          <span class="duo-body">
+            <span class="duo-title">{{duo.food.title}}</span>
+            <span class="duo-text">{{duo.food.text}}</span>
+            <span class="duo-link">{{duo.food.link}} →</span>
+          </span>
+        </a>
+        <a class="duo-card" href="#appartamenti">
+          <img src="{{img.stay}}" alt="" loading="lazy">
+          <span class="duo-body">
+            <span class="duo-title">{{duo.stay.title}}</span>
+            <span class="duo-text">{{duo.stay.text}}</span>
+            <span class="duo-link">{{duo.stay.link}} →</span>
+          </span>
+        </a>
+      </div>
     </section>
 
     <section class="manifesto">

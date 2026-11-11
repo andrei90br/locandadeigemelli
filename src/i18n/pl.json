@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Locanda dei Gemelli | Restauracja i pizzeria w Dimaro Folgarida, Val di Sole",
-    "description": "Nowoczesna osteria w Val di Sole: kuchnia trentyńska z lokalnych składników i pizza od mistrza pizzaiolo. Obiady i kolacje w Dimaro Folgarida, nieczynne we wtorki.",
+    "title": "Locanda dei Gemelli | Restauracja, pizzeria i apartamenty w Dimaro Folgarida, Val di Sole",
+    "description": "Restauracja, pizzeria i 6 apartamentów w Dimaro Folgarida w Val di Sole: kuchnia trentyńska z lokalnych składników, pizza od mistrza pizzaiolo i apartamenty z kuchnią dla 4–7 osób.",
     "locale": "pl_PL"
   },
   "nav": {
@@ -17,18 +17,47 @@
   },
   "cta": {
     "book": "Zarezerwuj stolik",
+    "apartments": "Zobacz apartamenty",
     "visit": "Godziny i adres"
   },
   "hero": {
-    "eyebrow": "Restauracja i pizzeria · Dimaro Folgarida, Val di Sole",
-    "title": "Prawdziwa kuchnia trentyńska. Pizza od mistrza. Bez skrótów.",
-    "lead": "Nowoczesna osteria w Val di Sole: składniki z naszych dolin, przepisy z lokalnej tradycji i pizza warta podróży. Na obiad i na kolację."
+    "eyebrow": "Restauracja · Pizzeria · Apartamenty · Dimaro Folgarida, Val di Sole",
+    "title": "Zjedz dobrze. Śpij lepiej. Pod jednym dachem.",
+    "lead": "Locanda dei Gemelli to restauracja, pizzeria i wakacyjny dom w Val di Sole. Kuchnia trentyńska ze składników z naszych dolin, pizza od naszego mistrza pizzaiolo i 6 niezależnych apartamentów w tym samym budynku."
   },
   "proof": {
     "label": "Dlaczego my",
-    "0": { "title": "Lokalne składniki", "text": "Dostawcy z Val di Sole, Val di Non i doliny Adygi" },
-    "1": { "title": "Mistrz pizzaiolo", "text": "Starannie przygotowane ciasto i sezonowe składniki" },
-    "2": { "title": "Obiad i kolacja", "text": "Otwarte 6 dni w tygodniu, we wtorki nieczynne" }
+    "0": {
+      "title": "Lokalne składniki",
+      "text": "Dostawcy z Val di Sole, Val di Non i doliny Adygi"
+    },
+    "1": {
+      "title": "Mistrz pizzaiolo",
+      "text": "Starannie przygotowane ciasto i sezonowe składniki"
+    },
+    "2": {
+      "title": "6 apartamentów",
+      "text": "Z kuchnią, od 4 do 7 miejsc do spania"
+    },
+    "3": {
+      "title": "Obiad i kolacja",
+      "text": "Otwarte 6 dni w tygodniu, we wtorki nieczynne"
+    }
+  },
+  "duo": {
+    "eyebrow": "Jedna locanda, dwa doświadczenia",
+    "title": "Przyjedź dla kuchni. Zostań na wakacje.",
+    "text": "Nie musisz wybierać między dobrą restauracją a dobrym noclegiem. U nas masz jedno i drugie, prowadzone przez tych samych ludzi, z tym samym standardem.",
+    "food": {
+      "title": "Restauracja i pizzeria",
+      "text": "Kuchnia trentyńska w nowoczesnym wydaniu na obiad i kolację, pizza od mistrza wieczorem, na wynos i z dostawą.",
+      "link": "Poznaj kuchnię"
+    },
+    "stay": {
+      "title": "6 apartamentów",
+      "text": "Niezależne apartamenty od 46 do 60 m² z kuchnią, własną łazienką i Wi-Fi, dla 4–7 osób. Zwierzęta mile widziane.",
+      "link": "Zobacz apartamenty"
+    }
   },
   "manifesto": {
     "eyebrow": "Nowoczesna osteria",

@@ -21,6 +21,7 @@ const IMG = {
   takeaway: SRC + '2022/06/Asporto-e-consegna-a-domicilio.jpg',
   garden: SRC + '2022/07/servizio-giardino-eventi.jpg',
   business: SRC + '2022/06/Business-Locanda-Elisa-2.jpg',
+  stay: SRC + '2022/07/Golden-02.jpg',
 };
 
 // Appartamenti (dati dal sito attuale). rooms = chiave in apartments.rooms delle traduzioni.
@@ -59,7 +60,11 @@ for (const lang of LANGS) {
 
   const jsonld = JSON.stringify({
     '@context': 'https://schema.org',
-    '@type': 'Restaurant',
+    '@type': ['Restaurant', 'LodgingBusiness'],
+    numberOfRooms: 6,
+    petsAllowed: true,
+    checkinTime: '14:00',
+    checkoutTime: '11:00',
     name: 'Locanda dei Gemelli',
     url: SITE_URL + lang.path,
     image: IMG.hero,

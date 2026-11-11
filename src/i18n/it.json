@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Locanda dei Gemelli | Ristorante e Pizzeria a Dimaro Folgarida, Val di Sole",
-    "description": "Osteria moderna in Val di Sole: cucina trentina con ingredienti a km zero e pizza del maestro pizzaiolo. Pranzo e cena a Dimaro Folgarida, chiuso il martedì.",
+    "title": "Locanda dei Gemelli | Ristorante, Pizzeria e Appartamenti a Dimaro Folgarida, Val di Sole",
+    "description": "Ristorante pizzeria e 6 appartamenti a Dimaro Folgarida, in Val di Sole: cucina trentina a km zero, la pizza del maestro pizzaiolo e appartamenti con cucina da 4 a 7 posti letto.",
     "locale": "it_IT"
   },
   "nav": {
@@ -17,18 +17,47 @@
   },
   "cta": {
     "book": "Prenota un tavolo",
+    "apartments": "Scopri gli appartamenti",
     "visit": "Orari e indirizzo"
   },
   "hero": {
-    "eyebrow": "Ristorante e pizzeria · Dimaro Folgarida, Val di Sole",
-    "title": "Cucina trentina vera. Pizza da maestro. Zero scorciatoie.",
-    "lead": "L'osteria moderna della Val di Sole: ingredienti delle nostre valli, ricette della tradizione solandra e una pizza che vale il viaggio. A pranzo e a cena."
+    "eyebrow": "Ristorante · Pizzeria · Appartamenti · Dimaro Folgarida, Val di Sole",
+    "title": "Mangia bene. Dormi meglio. Sotto lo stesso tetto.",
+    "lead": "Locanda dei Gemelli è ristorante, pizzeria e casa per le tue vacanze in Val di Sole. Cucina trentina con gli ingredienti delle nostre valli, la pizza del maestro pizzaiolo e 6 appartamenti indipendenti nello stesso edificio."
   },
   "proof": {
     "label": "Perché sceglierci",
-    "0": { "title": "Km zero", "text": "Fornitori di Val di Sole, Val di Non e Valle dell'Adige" },
-    "1": { "title": "Maestro pizzaiolo", "text": "Impasti curati e ingredienti di stagione" },
-    "2": { "title": "Pranzo e cena", "text": "Aperti 6 giorni su 7, chiusi il martedì" }
+    "0": {
+      "title": "Km zero",
+      "text": "Fornitori di Val di Sole, Val di Non e Valle dell'Adige"
+    },
+    "1": {
+      "title": "Maestro pizzaiolo",
+      "text": "Impasti curati e ingredienti di stagione"
+    },
+    "2": {
+      "title": "6 appartamenti",
+      "text": "Con cucina, da 4 a 7 posti letto"
+    },
+    "3": {
+      "title": "Pranzo e cena",
+      "text": "Aperti 6 giorni su 7, chiusi il martedì"
+    }
+  },
+  "duo": {
+    "eyebrow": "Una locanda, due esperienze",
+    "title": "Vieni per la cucina. Resta per la vacanza.",
+    "text": "Non devi scegliere tra un buon ristorante e un buon posto dove dormire. Qui hai entrambi, gestiti dalle stesse persone con lo stesso standard.",
+    "food": {
+      "title": "Ristorante e pizzeria",
+      "text": "Cucina trentina rivisitata a pranzo e a cena, pizza del maestro pizzaiolo la sera, asporto e consegna a domicilio.",
+      "link": "Scopri la cucina"
+    },
+    "stay": {
+      "title": "6 appartamenti",
+      "text": "Appartamenti indipendenti da 46 a 60 m² con cucina, bagno privato e Wi-Fi, per 4–7 persone. Animali benvenuti.",
+      "link": "Scopri gli appartamenti"
+    }
   },
   "manifesto": {
     "eyebrow": "Osteria moderna",

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Locanda dei Gemelli | Restaurant und Pizzeria in Dimaro Folgarida, Val di Sole",
-    "description": "Moderne Osteria im Val di Sole: Trentiner Küche mit regionalen Zutaten und Pizza vom Meister-Pizzaiolo. Mittag- und Abendessen in Dimaro Folgarida, dienstags Ruhetag.",
+    "title": "Locanda dei Gemelli | Restaurant, Pizzeria und Ferienwohnungen in Dimaro Folgarida, Val di Sole",
+    "description": "Restaurant, Pizzeria und 6 Ferienwohnungen in Dimaro Folgarida im Val di Sole: Trentiner Küche mit regionalen Zutaten, Pizza vom Meister-Pizzaiolo und Ferienwohnungen mit Küche für 4 bis 7 Personen.",
     "locale": "de_DE"
   },
   "nav": {
@@ -17,18 +17,47 @@
   },
   "cta": {
     "book": "Tisch reservieren",
+    "apartments": "Ferienwohnungen entdecken",
     "visit": "Öffnungszeiten und Adresse"
   },
   "hero": {
-    "eyebrow": "Restaurant und Pizzeria · Dimaro Folgarida, Val di Sole",
-    "title": "Echte Trentiner Küche. Pizza vom Meister. Keine Abkürzungen.",
-    "lead": "Die moderne Osteria im Val di Sole: Zutaten aus unseren Tälern, Rezepte aus der Tradition des Sulzbergs und eine Pizza, für die sich der Weg lohnt. Mittags und abends."
+    "eyebrow": "Restaurant · Pizzeria · Ferienwohnungen · Dimaro Folgarida, Val di Sole",
+    "title": "Gut essen. Besser schlafen. Unter einem Dach.",
+    "lead": "Die Locanda dei Gemelli ist Restaurant, Pizzeria und Urlaubszuhause im Val di Sole. Trentiner Küche mit Zutaten aus unseren Tälern, Pizza von unserem Meister-Pizzaiolo und 6 unabhängige Ferienwohnungen im selben Haus."
   },
   "proof": {
     "label": "Warum zu uns",
-    "0": { "title": "Regional", "text": "Erzeuger aus Val di Sole, Val di Non und dem Etschtal" },
-    "1": { "title": "Meister-Pizzaiolo", "text": "Sorgfältige Teige und saisonale Zutaten" },
-    "2": { "title": "Mittag- und Abendessen", "text": "6 Tage die Woche geöffnet, dienstags Ruhetag" }
+    "0": {
+      "title": "Regional",
+      "text": "Erzeuger aus Val di Sole, Val di Non und dem Etschtal"
+    },
+    "1": {
+      "title": "Meister-Pizzaiolo",
+      "text": "Sorgfältige Teige und saisonale Zutaten"
+    },
+    "2": {
+      "title": "6 Ferienwohnungen",
+      "text": "Mit Küche, 4 bis 7 Schlafplätze"
+    },
+    "3": {
+      "title": "Mittag- und Abendessen",
+      "text": "6 Tage die Woche geöffnet, dienstags Ruhetag"
+    }
+  },
+  "duo": {
+    "eyebrow": "Eine Locanda, zwei Erlebnisse",
+    "title": "Kommen Sie zum Essen. Bleiben Sie für den Urlaub.",
+    "text": "Sie müssen sich nicht zwischen einem guten Restaurant und einer guten Unterkunft entscheiden. Hier haben Sie beides, geführt von denselben Menschen mit demselben Anspruch.",
+    "food": {
+      "title": "Restaurant und Pizzeria",
+      "text": "Trentiner Küche mit moderner Handschrift mittags und abends, Pizza vom Meister am Abend, Abholung und Lieferung.",
+      "link": "Die Küche entdecken"
+    },
+    "stay": {
+      "title": "6 Ferienwohnungen",
+      "text": "Unabhängige Ferienwohnungen von 46 bis 60 m² mit Küche, eigenem Bad und WLAN, für 4–7 Personen. Haustiere willkommen.",
+      "link": "Ferienwohnungen entdecken"
+    }
   },
   "manifesto": {
     "eyebrow": "Moderne Osteria",

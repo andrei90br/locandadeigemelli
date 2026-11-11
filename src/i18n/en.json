@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Locanda dei Gemelli | Restaurant and Pizzeria in Dimaro Folgarida, Val di Sole",
-    "description": "A modern osteria in Val di Sole: Trentino cooking with local ingredients and pizza by a master pizzaiolo. Lunch and dinner in Dimaro Folgarida, closed on Tuesdays.",
+    "title": "Locanda dei Gemelli | Restaurant, Pizzeria and Apartments in Dimaro Folgarida, Val di Sole",
+    "description": "Restaurant, pizzeria and 6 apartments in Dimaro Folgarida, Val di Sole: Trentino cooking with local ingredients, pizza by a master pizzaiolo and self-catering apartments sleeping 4 to 7.",
     "locale": "en_GB"
   },
   "nav": {
@@ -17,18 +17,47 @@
   },
   "cta": {
     "book": "Book a table",
+    "apartments": "Discover the apartments",
     "visit": "Hours and address"
   },
   "hero": {
-    "eyebrow": "Restaurant and pizzeria · Dimaro Folgarida, Val di Sole",
-    "title": "Real Trentino cooking. Master-made pizza. No shortcuts.",
-    "lead": "The modern osteria of Val di Sole: ingredients from our valleys, recipes from the local tradition and a pizza worth the trip. Lunch and dinner."
+    "eyebrow": "Restaurant · Pizzeria · Apartments · Dimaro Folgarida, Val di Sole",
+    "title": "Eat well. Sleep better. Under one roof.",
+    "lead": "Locanda dei Gemelli is a restaurant, a pizzeria and a holiday home in Val di Sole. Trentino cooking with ingredients from our valleys, pizza by our master pizzaiolo and 6 self-contained apartments in the same building."
   },
   "proof": {
     "label": "Why choose us",
-    "0": { "title": "Locally sourced", "text": "Producers from Val di Sole, Val di Non and the Adige Valley" },
-    "1": { "title": "Master pizzaiolo", "text": "Carefully made dough and seasonal ingredients" },
-    "2": { "title": "Lunch and dinner", "text": "Open 6 days a week, closed on Tuesdays" }
+    "0": {
+      "title": "Locally sourced",
+      "text": "Producers from Val di Sole, Val di Non and the Adige Valley"
+    },
+    "1": {
+      "title": "Master pizzaiolo",
+      "text": "Carefully made dough and seasonal ingredients"
+    },
+    "2": {
+      "title": "6 apartments",
+      "text": "With kitchen, sleeping 4 to 7"
+    },
+    "3": {
+      "title": "Lunch and dinner",
+      "text": "Open 6 days a week, closed on Tuesdays"
+    }
+  },
+  "duo": {
+    "eyebrow": "One locanda, two experiences",
+    "title": "Come for the food. Stay for the holiday.",
+    "text": "You don't have to choose between a good restaurant and a good place to sleep. Here you get both, run by the same people to the same standard.",
+    "food": {
+      "title": "Restaurant and pizzeria",
+      "text": "Trentino cooking with a modern touch at lunch and dinner, master-made pizza in the evening, takeaway and delivery.",
+      "link": "Discover the kitchen"
+    },
+    "stay": {
+      "title": "6 apartments",
+      "text": "Self-contained apartments of 46 to 60 m² with kitchen, private bathroom and Wi-Fi, for 4–7 people. Pets welcome.",
+      "link": "Discover the apartments"
+    }
   },
   "manifesto": {
     "eyebrow": "A modern osteria",

@@ -133,12 +133,27 @@ p { margin: 0 0 1em; }
 .proof { background: var(--ink); color: var(--paper); }
 .proof-list {
   list-style: none; margin: 0 auto; padding-top: 34px; padding-bottom: 34px;
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px;
 }
 .proof-list li { display: flex; flex-direction: column; gap: 4px; padding-left: 18px; border-left: 3px solid var(--accent); }
 .proof-list strong { font-family: var(--font-head); text-transform: uppercase; font-size: 1.2rem; letter-spacing: 0.04em; }
 .proof-list span { font-size: 0.92rem; opacity: 0.75; }
-@media (max-width: 760px) { .proof-list { grid-template-columns: 1fr; } }
+@media (max-width: 960px) { .proof-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .proof-list { grid-template-columns: minmax(0, 1fr); } }
+
+/* Ristorante + appartamenti */
+.duo { padding: var(--section) 0 0; text-align: center; }
+.duo .lead { color: var(--ink-2); }
+.duo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 48px; text-align: left; }
+.duo-card { position: relative; display: block; min-height: 460px; overflow: hidden; color: #fff; text-decoration: none; background: var(--ink-2); }
+.duo-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.duo-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,11,9,0.05) 30%, rgba(14,11,9,0.88) 100%); }
+.duo-card:hover img { transform: scale(1.04); }
+.duo-body { position: absolute; inset: auto 0 0; z-index: 1; display: flex; flex-direction: column; gap: 10px; padding: clamp(24px, 4vw, 40px); }
+.duo-title { font-family: var(--font-head); text-transform: uppercase; font-weight: 700; font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1; }
+.duo-text { max-width: 44ch; opacity: 0.9; }
+.duo-link { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: #f0b08f; }
+@media (max-width: 760px) { .duo-grid { grid-template-columns: minmax(0, 1fr); } .duo-card { min-height: 380px; } }
 
 /* Manifesto */
 .manifesto { padding: var(--section) 0; text-align: center; }
