@@ -1,102 +1,108 @@
 {
-  "meta": {
-    "title": "Locanda dei Gemelli | Restauracja, pizzeria i apartamenty w Dimaro Folgarida, Val di Sole",
-    "description": "Restauracja, pizzeria i 6 apartamentów w Dimaro Folgarida w Val di Sole: kuchnia trentyńska z lokalnych składników, pizza od mistrza pizzaiolo i apartamenty z kuchnią dla 4–7 osób.",
-    "locale": "pl_PL"
-  },
+  "locale": "pl_PL",
   "nav": {
     "skip": "Przejdź do treści",
     "label": "Nawigacja główna",
-    "kitchen": "Kuchnia",
-    "pizza": "Pizza",
-    "services": "Usługi",
     "apartments": "Apartamenty",
-    "visit": "Godziny i dojazd",
+    "restaurant": "Restauracja i pizzeria",
+    "valdisole": "Val di Sole",
+    "where": "Lokalizacja",
     "languages": "Język",
-    "open": "Otwórz menu"
+    "open": "Otwórz menu",
+    "request": "Zapytaj o dostępność"
   },
-  "cta": {
-    "book": "Zarezerwuj stolik",
-    "apartments": "Zobacz apartamenty",
-    "visit": "Godziny i adres"
+  "booking": {
+    "label": "Sprawdź dostępność apartamentów",
+    "arrival": "Przyjazd",
+    "departure": "Wyjazd",
+    "adults": "Dorośli",
+    "children": "Dzieci",
+    "submit": "Sprawdź dostępność"
   },
-  "hero": {
-    "eyebrow": "Restauracja · Pizzeria · Apartamenty · Dimaro Folgarida, Val di Sole",
-    "title": "Zjedz dobrze. Śpij lepiej. Pod jednym dachem.",
-    "lead": "Locanda dei Gemelli to restauracja, pizzeria i wakacyjny dom w Val di Sole. Kuchnia trentyńska ze składników z naszych dolin, pizza od naszego mistrza pizzaiolo i 6 niezależnych apartamentów w tym samym budynku."
+  "common": {
+    "explore": "Zobacz",
+    "request": "Zapytaj",
+    "season": "Otwarte od grudnia do kwietnia i od czerwca do października",
+    "address": "Via Campiglio 59, 38025 Dimaro Folgarida (TN), Włochy",
+    "map": "Otwórz w Google Maps",
+    "hoursTitle": "Godziny otwarcia restauracji",
+    "restaurant": "Restauracja",
+    "pizzeria": "Pizzeria",
+    "closedDay": "Wtorek",
+    "closed": "Nieczynne",
+    "beds": "{n} miejsc noclegowych",
+    "allApartments": "Wszystkie apartamenty"
   },
-  "proof": {
-    "label": "Dlaczego my",
-    "0": {
-      "title": "Lokalne składniki",
-      "text": "Dostawcy z Val di Sole, Val di Non i doliny Adygi"
+  "footer": {
+    "stay": "Pobyt",
+    "dine": "Jedzenie",
+    "discover": "Odkryj",
+    "hours": "Restauracja 12–14 i 18–22:30 · Pizzeria 18–23 · We wtorki nieczynne"
+  },
+  "home": {
+    "meta": {
+      "title": "Locanda dei Gemelli | Apartamenty, restauracja i pizzeria w Dimaro Folgarida, Val di Sole",
+      "description": "6 apartamentów z kuchnią oraz restauracja i pizzeria na parterze, w Dimaro Folgarida w Val di Sole. Lokalna kuchnia trydencka, pizza mistrza pizzaiolo, stoki i szlaki kilka minut stąd."
     },
-    "1": {
-      "title": "Mistrz pizzaiolo",
-      "text": "Starannie przygotowane ciasto i sezonowe składniki"
+    "hero": {
+      "eyebrow": "Dimaro Folgarida · Val di Sole · Trydent",
+      "title": "Dobrze śpij. Jedz jeszcze lepiej. Pod jednym dachem.",
+      "lead": "6 niezależnych apartamentów oraz restauracja i pizzeria na parterze, kilka minut od stoków Folgarida-Marilleva i szlaków Val di Sole."
     },
-    "2": {
-      "title": "6 apartamentów",
-      "text": "Z kuchnią, od 4 do 7 miejsc do spania"
-    },
-    "3": {
-      "title": "Obiad i kolacja",
-      "text": "Otwarte 6 dni w tygodniu, we wtorki nieczynne"
-    }
-  },
-  "duo": {
-    "eyebrow": "Jedna locanda, dwa doświadczenia",
-    "title": "Przyjedź dla kuchni. Zostań na wakacje.",
-    "text": "Nie musisz wybierać między dobrą restauracją a dobrym noclegiem. U nas masz jedno i drugie, prowadzone przez tych samych ludzi, z tym samym standardem.",
-    "food": {
-      "title": "Restauracja i pizzeria",
-      "text": "Kuchnia trentyńska w nowoczesnym wydaniu na obiad i kolację, pizza od mistrza wieczorem, na wynos i z dostawą.",
-      "link": "Poznaj kuchnię"
+    "proof": [
+      { "title": "6 apartamentów", "text": "Od 46 do 60 m², od 4 do 7 miejsc" },
+      { "title": "Restauracja i pizzeria", "text": "Na parterze, w porze obiadu i kolacji" },
+      { "title": "Produkty lokalne", "text": "Składniki z Val di Sole, Val di Non i doliny Adygi" },
+      { "title": "Dwa sezony", "text": "Od grudnia do kwietnia i od czerwca do października" }
+    ],
+    "intro": {
+      "eyebrow": "Locanda",
+      "title": "Jeden adres. Dwa powody, by go wybrać.",
+      "text": "Większość górskich wakacji zmusza do wyboru: dobre miejsce do spania albo dobre miejsce do jedzenia. Tutaj nie musisz wybierać. Idziesz na górę do apartamentu, schodzisz na kolację. Ci sami ludzie, ten sam standard, od zameldowania do ostatniej pizzy."
     },
     "stay": {
-      "title": "6 apartamentów",
-      "text": "Niezależne apartamenty od 46 do 60 m² z kuchnią, własną łazienką i Wi-Fi, dla 4–7 osób. Zwierzęta mile widziane.",
-      "link": "Zobacz apartamenty"
+      "eyebrow": "Pobyt",
+      "title": "Sześć apartamentów. Zero kompromisów.",
+      "text": "Każdy apartament jest niezależny, z w pełni wyposażoną kuchnią, częścią dzienną i prywatną łazienką. Prawdziwa przestrzeń dla par, rodzin i grup przyjaciół, ze swobodą domu i restauracją tuż pod spodem.",
+      "cta": "Zobacz apartamenty"
+    },
+    "dine": {
+      "eyebrow": "Jedzenie",
+      "title": "Prawdziwa kuchnia trydencka. Pizza od mistrza.",
+      "text": "W porze obiadu i kolacji dania z tradycji Val di Sole, ze składników z naszych dolin. Wieczorem pizza naszego mistrza pizzaiolo. Otwarte dla wszystkich, nie tylko dla gości.",
+      "cta": "Zobacz restaurację"
+    },
+    "exp": {
+      "eyebrow": "Atrakcje",
+      "title": "Val di Sole tuż za drzwiami.",
+      "text": "Zimą narty w Folgarida-Marilleva i Madonna di Campiglio. Latem ścieżka rowerowa, rafting na rzece Noce i szlaki dwóch parków przyrody. Ty planujesz dzień, my zajmujemy się wieczorem.",
+      "cta": "Odkryj Val di Sole"
+    },
+    "where": {
+      "eyebrow": "Lokalizacja",
+      "title": "W sercu Val di Sole.",
+      "text": "Jesteśmy w Dimaro Folgarida, kilka minut od wyciągów Folgarida-Marilleva, przy ścieżce rowerowej Val di Sole. Madonna di Campiglio i przełęcz Tonale są w zasięgu ręki."
+    },
+    "final": {
+      "title": "Najlepsze terminy znikają pierwsze.",
+      "text": "Wyślij nam swoje daty: odpowiemy z informacją o dostępności i cenie. Zapytanie jest niewiążące.",
+      "cta": "Zapytaj o dostępność"
     }
   },
-  "manifesto": {
-    "eyebrow": "Nowoczesna osteria",
-    "title": "Czego nie podalibyśmy własnej rodzinie, tego nie podamy Tobie.",
-    "text": "Restauracji nie ocenia się po wystroju, tylko po tym, co jest na talerzu. Dlatego zaczynamy od surowca: sezonowych, sprawdzonych produktów górskich od producentów z naszych dolin. Traktujemy je z szacunkiem, według przepisów tradycji Val di Sole i Trentino, z dzisiejszą techniką."
-  },
-  "pillars": {
-    "0": { "title": "Korzenie", "text": "Przepisy, na których się wychowaliśmy, z tradycji Val di Sole i Trentino. Od nich zaczyna się każde danie." },
-    "1": { "title": "Sezon", "text": "Nasze menu podąża za górami. Używamy tego, co doliny dają w danej chwili, w najlepszej formie." },
-    "2": { "title": "Rzemiosło", "text": "Nowoczesna technika w służbie smaku, nie efektu. Nic zbędnego na talerzu." }
-  },
-  "kitchen": {
-    "eyebrow": "Restauracja",
-    "title": "Tradycja w dzisiejszym wydaniu.",
-    "text": "Dania kuchni trentyńskiej w nowoczesnym ujęciu i kilka propozycji międzynarodowych dla tych, którzy chcą zejść ze szlaku. Świeże składniki, uczciwe porcje, wyraziste smaki. Obiad, którego potrzebujesz między zjazdami, i kolacja, którą zapamiętasz po urlopie.",
-    "hours": "Obiad 12:00 – 14:00 · Kolacja 18:00 – 22:30",
-    "menu": "Pełne menu wkrótce pojawi się na tej stronie.",
-    "alt": "Sala restauracji"
-  },
-  "pizza": {
-    "eyebrow": "Pizzeria",
-    "title": "Pizza to rzemiosło. Nasz mistrz zna je na wylot.",
-    "text": "Każda pizza wychodzi spod rąk naszego mistrza pizzaiolo. Starannie przygotowane ciasto, wysokiej jakości sezonowe składniki, przemyślane połączenia. Znajdziesz klasyki, które kochasz, i wyjątkowe kompozycje z naszej kuchni, których nie zjesz nigdzie indziej.",
-    "hours": "Codziennie 18:00 – 23:00, oprócz wtorku"
-  },
-  "services": {
-    "eyebrow": "Nie tylko kolacja",
-    "title": "Ten sam standard, gdziekolwiek chcesz zjeść.",
-    "0": { "title": "Na wynos i z dostawą", "text": "Nasza kuchnia i nasza pizza u Ciebie w domu lub w apartamencie wakacyjnym. Ta sama staranność, ten sam smak." },
-    "1": { "title": "Ogród i wydarzenia", "text": "Letnie wieczory na świeżym powietrzu, urodziny, kolacje grupowe i przyjęcia. Ogród czeka na Twoje wydarzenie." },
-    "2": { "title": "Lunche i spotkania biznesowe", "text": "Osobna sala, sprzęt do prezentacji, przerwa kawowa, bufet lub lekki lunch. Ty skupiasz się na spotkaniu, my zajmujemy się resztą." }
-  },
   "apartments": {
-    "eyebrow": "Apartamenty",
-    "title": "Śpij kilka kroków od swojego stolika.",
-    "text": "Sześć niezależnych apartamentów, każdy z kuchnią i własną łazienką, aby przeżyć Val di Sole w pełni na własnych zasadach. Od 46 do 60 m², od 4 do 7 miejsc do spania. Zwierzęta mile widziane, obiekt dla niepalących. A gdy nie masz ochoty gotować, restauracja i pizzeria są na parterze.",
-    "alt": "Apartament",
-    "beds": "miejsca do spania: {n}",
-    "book": "Zapytaj",
+    "meta": {
+      "title": "Apartamenty w Dimaro Folgarida, Val di Sole | Locanda dei Gemelli",
+      "description": "6 niezależnych apartamentów od 46 do 60 m² z kuchnią, prywatną łazienką i Wi-Fi, od 4 do 7 miejsc. Zwierzęta mile widziane. Restauracja i pizzeria na parterze."
+    },
+    "hero": {
+      "eyebrow": "Pobyt",
+      "title": "Sześć apartamentów. Prawdziwa przestrzeń w Val di Sole.",
+      "lead": "Od 46 do 60 m², od 4 do 7 miejsc. Wszystkie z kuchnią, prywatną łazienką i częścią dzienną. Zwierzęta mile widziane, zakaz palenia."
+    },
+    "intro": {
+      "title": "Wybierz swój apartament",
+      "text": "Cztery apartamenty o powierzchni 46 m² dla 4 osób i dwa o powierzchni 60 m² dla grup i rodzin do 7 osób. Ta sama troska, te same udogodnienia, ta sama lokalizacja."
+    },
     "rooms": {
       "dbl2": "2 sypialnie z łóżkiem małżeńskim",
       "dblBunk": "1 sypialnia z łóżkiem małżeńskim i 1 pokój z łóżkiem piętrowym",
@@ -105,70 +111,141 @@
       "dblBunkSingleSofa": "1 sypialnia z łóżkiem małżeńskim, 1 pokój z łóżkiem piętrowym i pojedynczym, 1 rozkładana sofa"
     },
     "servicesTitle": "W każdym apartamencie",
-    "services": [
-      "Wi-Fi",
-      "Własna łazienka",
-      "Kuchnia z jadalnią",
-      "Część dzienna",
-      "TV",
-      "Parking publiczny (bez rezerwacji)",
-      "Restauracja i pizzeria na parterze",
-      "Dodatkowe łóżka polowe na życzenie"
+    "services": ["Wi-Fi", "Prywatna łazienka", "Kuchnia z jadalnią", "Część dzienna", "TV", "Parking publiczny (bez rezerwacji)", "Restauracja i pizzeria na parterze", "Dodatkowe łóżka na życzenie"],
+    "goodTitle": "Warto wiedzieć",
+    "good": ["Zameldowanie od 14:00 do 23:00", "Wymeldowanie do 11:00", "Zwierzęta mile widziane", "Zakaz palenia"]
+  },
+  "apartment": {
+    "metaTitle": "Apartament {name} · {size} m², {beds} miejsc | Locanda dei Gemelli, Val di Sole",
+    "metaDescription": "Apartament {name} w Dimaro Folgarida: {size} m², {beds} miejsc noclegowych, {rooms}. Kuchnia, prywatna łazienka, Wi-Fi. Restauracja i pizzeria na parterze.",
+    "eyebrow": "Apartament",
+    "text": "Niezależny apartament o powierzchni {size} m²: {rooms}. Wyposażona kuchnia, część dzienna, prywatna łazienka, Wi-Fi i TV: wszystko, czego potrzebujesz, by poczuć się w Val di Sole jak w domu. A gdy chcesz odpocząć od gotowania, restauracja i pizzeria są na parterze.",
+    "factsTitle": "W skrócie",
+    "size": "Powierzchnia",
+    "beds": "Miejsca noclegowe",
+    "rooms": "Pokoje",
+    "gallery": "Galeria zdjęć",
+    "cta": "Zapytaj o ten apartament",
+    "others": "Pozostałe apartamenty",
+    "photo": "Zdjęcie {n} apartamentu {name}"
+  },
+  "restaurant": {
+    "meta": {
+      "title": "Restauracja i pizzeria w Dimaro Folgarida, Val di Sole | Locanda dei Gemelli",
+      "description": "Nowoczesna osteria w Val di Sole: kuchnia trydencka z lokalnych składników i pizza mistrza pizzaiolo. Obiady i kolacje w Dimaro Folgarida, we wtorki nieczynne."
+    },
+    "hero": {
+      "eyebrow": "Restauracja i pizzeria",
+      "title": "Prawdziwa kuchnia trydencka. Pizza od mistrza. Bez dróg na skróty.",
+      "lead": "Nowoczesna osteria Val di Sole: składniki z naszych dolin, tradycyjne lokalne przepisy i pizza warta podróży. Otwarte dla wszystkich, w porze obiadu i kolacji."
+    },
+    "manifesto": {
+      "eyebrow": "Nowoczesna osteria",
+      "title": "Jeśli nie podalibyśmy tego własnej rodzinie, nie trafi na Twój stół.",
+      "text": "Restauracji nie ocenia się po wystroju. Ocenia się ją po talerzu. Dlatego zaczynamy od surowca: górskich produktów sezonowych i identyfikowalnych, od producentów z naszych dolin. Potem traktujemy je z szacunkiem, według przepisów z Val di Sole i Trydentu, z dzisiejszą techniką."
+    },
+    "pillars": [
+      { "title": "Korzenie", "text": "Przepisy, na których się wychowaliśmy, z tradycji Val di Sole i Trydentu. Od nich zaczyna się każde danie." },
+      { "title": "Sezon", "text": "Karta podąża za górami. Używamy tego, co doliny dają w danym momencie, w najlepszej formie." },
+      { "title": "Rzemiosło", "text": "Nowoczesna technika w służbie smaku, nie efektu. Nic zbędnego na talerzu." }
     ],
-    "times": "Zameldowanie 14:00 – 23:00 · Wymeldowanie do 11:00",
-    "cta": "Wyślij zapytanie o rezerwację"
+    "kitchen": {
+      "eyebrow": "Restauracja",
+      "title": "Tradycja w dzisiejszym wydaniu.",
+      "text": "Dania kuchni trydenckiej w nowoczesnej odsłonie i kilka propozycji międzynarodowych dla tych, którzy chcą zboczyć ze szlaku. Świeże składniki, uczciwe porcje, wyraziste smaki. Obiad, którego potrzebujesz między zjazdami, i kolacja, którą zapamiętasz na koniec wakacji.",
+      "hours": "Obiad 12:00 – 14:00 · Kolacja 18:00 – 22:30",
+      "menu": "Pełna karta będzie wkrótce dostępna na tej stronie."
+    },
+    "pizza": {
+      "eyebrow": "Pizzeria",
+      "title": "Pizza to rzemiosło. Nasz mistrz to wie.",
+      "text": "Każda pizza wychodzi spod rąk naszego mistrza pizzaiolo. Starannie przygotowane ciasto, sezonowe składniki najwyższej jakości, przemyślane połączenia. Znajdziesz klasyki, które kochasz, i wyjątkowe kompozycje z naszej kuchni, których nie ma nigdzie indziej.",
+      "hours": "Codziennie wieczorem 18:00 – 23:00, oprócz wtorków"
+    },
+    "services": {
+      "eyebrow": "Nie tylko kolacja",
+      "title": "Ten sam standard, gdziekolwiek chcesz zjeść.",
+      "items": [
+        { "title": "Na wynos i z dostawą", "text": "Nasza kuchnia i nasza pizza w Twoim domu lub apartamencie wakacyjnym. Ta sama troska, ten sam smak." },
+        { "title": "Ogród i wydarzenia", "text": "Letnie wieczory na świeżym powietrzu, urodziny, kolacje grupowe i przyjęcia. Ogród jest gotowy na Twoje wydarzenie." },
+        { "title": "Lunche i spotkania biznesowe", "text": "Osobna sala, sprzęt do prezentacji, przerwy kawowe, bufet lub lekki lunch. Ty skupiasz się na spotkaniu, resztą zajmujemy się my." }
+      ]
+    },
+    "quote": "Doliny dają składniki. My dajemy rzemiosło.",
+    "book": {
+      "eyebrow": "Rezerwacje",
+      "title": "Twój stolik czeka.",
+      "text": "Wkrótce zarezerwujesz online przez TheFork lub napiszesz do nas na WhatsApp. Tymczasem czekamy na Ciebie przy Via Campiglio 59.",
+      "thefork": "TheFork · wkrótce",
+      "whatsapp": "WhatsApp · wkrótce"
+    }
   },
-  "form": {
-    "title": "Zapytanie o informacje i rezerwację",
-    "text": "Podaj daty, liczbę gości i, jeśli chcesz, wybrany apartament. Odpowiemy e-mailem, podając dostępność i cenę. Zapytanie nie jest wiążące.",
-    "subject": "Zapytanie o rezerwację apartamentu – strona Locanda dei Gemelli",
-    "name": "Imię i nazwisko",
-    "email": "E-mail",
-    "noCommitment": "Zapytanie niewiążące",
-    "required": "* pola obowiązkowe",
-    "firstName": "Imię",
-    "lastName": "Nazwisko",
-    "phone": "Telefon",
-    "apartment": "Apartament",
-    "any": "Bez preferencji",
-    "arrival": "Przyjazd",
-    "departure": "Wyjazd",
-    "guests": "Liczba gości",
-    "nights": "Noce",
-    "adults": "Dorośli",
-    "children": "Dzieci",
-    "continue": "Sprawdź dostępność",
-    "privacy": "Wyrażam zgodę na przetwarzanie moich danych w celu odpowiedzi na to zapytanie. *",
-    "pets": "Zwierzęta",
-    "no": "Nie",
-    "yes": "Tak",
-    "message": "Treść zapytania",
-    "submit": "Wyślij zapytanie",
-    "note": "Twoje dane wykorzystamy wyłącznie do odpowiedzi na zapytanie.",
-    "sent": "Dziękujemy! Otrzymaliśmy Twoje zapytanie i wkrótce odpowiemy e-mailem."
+  "valdisole": {
+    "meta": {
+      "title": "Co robić w Val di Sole zimą i latem | Locanda dei Gemelli",
+      "description": "Narty w Folgarida-Marilleva i Madonna di Campiglio, ścieżka rowerowa Val di Sole, rafting na Noce, trekking w parkach. Wszystko kilka minut od Locanda dei Gemelli."
+    },
+    "hero": {
+      "eyebrow": "Atrakcje",
+      "title": "Dwa sezony. Dolina, która nigdy nie zwalnia.",
+      "lead": "Dimaro Folgarida to idealny punkt wypadowy: stoki zimą, rzeki i szlaki latem. Ty wybierasz dzień, wieczorem zajmujemy się my."
+    },
+    "winter": {
+      "eyebrow": "Zima · grudzień – kwiecień",
+      "title": "Śnieg kilka minut stąd.",
+      "items": [
+        { "title": "Folgarida-Marilleva", "text": "Wyciągi są kilka minut od Locandy. Stąd zjedziesz na nartach aż do Madonna di Campiglio w Skiarea Campiglio Dolomiti di Brenta." },
+        { "title": "Przełęcz Tonale", "text": "Wysoko położone trasy i lodowiec Presena, dla pewnego śniegu przez cały sezon." },
+        { "title": "Biegówki i rakiety śnieżne", "text": "Trasy biegowe i szlaki na rakietach śnieżnych w lasach doliny, dla tych, którzy wolą ciszę od prędkości." }
+      ]
+    },
+    "summer": {
+      "eyebrow": "Lato · czerwiec – październik",
+      "title": "Rzeki, szlaki i dwa kółka.",
+      "items": [
+        { "title": "Ścieżka rowerowa Val di Sole", "text": "Ścieżka biegnie przez Dimaro i wzdłuż rzeki Noce przez całą dolinę. Idealna dla rodzin, także na e-bike'u." },
+        { "title": "Rafting na Noce", "text": "Noce to jedna z najbardziej cenionych rzek w Europie do raftingu i kajakarstwa, z trasami dla początkujących i zaawansowanych." },
+        { "title": "Trekking w parkach", "text": "Park Narodowy Stelvio i Park Przyrody Adamello Brenta: szlaki, górskie schroniska i alpejskie jeziora na każdym poziomie." }
+      ]
+    },
+    "base": {
+      "title": "Dzień należy do Ciebie. Wieczór do nas.",
+      "text": "Wracasz ze stoku lub szlaku, idziesz do apartamentu i schodzisz na kolację. Bez samochodu, bez szukania stolika."
+    }
   },
-  "quote": {
-    "text": "Doliny dają składniki. My dajemy rzemiosło."
-  },
-  "visit": {
-    "eyebrow": "Odwiedź nas",
-    "title": "W sercu Val di Sole.",
-    "text": "Jesteśmy w Dimaro Folgarida, kilka minut od wyciągów Folgarida-Marilleva i tuż przy ścieżce rowerowej Val di Sole. Idealne miejsce po dniu na nartach, na rowerze lub w górach.",
-    "map": "Otwórz w Google Maps",
-    "hoursTitle": "Godziny otwarcia",
-    "restaurant": "Restauracja",
-    "pizzeria": "Pizzeria",
-    "closedDay": "Wtorek",
-    "closed": "Nieczynne"
-  },
-  "book": {
-    "eyebrow": "Rezerwacje",
-    "title": "Twój stolik na Ciebie czeka.",
-    "text": "Wkrótce zarezerwujesz online przez TheFork lub napiszesz do nas szybko na WhatsAppie. Tymczasem zapraszamy na Via Campiglio 59.",
-    "thefork": "TheFork · wkrótce",
-    "whatsapp": "WhatsApp · wkrótce"
-  },
-  "footer": {
-    "hours": "Restauracja 12–14 i 18–22:30 · Pizzeria 18–23 · We wtorki nieczynne"
+  "request": {
+    "meta": {
+      "title": "Zapytania i rezerwacje | Locanda dei Gemelli",
+      "description": "Zapytaj o dostępność i cenę apartamentów Locanda dei Gemelli w Dimaro Folgarida, Val di Sole. Zapytanie niewiążące."
+    },
+    "hero": {
+      "eyebrow": "Rezerwacje",
+      "title": "Zapytania i rezerwacje",
+      "lead": "Podaj daty, liczbę gości i, jeśli chcesz, preferowany apartament. Odpowiemy e-mailem z informacją o dostępności i cenie."
+    },
+    "form": {
+      "subject": "Zapytanie o apartament – strona Locanda dei Gemelli (PL)",
+      "noCommitment": "Zapytanie niewiążące",
+      "required": "* pola obowiązkowe",
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "arrival": "Przyjazd",
+      "departure": "Wyjazd",
+      "adults": "Dorośli",
+      "children": "Dzieci",
+      "apartment": "Apartament",
+      "any": "Bez preferencji",
+      "pets": "Zwierzęta",
+      "no": "Nie",
+      "yes": "Tak",
+      "message": "Twoje zapytanie",
+      "privacy": "Wyrażam zgodę na przetwarzanie moich danych w celu otrzymania odpowiedzi na to zapytanie. *",
+      "submit": "Wyślij zapytanie",
+      "sent": "Dziękujemy! Otrzymaliśmy Twoje zapytanie i odpowiemy e-mailem najszybciej, jak to możliwe."
+    },
+    "asideTitle": "Dlaczego warto zapytać tutaj",
+    "aside": ["Bezpośrednia odpowiedź od gospodarzy Locandy", "Teraz bez żadnej płatności", "Restauracja i pizzeria na parterze"]
   }
 }

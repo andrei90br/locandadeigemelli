@@ -1,102 +1,108 @@
 {
-  "meta": {
-    "title": "Locanda dei Gemelli | Ristorante, Pizzeria e Appartamenti a Dimaro Folgarida, Val di Sole",
-    "description": "Ristorante pizzeria e 6 appartamenti a Dimaro Folgarida, in Val di Sole: cucina trentina a km zero, la pizza del maestro pizzaiolo e appartamenti con cucina da 4 a 7 posti letto.",
-    "locale": "it_IT"
-  },
+  "locale": "it_IT",
   "nav": {
     "skip": "Vai al contenuto",
     "label": "Navigazione principale",
-    "kitchen": "Cucina",
-    "pizza": "Pizza",
-    "services": "Servizi",
     "apartments": "Appartamenti",
-    "visit": "Orari e dove siamo",
+    "restaurant": "Ristorante e Pizzeria",
+    "valdisole": "Val di Sole",
+    "where": "Dove siamo",
     "languages": "Lingua",
-    "open": "Apri il menu"
+    "open": "Apri il menu",
+    "request": "Richiedi disponibilità"
   },
-  "cta": {
-    "book": "Prenota un tavolo",
-    "apartments": "Scopri gli appartamenti",
-    "visit": "Orari e indirizzo"
+  "booking": {
+    "label": "Verifica la disponibilità degli appartamenti",
+    "arrival": "Arrivo",
+    "departure": "Partenza",
+    "adults": "Adulti",
+    "children": "Bambini",
+    "submit": "Verifica disponibilità"
   },
-  "hero": {
-    "eyebrow": "Ristorante · Pizzeria · Appartamenti · Dimaro Folgarida, Val di Sole",
-    "title": "Mangia bene. Dormi meglio. Sotto lo stesso tetto.",
-    "lead": "Locanda dei Gemelli è ristorante, pizzeria e casa per le tue vacanze in Val di Sole. Cucina trentina con gli ingredienti delle nostre valli, la pizza del maestro pizzaiolo e 6 appartamenti indipendenti nello stesso edificio."
+  "common": {
+    "explore": "Scopri",
+    "request": "Richiedi",
+    "season": "Aperti da dicembre ad aprile e da giugno a ottobre",
+    "address": "Via Campiglio 59, 38025 Dimaro Folgarida (TN)",
+    "map": "Apri in Google Maps",
+    "hoursTitle": "Orari del ristorante",
+    "restaurant": "Ristorante",
+    "pizzeria": "Pizzeria",
+    "closedDay": "Martedì",
+    "closed": "Chiuso",
+    "beds": "{n} posti letto",
+    "allApartments": "Tutti gli appartamenti"
   },
-  "proof": {
-    "label": "Perché sceglierci",
-    "0": {
-      "title": "Km zero",
-      "text": "Fornitori di Val di Sole, Val di Non e Valle dell'Adige"
+  "footer": {
+    "stay": "Soggiorno",
+    "dine": "Ristorazione",
+    "discover": "Scopri",
+    "hours": "Ristorante 12–14 e 18–22:30 · Pizzeria 18–23 · Chiuso il martedì"
+  },
+  "home": {
+    "meta": {
+      "title": "Locanda dei Gemelli | Appartamenti, Ristorante e Pizzeria a Dimaro Folgarida, Val di Sole",
+      "description": "6 appartamenti con cucina e un ristorante pizzeria al piano terra, a Dimaro Folgarida in Val di Sole. Cucina trentina a km zero, pizza del maestro pizzaiolo, piste e sentieri a pochi minuti."
     },
-    "1": {
-      "title": "Maestro pizzaiolo",
-      "text": "Impasti curati e ingredienti di stagione"
+    "hero": {
+      "eyebrow": "Dimaro Folgarida · Val di Sole · Trentino",
+      "title": "Dormi bene. Mangia meglio. Sotto lo stesso tetto.",
+      "lead": "6 appartamenti indipendenti e un ristorante pizzeria al piano terra, a pochi minuti dalle piste di Folgarida-Marilleva e dai sentieri della Val di Sole."
     },
-    "2": {
-      "title": "6 appartamenti",
-      "text": "Con cucina, da 4 a 7 posti letto"
-    },
-    "3": {
-      "title": "Pranzo e cena",
-      "text": "Aperti 6 giorni su 7, chiusi il martedì"
-    }
-  },
-  "duo": {
-    "eyebrow": "Una locanda, due esperienze",
-    "title": "Vieni per la cucina. Resta per la vacanza.",
-    "text": "Non devi scegliere tra un buon ristorante e un buon posto dove dormire. Qui hai entrambi, gestiti dalle stesse persone con lo stesso standard.",
-    "food": {
-      "title": "Ristorante e pizzeria",
-      "text": "Cucina trentina rivisitata a pranzo e a cena, pizza del maestro pizzaiolo la sera, asporto e consegna a domicilio.",
-      "link": "Scopri la cucina"
+    "proof": [
+      { "title": "6 appartamenti", "text": "Da 46 a 60 m², da 4 a 7 posti letto" },
+      { "title": "Ristorante e pizzeria", "text": "Al piano terra, a pranzo e a cena" },
+      { "title": "Km zero", "text": "Ingredienti di Val di Sole, Val di Non e Valle dell'Adige" },
+      { "title": "Due stagioni", "text": "Da dicembre ad aprile e da giugno a ottobre" }
+    ],
+    "intro": {
+      "eyebrow": "La Locanda",
+      "title": "Un indirizzo. Due ragioni per sceglierlo.",
+      "text": "La maggior parte delle vacanze in montagna ti costringe a scegliere: un buon posto dove dormire o un buon posto dove mangiare. Qui non devi scegliere. Sali in appartamento, scendi a cena. Stesse persone, stesso standard, dal check-in all'ultima pizza."
     },
     "stay": {
-      "title": "6 appartamenti",
-      "text": "Appartamenti indipendenti da 46 a 60 m² con cucina, bagno privato e Wi-Fi, per 4–7 persone. Animali benvenuti.",
-      "link": "Scopri gli appartamenti"
+      "eyebrow": "Soggiorno",
+      "title": "Sei appartamenti. Zero compromessi.",
+      "text": "Ogni appartamento è indipendente, con cucina attrezzata, zona giorno e bagno privato. Spazio vero per coppie, famiglie e gruppi di amici, con la libertà di una casa e la comodità di un ristorante sotto.",
+      "cta": "Scopri gli appartamenti"
+    },
+    "dine": {
+      "eyebrow": "Ristorazione",
+      "title": "Cucina trentina vera. Pizza da maestro.",
+      "text": "A pranzo e a cena, piatti della tradizione solandra con gli ingredienti delle nostre valli. La sera, la pizza del nostro maestro pizzaiolo. Aperto a tutti, non solo agli ospiti.",
+      "cta": "Scopri il ristorante"
+    },
+    "exp": {
+      "eyebrow": "Esperienze",
+      "title": "La Val di Sole, fuori dalla porta.",
+      "text": "D'inverno sci a Folgarida-Marilleva e Madonna di Campiglio. D'estate la ciclabile, il rafting sul Noce e i sentieri di due parchi naturali. Tu scegli la giornata, noi pensiamo alla sera.",
+      "cta": "Scopri la Val di Sole"
+    },
+    "where": {
+      "eyebrow": "Dove siamo",
+      "title": "Nel cuore della Val di Sole.",
+      "text": "Siamo a Dimaro Folgarida, a pochi minuti dagli impianti di Folgarida-Marilleva e lungo la ciclabile della Val di Sole. Madonna di Campiglio e il Passo del Tonale sono a portata di mano."
+    },
+    "final": {
+      "title": "Le date migliori vanno via per prime.",
+      "text": "Inviaci le tue date: ti rispondiamo con disponibilità e prezzo. La richiesta non è vincolante.",
+      "cta": "Richiedi disponibilità"
     }
   },
-  "manifesto": {
-    "eyebrow": "Osteria moderna",
-    "title": "Se non lo serviremmo alla nostra famiglia, non arriva al tuo tavolo.",
-    "text": "Un ristorante non si giudica dall'arredamento. Si giudica dal piatto. Per questo partiamo dalla materia prima: prodotti di montagna, stagionali e tracciabili, scelti dai produttori delle nostre valli. Poi li trattiamo con rispetto, con le ricette della tradizione solandra e trentina e la tecnica di oggi."
-  },
-  "pillars": {
-    "0": { "title": "Radici", "text": "Le ricette con cui siamo cresciuti, dalla tradizione solandra e trentina. È da lì che parte ogni piatto." },
-    "1": { "title": "Stagione", "text": "Il menu segue la montagna. Usiamo quello che le valli danno in quel momento, al suo meglio." },
-    "2": { "title": "Mestiere", "text": "Tecnica moderna al servizio del sapore, non dell'effetto. Niente di superfluo nel piatto." }
-  },
-  "kitchen": {
-    "eyebrow": "Il ristorante",
-    "title": "La tradizione, fatta oggi.",
-    "text": "Piatti della cucina trentina riletti con mano moderna, e qualche proposta internazionale per chi vuole uscire dal sentiero. Ingredienti freschi, porzioni oneste, sapori netti. È il pranzo che ti serve tra una pista e l'altra e la cena che ricordi a fine vacanza.",
-    "hours": "Pranzo 12:00 – 14:00 · Cena 18:00 – 22:30",
-    "menu": "Il menu completo sarà presto disponibile su questa pagina.",
-    "alt": "La sala del ristorante"
-  },
-  "pizza": {
-    "eyebrow": "La pizzeria",
-    "title": "La pizza è un mestiere. Il nostro maestro lo sa.",
-    "text": "Ogni pizza esce dalle mani del nostro maestro pizzaiolo. Impasti curati, ingredienti di stagione e di qualità, abbinamenti studiati. Trovi le classiche che ami e le combinazioni speciali nate nella nostra cucina, che non trovi altrove.",
-    "hours": "Tutte le sere 18:00 – 23:00, martedì escluso"
-  },
-  "services": {
-    "eyebrow": "Oltre la cena",
-    "title": "Lo stesso standard, ovunque tu voglia mangiare.",
-    "0": { "title": "Asporto e consegna a domicilio", "text": "La nostra cucina e la nostra pizza, a casa tua o nel tuo appartamento in vacanza. Stessa cura, stesso sapore." },
-    "1": { "title": "Giardino ed eventi", "text": "Serate estive all'aperto, compleanni, cene di gruppo e feste. Il giardino è pronto ad accogliere il tuo evento." },
-    "2": { "title": "Pranzi e meeting di lavoro", "text": "Sala riservata, tecnologia per presentare, coffee break, buffet o light lunch. Tu pensi alla riunione, al resto pensiamo noi." }
-  },
   "apartments": {
-    "eyebrow": "Gli appartamenti",
-    "title": "Dormi a due passi dal tuo tavolo.",
-    "text": "Sei appartamenti indipendenti, tutti con cucina e bagno privato, per vivere la Val di Sole in piena autonomia. Da 46 a 60 m², da 4 a 7 posti letto. Animali benvenuti, ambienti non fumatori. E quando non hai voglia di cucinare, ristorante e pizzeria sono al piano terra.",
-    "alt": "Appartamento",
-    "beds": "{n} posti letto",
-    "book": "Richiedi",
+    "meta": {
+      "title": "Appartamenti a Dimaro Folgarida, Val di Sole | Locanda dei Gemelli",
+      "description": "6 appartamenti indipendenti da 46 a 60 m² con cucina, bagno privato e Wi-Fi, da 4 a 7 posti letto. Animali benvenuti. Ristorante e pizzeria al piano terra."
+    },
+    "hero": {
+      "eyebrow": "Soggiorno",
+      "title": "Sei appartamenti. Spazio vero, in Val di Sole.",
+      "lead": "Da 46 a 60 m², da 4 a 7 posti letto. Tutti con cucina, bagno privato e zona giorno. Animali benvenuti, ambienti non fumatori."
+    },
+    "intro": {
+      "title": "Scegli il tuo appartamento",
+      "text": "Quattro appartamenti da 46 m² per 4 persone, due da 60 m² per gruppi e famiglie fino a 7. Stessa cura, stessi servizi, stessa posizione."
+    },
     "rooms": {
       "dbl2": "2 camere matrimoniali",
       "dblBunk": "1 camera matrimoniale e 1 camera con letto a castello",
@@ -105,70 +111,141 @@
       "dblBunkSingleSofa": "1 camera matrimoniale, 1 camera con letto a castello e letto singolo, 1 divano letto"
     },
     "servicesTitle": "In tutti gli appartamenti",
-    "services": [
-      "Wi-Fi",
-      "Bagno privato",
-      "Cucina e zona pranzo",
-      "Zona giorno",
-      "TV",
-      "Parcheggio pubblico (non prenotabile)",
-      "Ristorante e pizzeria al piano terra",
-      "Brandine aggiuntive su richiesta"
+    "services": ["Wi-Fi", "Bagno privato", "Cucina e zona pranzo", "Zona giorno", "TV", "Parcheggio pubblico (non prenotabile)", "Ristorante e pizzeria al piano terra", "Brandine aggiuntive su richiesta"],
+    "goodTitle": "Buono a sapersi",
+    "good": ["Check-in dalle 14:00 alle 23:00", "Check-out entro le 11:00", "Animali benvenuti", "Ambienti non fumatori"]
+  },
+  "apartment": {
+    "metaTitle": "Appartamento {name} · {size} m², {beds} posti letto | Locanda dei Gemelli, Val di Sole",
+    "metaDescription": "Appartamento {name} a Dimaro Folgarida: {size} m², {beds} posti letto, {rooms}. Cucina, bagno privato, Wi-Fi. Ristorante e pizzeria al piano terra.",
+    "eyebrow": "Appartamento",
+    "text": "Un appartamento indipendente di {size} m² con {rooms}. Cucina attrezzata, zona giorno, bagno privato, Wi-Fi e TV: tutto quello che serve per sentirti a casa in Val di Sole. E quando vuoi una serata senza fornelli, ristorante e pizzeria sono al piano terra.",
+    "factsTitle": "In breve",
+    "size": "Superficie",
+    "beds": "Posti letto",
+    "rooms": "Camere",
+    "gallery": "Galleria fotografica",
+    "cta": "Richiedi questo appartamento",
+    "others": "Gli altri appartamenti",
+    "photo": "Foto {n} dell'appartamento {name}"
+  },
+  "restaurant": {
+    "meta": {
+      "title": "Ristorante e Pizzeria a Dimaro Folgarida, Val di Sole | Locanda dei Gemelli",
+      "description": "Osteria moderna in Val di Sole: cucina trentina con ingredienti a km zero e pizza del maestro pizzaiolo. Pranzo e cena a Dimaro Folgarida, chiuso il martedì."
+    },
+    "hero": {
+      "eyebrow": "Ristorante e Pizzeria",
+      "title": "Cucina trentina vera. Pizza da maestro. Zero scorciatoie.",
+      "lead": "L'osteria moderna della Val di Sole: ingredienti delle nostre valli, ricette della tradizione solandra e una pizza che vale il viaggio. Aperto a tutti, a pranzo e a cena."
+    },
+    "manifesto": {
+      "eyebrow": "Osteria moderna",
+      "title": "Se non lo serviremmo alla nostra famiglia, non arriva al tuo tavolo.",
+      "text": "Un ristorante non si giudica dall'arredamento. Si giudica dal piatto. Per questo partiamo dalla materia prima: prodotti di montagna, stagionali e tracciabili, scelti dai produttori delle nostre valli. Poi li trattiamo con rispetto, con le ricette della tradizione solandra e trentina e la tecnica di oggi."
+    },
+    "pillars": [
+      { "title": "Radici", "text": "Le ricette con cui siamo cresciuti, dalla tradizione solandra e trentina. È da lì che parte ogni piatto." },
+      { "title": "Stagione", "text": "Il menu segue la montagna. Usiamo quello che le valli danno in quel momento, al suo meglio." },
+      { "title": "Mestiere", "text": "Tecnica moderna al servizio del sapore, non dell'effetto. Niente di superfluo nel piatto." }
     ],
-    "times": "Check-in 14:00 – 23:00 · Check-out entro le 11:00",
-    "cta": "Richiedi una prenotazione"
+    "kitchen": {
+      "eyebrow": "Il ristorante",
+      "title": "La tradizione, fatta oggi.",
+      "text": "Piatti della cucina trentina riletti con mano moderna, e qualche proposta internazionale per chi vuole uscire dal sentiero. Ingredienti freschi, porzioni oneste, sapori netti. È il pranzo che ti serve tra una pista e l'altra e la cena che ricordi a fine vacanza.",
+      "hours": "Pranzo 12:00 – 14:00 · Cena 18:00 – 22:30",
+      "menu": "Il menu completo sarà presto disponibile su questa pagina."
+    },
+    "pizza": {
+      "eyebrow": "La pizzeria",
+      "title": "La pizza è un mestiere. Il nostro maestro lo sa.",
+      "text": "Ogni pizza esce dalle mani del nostro maestro pizzaiolo. Impasti curati, ingredienti di stagione e di qualità, abbinamenti studiati. Trovi le classiche che ami e le combinazioni speciali nate nella nostra cucina, che non trovi altrove.",
+      "hours": "Tutte le sere 18:00 – 23:00, martedì escluso"
+    },
+    "services": {
+      "eyebrow": "Oltre la cena",
+      "title": "Lo stesso standard, ovunque tu voglia mangiare.",
+      "items": [
+        { "title": "Asporto e consegna a domicilio", "text": "La nostra cucina e la nostra pizza, a casa tua o nel tuo appartamento in vacanza. Stessa cura, stesso sapore." },
+        { "title": "Giardino ed eventi", "text": "Serate estive all'aperto, compleanni, cene di gruppo e feste. Il giardino è pronto ad accogliere il tuo evento." },
+        { "title": "Pranzi e meeting di lavoro", "text": "Sala riservata, tecnologia per presentare, coffee break, buffet o light lunch. Tu pensi alla riunione, al resto pensiamo noi." }
+      ]
+    },
+    "quote": "Le valli forniscono gli ingredienti. Noi ci mettiamo il mestiere.",
+    "book": {
+      "eyebrow": "Prenotazioni",
+      "title": "Il tuo tavolo ti aspetta.",
+      "text": "A breve potrai prenotare online con TheFork o scriverci su WhatsApp in un attimo. Nel frattempo ti aspettiamo in Via Campiglio 59.",
+      "thefork": "TheFork · in arrivo",
+      "whatsapp": "WhatsApp · in arrivo"
+    }
   },
-  "form": {
-    "title": "Richiesta informazioni e prenotazioni",
-    "text": "Indicaci date, numero di ospiti e, se vuoi, l'appartamento che preferisci. Ti rispondiamo via email con disponibilità e prezzo. La richiesta non è vincolante.",
-    "subject": "Richiesta prenotazione appartamento – sito Locanda dei Gemelli",
-    "name": "Nome e cognome",
-    "email": "Email",
-    "noCommitment": "Richiesta non impegnativa",
-    "required": "* campi obbligatori",
-    "firstName": "Nome",
-    "lastName": "Cognome",
-    "phone": "Telefono",
-    "apartment": "Appartamento",
-    "any": "Nessuna preferenza",
-    "arrival": "Arrivo",
-    "departure": "Partenza",
-    "guests": "Ospiti",
-    "nights": "Notti",
-    "adults": "Adulti",
-    "children": "Bambini",
-    "continue": "Richiedi disponibilità",
-    "privacy": "Acconsento al trattamento dei miei dati per ricevere una risposta a questa richiesta. *",
-    "pets": "Animali",
-    "no": "No",
-    "yes": "Sì",
-    "message": "Richiesta",
-    "submit": "Invia la richiesta",
-    "note": "Usiamo i tuoi dati solo per rispondere alla richiesta.",
-    "sent": "Grazie! Abbiamo ricevuto la tua richiesta e ti rispondiamo via email al più presto."
+  "valdisole": {
+    "meta": {
+      "title": "Cosa fare in Val di Sole, inverno ed estate | Locanda dei Gemelli",
+      "description": "Sci a Folgarida-Marilleva e Madonna di Campiglio, ciclabile della Val di Sole, rafting sul Noce, trekking nei parchi. Tutto a pochi minuti dalla Locanda dei Gemelli."
+    },
+    "hero": {
+      "eyebrow": "Esperienze",
+      "title": "Due stagioni. Una valle che non si ferma mai.",
+      "lead": "Dimaro Folgarida è il punto di partenza ideale: piste d'inverno, fiumi e sentieri d'estate. Tu scegli la giornata, la sera ci pensiamo noi."
+    },
+    "winter": {
+      "eyebrow": "Inverno · dicembre – aprile",
+      "title": "Neve a pochi minuti.",
+      "items": [
+        { "title": "Folgarida-Marilleva", "text": "Gli impianti sono a pochi minuti dalla Locanda. Da qui scii fino a Madonna di Campiglio nello Skiarea Campiglio Dolomiti di Brenta." },
+        { "title": "Passo del Tonale", "text": "Piste in quota e il ghiacciaio Presena, per chi cerca neve sicura per tutta la stagione." },
+        { "title": "Fondo e ciaspole", "text": "Anelli di fondo e percorsi con le ciaspole nei boschi della valle, per chi preferisce il silenzio alla velocità." }
+      ]
+    },
+    "summer": {
+      "eyebrow": "Estate · giugno – ottobre",
+      "title": "Fiumi, sentieri e due ruote.",
+      "items": [
+        { "title": "Ciclabile della Val di Sole", "text": "La pista ciclabile passa da Dimaro e segue il torrente Noce lungo la valle. Perfetta in famiglia, anche in e-bike." },
+        { "title": "Rafting sul Noce", "text": "Il Noce è uno dei fiumi più apprezzati d'Europa per rafting e kayak, con percorsi per principianti ed esperti." },
+        { "title": "Trekking nei parchi", "text": "Il Parco Nazionale dello Stelvio e il Parco Naturale Adamello Brenta: sentieri, malghe e laghi alpini per ogni livello." }
+      ]
+    },
+    "base": {
+      "title": "La giornata è tua. La sera è nostra.",
+      "text": "Torni dalla pista o dal sentiero, sali in appartamento e scendi a cena. Nessuna macchina da prendere, nessun tavolo da cercare."
+    }
   },
-  "quote": {
-    "text": "Le valli forniscono gli ingredienti. Noi ci mettiamo il mestiere."
-  },
-  "visit": {
-    "eyebrow": "Vieni a trovarci",
-    "title": "Nel cuore della Val di Sole.",
-    "text": "Siamo a Dimaro Folgarida, a pochi minuti dagli impianti di Folgarida-Marilleva e lungo la ciclabile della Val di Sole. Il posto giusto dopo una giornata sugli sci, in bici o in quota.",
-    "map": "Apri in Google Maps",
-    "hoursTitle": "Orari",
-    "restaurant": "Ristorante",
-    "pizzeria": "Pizzeria",
-    "closedDay": "Martedì",
-    "closed": "Chiuso"
-  },
-  "book": {
-    "eyebrow": "Prenotazioni",
-    "title": "Il tuo tavolo ti aspetta.",
-    "text": "A breve potrai prenotare online con TheFork o scriverci su WhatsApp in un attimo. Nel frattempo, ti aspettiamo in Via Campiglio 59.",
-    "thefork": "TheFork · in arrivo",
-    "whatsapp": "WhatsApp · in arrivo"
-  },
-  "footer": {
-    "hours": "Ristorante 12–14 e 18–22:30 · Pizzeria 18–23 · Chiuso il martedì"
+  "request": {
+    "meta": {
+      "title": "Richiesta informazioni e prenotazioni | Locanda dei Gemelli",
+      "description": "Richiedi disponibilità e prezzo per gli appartamenti della Locanda dei Gemelli a Dimaro Folgarida, Val di Sole. Richiesta non impegnativa."
+    },
+    "hero": {
+      "eyebrow": "Prenotazioni",
+      "title": "Richiesta informazioni e prenotazioni",
+      "lead": "Indicaci date, numero di ospiti e, se vuoi, l'appartamento che preferisci. Ti rispondiamo via email con disponibilità e prezzo."
+    },
+    "form": {
+      "subject": "Richiesta prenotazione appartamento – sito Locanda dei Gemelli",
+      "noCommitment": "Richiesta non impegnativa",
+      "required": "* campi obbligatori",
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "email": "Email",
+      "phone": "Telefono",
+      "arrival": "Arrivo",
+      "departure": "Partenza",
+      "adults": "Adulti",
+      "children": "Bambini",
+      "apartment": "Appartamento",
+      "any": "Nessuna preferenza",
+      "pets": "Animali",
+      "no": "No",
+      "yes": "Sì",
+      "message": "Richiesta",
+      "privacy": "Acconsento al trattamento dei miei dati per ricevere una risposta a questa richiesta. *",
+      "submit": "Invia la richiesta",
+      "sent": "Grazie! Abbiamo ricevuto la tua richiesta e ti rispondiamo via email al più presto."
+    },
+    "asideTitle": "Perché richiedere qui",
+    "aside": ["Risposta diretta da chi gestisce la Locanda", "Nessun pagamento richiesto ora", "Ristorante e pizzeria al piano terra"]
   }
 }

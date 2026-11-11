@@ -1,13 +1,14 @@
 # Locanda dei Gemelli
 
-Sito del ristorante e pizzeria Locanda dei Gemelli, Dimaro Folgarida (TN). Pubblicato con GitHub Pages.
+Sito della Locanda dei Gemelli (6 appartamenti + ristorante e pizzeria), Dimaro Folgarida (TN). Pubblicato con GitHub Pages.
 
 ## Struttura
 
-- `src/template.html`: la pagina, una sola per tutte le lingue
-- `src/i18n/{it,en,de,pl}.json`: i testi per lingua
+- `src/data.mjs`: dati fissi (foto, appartamenti, percorsi delle pagine, email delle richieste)
+- `src/render.mjs`: layout e pagine (home, appartamenti, scheda di ogni appartamento, ristorante, val-di-sole, richiesta)
+- `src/i18n/{it,en,de,pl}.json`: i testi per lingua (stessa struttura in tutte le lingue)
 - `assets/`: CSS e JS
-- `build.mjs`: genera `index.html` (IT), `en/`, `de/`, `pl/`, `sitemap.xml` e `robots.txt`
+- `build.mjs`: genera tutte le pagine (IT nella root, `en/`, `de/`, `pl/`), `sitemap.xml` e `robots.txt`
 
 ## Modificare i testi
 
@@ -19,7 +20,7 @@ Sito del ristorante e pizzeria Locanda dei Gemelli, Dimaro Folgarida (TN). Pubbl
 
 - Logo, contatti, menu, storia
 - Prenotazioni TheFork e WhatsApp
-- Foto definitive (ora sono prese da locandaelisa.it, vedi `IMG` in `build.mjs`)
+- Foto definitive (ora sono prese da locandaelisa.it, vedi `IMG` e `APARTMENTS` in `src/data.mjs`)
 - Ragione sociale, P.IVA, Privacy e Cookie Policy
 - Dominio `locandadeigemelli.com`: DNS su IONOS (A su GitHub Pages, CNAME www), dominio impostato in Settings → Pages
 
