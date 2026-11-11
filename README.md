@@ -33,3 +33,9 @@ In `assets/img/`:
 - `favicon.png`, `apple-touch-icon.png`: monogramma AH
 - `prodotti-genuini.jpg`: illustrazione ingredienti con il logo al centro (usata nella sezione Pizzeria)
 - `prodotti-genuini-senza-logo.jpg`: la stessa illustrazione con il cerchio bianco vuoto, per usi futuri
+
+## Sviluppo e pubblicazione
+
+Il lavoro si fa sul branch `sviluppo`. Su `main` per ora è online solo la pagina "in arrivo" (`in-arrivo/`).
+Al lancio: aprire una pull request da `sviluppo` a `main` e, nel workflow `.github/workflows/pages.yml`,
+ripristinare il passo `node build.mjs` e `path: .` al posto di `path: in-arrivo`.
