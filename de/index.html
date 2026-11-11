@@ -198,11 +198,11 @@
       </div>
       <div class="wrap request" id="richiesta">
         <div class="request-intro">
-          <h3>Ihre Buchungsanfrage</h3>
+          <h3>Informations- und Buchungsanfrage</h3>
           <p>Nennen Sie uns Ihre Reisedaten, die Anzahl der Gäste und, wenn Sie möchten, Ihre Wunschwohnung. Wir antworten per E-Mail mit Verfügbarkeit und Preis. Die Anfrage ist unverbindlich.</p>
         </div>
         <p class="request-sent" role="status" hidden data-request-sent>Vielen Dank! Wir haben Ihre Anfrage erhalten und antworten Ihnen so bald wie möglich per E-Mail.</p>
-        <form class="booking" action="https://formsubmit.co/lalocandadeigemelli@gmail.com" method="POST" data-request-form>
+        <form class="request-form" action="https://formsubmit.co/lalocandadeigemelli@gmail.com" method="POST" data-request-form>
           <input type="hidden" name="_subject" value="Buchungsanfrage Ferienwohnung – Website Locanda dei Gemelli">
           <input type="hidden" name="_next" value="https://locandadeigemelli.com/de/?richiesta=inviata">
           <input type="hidden" name="_template" value="table">
@@ -210,29 +210,25 @@
           <input type="hidden" name="Lingua" value="de">
           <input type="hidden" name="Notti" data-nights-input>
           <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-          <div class="booking-bar" data-step-stay>
-            <label class="bk-cell"><span class="bk-label">Anreise</span><input type="date" name="Arrivo" required data-arrival></label>
-            <label class="bk-cell"><span class="bk-label">Abreise</span><input type="date" name="Partenza" required data-departure></label>
-            <div class="bk-cell bk-nights"><span class="bk-label">Nächte</span><span class="bk-value" data-nights>–</span></div>
-            <label class="bk-cell bk-small"><span class="bk-label">Erwachsene</span><select name="Adulti" data-adults><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></label>
-            <label class="bk-cell bk-small"><span class="bk-label">Kinder</span><select name="Bambini" data-children><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
-            <label class="bk-cell"><span class="bk-label">Ferienwohnung</span><select name="Appartamento" data-apt-select><option value="">Keine Präferenz</option><option>Jonagold</option><option>Pink Lady</option><option>Renetta</option><option>Fuji</option><option>Golden</option><option>Morgana</option></select></label>
-            <button class="btn btn-accent bk-go" type="button" data-continue>Verfügbarkeit anfragen</button>
+          <p class="rf-head"><strong>Unverbindliche Anfrage</strong><span>* Pflichtfelder</span></p>
+          <div class="rf-group">
+            <input type="text" name="Nome" placeholder="Vorname *" aria-label="Vorname" required autocomplete="given-name">
+            <input type="email" name="email" placeholder="E-Mail *" aria-label="E-Mail" required autocomplete="email">
+            <input type="text" name="Cognome" placeholder="Nachname *" aria-label="Nachname" required autocomplete="family-name">
+            <input type="tel" name="Telefono" placeholder="Telefon *" aria-label="Telefon" required autocomplete="tel">
           </div>
-
-          <div class="booking-details" data-step-details>
-            <p class="booking-summary" data-summary></p>
-            <div class="booking-grid">
-              <label>Vor- und Nachname *<input type="text" name="Nome" required autocomplete="name"></label>
-              <label>E-Mail *<input type="email" name="email" required autocomplete="email"></label>
-              <label>Telefon<input type="tel" name="Telefono" autocomplete="tel"></label>
-              <label>Haustiere<select name="Animali"><option>Nein</option><option>Ja</option></select></label>
-              <label class="full">Besondere Wünsche<textarea name="Messaggio" rows="3"></textarea></label>
-              <label class="full check"><input type="checkbox" name="Privacy" value="ok" required> <span>Ich stimme der Verarbeitung meiner Daten zur Beantwortung dieser Anfrage zu. *</span></label>
-              <button class="btn btn-accent full" type="submit">Anfrage senden</button>
-              <p class="full request-note">Wir verwenden Ihre Daten nur zur Beantwortung Ihrer Anfrage.</p>
-            </div>
+          <div class="rf-group">
+            <input type="text" class="rf-date" name="Arrivo" placeholder="Anreise *" aria-label="Anreise" required data-date data-arrival>
+            <select name="Adulti" aria-label="Erwachsene" required><option value="" disabled selected>Erwachsene *</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+            <input type="text" class="rf-date" name="Partenza" placeholder="Abreise *" aria-label="Abreise" required data-date data-departure>
+            <select name="Bambini" aria-label="Kinder"><option value="" disabled selected>Kinder</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+            <select name="Appartamento" aria-label="Ferienwohnung" data-apt-select><option value="">Ferienwohnung: Keine Präferenz</option><option>Jonagold</option><option>Pink Lady</option><option>Renetta</option><option>Fuji</option><option>Golden</option><option>Morgana</option></select>
+            <select name="Animali" aria-label="Haustiere"><option value="" disabled selected>Haustiere</option><option>Nein</option><option>Ja</option></select>
+          </div>
+          <div class="rf-group rf-single">
+            <textarea name="Richiesta" rows="5" placeholder="Ihre Anfrage" aria-label="Ihre Anfrage"></textarea>
+            <label class="rf-check"><input type="checkbox" name="Privacy" value="ok" required> <span>Ich stimme der Verarbeitung meiner Daten zur Beantwortung dieser Anfrage zu. *</span></label>
+            <button class="btn btn-accent" type="submit">Anfrage senden</button>
           </div>
         </form>
       </div>

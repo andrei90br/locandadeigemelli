@@ -90,11 +90,15 @@
     "cta": "Richiedi una prenotazione"
   },
   "form": {
-    "title": "Richiedi la tua prenotazione",
+    "title": "Richiesta informazioni e prenotazioni",
     "text": "Indicaci date, numero di ospiti e, se vuoi, l'appartamento che preferisci. Ti rispondiamo via email con disponibilità e prezzo. La richiesta non è vincolante.",
     "subject": "Richiesta prenotazione appartamento – sito Locanda dei Gemelli",
     "name": "Nome e cognome",
     "email": "Email",
+    "noCommitment": "Richiesta non impegnativa",
+    "required": "* campi obbligatori",
+    "firstName": "Nome",
+    "lastName": "Cognome",
     "phone": "Telefono",
     "apartment": "Appartamento",
     "any": "Nessuna preferenza",
@@ -109,7 +113,7 @@
     "pets": "Animali",
     "no": "No",
     "yes": "Sì",
-    "message": "Richieste particolari",
+    "message": "Richiesta",
     "submit": "Invia la richiesta",
     "note": "Usiamo i tuoi dati solo per rispondere alla richiesta.",
     "sent": "Grazie! Abbiamo ricevuto la tua richiesta e ti rispondiamo via email al più presto."

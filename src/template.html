@@ -144,7 +144,7 @@
           <p>{{form.text}}</p>
         </div>
         <p class="request-sent" role="status" hidden data-request-sent>{{form.sent}}</p>
-        <form class="booking" action="{{formAction}}" method="POST" data-request-form>
+        <form class="request-form" action="{{formAction}}" method="POST" data-request-form>
           <input type="hidden" name="_subject" value="{{form.subject}}">
           <input type="hidden" name="_next" value="{{formNext}}">
           <input type="hidden" name="_template" value="table">
@@ -152,29 +152,25 @@
           <input type="hidden" name="Lingua" value="{{lang}}">
           <input type="hidden" name="Notti" data-nights-input>
           <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-          <div class="booking-bar" data-step-stay>
-            <label class="bk-cell"><span class="bk-label">{{form.arrival}}</span><input type="date" name="Arrivo" required data-arrival></label>
-            <label class="bk-cell"><span class="bk-label">{{form.departure}}</span><input type="date" name="Partenza" required data-departure></label>
-            <div class="bk-cell bk-nights"><span class="bk-label">{{form.nights}}</span><span class="bk-value" data-nights>–</span></div>
-            <label class="bk-cell bk-small"><span class="bk-label">{{form.adults}}</span><select name="Adulti" data-adults><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></label>
-            <label class="bk-cell bk-small"><span class="bk-label">{{form.children}}</span><select name="Bambini" data-children><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
-            <label class="bk-cell"><span class="bk-label">{{form.apartment}}</span><select name="Appartamento" data-apt-select><option value="">{{form.any}}</option>{{aptOptions}}</select></label>
-            <button class="btn btn-accent bk-go" type="button" data-continue>{{form.continue}}</button>
+          <p class="rf-head"><strong>{{form.noCommitment}}</strong><span>{{form.required}}</span></p>
+          <div class="rf-group">
+            <input type="text" name="Nome" placeholder="{{form.firstName}} *" aria-label="{{form.firstName}}" required autocomplete="given-name">
+            <input type="email" name="email" placeholder="{{form.email}} *" aria-label="{{form.email}}" required autocomplete="email">
+            <input type="text" name="Cognome" placeholder="{{form.lastName}} *" aria-label="{{form.lastName}}" required autocomplete="family-name">
+            <input type="tel" name="Telefono" placeholder="{{form.phone}} *" aria-label="{{form.phone}}" required autocomplete="tel">
           </div>
-
-          <div class="booking-details" data-step-details>
-            <p class="booking-summary" data-summary></p>
-            <div class="booking-grid">
-              <label>{{form.name}} *<input type="text" name="Nome" required autocomplete="name"></label>
-              <label>{{form.email}} *<input type="email" name="email" required autocomplete="email"></label>
-              <label>{{form.phone}}<input type="tel" name="Telefono" autocomplete="tel"></label>
-              <label>{{form.pets}}<select name="Animali"><option>{{form.no}}</option><option>{{form.yes}}</option></select></label>
-              <label class="full">{{form.message}}<textarea name="Messaggio" rows="3"></textarea></label>
-              <label class="full check"><input type="checkbox" name="Privacy" value="ok" required> <span>{{form.privacy}}</span></label>
-              <button class="btn btn-accent full" type="submit">{{form.submit}}</button>
-              <p class="full request-note">{{form.note}}</p>
-            </div>
+          <div class="rf-group">
+            <input type="text" class="rf-date" name="Arrivo" placeholder="{{form.arrival}} *" aria-label="{{form.arrival}}" required data-date data-arrival>
+            <select name="Adulti" aria-label="{{form.adults}}" required><option value="" disabled selected>{{form.adults}} *</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+            <input type="text" class="rf-date" name="Partenza" placeholder="{{form.departure}} *" aria-label="{{form.departure}}" required data-date data-departure>
+            <select name="Bambini" aria-label="{{form.children}}"><option value="" disabled selected>{{form.children}}</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+            <select name="Appartamento" aria-label="{{form.apartment}}" data-apt-select><option value="">{{form.apartment}}: {{form.any}}</option>{{aptOptions}}</select>
+            <select name="Animali" aria-label="{{form.pets}}"><option value="" disabled selected>{{form.pets}}</option><option>{{form.no}}</option><option>{{form.yes}}</option></select>
+          </div>
+          <div class="rf-group rf-single">
+            <textarea name="Richiesta" rows="5" placeholder="{{form.message}}" aria-label="{{form.message}}"></textarea>
+            <label class="rf-check"><input type="checkbox" name="Privacy" value="ok" required> <span>{{form.privacy}}</span></label>
+            <button class="btn btn-accent" type="submit">{{form.submit}}</button>
           </div>
         </form>
       </div>

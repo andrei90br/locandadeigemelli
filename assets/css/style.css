@@ -215,50 +215,32 @@ p { margin: 0 0 1em; }
 .request h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
 .request-intro p { color: var(--muted); margin: 0; }
 .request-sent { background: var(--ink); color: var(--paper); padding: 24px 28px; margin: 0; font-weight: 500; max-width: 760px; }
-.request-sent[hidden], .booking[hidden], .booking-details[hidden] { display: none; }
+.request-sent[hidden] { display: none; }
 
-/* Barra di prenotazione stile hotel */
-.booking-bar {
-  display: grid; grid-template-columns: 1.15fr 1.15fr 0.6fr 0.7fr 0.7fr 1.3fr auto;
-  background: var(--ink); color: var(--paper); box-shadow: 0 18px 40px rgba(23, 19, 16, 0.18);
+/* Modulo richiesta (stile hotel: campi a due colonne con etichetta nel campo) */
+.request-form { max-width: 1110px; background: #fff; border: 1px solid var(--line); padding: clamp(22px, 4vw, 40px); }
+.request-form[hidden] { display: none; }
+.rf-head { display: flex; flex-direction: column; gap: 6px; margin: 0 0 22px; font-size: 0.95rem; color: var(--muted); }
+.rf-head strong { color: var(--ink); }
+.rf-group { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 28px; }
+.rf-group + .rf-group { margin-top: 28px; }
+.rf-single { grid-template-columns: minmax(0, 1fr); }
+.request-form input:not([type="checkbox"]), .request-form select, .request-form textarea {
+  font: 400 1rem/1.4 var(--font-body); color: var(--ink); background: #fff;
+  border: 1px solid #d6d0c6; border-radius: 3px; padding: 11px 14px; min-height: 46px; width: 100%;
 }
-.bk-cell { display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 16px 20px; border-right: 1px solid rgba(255,255,255,0.12); min-width: 0; }
-.bk-label { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.75rem; color: #e58a63; }
-.bk-cell input, .bk-cell select {
-  font: 500 1.05rem/1.3 var(--font-body); color: var(--paper); background: transparent;
-  border: 0; padding: 4px 0; min-height: 34px; width: 100%; color-scheme: dark; cursor: pointer;
+.request-form ::placeholder { color: var(--ink); opacity: 0.85; }
+.request-form select:invalid, .request-form select option[value=""] { color: var(--ink); }
+.request-form input:focus, .request-form select:focus, .request-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent; }
+.rf-date {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='1.6'%3E%3Crect x='3' y='5' width='18' height='16' rx='1.5'/%3E%3Cpath d='M3 10h18M8 3v4M16 3v4M7 14h2M11 14h2M15 14h2M7 17.5h2M11 17.5h2'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important; background-position: right 12px center !important; background-size: 24px !important; padding-right: 48px !important;
 }
-.bk-cell select option { color: var(--ink); background: #fff; }
-.bk-cell:focus-within { background: rgba(255,255,255,0.06); }
-.bk-cell input:focus, .bk-cell select:focus { outline: none; }
-.bk-value { font: 600 1.25rem/1.3 var(--font-body); padding: 4px 0; }
-.bk-go { min-height: 100%; padding: 0 30px; border: 0; cursor: pointer; font-size: 1rem; border-radius: 0; }
-
-.booking-details { background: #fff; border: 1px solid var(--line); border-top: 0; padding: clamp(22px, 4vw, 36px); }
-.booking-summary { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; font-size: 1.05rem; margin: 0 0 20px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
-.booking-summary:empty { display: none; }
-.booking-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px; }
-.booking-grid label { display: flex; flex-direction: column; gap: 6px; font-size: 0.9rem; font-weight: 600; }
-.booking-grid input, .booking-grid select, .booking-grid textarea {
-  font: 400 1rem/1.4 var(--font-body); color: var(--ink); background: var(--paper);
-  border: 1px solid var(--line); border-radius: 2px; padding: 12px; min-height: 48px; width: 100%;
-}
-.booking-grid input:focus, .booking-grid select:focus, .booking-grid textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
-.booking-grid .full { grid-column: 1 / -1; }
-.booking-grid .check { flex-direction: row; align-items: flex-start; gap: 10px; font-weight: 400; color: var(--muted); }
-.booking-grid .check input { width: 20px; min-height: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--accent); flex-shrink: 0; }
-.booking-grid .btn { border: 0; cursor: pointer; font-size: 1rem; }
-.request-note { margin: 0; font-size: 0.85rem; color: var(--muted); }
-
-@media (max-width: 1100px) {
-  .booking-bar { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .bk-cell { border-bottom: 1px solid rgba(255,255,255,0.12); }
-  .bk-go { grid-column: 1 / -1; min-height: 58px; }
-}
-@media (max-width: 560px) {
-  .booking-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .booking-grid { grid-template-columns: minmax(0, 1fr); }
-}
+.rf-date[type="date"] { background-image: none !important; padding-right: 14px !important; }
+.rf-check { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--muted); }
+.rf-check input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--accent); flex-shrink: 0; }
+.request-form .btn { justify-self: start; border: 0; cursor: pointer; font-size: 1rem; padding: 0 40px; }
+@media (max-width: 640px) { .rf-group { grid-template-columns: minmax(0, 1fr); } .request-form .btn { justify-self: stretch; } }
 .hp { position: absolute; left: -9999px; }
 @media (max-width: 960px) { .apt-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .apt-info { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 600px) { .apt-grid { grid-template-columns: minmax(0, 1fr); } .apt-services { columns: 1; } }

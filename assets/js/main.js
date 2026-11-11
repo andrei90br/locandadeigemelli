@@ -22,51 +22,35 @@
     if (e.key === 'Escape') setOpen(false);
   });
 
-  // Richiesta appartamenti: barra stile hotel (date, ospiti, appartamento), poi dati dell'ospite.
+  // Richiesta appartamenti: i campi data mostrano l'etichetta finché sono vuoti, come nei siti degli hotel.
   const form = document.querySelector('[data-request-form]');
   const aptSelect = form.querySelector('[data-apt-select]');
   const arrival = form.querySelector('[data-arrival]');
   const departure = form.querySelector('[data-departure]');
-  const nightsOut = form.querySelector('[data-nights]');
-  const nightsInput = form.querySelector('[data-nights-input]');
-  const details = form.querySelector('[data-step-details]');
-  const summary = form.querySelector('[data-summary]');
+  const today = new Date().toISOString().slice(0, 10);
+  const nextDay = (value) => { const d = new Date(value + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + 1); return d.toISOString().slice(0, 10); };
 
-  const iso = (d) => d.toISOString().slice(0, 10);
-  const addDays = (value, n) => { const d = new Date(value + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return iso(d); };
-  arrival.min = iso(new Date());
-  departure.min = addDays(arrival.min, 1);
-
-  const nights = () => {
-    if (!arrival.value || !departure.value) return 0;
-    return Math.round((new Date(departure.value) - new Date(arrival.value)) / 86400000);
-  };
-  const update = () => {
-    const n = nights();
-    nightsOut.textContent = n > 0 ? n : '–';
-    nightsInput.value = n > 0 ? n : '';
-  };
-  arrival.addEventListener('change', () => {
-    if (!arrival.value) return;
-    departure.min = addDays(arrival.value, 1);
-    if (!departure.value || departure.value <= arrival.value) departure.value = addDays(arrival.value, 1);
-    update();
-  });
-  departure.addEventListener('change', update);
-
-  details.hidden = true;
-  form.querySelector('[data-continue]').addEventListener('click', () => {
-    if (!arrival.reportValidity() || !departure.reportValidity()) return;
-    if (nights() < 1) { departure.setCustomValidity(' '); departure.reportValidity(); departure.setCustomValidity(''); return; }
-    const parts = [...form.querySelectorAll('[data-step-stay] .bk-cell')].map((cell) => {
-      const label = cell.querySelector('.bk-label').textContent;
-      const field = cell.querySelector('select, input');
-      const value = field ? (field.tagName === 'SELECT' ? field.selectedOptions[0].textContent : new Date(field.value + 'T12:00:00Z').toLocaleDateString(document.documentElement.lang, { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })) : cell.querySelector('.bk-value').textContent;
-      return `${label}: ${value}`;
+  form.querySelectorAll('[data-date]').forEach((input) => {
+    input.addEventListener('focus', () => {
+      input.type = 'date';
+      input.min = input === departure && arrival.value ? nextDay(arrival.value) : today;
+      try { input.showPicker(); } catch (e) { /* non supportato */ }
     });
-    summary.textContent = parts.join(' · ');
-    details.hidden = false;
-    form.querySelector('input[name="Nome"]').focus();
+    input.addEventListener('blur', () => { if (!input.value) input.type = 'text'; });
+  });
+  arrival.addEventListener('change', () => {
+    if (arrival.value && departure.value && departure.value <= arrival.value) departure.value = '';
+  });
+  form.addEventListener('submit', (e) => {
+    if (departure.value <= arrival.value) {
+      e.preventDefault();
+      departure.type = 'date';
+      departure.setCustomValidity(' ');
+      departure.reportValidity();
+      departure.setCustomValidity('');
+      return;
+    }
+    form.querySelector('[data-nights-input]').value = Math.round((new Date(departure.value) - new Date(arrival.value)) / 86400000);
   });
 
   document.querySelectorAll('[data-apt]').forEach((link) =>

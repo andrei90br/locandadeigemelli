@@ -90,11 +90,15 @@
     "cta": "Buchung anfragen"
   },
   "form": {
-    "title": "Ihre Buchungsanfrage",
+    "title": "Informations- und Buchungsanfrage",
     "text": "Nennen Sie uns Ihre Reisedaten, die Anzahl der Gäste und, wenn Sie möchten, Ihre Wunschwohnung. Wir antworten per E-Mail mit Verfügbarkeit und Preis. Die Anfrage ist unverbindlich.",
     "subject": "Buchungsanfrage Ferienwohnung – Website Locanda dei Gemelli",
     "name": "Vor- und Nachname",
     "email": "E-Mail",
+    "noCommitment": "Unverbindliche Anfrage",
+    "required": "* Pflichtfelder",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
     "phone": "Telefon",
     "apartment": "Ferienwohnung",
     "any": "Keine Präferenz",
@@ -109,7 +113,7 @@
     "pets": "Haustiere",
     "no": "Nein",
     "yes": "Ja",
-    "message": "Besondere Wünsche",
+    "message": "Ihre Anfrage",
     "submit": "Anfrage senden",
     "note": "Wir verwenden Ihre Daten nur zur Beantwortung Ihrer Anfrage.",
     "sent": "Vielen Dank! Wir haben Ihre Anfrage erhalten und antworten Ihnen so bald wie möglich per E-Mail."

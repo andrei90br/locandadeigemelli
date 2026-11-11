@@ -90,11 +90,15 @@
     "cta": "Request a booking"
   },
   "form": {
-    "title": "Request your booking",
+    "title": "Information and booking request",
     "text": "Tell us your dates, the number of guests and, if you like, your preferred apartment. We'll reply by email with availability and price. The request is not binding.",
     "subject": "Apartment booking request – Locanda dei Gemelli website",
     "name": "Full name",
     "email": "Email",
+    "noCommitment": "Non-binding request",
+    "required": "* required fields",
+    "firstName": "First name",
+    "lastName": "Last name",
     "phone": "Phone",
     "apartment": "Apartment",
     "any": "No preference",
@@ -109,7 +113,7 @@
     "pets": "Pets",
     "no": "No",
     "yes": "Yes",
-    "message": "Special requests",
+    "message": "Your request",
     "submit": "Send request",
     "note": "We only use your details to reply to your request.",
     "sent": "Thank you! We've received your request and will reply by email as soon as possible."

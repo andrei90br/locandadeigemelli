@@ -90,11 +90,15 @@
     "cta": "Wyślij zapytanie o rezerwację"
   },
   "form": {
-    "title": "Zapytaj o rezerwację",
+    "title": "Zapytanie o informacje i rezerwację",
     "text": "Podaj daty, liczbę gości i, jeśli chcesz, wybrany apartament. Odpowiemy e-mailem, podając dostępność i cenę. Zapytanie nie jest wiążące.",
     "subject": "Zapytanie o rezerwację apartamentu – strona Locanda dei Gemelli",
     "name": "Imię i nazwisko",
     "email": "E-mail",
+    "noCommitment": "Zapytanie niewiążące",
+    "required": "* pola obowiązkowe",
+    "firstName": "Imię",
+    "lastName": "Nazwisko",
     "phone": "Telefon",
     "apartment": "Apartament",
     "any": "Bez preferencji",
@@ -109,7 +113,7 @@
     "pets": "Zwierzęta",
     "no": "Nie",
     "yes": "Tak",
-    "message": "Dodatkowe życzenia",
+    "message": "Treść zapytania",
     "submit": "Wyślij zapytanie",
     "note": "Twoje dane wykorzystamy wyłącznie do odpowiedzi na zapytanie.",
     "sent": "Dziękujemy! Otrzymaliśmy Twoje zapytanie i wkrótce odpowiemy e-mailem."
