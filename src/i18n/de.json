@@ -10,6 +10,7 @@
     "kitchen": "Küche",
     "pizza": "Pizza",
     "services": "Angebot",
+    "apartments": "Ferienwohnungen",
     "visit": "Öffnungszeiten und Anfahrt",
     "languages": "Sprache",
     "open": "Menü öffnen"
@@ -59,6 +60,34 @@
     "0": { "title": "Abholung und Lieferung", "text": "Unsere Küche und unsere Pizza bei Ihnen zu Hause oder in Ihrer Ferienwohnung. Gleiche Sorgfalt, gleicher Geschmack." },
     "1": { "title": "Garten und Veranstaltungen", "text": "Sommerabende im Freien, Geburtstage, Gruppenessen und Feiern. Der Garten ist bereit für Ihr Fest." },
     "2": { "title": "Geschäftsessen und Meetings", "text": "Separater Raum, Präsentationstechnik, Kaffeepause, Buffet oder leichtes Mittagessen. Sie konzentrieren sich auf das Meeting, wir kümmern uns um den Rest." }
+  },
+  "apartments": {
+    "eyebrow": "Die Ferienwohnungen",
+    "title": "Schlafen, nur ein paar Schritte vom Tisch entfernt.",
+    "text": "Sechs unabhängige Ferienwohnungen, alle mit Küche und eigenem Bad, um das Val di Sole ganz nach Ihrem Rhythmus zu erleben. 46 bis 60 m², 4 bis 7 Schlafplätze. Haustiere willkommen, Nichtraucher-Unterkunft. Und wenn Sie keine Lust zu kochen haben, sind Restaurant und Pizzeria nur ein paar Schritte entfernt.",
+    "alt": "Ferienwohnung",
+    "beds": "{n} Schlafplätze",
+    "book": "Buchen",
+    "rooms": {
+      "dbl2": "2 Doppelzimmer",
+      "dblBunk": "1 Doppelzimmer und 1 Zimmer mit Etagenbett",
+      "dblSofa": "1 Doppelzimmer und 1 Schlafsofa",
+      "dblBunkSofa": "1 Doppelzimmer, 1 Zimmer mit Etagenbett und 1 Schlafsofa",
+      "dblBunkSingleSofa": "1 Doppelzimmer, 1 Zimmer mit Etagenbett und Einzelbett, 1 Schlafsofa"
+    },
+    "servicesTitle": "In allen Ferienwohnungen",
+    "services": [
+      "WLAN",
+      "Eigenes Bad",
+      "Küche und Essbereich",
+      "Wohnbereich",
+      "TV",
+      "Öffentlicher Parkplatz (nicht reservierbar)",
+      "Restaurant und Pizzeria nur ein paar Schritte entfernt",
+      "Zusatzbetten auf Anfrage"
+    ],
+    "times": "Check-in 14:00 – 23:00 · Check-out bis 11:00",
+    "cta": "Verfügbarkeit prüfen"
   },
   "quote": {
     "text": "Die Täler liefern die Zutaten. Wir liefern das Handwerk."

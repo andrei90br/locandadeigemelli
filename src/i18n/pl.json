@@ -10,6 +10,7 @@
     "kitchen": "Kuchnia",
     "pizza": "Pizza",
     "services": "Usługi",
+    "apartments": "Apartamenty",
     "visit": "Godziny i dojazd",
     "languages": "Język",
     "open": "Otwórz menu"
@@ -59,6 +60,34 @@
     "0": { "title": "Na wynos i z dostawą", "text": "Nasza kuchnia i nasza pizza u Ciebie w domu lub w apartamencie wakacyjnym. Ta sama staranność, ten sam smak." },
     "1": { "title": "Ogród i wydarzenia", "text": "Letnie wieczory na świeżym powietrzu, urodziny, kolacje grupowe i przyjęcia. Ogród czeka na Twoje wydarzenie." },
     "2": { "title": "Lunche i spotkania biznesowe", "text": "Osobna sala, sprzęt do prezentacji, przerwa kawowa, bufet lub lekki lunch. Ty skupiasz się na spotkaniu, my zajmujemy się resztą." }
+  },
+  "apartments": {
+    "eyebrow": "Apartamenty",
+    "title": "Śpij kilka kroków od swojego stolika.",
+    "text": "Sześć niezależnych apartamentów, każdy z kuchnią i własną łazienką, aby przeżyć Val di Sole w pełni na własnych zasadach. Od 46 do 60 m², od 4 do 7 miejsc do spania. Zwierzęta mile widziane, obiekt dla niepalących. A gdy nie masz ochoty gotować, restauracja i pizzeria są kilka kroków dalej.",
+    "alt": "Apartament",
+    "beds": "miejsca do spania: {n}",
+    "book": "Zarezerwuj",
+    "rooms": {
+      "dbl2": "2 sypialnie z łóżkiem małżeńskim",
+      "dblBunk": "1 sypialnia z łóżkiem małżeńskim i 1 pokój z łóżkiem piętrowym",
+      "dblSofa": "1 sypialnia z łóżkiem małżeńskim i 1 rozkładana sofa",
+      "dblBunkSofa": "1 sypialnia z łóżkiem małżeńskim, 1 pokój z łóżkiem piętrowym i 1 rozkładana sofa",
+      "dblBunkSingleSofa": "1 sypialnia z łóżkiem małżeńskim, 1 pokój z łóżkiem piętrowym i pojedynczym, 1 rozkładana sofa"
+    },
+    "servicesTitle": "W każdym apartamencie",
+    "services": [
+      "Wi-Fi",
+      "Własna łazienka",
+      "Kuchnia z jadalnią",
+      "Część dzienna",
+      "TV",
+      "Parking publiczny (bez rezerwacji)",
+      "Restauracja i pizzeria kilka kroków dalej",
+      "Dodatkowe łóżka polowe na życzenie"
+    ],
+    "times": "Zameldowanie 14:00 – 23:00 · Wymeldowanie do 11:00",
+    "cta": "Sprawdź dostępność"
   },
   "quote": {
     "text": "Doliny dają składniki. My dajemy rzemiosło."

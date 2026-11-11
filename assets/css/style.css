@@ -48,7 +48,7 @@ p { margin: 0 0 1em; }
 .skip:focus { left: 16px; top: 16px; z-index: 100; background: var(--paper); padding: 8px 12px; }
 
 /* Bottoni */
-.btn {
+.btn { white-space: nowrap;
   display: inline-flex; align-items: center; justify-content: center;
   min-height: 52px; padding: 0 28px;
   font-size: 1rem; font-weight: 600; letter-spacing: 0.08em;
@@ -75,11 +75,11 @@ p { margin: 0 0 1em; }
 .site-header.is-scrolled, .site-header.is-open { box-shadow: 0 1px 0 rgba(255,255,255,0.08); }
 .header-inner { display: flex; align-items: center; gap: 28px; height: 150px; transition: height 0.25s; }
 .is-scrolled .header-inner { height: 104px; }
-.brand { text-decoration: none; display: flex; align-items: center; margin-right: auto; }
+.brand { text-decoration: none; display: flex; align-items: center; margin-right: auto; flex-shrink: 0; }
 .brand-logo { height: 132px; width: auto; transition: height 0.25s; }
 .is-scrolled .brand-logo { height: 90px; }
 .nav { display: flex; align-items: center; gap: 26px; }
-.nav > a {
+.nav > a { white-space: nowrap;
   font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.08em;
   font-size: 0.95rem; text-decoration: none; opacity: 0.9;
 }
@@ -91,7 +91,7 @@ p { margin: 0 0 1em; }
 .nav .langs { padding-left: 22px; border-left: 1px solid rgba(255,255,255,0.25); }
 .menu-toggle { display: none; }
 
-@media (max-width: 920px) {
+@media (max-width: 1240px) {
   .header-inner, .is-scrolled .header-inner { gap: 12px; height: 92px; }
   .brand-logo, .is-scrolled .brand-logo { height: 80px; }
   .header-cta { min-height: 38px; padding: 0 14px; font-size: 0.8rem; }
@@ -191,6 +191,27 @@ p { margin: 0 0 1em; }
 .card-body { padding: 28px 26px 32px; }
 .card-body p { color: var(--muted); margin: 0; }
 @media (max-width: 900px) { .cards { grid-template-columns: 1fr; max-width: 560px; } }
+
+/* Appartamenti */
+.apartments { padding: var(--section) 0; }
+.apartments .lead { color: var(--ink-2); }
+.apt-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
+.apt { background: #fff; display: flex; flex-direction: column; border: 1px solid var(--line); }
+.apt img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; background: var(--paper-2); }
+.apt-body { padding: 24px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+.apt-body p { color: var(--muted); margin: 0 0 0.6em; }
+.apt-body .apt-meta { color: var(--accent); font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.95rem; }
+.apt-link { margin-top: auto; padding-top: 12px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; text-decoration: none; color: var(--ink); }
+.apt-link:hover { color: var(--accent); }
+.apt-info { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); margin-top: 56px; align-items: start; }
+.apt-services { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 32px; }
+.apt-services li { padding: 8px 0 8px 22px; position: relative; break-inside: avoid; }
+.apt-services li::before { content: ''; position: absolute; left: 0; top: 18px; width: 10px; height: 2px; background: var(--accent); }
+.apt-book { background: var(--ink); color: var(--paper); padding: clamp(28px, 4vw, 40px); }
+.apt-times { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; font-size: 1.05rem; }
+.apt-cin { margin: 1.4em 0 0; font-size: 0.8rem; opacity: 0.6; }
+@media (max-width: 960px) { .apt-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .apt-info { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 600px) { .apt-grid { grid-template-columns: minmax(0, 1fr); } .apt-services { columns: 1; } }
 
 /* Citazione */
 .quote {

@@ -32,6 +32,7 @@
         <a href="#cucina">{{nav.kitchen}}</a>
         <a href="#pizza">{{nav.pizza}}</a>
         <a href="#servizi">{{nav.services}}</a>
+        <a href="#appartamenti">{{nav.apartments}}</a>
         <a href="#visita">{{nav.visit}}</a>
         <div class="langs" aria-label="{{nav.languages}}">{{langswitch}}</div>
       </nav>
@@ -116,6 +117,27 @@
           <img src="{{img.business}}" alt="" loading="lazy">
           <div class="card-body"><h3>{{services.2.title}}</h3><p>{{services.2.text}}</p></div>
         </article>
+      </div>
+    </section>
+
+    <section class="apartments" id="appartamenti">
+      <div class="wrap narrow">
+        <p class="eyebrow">{{apartments.eyebrow}}</p>
+        <h2>{{apartments.title}}</h2>
+        <p class="lead">{{apartments.text}}</p>
+      </div>
+      <div class="wrap apt-grid">{{apartments}}
+      </div>
+      <div class="wrap apt-info">
+        <div>
+          <h3>{{apartments.servicesTitle}}</h3>
+          <ul class="apt-services">{{aptServices}}</ul>
+        </div>
+        <div class="apt-book">
+          <p class="apt-times">{{apartments.times}}</p>
+          <a class="btn btn-accent" href="{{bookingUrl}}" target="_blank" rel="noopener">{{apartments.cta}}</a>
+          <p class="apt-cin">CIN IT022233B4DXV4FKKK</p>
+        </div>
       </div>
     </section>
 

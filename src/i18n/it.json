@@ -10,6 +10,7 @@
     "kitchen": "Cucina",
     "pizza": "Pizza",
     "services": "Servizi",
+    "apartments": "Appartamenti",
     "visit": "Orari e dove siamo",
     "languages": "Lingua",
     "open": "Apri il menu"
@@ -59,6 +60,34 @@
     "0": { "title": "Asporto e consegna a domicilio", "text": "La nostra cucina e la nostra pizza, a casa tua o nel tuo appartamento in vacanza. Stessa cura, stesso sapore." },
     "1": { "title": "Giardino ed eventi", "text": "Serate estive all'aperto, compleanni, cene di gruppo e feste. Il giardino è pronto ad accogliere il tuo evento." },
     "2": { "title": "Pranzi e meeting di lavoro", "text": "Sala riservata, tecnologia per presentare, coffee break, buffet o light lunch. Tu pensi alla riunione, al resto pensiamo noi." }
+  },
+  "apartments": {
+    "eyebrow": "Gli appartamenti",
+    "title": "Dormi a due passi dal tuo tavolo.",
+    "text": "Sei appartamenti indipendenti, tutti con cucina e bagno privato, per vivere la Val di Sole in piena autonomia. Da 46 a 60 m², da 4 a 7 posti letto. Animali benvenuti, ambienti non fumatori. E quando non hai voglia di cucinare, ristorante e pizzeria sono a pochi passi.",
+    "alt": "Appartamento",
+    "beds": "{n} posti letto",
+    "book": "Prenota",
+    "rooms": {
+      "dbl2": "2 camere matrimoniali",
+      "dblBunk": "1 camera matrimoniale e 1 camera con letto a castello",
+      "dblSofa": "1 camera matrimoniale e 1 divano letto",
+      "dblBunkSofa": "1 camera matrimoniale, 1 camera con letto a castello e 1 divano letto",
+      "dblBunkSingleSofa": "1 camera matrimoniale, 1 camera con letto a castello e letto singolo, 1 divano letto"
+    },
+    "servicesTitle": "In tutti gli appartamenti",
+    "services": [
+      "Wi-Fi",
+      "Bagno privato",
+      "Cucina e zona pranzo",
+      "Zona giorno",
+      "TV",
+      "Parcheggio pubblico (non prenotabile)",
+      "Ristorante e pizzeria a pochi passi",
+      "Brandine aggiuntive su richiesta"
+    ],
+    "times": "Check-in 14:00 – 23:00 · Check-out entro le 11:00",
+    "cta": "Verifica disponibilità"
   },
   "quote": {
     "text": "Le valli forniscono gli ingredienti. Noi ci mettiamo il mestiere."

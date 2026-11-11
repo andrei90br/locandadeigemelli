@@ -23,6 +23,17 @@ const IMG = {
   business: SRC + '2022/06/Business-Locanda-Elisa-2.jpg',
 };
 
+// Appartamenti (dati dal sito attuale). rooms = chiave in apartments.rooms delle traduzioni.
+const BOOKING_URL = 'https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315';
+const APARTMENTS = [
+  { name: 'Jonagold', size: 46, beds: 4, rooms: 'dbl2', img: SRC + '2022/07/Jonagold-05.jpg' },
+  { name: 'Pink Lady', size: 46, beds: 4, rooms: 'dblBunk', img: SRC + '2022/07/Pink-Lady-02-1.jpg' },
+  { name: 'Renetta', size: 46, beds: 4, rooms: 'dblSofa', img: SRC + '2022/07/Renetta-02-1.jpg' },
+  { name: 'Fuji', size: 46, beds: 4, rooms: 'dblBunk', img: SRC + '2023/02/b82f9da3-068b-4e83-b49d-6dd824b1772f-jpg.webp' },
+  { name: 'Golden', size: 60, beds: 6, rooms: 'dblBunkSofa', img: SRC + '2022/07/Golden-02.jpg' },
+  { name: 'Morgana', size: 60, beds: 7, rooms: 'dblBunkSingleSofa', img: SRC + '2022/07/Morgana-03.jpg' },
+];
+
 const template = readFileSync('src/template.html', 'utf8');
 
 const escapeHtml = (s) =>
@@ -66,8 +77,24 @@ for (const lang of LANGS) {
     ],
   });
 
+  const a = t.apartments;
+  const apartments = APARTMENTS.map((ap) => `
+        <article class="apt">
+          <img src="${ap.img}" alt="${escapeHtml(a.alt)} ${ap.name}" loading="lazy">
+          <div class="apt-body">
+            <h3>${ap.name}</h3>
+            <p class="apt-meta">${ap.size} m² · ${escapeHtml(a.beds.replace('{n}', ap.beds))}</p>
+            <p>${escapeHtml(a.rooms[ap.rooms])}</p>
+            <a class="apt-link" href="${BOOKING_URL}" target="_blank" rel="noopener">${escapeHtml(a.book)} →</a>
+          </div>
+        </article>`).join('');
+  const aptServices = a.services.map((x) => `<li>${escapeHtml(x)}</li>`).join('');
+
   const vars = {
     lang: lang.code,
+    apartments,
+    aptServices,
+    bookingUrl: BOOKING_URL,
     base,
     langpath: lang.path,
     canonical: SITE_URL + lang.path,

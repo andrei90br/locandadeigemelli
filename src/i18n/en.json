@@ -10,6 +10,7 @@
     "kitchen": "Kitchen",
     "pizza": "Pizza",
     "services": "Services",
+    "apartments": "Apartments",
     "visit": "Hours and location",
     "languages": "Language",
     "open": "Open menu"
@@ -59,6 +60,34 @@
     "0": { "title": "Takeaway and delivery", "text": "Our cooking and our pizza, at your home or holiday apartment. Same care, same flavour." },
     "1": { "title": "Garden and events", "text": "Summer evenings outdoors, birthdays, group dinners and parties. The garden is ready for your event." },
     "2": { "title": "Business lunches and meetings", "text": "A private room, presentation equipment, coffee breaks, buffet or light lunch. You focus on the meeting, we take care of the rest." }
+  },
+  "apartments": {
+    "eyebrow": "The apartments",
+    "title": "Sleep a few steps from your table.",
+    "text": "Six self-contained apartments, each with its own kitchen and private bathroom, so you can enjoy Val di Sole on your own terms. From 46 to 60 m², sleeping 4 to 7. Pets welcome, non-smoking throughout. And when you don't feel like cooking, the restaurant and pizzeria are a few steps away.",
+    "alt": "Apartment",
+    "beds": "sleeps {n}",
+    "book": "Book",
+    "rooms": {
+      "dbl2": "2 double bedrooms",
+      "dblBunk": "1 double bedroom and 1 room with bunk beds",
+      "dblSofa": "1 double bedroom and 1 sofa bed",
+      "dblBunkSofa": "1 double bedroom, 1 room with bunk beds and 1 sofa bed",
+      "dblBunkSingleSofa": "1 double bedroom, 1 room with bunk beds and a single bed, 1 sofa bed"
+    },
+    "servicesTitle": "Every apartment has",
+    "services": [
+      "Wi-Fi",
+      "Private bathroom",
+      "Kitchen and dining area",
+      "Living area",
+      "TV",
+      "Public parking (cannot be reserved)",
+      "Restaurant and pizzeria a few steps away",
+      "Extra folding beds on request"
+    ],
+    "times": "Check-in 14:00 – 23:00 · Check-out by 11:00",
+    "cta": "Check availability"
   },
   "quote": {
     "text": "The valleys provide the ingredients. We bring the craft."
