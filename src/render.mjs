@@ -102,7 +102,7 @@ export function layout(c, { title, description, image, body, jsonld }) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${e(title)}</title>
+${process.env.PREVIEW ? '  <meta name="robots" content="noindex, nofollow">\n' : ''}  <title>${e(title)}</title>
   <meta name="description" content="${e(description)}">
   <link rel="canonical" href="${canonical}">
 ${alternates}

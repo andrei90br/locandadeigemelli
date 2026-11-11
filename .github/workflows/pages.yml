@@ -22,13 +22,29 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/checkout@v4
+        with:
+          ref: sviluppo
+          path: sviluppo
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node build.mjs
+      # Sito in lavorazione sul branch "sviluppo": online c'è la pagina "in arrivo" nella root
+      # e un'anteprima nascosta (noindex) del nuovo sito in /anteprima/.
+      # Dopo ogni push su "sviluppo" rilanciare questo workflow (Actions → Run workflow) per aggiornare l'anteprima.
+      # Al lancio: fondere "sviluppo" in main, togliere l'anteprima e pubblicare il sito (node build.mjs + path: .).
+      - name: Prepara pagina "in arrivo" e anteprima
+        run: |
+          mkdir -p _site/anteprima
+          cp -r in-arrivo/. _site/
+          cd sviluppo
+          PREVIEW=1 node build.mjs
+          cp -r index.html en de pl appartamenti ristorante val-di-sole richiesta assets ../_site/anteprima/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
