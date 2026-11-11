@@ -137,7 +137,7 @@
             <h3>Jonagold</h3>
             <p class="apt-meta">46 m² · sleeps 4</p>
             <p>2 double bedrooms</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Book →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Jonagold">Enquire →</a>
           </div>
         </article>
         <article class="apt">
@@ -146,7 +146,7 @@
             <h3>Pink Lady</h3>
             <p class="apt-meta">46 m² · sleeps 4</p>
             <p>1 double bedroom and 1 room with bunk beds</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Book →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Pink Lady">Enquire →</a>
           </div>
         </article>
         <article class="apt">
@@ -155,7 +155,7 @@
             <h3>Renetta</h3>
             <p class="apt-meta">46 m² · sleeps 4</p>
             <p>1 double bedroom and 1 sofa bed</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Book →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Renetta">Enquire →</a>
           </div>
         </article>
         <article class="apt">
@@ -164,7 +164,7 @@
             <h3>Fuji</h3>
             <p class="apt-meta">46 m² · sleeps 4</p>
             <p>1 double bedroom and 1 room with bunk beds</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Book →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Fuji">Enquire →</a>
           </div>
         </article>
         <article class="apt">
@@ -173,7 +173,7 @@
             <h3>Golden</h3>
             <p class="apt-meta">60 m² · sleeps 6</p>
             <p>1 double bedroom, 1 room with bunk beds and 1 sofa bed</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Book →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Golden">Enquire →</a>
           </div>
         </article>
         <article class="apt">
@@ -182,7 +182,7 @@
             <h3>Morgana</h3>
             <p class="apt-meta">60 m² · sleeps 7</p>
             <p>1 double bedroom, 1 room with bunk beds and a single bed, 1 sofa bed</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Book →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Morgana">Enquire →</a>
           </div>
         </article>
       </div>
@@ -193,9 +193,34 @@
         </div>
         <div class="apt-book">
           <p class="apt-times">Check-in 14:00 – 23:00 · Check-out by 11:00</p>
-          <a class="btn btn-accent" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Check availability</a>
-          <p class="apt-cin">CIN IT022233B4DXV4FKKK</p>
+          <a class="btn btn-accent" href="#richiesta">Request a booking</a>
         </div>
+      </div>
+      <div class="wrap request" id="richiesta">
+        <div class="request-intro">
+          <h3>Request your booking</h3>
+          <p>Tell us your dates, the number of guests and, if you like, your preferred apartment. We'll reply by email with availability and price. The request is not binding.</p>
+        </div>
+        <p class="request-sent" role="status" hidden data-request-sent>Thank you! We've received your request and will reply by email as soon as possible.</p>
+        <form class="request-form" action="https://formsubmit.co/lalocandadeigemelli@gmail.com" method="POST" data-request-form>
+          <input type="hidden" name="_subject" value="Apartment booking request – Locanda dei Gemelli website">
+          <input type="hidden" name="_next" value="https://locandadeigemelli.com/en/?richiesta=inviata">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="Lingua" value="en">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label>Full name *<input type="text" name="Nome" required autocomplete="name"></label>
+          <label>Email *<input type="email" name="email" required autocomplete="email"></label>
+          <label>Phone<input type="tel" name="Telefono" autocomplete="tel"></label>
+          <label>Apartment<select name="Appartamento" data-apt-select><option value="">No preference</option><option>Jonagold</option><option>Pink Lady</option><option>Renetta</option><option>Fuji</option><option>Golden</option><option>Morgana</option></select></label>
+          <label>Arrival *<input type="date" name="Arrivo" required></label>
+          <label>Departure *<input type="date" name="Partenza" required></label>
+          <label>Guests *<input type="number" name="Ospiti" min="1" max="7" required></label>
+          <label>Pets<select name="Animali"><option>No</option><option>Yes</option></select></label>
+          <label class="full">Special requests<textarea name="Messaggio" rows="4"></textarea></label>
+          <button class="btn btn-accent full" type="submit">Send request</button>
+          <p class="full request-note">We only use your details to reply to your request.</p>
+        </form>
       </div>
     </section>
 

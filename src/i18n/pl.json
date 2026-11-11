@@ -67,7 +67,7 @@
     "text": "Sześć niezależnych apartamentów, każdy z kuchnią i własną łazienką, aby przeżyć Val di Sole w pełni na własnych zasadach. Od 46 do 60 m², od 4 do 7 miejsc do spania. Zwierzęta mile widziane, obiekt dla niepalących. A gdy nie masz ochoty gotować, restauracja i pizzeria są kilka kroków dalej.",
     "alt": "Apartament",
     "beds": "miejsca do spania: {n}",
-    "book": "Zarezerwuj",
+    "book": "Zapytaj",
     "rooms": {
       "dbl2": "2 sypialnie z łóżkiem małżeńskim",
       "dblBunk": "1 sypialnia z łóżkiem małżeńskim i 1 pokój z łóżkiem piętrowym",
@@ -87,7 +87,27 @@
       "Dodatkowe łóżka polowe na życzenie"
     ],
     "times": "Zameldowanie 14:00 – 23:00 · Wymeldowanie do 11:00",
-    "cta": "Sprawdź dostępność"
+    "cta": "Wyślij zapytanie o rezerwację"
+  },
+  "form": {
+    "title": "Zapytaj o rezerwację",
+    "text": "Podaj daty, liczbę gości i, jeśli chcesz, wybrany apartament. Odpowiemy e-mailem, podając dostępność i cenę. Zapytanie nie jest wiążące.",
+    "subject": "Zapytanie o rezerwację apartamentu – strona Locanda dei Gemelli",
+    "name": "Imię i nazwisko",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "apartment": "Apartament",
+    "any": "Bez preferencji",
+    "arrival": "Przyjazd",
+    "departure": "Wyjazd",
+    "guests": "Liczba gości",
+    "pets": "Zwierzęta",
+    "no": "Nie",
+    "yes": "Tak",
+    "message": "Dodatkowe życzenia",
+    "submit": "Wyślij zapytanie",
+    "note": "Twoje dane wykorzystamy wyłącznie do odpowiedzi na zapytanie.",
+    "sent": "Dziękujemy! Otrzymaliśmy Twoje zapytanie i wkrótce odpowiemy e-mailem."
   },
   "quote": {
     "text": "Doliny dają składniki. My dajemy rzemiosło."

@@ -21,4 +21,15 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') setOpen(false);
   });
+
+  // Richiesta appartamenti: preseleziona l'appartamento e mostra la conferma dopo l'invio.
+  const aptSelect = document.querySelector('[data-apt-select]');
+  document.querySelectorAll('[data-apt]').forEach((link) =>
+    link.addEventListener('click', () => { aptSelect.value = link.dataset.apt; })
+  );
+  if (new URLSearchParams(location.search).get('richiesta') === 'inviata') {
+    document.querySelector('[data-request-sent]').hidden = false;
+    document.querySelector('[data-request-form]').hidden = true;
+    window.addEventListener('load', () => document.getElementById('richiesta').scrollIntoView({ behavior: 'instant' }));
+  }
 })();

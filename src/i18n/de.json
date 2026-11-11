@@ -67,7 +67,7 @@
     "text": "Sechs unabhängige Ferienwohnungen, alle mit Küche und eigenem Bad, um das Val di Sole ganz nach Ihrem Rhythmus zu erleben. 46 bis 60 m², 4 bis 7 Schlafplätze. Haustiere willkommen, Nichtraucher-Unterkunft. Und wenn Sie keine Lust zu kochen haben, sind Restaurant und Pizzeria nur ein paar Schritte entfernt.",
     "alt": "Ferienwohnung",
     "beds": "{n} Schlafplätze",
-    "book": "Buchen",
+    "book": "Anfragen",
     "rooms": {
       "dbl2": "2 Doppelzimmer",
       "dblBunk": "1 Doppelzimmer und 1 Zimmer mit Etagenbett",
@@ -87,7 +87,27 @@
       "Zusatzbetten auf Anfrage"
     ],
     "times": "Check-in 14:00 – 23:00 · Check-out bis 11:00",
-    "cta": "Verfügbarkeit prüfen"
+    "cta": "Buchung anfragen"
+  },
+  "form": {
+    "title": "Ihre Buchungsanfrage",
+    "text": "Nennen Sie uns Ihre Reisedaten, die Anzahl der Gäste und, wenn Sie möchten, Ihre Wunschwohnung. Wir antworten per E-Mail mit Verfügbarkeit und Preis. Die Anfrage ist unverbindlich.",
+    "subject": "Buchungsanfrage Ferienwohnung – Website Locanda dei Gemelli",
+    "name": "Vor- und Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "apartment": "Ferienwohnung",
+    "any": "Keine Präferenz",
+    "arrival": "Anreise",
+    "departure": "Abreise",
+    "guests": "Gäste",
+    "pets": "Haustiere",
+    "no": "Nein",
+    "yes": "Ja",
+    "message": "Besondere Wünsche",
+    "submit": "Anfrage senden",
+    "note": "Wir verwenden Ihre Daten nur zur Beantwortung Ihrer Anfrage.",
+    "sent": "Vielen Dank! Wir haben Ihre Anfrage erhalten und antworten Ihnen so bald wie möglich per E-Mail."
   },
   "quote": {
     "text": "Die Täler liefern die Zutaten. Wir liefern das Handwerk."

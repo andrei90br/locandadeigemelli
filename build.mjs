@@ -24,7 +24,8 @@ const IMG = {
 };
 
 // Appartamenti (dati dal sito attuale). rooms = chiave in apartments.rooms delle traduzioni.
-const BOOKING_URL = 'https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315';
+// Le richieste di prenotazione arrivano via email tramite FormSubmit.
+const REQUEST_EMAIL = 'lalocandadeigemelli@gmail.com';
 const APARTMENTS = [
   { name: 'Jonagold', size: 46, beds: 4, rooms: 'dbl2', img: SRC + '2022/07/Jonagold-05.jpg' },
   { name: 'Pink Lady', size: 46, beds: 4, rooms: 'dblBunk', img: SRC + '2022/07/Pink-Lady-02-1.jpg' },
@@ -85,7 +86,7 @@ for (const lang of LANGS) {
             <h3>${ap.name}</h3>
             <p class="apt-meta">${ap.size} m² · ${escapeHtml(a.beds.replace('{n}', ap.beds))}</p>
             <p>${escapeHtml(a.rooms[ap.rooms])}</p>
-            <a class="apt-link" href="${BOOKING_URL}" target="_blank" rel="noopener">${escapeHtml(a.book)} →</a>
+            <a class="apt-link" href="#richiesta" data-apt="${ap.name}">${escapeHtml(a.book)} →</a>
           </div>
         </article>`).join('');
   const aptServices = a.services.map((x) => `<li>${escapeHtml(x)}</li>`).join('');
@@ -94,7 +95,9 @@ for (const lang of LANGS) {
     lang: lang.code,
     apartments,
     aptServices,
-    bookingUrl: BOOKING_URL,
+    formAction: `https://formsubmit.co/${REQUEST_EMAIL}`,
+    formNext: `${SITE_URL}${lang.path}?richiesta=inviata`,
+    aptOptions: APARTMENTS.map((ap) => `<option>${ap.name}</option>`).join(''),
     base,
     langpath: lang.path,
     canonical: SITE_URL + lang.path,

@@ -67,7 +67,7 @@
     "text": "Six self-contained apartments, each with its own kitchen and private bathroom, so you can enjoy Val di Sole on your own terms. From 46 to 60 m², sleeping 4 to 7. Pets welcome, non-smoking throughout. And when you don't feel like cooking, the restaurant and pizzeria are a few steps away.",
     "alt": "Apartment",
     "beds": "sleeps {n}",
-    "book": "Book",
+    "book": "Enquire",
     "rooms": {
       "dbl2": "2 double bedrooms",
       "dblBunk": "1 double bedroom and 1 room with bunk beds",
@@ -87,7 +87,27 @@
       "Extra folding beds on request"
     ],
     "times": "Check-in 14:00 – 23:00 · Check-out by 11:00",
-    "cta": "Check availability"
+    "cta": "Request a booking"
+  },
+  "form": {
+    "title": "Request your booking",
+    "text": "Tell us your dates, the number of guests and, if you like, your preferred apartment. We'll reply by email with availability and price. The request is not binding.",
+    "subject": "Apartment booking request – Locanda dei Gemelli website",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "apartment": "Apartment",
+    "any": "No preference",
+    "arrival": "Arrival",
+    "departure": "Departure",
+    "guests": "Guests",
+    "pets": "Pets",
+    "no": "No",
+    "yes": "Yes",
+    "message": "Special requests",
+    "submit": "Send request",
+    "note": "We only use your details to reply to your request.",
+    "sent": "Thank you! We've received your request and will reply by email as soon as possible."
   },
   "quote": {
     "text": "The valleys provide the ingredients. We bring the craft."

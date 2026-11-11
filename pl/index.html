@@ -137,7 +137,7 @@
             <h3>Jonagold</h3>
             <p class="apt-meta">46 m² · miejsca do spania: 4</p>
             <p>2 sypialnie z łóżkiem małżeńskim</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Zarezerwuj →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Jonagold">Zapytaj →</a>
           </div>
         </article>
         <article class="apt">
@@ -146,7 +146,7 @@
             <h3>Pink Lady</h3>
             <p class="apt-meta">46 m² · miejsca do spania: 4</p>
             <p>1 sypialnia z łóżkiem małżeńskim i 1 pokój z łóżkiem piętrowym</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Zarezerwuj →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Pink Lady">Zapytaj →</a>
           </div>
         </article>
         <article class="apt">
@@ -155,7 +155,7 @@
             <h3>Renetta</h3>
             <p class="apt-meta">46 m² · miejsca do spania: 4</p>
             <p>1 sypialnia z łóżkiem małżeńskim i 1 rozkładana sofa</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Zarezerwuj →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Renetta">Zapytaj →</a>
           </div>
         </article>
         <article class="apt">
@@ -164,7 +164,7 @@
             <h3>Fuji</h3>
             <p class="apt-meta">46 m² · miejsca do spania: 4</p>
             <p>1 sypialnia z łóżkiem małżeńskim i 1 pokój z łóżkiem piętrowym</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Zarezerwuj →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Fuji">Zapytaj →</a>
           </div>
         </article>
         <article class="apt">
@@ -173,7 +173,7 @@
             <h3>Golden</h3>
             <p class="apt-meta">60 m² · miejsca do spania: 6</p>
             <p>1 sypialnia z łóżkiem małżeńskim, 1 pokój z łóżkiem piętrowym i 1 rozkładana sofa</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Zarezerwuj →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Golden">Zapytaj →</a>
           </div>
         </article>
         <article class="apt">
@@ -182,7 +182,7 @@
             <h3>Morgana</h3>
             <p class="apt-meta">60 m² · miejsca do spania: 7</p>
             <p>1 sypialnia z łóżkiem małżeńskim, 1 pokój z łóżkiem piętrowym i pojedynczym, 1 rozkładana sofa</p>
-            <a class="apt-link" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Zarezerwuj →</a>
+            <a class="apt-link" href="#richiesta" data-apt="Morgana">Zapytaj →</a>
           </div>
         </article>
       </div>
@@ -193,9 +193,34 @@
         </div>
         <div class="apt-book">
           <p class="apt-times">Zameldowanie 14:00 – 23:00 · Wymeldowanie do 11:00</p>
-          <a class="btn btn-accent" href="https://booking.roomcloud.net/be/se2/hotel.jsp?hotel=16315" target="_blank" rel="noopener">Sprawdź dostępność</a>
-          <p class="apt-cin">CIN IT022233B4DXV4FKKK</p>
+          <a class="btn btn-accent" href="#richiesta">Wyślij zapytanie o rezerwację</a>
         </div>
+      </div>
+      <div class="wrap request" id="richiesta">
+        <div class="request-intro">
+          <h3>Zapytaj o rezerwację</h3>
+          <p>Podaj daty, liczbę gości i, jeśli chcesz, wybrany apartament. Odpowiemy e-mailem, podając dostępność i cenę. Zapytanie nie jest wiążące.</p>
+        </div>
+        <p class="request-sent" role="status" hidden data-request-sent>Dziękujemy! Otrzymaliśmy Twoje zapytanie i wkrótce odpowiemy e-mailem.</p>
+        <form class="request-form" action="https://formsubmit.co/lalocandadeigemelli@gmail.com" method="POST" data-request-form>
+          <input type="hidden" name="_subject" value="Zapytanie o rezerwację apartamentu – strona Locanda dei Gemelli">
+          <input type="hidden" name="_next" value="https://locandadeigemelli.com/pl/?richiesta=inviata">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="Lingua" value="pl">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label>Imię i nazwisko *<input type="text" name="Nome" required autocomplete="name"></label>
+          <label>E-mail *<input type="email" name="email" required autocomplete="email"></label>
+          <label>Telefon<input type="tel" name="Telefono" autocomplete="tel"></label>
+          <label>Apartament<select name="Appartamento" data-apt-select><option value="">Bez preferencji</option><option>Jonagold</option><option>Pink Lady</option><option>Renetta</option><option>Fuji</option><option>Golden</option><option>Morgana</option></select></label>
+          <label>Przyjazd *<input type="date" name="Arrivo" required></label>
+          <label>Wyjazd *<input type="date" name="Partenza" required></label>
+          <label>Liczba gości *<input type="number" name="Ospiti" min="1" max="7" required></label>
+          <label>Zwierzęta<select name="Animali"><option>Nie</option><option>Tak</option></select></label>
+          <label class="full">Dodatkowe życzenia<textarea name="Messaggio" rows="4"></textarea></label>
+          <button class="btn btn-accent full" type="submit">Wyślij zapytanie</button>
+          <p class="full request-note">Twoje dane wykorzystamy wyłącznie do odpowiedzi na zapytanie.</p>
+        </form>
       </div>
     </section>
 

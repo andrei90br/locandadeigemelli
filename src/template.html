@@ -135,9 +135,34 @@
         </div>
         <div class="apt-book">
           <p class="apt-times">{{apartments.times}}</p>
-          <a class="btn btn-accent" href="{{bookingUrl}}" target="_blank" rel="noopener">{{apartments.cta}}</a>
-          <p class="apt-cin">CIN IT022233B4DXV4FKKK</p>
+          <a class="btn btn-accent" href="#richiesta">{{apartments.cta}}</a>
         </div>
+      </div>
+      <div class="wrap request" id="richiesta">
+        <div class="request-intro">
+          <h3>{{form.title}}</h3>
+          <p>{{form.text}}</p>
+        </div>
+        <p class="request-sent" role="status" hidden data-request-sent>{{form.sent}}</p>
+        <form class="request-form" action="{{formAction}}" method="POST" data-request-form>
+          <input type="hidden" name="_subject" value="{{form.subject}}">
+          <input type="hidden" name="_next" value="{{formNext}}">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="Lingua" value="{{lang}}">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label>{{form.name}} *<input type="text" name="Nome" required autocomplete="name"></label>
+          <label>{{form.email}} *<input type="email" name="email" required autocomplete="email"></label>
+          <label>{{form.phone}}<input type="tel" name="Telefono" autocomplete="tel"></label>
+          <label>{{form.apartment}}<select name="Appartamento" data-apt-select><option value="">{{form.any}}</option>{{aptOptions}}</select></label>
+          <label>{{form.arrival}} *<input type="date" name="Arrivo" required></label>
+          <label>{{form.departure}} *<input type="date" name="Partenza" required></label>
+          <label>{{form.guests}} *<input type="number" name="Ospiti" min="1" max="7" required></label>
+          <label>{{form.pets}}<select name="Animali"><option>{{form.no}}</option><option>{{form.yes}}</option></select></label>
+          <label class="full">{{form.message}}<textarea name="Messaggio" rows="4"></textarea></label>
+          <button class="btn btn-accent full" type="submit">{{form.submit}}</button>
+          <p class="full request-note">{{form.note}}</p>
+        </form>
       </div>
     </section>
 

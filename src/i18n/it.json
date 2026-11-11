@@ -67,7 +67,7 @@
     "text": "Sei appartamenti indipendenti, tutti con cucina e bagno privato, per vivere la Val di Sole in piena autonomia. Da 46 a 60 m², da 4 a 7 posti letto. Animali benvenuti, ambienti non fumatori. E quando non hai voglia di cucinare, ristorante e pizzeria sono a pochi passi.",
     "alt": "Appartamento",
     "beds": "{n} posti letto",
-    "book": "Prenota",
+    "book": "Richiedi",
     "rooms": {
       "dbl2": "2 camere matrimoniali",
       "dblBunk": "1 camera matrimoniale e 1 camera con letto a castello",
@@ -87,7 +87,27 @@
       "Brandine aggiuntive su richiesta"
     ],
     "times": "Check-in 14:00 – 23:00 · Check-out entro le 11:00",
-    "cta": "Verifica disponibilità"
+    "cta": "Richiedi una prenotazione"
+  },
+  "form": {
+    "title": "Richiedi la tua prenotazione",
+    "text": "Indicaci date, numero di ospiti e, se vuoi, l'appartamento che preferisci. Ti rispondiamo via email con disponibilità e prezzo. La richiesta non è vincolante.",
+    "subject": "Richiesta prenotazione appartamento – sito Locanda dei Gemelli",
+    "name": "Nome e cognome",
+    "email": "Email",
+    "phone": "Telefono",
+    "apartment": "Appartamento",
+    "any": "Nessuna preferenza",
+    "arrival": "Arrivo",
+    "departure": "Partenza",
+    "guests": "Ospiti",
+    "pets": "Animali",
+    "no": "No",
+    "yes": "Sì",
+    "message": "Richieste particolari",
+    "submit": "Invia la richiesta",
+    "note": "Usiamo i tuoi dati solo per rispondere alla richiesta.",
+    "sent": "Grazie! Abbiamo ricevuto la tua richiesta e ti rispondiamo via email al più presto."
   },
   "quote": {
     "text": "Le valli forniscono gli ingredienti. Noi ci mettiamo il mestiere."
