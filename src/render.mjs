@@ -231,6 +231,7 @@ export function home(c) {
   const body = `
     <section class="hero hero-home" style="--bg: url('${c.asset(IMG.hero)}')">
       <div class="wrap hero-inner">
+        <p class="notice">${e(h.notice)}</p>
         <p class="eyebrow">${e(h.hero.eyebrow)}</p>
         <h1>${e(h.hero.title)}</h1>
         <p class="lead">${e(h.hero.lead)}</p>
