@@ -128,7 +128,9 @@
     "gallery": "Fotogalerie",
     "cta": "Diese Wohnung anfragen",
     "others": "Weitere Ferienwohnungen",
-    "photo": "Foto {n} der Ferienwohnung {name}"
+    "photo": "Foto {n} der Ferienwohnung {name}",
+    "roomNames": { "salotto": "Wohnzimmer", "soggiorno": "Wohnzimmer", "cucina": "Küche", "stanza": "Schlafzimmer", "bagno": "Badezimmer", "entrata": "Eingang", "corridoio": "Flur" },
+    "lbClose": "Schließen", "lbPrev": "Vorheriges Foto", "lbNext": "Nächstes Foto"
   },
   "restaurant": {
     "meta": {

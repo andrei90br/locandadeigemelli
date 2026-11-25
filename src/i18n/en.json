@@ -128,7 +128,9 @@
     "gallery": "Photo gallery",
     "cta": "Enquire about this apartment",
     "others": "Other apartments",
-    "photo": "Photo {n} of the {name} apartment"
+    "photo": "Photo {n} of the {name} apartment",
+    "roomNames": { "salotto": "Living room", "soggiorno": "Living room", "cucina": "Kitchen", "stanza": "Bedroom", "bagno": "Bathroom", "entrata": "Entrance", "corridoio": "Hallway" },
+    "lbClose": "Close", "lbPrev": "Previous photo", "lbNext": "Next photo"
   },
   "restaurant": {
     "meta": {

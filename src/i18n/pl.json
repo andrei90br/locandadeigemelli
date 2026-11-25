@@ -128,7 +128,9 @@
     "gallery": "Galeria zdjęć",
     "cta": "Zapytaj o ten apartament",
     "others": "Pozostałe apartamenty",
-    "photo": "Zdjęcie {n} apartamentu {name}"
+    "photo": "Zdjęcie {n} apartamentu {name}",
+    "roomNames": { "salotto": "Salon", "soggiorno": "Salon", "cucina": "Kuchnia", "stanza": "Sypialnia", "bagno": "Łazienka", "entrata": "Wejście", "corridoio": "Korytarz" },
+    "lbClose": "Zamknij", "lbPrev": "Poprzednie zdjęcie", "lbNext": "Następne zdjęcie"
   },
   "restaurant": {
     "meta": {

@@ -16,7 +16,9 @@ export function context(lang, t, pagePath) {
   const root = '../'.repeat(depth);
   const href = (path) => root + lang.path + path;
   const asset = (src) => (isExternal(src) ? src : root + src);
-  return { lang, t, pagePath, root, href, asset };
+  // Nei var(--bg) l'url() è risolto rispetto a assets/css/style.css, non alla pagina.
+  const bg = (src) => (isExternal(src) ? src : '../../' + src);
+  return { lang, t, pagePath, root, href, asset, bg };
 }
 
 const aptHref = (c, a) => c.href(`${PAGES.apartments}${a.slug}/`);
@@ -114,7 +116,7 @@ ${alternates}
   <meta property="og:type" content="website">
   <meta property="og:title" content="${e(title)}">
   <meta property="og:description" content="${e(description)}">
-  <meta property="og:image" content="${e(image || IMG.hero)}">
+  <meta property="og:image" content="${e(isExternal(image || IMG.hero) ? image || IMG.hero : SITE_URL + image)}">
   <meta property="og:locale" content="${c.t.locale}">
   <link rel="icon" type="image/png" href="${c.root}assets/img/favicon.png">
   <link rel="apple-touch-icon" href="${c.root}assets/img/apple-touch-icon.png">
@@ -136,7 +138,7 @@ ${jsonld ? `  <script type="application/ld+json">${JSON.stringify(jsonld)}</scri
 
 function pageHero(c, h, image, extra = '') {
   return `
-    <section class="hero hero-page" style="--bg: url('${c.asset(image)}')">
+    <section class="hero hero-page" style="--bg: url('${c.bg(image)}')">
       <div class="wrap hero-inner">
         <p class="eyebrow">${e(h.eyebrow)}</p>
         <h1>${e(h.title)}</h1>
@@ -164,7 +166,7 @@ function aptCard(c, a) {
   const t = c.t;
   return `
         <article class="apt-card">
-          <a class="apt-media" href="${aptHref(c, a)}"><img src="${a.photos[0]}" alt="${e(t.apartment.eyebrow)} ${e(a.name)}" loading="lazy"></a>
+          <a class="apt-media" href="${aptHref(c, a)}"><img src="${c.asset(a.photos[0].thumb)}" alt="${e(t.apartment.eyebrow)} ${e(a.name)}" loading="lazy"></a>
           <div class="apt-body">
             <h3><a href="${aptHref(c, a)}">${e(a.name)}</a></h3>
             <p class="apt-meta">${a.size} m² · ${e(fill(t.common.beds, { n: a.beds }))}</p>
@@ -229,7 +231,7 @@ function baseJsonLd(c) {
 export function home(c) {
   const t = c.t, h = t.home;
   const body = `
-    <section class="hero hero-home" style="--bg: url('${c.asset(IMG.hero)}')">
+    <section class="hero hero-home" style="--bg: url('${c.bg(IMG.hero)}')">
       <div class="wrap hero-inner">
         <p class="notice">${e(h.notice)}</p>
         <p class="eyebrow">${e(h.hero.eyebrow)}</p>
@@ -341,7 +343,7 @@ export function apartment(c, a) {
   const vars = { name: a.name, size: a.size, beds: a.beds, rooms };
   const others = APARTMENTS.filter((o) => o !== a);
   const body = `
-    <section class="hero hero-page" style="--bg: url('${a.photos[0]}')">
+    <section class="hero hero-page" style="--bg: url('${c.bg(a.photos[0].src)}')">
       <div class="wrap hero-inner">
         <p class="eyebrow">${e(p.eyebrow)}</p>
         <h1>${e(a.name)}</h1>
@@ -373,7 +375,7 @@ export function apartment(c, a) {
       <div class="wrap">
         <h2 class="h3">${e(p.gallery)}</h2>
         <div class="gallery" data-gallery>
-          ${a.photos.map((src, i) => `<a href="${src}" class="gallery-item" data-lightbox><img src="${src}" alt="${e(fill(p.photo, { n: i + 1, name: a.name }))}" loading="lazy"></a>`).join('\n          ')}
+          ${a.photos.map((ph, i) => `<a href="${c.asset(ph.src)}" class="gallery-item" data-lightbox><img src="${c.asset(ph.thumb)}" alt="${e(a.name)} · ${e(p.roomNames[ph.room] || fill(p.photo, { n: i + 1, name: a.name }))}" loading="lazy" decoding="async"></a>`).join('\n          ')}
         </div>
       </div>
     </section>
@@ -386,8 +388,13 @@ export function apartment(c, a) {
       <div class="wrap apt-grid">${others.slice(0, 3).map((o) => aptCard(c, o)).join('')}
       </div>
     </section>
-    <dialog class="lightbox" data-lightbox-dialog><img alt=""><button type="button" aria-label="×" data-close>×</button></dialog>`;
-  return layout(c, { title: fill(p.metaTitle, vars), description: fill(p.metaDescription, vars), image: a.photos[0], body });
+    <dialog class="lightbox" data-lightbox-dialog>
+      <figure><img alt=""><figcaption data-caption></figcaption></figure>
+      <button type="button" class="lb-close" aria-label="${e(p.lbClose)}" data-close>×</button>
+      <button type="button" class="lb-nav lb-prev" aria-label="${e(p.lbPrev)}" data-prev>‹</button>
+      <button type="button" class="lb-nav lb-next" aria-label="${e(p.lbNext)}" data-next>›</button>
+    </dialog>`;
+  return layout(c, { title: fill(p.metaTitle, vars), description: fill(p.metaDescription, vars), image: a.photos[0].src, body });
 }
 
 export function restaurant(c) {

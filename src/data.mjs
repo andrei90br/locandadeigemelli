@@ -1,5 +1,8 @@
-// Dati del sito. Le foto sono provvisorie e vengono da locandaelisa.it:
-// quando arrivano quelle nuove vanno messe in assets/img/ e aggiornati i percorsi qui.
+// Dati del sito. Le foto degli appartamenti sono in assets/img/appartamenti/<slug>/
+// (file <stanza>-NN.webp a 2000px + <stanza>-NN-sm.webp a 900px, creati da scripts/foto.py).
+// Le altre foto sono ancora provvisorie e vengono da locandaelisa.it.
+import { readdirSync } from 'node:fs';
+
 export const SITE_URL = 'https://locandadeigemelli.com/';
 export const REQUEST_EMAIL = 'lalocandadeigemelli@gmail.com';
 export const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Via+Campiglio+59+38025+Dimaro+Folgarida';
@@ -20,25 +23,33 @@ export const IMG = {
   takeaway: SRC + '2022/06/Asporto-e-consegna-a-domicilio.jpg',
   garden: SRC + '2022/07/servizio-giardino-eventi.jpg',
   business: SRC + '2022/06/Business-Locanda-Elisa-2.jpg',
-  stay: SRC + '2022/07/Golden-02.jpg',
+  stay: 'assets/img/appartamenti/golden/cucina-02.webp',
   illustration: 'assets/img/prodotti-genuini.jpg',
 };
 
+// Ordine delle foto in galleria: per tipo di stanza, poi per numero.
+const ROOM_ORDER = ['salotto', 'soggiorno', 'cucina', 'stanza-1', 'stanza-2', 'stanza-3', 'bagno', 'entrata', 'corridoio'];
+const roomOf = (f) => ROOM_ORDER.find((r) => f.startsWith(r)) || 'altro';
+// Foto di un appartamento lette dalla cartella; `cover` = foto da mettere per prima (copertina).
+function photos(slug, cover) {
+  const dir = `assets/img/appartamenti/${slug}/`;
+  const names = readdirSync(dir)
+    .filter((f) => f.endsWith('.webp') && !f.endsWith('-sm.webp'))
+    .map((f) => f.replace('.webp', ''))
+    .sort((a, b) => ROOM_ORDER.indexOf(roomOf(a)) - ROOM_ORDER.indexOf(roomOf(b)) || a.localeCompare(b));
+  if (cover) names.unshift(...names.splice(names.indexOf(cover), 1));
+  return names.map((n) => ({ src: dir + n + '.webp', thumb: dir + n + '-sm.webp', room: roomOf(n).replace(/-\d$/, '') }));
+}
+
 // rooms = chiave delle traduzioni in apartments.rooms
 export const APARTMENTS = [
-  { slug: 'jonagold', name: 'Jonagold', size: 46, beds: 4, rooms: 'dbl2',
-    photos: up(['Jonagold-05.jpg', 'Jonagold-02.jpg', 'Jonagold-07.jpg', 'Jonagold-09.jpg', 'Jonagold-10.jpg', 'Jonagold-12.jpg', 'Jonagold-13.jpg'], '2022/07/') },
-  { slug: 'pink-lady', name: 'Pink Lady', size: 46, beds: 4, rooms: 'dblBunk',
-    photos: up(['Pink-Lady-02-1.jpg', 'Pink-Lady-04.jpg', 'Pink-Lady-03.jpg', 'Pink-Lady-06.jpg', 'Pink-Lady-08.jpg', 'Pink-Lady-09.jpg', 'Pink-Lady-11.jpg', 'Pink-Lady-13-1.jpg'], '2022/07/') },
-  { slug: 'renetta', name: 'Renetta', size: 46, beds: 4, rooms: 'dblSofa',
-    photos: up(['Renetta-02-1.jpg', 'Renetta-04.jpg', 'Renetta-05.jpg', 'Renetta-07.jpg', 'Renetta-08.jpg', 'Renetta-10.jpg', 'Renetta-12.jpg', 'Renetta-13.jpg'], '2022/07/') },
-  { slug: 'fuji', name: 'Fuji', size: 46, beds: 4, rooms: 'dblBunk',
-    photos: up(['b82f9da3-068b-4e83-b49d-6dd824b1772f-jpg.webp', 'd45eff15-c7ad-409d-a110-b3f12deebc61-jpg.webp', 'f845ad4a-5255-4189-a28c-e492e90a6b03-jpg.webp', '9075a08c-86a2-4c76-bef8-2c18ecd1f92e-jpg.webp', 'd57005ee-85a2-4384-8efc-6e72de855e62-jpg.webp'], '2023/02/') },
-  { slug: 'golden', name: 'Golden', size: 60, beds: 6, rooms: 'dblBunkSofa',
-    photos: up(['Golden-02.jpg', 'Golden-03-1.jpg', 'Golden-04.jpg', 'Golden-11.jpg', 'Golden-14.jpg', 'Golden-16.jpg', 'Golden-18-1.jpg', 'Golden-19.jpg'], '2022/07/') },
-  { slug: 'morgana', name: 'Morgana', size: 60, beds: 7, rooms: 'dblBunkSingleSofa',
-    photos: up(['Morgana-03.jpg', 'Morgana-04.jpg', 'Morgana-06.jpg', 'Morgana-11.jpg', 'Morgana-12.jpg', 'Morgana-13.jpg', 'Morgana-14.jpg', 'Morgana-16.jpg'], '2022/07/') },
-];
+  { slug: 'jonagold', name: 'Jonagold', size: 46, beds: 4, rooms: 'dbl2', cover: 'salotto-02' },
+  { slug: 'pink-lady', name: 'Pink Lady', size: 46, beds: 4, rooms: 'dblBunk', cover: 'soggiorno-01' },
+  { slug: 'renetta', name: 'Renetta', size: 46, beds: 4, rooms: 'dblSofa', cover: 'cucina-01' },
+  { slug: 'fuji', name: 'Fuji', size: 46, beds: 4, rooms: 'dblBunk', cover: 'stanza-1-01' },
+  { slug: 'golden', name: 'Golden', size: 60, beds: 6, rooms: 'dblBunkSofa', cover: 'cucina-02' },
+  { slug: 'morgana', name: 'Morgana', size: 60, beds: 7, rooms: 'dblBunkSingleSofa', cover: 'salotto-01' },
+].map((a) => ({ ...a, photos: photos(a.slug, a.cover) }));
 
 // Pagine: chiave -> percorso (uguale in tutte le lingue)
 export const PAGES = {
