@@ -86,18 +86,44 @@
     }
   }
 
-  // Galleria con lightbox.
+  // Galleria con lightbox: frecce, tastiera e swipe.
   const dialog = document.querySelector('[data-lightbox-dialog]');
   if (dialog && typeof dialog.showModal === 'function') {
     const img = dialog.querySelector('img');
-    document.querySelectorAll('[data-lightbox]').forEach((link) =>
+    const caption = dialog.querySelector('[data-caption]');
+    const links = [...document.querySelectorAll('[data-lightbox]')];
+    let index = 0;
+    const show = (i) => {
+      index = (i + links.length) % links.length;
+      const link = links[index];
+      img.src = link.href;
+      img.alt = link.querySelector('img').alt;
+      caption.textContent = `${img.alt}  ·  ${index + 1} / ${links.length}`;
+      // Precarica la foto successiva.
+      new Image().src = links[(index + 1) % links.length].href;
+    };
+    links.forEach((link, i) =>
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        img.src = link.href;
-        img.alt = link.querySelector('img').alt;
+        show(i);
         dialog.showModal();
       })
     );
+    dialog.querySelector('[data-prev]').addEventListener('click', (e) => { e.stopPropagation(); show(index - 1); });
+    dialog.querySelector('[data-next]').addEventListener('click', (e) => { e.stopPropagation(); show(index + 1); });
+    img.addEventListener('click', (e) => { e.stopPropagation(); show(index + 1); });
     dialog.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') show(index - 1);
+      if (e.key === 'ArrowRight') show(index + 1);
+    });
+    let startX = null;
+    dialog.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    dialog.addEventListener('touchend', (e) => {
+      if (startX === null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) show(index + (dx < 0 ? 1 : -1));
+      startX = null;
+    });
   }
 })();
