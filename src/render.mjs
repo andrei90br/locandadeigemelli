@@ -140,7 +140,7 @@ function pageHero(c, h, image, extra = '') {
   return `
     <section class="hero hero-page" style="--bg: url('${c.bg(image)}')">
       <div class="wrap hero-inner">
-        <p class="eyebrow">${e(h.eyebrow)}</p>
+        ${h.eyebrow ? `<p class="eyebrow">${e(h.eyebrow)}</p>` : ''}
         <h1>${e(h.title)}</h1>
         <p class="lead">${e(h.lead)}</p>${extra}
       </div>
@@ -306,7 +306,7 @@ ${feature(c, h.dine, c.href(PAGES.restaurant), IMG.restaurant, true)}
 
 export function apartments(c) {
   const t = c.t, p = t.apartments;
-  const body = `${pageHero(c, p.hero, IMG.stay)}
+  const body = `${pageHero(c, { ...p.hero, eyebrow: '' }, IMG.stay)}
     ${bookingBar(c)}
 
     <section class="section">
