@@ -73,6 +73,22 @@
     set('[data-children]', params.get('bambini'));
     set('[data-apt-select]', params.get('apt'));
 
+    // Età dei bambini: un campo obbligatorio per ogni bambino indicato.
+    const children = form.querySelector('[data-children]');
+    const agesBox = form.querySelector('[data-ages]');
+    const ages = [...form.querySelectorAll('[data-child-age]')];
+    const updateAges = () => {
+      const n = parseInt(children.value, 10) || 0;
+      agesBox.hidden = n === 0;
+      ages.forEach((select, i) => {
+        const on = i < n;
+        select.hidden = !on;
+        select.disabled = !on;
+      });
+    };
+    children.addEventListener('change', updateAges);
+    updateAges();
+
     const d = setupDates(form);
     form.addEventListener('submit', (e) => {
       if (!d.checkOrder(e)) return;

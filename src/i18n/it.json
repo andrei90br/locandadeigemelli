@@ -238,6 +238,8 @@
       "departure": "Partenza",
       "adults": "Adulti",
       "children": "Bambini",
+      "childAge": "Età bambino {n}",
+      "agesNote": "Indica l'età di ogni bambino al giorno dell'arrivo.",
       "apartment": "Appartamento",
       "any": "Nessuna preferenza",
       "pets": "Animali",

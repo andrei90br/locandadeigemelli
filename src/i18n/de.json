@@ -238,6 +238,8 @@
       "departure": "Abreise",
       "adults": "Erwachsene",
       "children": "Kinder",
+      "childAge": "Alter Kind {n}",
+      "agesNote": "Bitte gib das Alter jedes Kindes am Anreisetag an.",
       "apartment": "Ferienwohnung",
       "any": "Keine Präferenz",
       "pets": "Haustiere",

@@ -260,6 +260,8 @@ address { font-style: normal; margin: 0 0 1.2em; }
 .rf-head span { color: var(--muted); }
 .rf-group { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px 18px; padding: 20px 0; border-top: 1px solid var(--line); }
 .rf-single { grid-template-columns: minmax(0, 1fr); }
+.rf-group[hidden], .request-form select[hidden] { display: none; }
+.rf-note { grid-column: 1 / -1; margin: 0; font-size: .9rem; color: var(--muted); }
 .request-form input:not([type="checkbox"]), .request-form select, .request-form textarea { width: 100%; min-width: 0; padding: 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); font: 400 1rem var(--sans); color: var(--ink); }
 .request-form select:invalid { color: var(--muted); }
 .request-form input:focus, .request-form select:focus, .request-form textarea:focus, .bb-field:focus-within { outline: 2px solid var(--accent); outline-offset: -2px; }

@@ -501,6 +501,11 @@ export function request(c) {
   const t = c.t, q = t.request, f = q.form;
   const adults = [1, 2, 3, 4, 5, 6, 7].map((n) => `<option>${n}</option>`).join('');
   const kids = [0, 1, 2, 3, 4, 5, 6].map((n) => `<option>${n}</option>`).join('');
+  const ages = [1, 2, 3, 4, 5, 6].map((n) => {
+    const label = e(f.childAge.replace('{n}', n));
+    const opts = Array.from({ length: 18 }, (_, y) => `<option value="${y || 'meno di 1 anno'}">${label}: ${y || '&lt; 1'}</option>`).join('');
+    return `<select name="Età bambino ${n}" aria-label="${label}" required disabled hidden data-child-age><option value="" disabled selected>${label} *</option>${opts}</select>`;
+  }).join('\n              ');
   const apts = APARTMENTS.map((a) => `<option>${e(a.name)}</option>`).join('');
   const body = `
     <section class="page-title">
@@ -537,6 +542,10 @@ export function request(c) {
               <select name="Bambini" aria-label="${e(f.children)}" data-children><option value="" disabled selected>${e(f.children)}</option>${kids}</select>
               <select name="Appartamento" aria-label="${e(f.apartment)}" data-apt-select><option value="">${e(f.apartment)}: ${e(f.any)}</option>${apts}</select>
               <select name="Animali" aria-label="${e(f.pets)}"><option value="" disabled selected>${e(f.pets)}</option><option>${e(f.no)}</option><option>${e(f.yes)}</option></select>
+            </div>
+            <div class="rf-group rf-ages" hidden data-ages>
+              <p class="rf-note">${e(f.agesNote)}</p>
+              ${ages}
             </div>
             <div class="rf-group rf-single">
               <textarea name="Richiesta" rows="5" placeholder="${e(f.message)}" aria-label="${e(f.message)}"></textarea>

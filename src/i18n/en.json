@@ -238,6 +238,8 @@
       "departure": "Departure",
       "adults": "Adults",
       "children": "Children",
+      "childAge": "Age of child {n}",
+      "agesNote": "Please enter each child's age on the day of arrival.",
       "apartment": "Apartment",
       "any": "No preference",
       "pets": "Pets",
