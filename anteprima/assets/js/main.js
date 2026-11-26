@@ -143,3 +143,17 @@
     });
   }
 })();
+
+// Mappa Google: caricata solo quando il visitatore clicca (niente cookie Google prima del consenso).
+document.querySelectorAll('[data-map]').forEach((box) => {
+  box.querySelector('[data-map-load]').addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.src = box.dataset.map;
+    f.title = box.dataset.title;
+    f.loading = 'lazy';
+    f.referrerPolicy = 'no-referrer-when-downgrade';
+    f.allowFullscreen = true;
+    box.replaceChildren(f);
+    box.classList.add('is-loaded');
+  });
+});
