@@ -30,6 +30,9 @@ export const IMG = {
   business: SRC + '2022/06/Business-Locanda-Elisa-2.jpg',
   stay: 'assets/img/appartamenti/golden/cucina-02.webp',
   illustration: 'assets/img/prodotti-genuini.jpg',
+  // Foto invernali: Giorgio Galeotti, Wikimedia Commons, CC BY 4.0 (credito in pagina Val di Sole)
+  winterHero: 'assets/img/val-di-sole/inverno-brenta-malghet-aut.webp',
+  winterBand: 'assets/img/val-di-sole/inverno-cime-malghet-aut.webp',
 };
 
 // Ordine delle foto in galleria: per tipo di stanza, poi per numero.

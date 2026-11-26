@@ -526,10 +526,12 @@ export function valdisole(c) {
         </div>
       </div>
     </section>
+    <section class="photo-band" style="--bg: url('${c.bg(IMG.winterBand)}')" role="img" aria-label="${e(v.photos.bandAlt)}"></section>
 ${season(w.beyond, 'section-alt')}`;
-  const body = `${pageHero(c, v.hero, IMG.hero)}
+  const body = `${pageHero(c, v.hero, IMG.winterHero)}
 ${winter}
 ${season(v.summer, '')}
+    <p class="wrap photo-credit">${v.photos.credit}</p>
 
     <section class="cta-final">
       <div class="wrap narrow center">
