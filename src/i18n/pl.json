@@ -26,6 +26,7 @@
     "address": "Via Campiglio 59, 38025 Dimaro Folgarida (TN), Włochy",
     "map": "Otwórz w Google Maps",
     "directions": "Wyznacz trasę",
+    "mapEmbed": { "title": "Mapa: La Locanda dei Gemelli w Dimaro", "button": "Pokaż mapę", "note": "Mapa jest ładowana z Google Maps, które może zapisywać pliki cookie." },
     "hoursTitle": "Godziny otwarcia restauracji",
     "restaurant": "Restauracja",
     "pizzeria": "Pizzeria",

@@ -1,7 +1,7 @@
 // Layout e pagine del sito. Ogni funzione riceve il contesto della lingua e restituisce HTML.
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
-import { SITE_URL, REQUEST_EMAIL, MAPS_URL, DIRECTIONS_URL, GOOGLE_PLACE_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
+import { SITE_URL, REQUEST_EMAIL, MAPS_URL, DIRECTIONS_URL, GOOGLE_PLACE_URL, MAP_EMBED_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
 
 export const e = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -207,6 +207,22 @@ function hoursBox(c) {
           </div>`;
 }
 
+// Mappa Google caricata solo al clic (data-map in main.js).
+function mapEmbed(c) {
+  const m = c.t.common.mapEmbed;
+  return `
+      <div class="wrap">
+        <div class="map-embed" data-map="${MAP_EMBED_URL}&hl=${c.lang.code}" data-title="${e(m.title)}">
+          <div class="map-consent">
+            <svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            <p class="map-consent-title">${e(m.title)}</p>
+            <button type="button" class="btn btn-outline" data-map-load>${e(m.button)}</button>
+            <p class="map-consent-note">${e(m.note)}</p>
+          </div>
+        </div>
+      </div>`;
+}
+
 function baseJsonLd(c) {
   return {
     '@context': 'https://schema.org',
@@ -298,7 +314,7 @@ ${feature(c, h.dine, c.href(PAGES.restaurant), IMG.restaurant, true)}
             <a class="btn btn-outline" href="${MAPS_URL}" target="_blank" rel="noopener">${e(t.common.map)}</a>
           </div>
         </div>${hoursBox(c)}
-      </div>
+      </div>${mapEmbed(c)}
     </section>
 
     <section class="cta-final">
@@ -469,7 +485,7 @@ export function restaurant(c) {
           <a class="link-arrow" href="${DIRECTIONS_URL}" target="_blank" rel="noopener">${e(t.common.directions)}</a>
           <a class="link-arrow" href="${MAPS_URL}" target="_blank" rel="noopener">${e(t.common.map)}</a>
         </div>${hoursBox(c)}
-      </div>
+      </div>${mapEmbed(c)}
     </section>`;
   return layout(c, { title: r.meta.title, description: r.meta.description, image: IMG.restaurant, body, jsonld: baseJsonLd(c) });
 }
