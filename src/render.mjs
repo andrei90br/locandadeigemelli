@@ -1,7 +1,7 @@
 // Layout e pagine del sito. Ogni funzione riceve il contesto della lingua e restituisce HTML.
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
-import { SITE_URL, REQUEST_EMAIL, MAPS_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
+import { SITE_URL, REQUEST_EMAIL, MAPS_URL, DIRECTIONS_URL, GOOGLE_PLACE_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
 
 export const e = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -67,6 +67,7 @@ function footer(c) {
       <div class="footer-brand">
         <img src="${c.root}assets/img/logo.svg" alt="La Locanda dei Gemelli" width="539" height="568" loading="lazy">
         <p>${e(t.common.address)}</p>
+        <p class="footer-maps"><a href="${MAPS_URL}" target="_blank" rel="noopener">${e(t.common.map)}</a> · <a href="${DIRECTIONS_URL}" target="_blank" rel="noopener">${e(t.common.directions)}</a></p>
         <p class="footer-season">${e(t.common.season)}</p>
       </div>
       <div>
@@ -210,7 +211,8 @@ function baseJsonLd(c) {
   return {
     '@context': 'https://schema.org',
     '@type': ['LodgingBusiness', 'Restaurant'],
-    name: 'Locanda dei Gemelli',
+    name: 'La Locanda dei Gemelli',
+    alternateName: 'Locanda dei Gemelli',
     url: SITE_URL + c.lang.path,
     image: IMG.hero,
     servesCuisine: ['Trentina', 'Italiana', 'Pizza'],
@@ -218,6 +220,8 @@ function baseJsonLd(c) {
     petsAllowed: true,
     checkinTime: '14:00',
     checkoutTime: '11:00',
+    hasMap: GOOGLE_PLACE_URL,
+    sameAs: [GOOGLE_PLACE_URL],
     address: { '@type': 'PostalAddress', streetAddress: 'Via Campiglio 59', postalCode: '38025', addressLocality: 'Dimaro Folgarida', addressRegion: 'TN', addressCountry: 'IT' },
     openingHoursSpecification: [
       { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '12:00', closes: '14:00' },
@@ -289,7 +293,10 @@ ${feature(c, h.dine, c.href(PAGES.restaurant), IMG.restaurant, true)}
           <h2>${e(h.where.title)}</h2>
           <p>${e(h.where.text)}</p>
           <address>${e(t.common.address)}</address>
-          <a class="btn btn-outline" href="${MAPS_URL}" target="_blank" rel="noopener">${e(t.common.map)}</a>
+          <div class="actions">
+            <a class="btn btn-accent" href="${DIRECTIONS_URL}" target="_blank" rel="noopener">${e(t.common.directions)}</a>
+            <a class="btn btn-outline" href="${MAPS_URL}" target="_blank" rel="noopener">${e(t.common.map)}</a>
+          </div>
         </div>${hoursBox(c)}
       </div>
     </section>
@@ -459,6 +466,7 @@ export function restaurant(c) {
             <span class="btn btn-outline is-soon" aria-disabled="true">${e(r.book.whatsapp)}</span>
           </div>
           <address>${e(t.common.address)}</address>
+          <a class="link-arrow" href="${DIRECTIONS_URL}" target="_blank" rel="noopener">${e(t.common.directions)}</a>
           <a class="link-arrow" href="${MAPS_URL}" target="_blank" rel="noopener">${e(t.common.map)}</a>
         </div>${hoursBox(c)}
       </div>
@@ -559,6 +567,7 @@ export function request(c) {
           <ul class="checklist">${[...q.aside, ...t.apartments.good.slice(0, 2)].map((s) => `<li>${e(s)}</li>`).join('')}</ul>
           <p class="hours-season">${e(t.common.season)}</p>
           <address>${e(t.common.address)}</address>
+          <a class="link-arrow" href="${DIRECTIONS_URL}" target="_blank" rel="noopener">${e(t.common.directions)}</a>
         </aside>
       </div>
     </section>`;

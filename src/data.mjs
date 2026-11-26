@@ -5,7 +5,10 @@ import { readdirSync } from 'node:fs';
 
 export const SITE_URL = 'https://locandadeigemelli.com/';
 export const REQUEST_EMAIL = 'lalocandadeigemelli@gmail.com';
-export const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Via+Campiglio+59+38025+Dimaro+Folgarida';
+// Scheda Google Business Profile "La Locanda dei Gemelli" (CID dalla scheda creata il 2026-11-26).
+export const GOOGLE_PLACE_URL = 'https://maps.google.com/?cid=524019156597058033';
+export const MAPS_URL = GOOGLE_PLACE_URL;
+export const DIRECTIONS_URL = 'https://www.google.com/maps/dir/?api=1&destination=La+Locanda+dei+Gemelli%2C+Via+Campiglio+59%2C+38025+Dimaro+TN';
 
 export const LANGS = [
   { code: 'it', path: '', label: 'IT' },
