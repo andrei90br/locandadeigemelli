@@ -39,7 +39,7 @@
     "stay": "Stay",
     "dine": "Dine",
     "discover": "Discover",
-    "hours": "Restaurant 12–2 pm and 6–10:30 pm · Pizzeria 6–11 pm · Closed on Tuesdays"
+    "hours": "Restaurant 11 am–2 pm and 6–9:30 pm · Pizzeria 6–10 pm · Closed on Tuesdays"
   },
   "home": {
     "notice": "New management · formerly Locanda Elisa",
@@ -158,14 +158,14 @@
       "eyebrow": "The restaurant",
       "title": "Tradition, done today.",
       "text": "Trentino dishes reinterpreted with a modern touch, plus a few international options for those who want to leave the beaten path. Fresh ingredients, honest portions, clear flavours. The lunch you need between runs and the dinner you remember at the end of your holiday.",
-      "hours": "Lunch 12:00 – 14:00 · Dinner 18:00 – 22:30",
+      "hours": "Lunch 11:00 – 14:00 · Dinner 18:00 – 21:30",
       "menu": "The full menu will soon be available on this page."
     },
     "pizza": {
       "eyebrow": "The pizzeria",
       "title": "Pizza is a craft. Our master knows it.",
       "text": "Every pizza comes from the hands of our master pizzaiolo. Carefully made dough, quality seasonal toppings, considered pairings. You'll find the classics you love and special combinations born in our kitchen that you won't find anywhere else.",
-      "hours": "Every evening 18:00 – 23:00, except Tuesdays"
+      "hours": "Every evening 18:00 – 22:00, except Tuesdays"
     },
     "services": {
       "eyebrow": "Beyond dinner",

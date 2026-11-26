@@ -39,7 +39,7 @@
     "stay": "Pobyt",
     "dine": "Jedzenie",
     "discover": "Odkryj",
-    "hours": "Restauracja 12–14 i 18–22:30 · Pizzeria 18–23 · We wtorki nieczynne"
+    "hours": "Restauracja 11–14 i 18–21:30 · Pizzeria 18–22 · We wtorki nieczynne"
   },
   "home": {
     "notice": "Nowe kierownictwo · dawniej Locanda Elisa",
@@ -158,14 +158,14 @@
       "eyebrow": "Restauracja",
       "title": "Tradycja w dzisiejszym wydaniu.",
       "text": "Dania kuchni trydenckiej w nowoczesnej odsłonie i kilka propozycji międzynarodowych dla tych, którzy chcą zboczyć ze szlaku. Świeże składniki, uczciwe porcje, wyraziste smaki. Obiad, którego potrzebujesz między zjazdami, i kolacja, którą zapamiętasz na koniec wakacji.",
-      "hours": "Obiad 12:00 – 14:00 · Kolacja 18:00 – 22:30",
+      "hours": "Obiad 11:00 – 14:00 · Kolacja 18:00 – 21:30",
       "menu": "Pełna karta będzie wkrótce dostępna na tej stronie."
     },
     "pizza": {
       "eyebrow": "Pizzeria",
       "title": "Pizza to rzemiosło. Nasz mistrz to wie.",
       "text": "Każda pizza wychodzi spod rąk naszego mistrza pizzaiolo. Starannie przygotowane ciasto, sezonowe składniki najwyższej jakości, przemyślane połączenia. Znajdziesz klasyki, które kochasz, i wyjątkowe kompozycje z naszej kuchni, których nie ma nigdzie indziej.",
-      "hours": "Codziennie wieczorem 18:00 – 23:00, oprócz wtorków"
+      "hours": "Codziennie wieczorem 18:00 – 22:00, oprócz wtorków"
     },
     "services": {
       "eyebrow": "Nie tylko kolacja",

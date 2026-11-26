@@ -39,7 +39,7 @@
     "stay": "Wohnen",
     "dine": "Essen",
     "discover": "Entdecken",
-    "hours": "Restaurant 12–14 und 18–22:30 Uhr · Pizzeria 18–23 Uhr · Dienstag Ruhetag"
+    "hours": "Restaurant 11–14 und 18–21:30 Uhr · Pizzeria 18–22 Uhr · Dienstag Ruhetag"
   },
   "home": {
     "notice": "Neue Führung · ehemals Locanda Elisa",
@@ -158,14 +158,14 @@
       "eyebrow": "Das Restaurant",
       "title": "Tradition, wie man sie heute kocht.",
       "text": "Trentiner Gerichte, modern interpretiert, und einige internationale Vorschläge für alle, die neue Wege gehen wollen. Frische Zutaten, ehrliche Portionen, klare Aromen. Das Mittagessen zwischen zwei Abfahrten und das Abendessen, an das du dich am Ende des Urlaubs erinnerst.",
-      "hours": "Mittag 12:00 – 14:00 · Abend 18:00 – 22:30 Uhr",
+      "hours": "Mittag 11:00 – 14:00 · Abend 18:00 – 21:30 Uhr",
       "menu": "Die vollständige Speisekarte ist bald auf dieser Seite verfügbar."
     },
     "pizza": {
       "eyebrow": "Die Pizzeria",
       "title": "Pizza ist ein Handwerk. Unser Meister beherrscht es.",
       "text": "Jede Pizza kommt aus den Händen unseres Meisterpizzaiolo. Sorgfältig zubereiteter Teig, hochwertige saisonale Zutaten, durchdachte Kombinationen. Du findest die Klassiker, die du liebst, und besondere Kreationen aus unserer Küche, die es sonst nirgends gibt.",
-      "hours": "Jeden Abend 18:00 – 23:00 Uhr, außer dienstags"
+      "hours": "Jeden Abend 18:00 – 22:00 Uhr, außer dienstags"
     },
     "services": {
       "eyebrow": "Mehr als Abendessen",
