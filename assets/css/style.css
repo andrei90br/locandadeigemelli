@@ -101,7 +101,13 @@ address + .link-arrow { display: inline-block; margin-top: .6em; }
 .hero-page:has(+ .booking-bar) .hero-inner { padding-bottom: 120px; }
 
 /* Avviso nuova gestione */
-.notice { display: inline-block; margin: 0 0 28px; padding: 12px 22px; background: var(--accent); color: #fff; border-radius: var(--radius); font-size: clamp(.82rem, 1.6vw, 1rem); font-weight: 600; letter-spacing: .16em; text-transform: uppercase; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+/* in alto a destra sulla foto, su sfondo nero */
+.hero-notice { position: absolute; top: 24px; left: 0; right: 0; z-index: 2; display: flex; justify-content: flex-end; pointer-events: none; }
+.notice { margin: 0; padding: 11px 20px; background: var(--black); color: #fff; border: 1px solid rgba(217,185,143,.55); border-radius: var(--radius); font-size: clamp(.7rem, 1.3vw, .86rem); font-weight: 600; letter-spacing: .16em; text-transform: uppercase; box-shadow: 0 8px 24px rgba(0,0,0,.3); pointer-events: auto; }
+@media (max-width: 520px) {
+  .hero-notice { top: 16px; }
+  .notice { padding: 8px 12px; font-size: .62rem; letter-spacing: .06em; text-align: right; max-width: 92%; }
+}
 
 /* Barra di prenotazione: tutto su una riga, si impila solo su schermi stretti */
 .booking-bar { position: relative; z-index: 5; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, .62fr) minmax(0, .62fr) minmax(0, 1.25fr) auto; margin-top: -56px; background: #fff; border-radius: var(--radius); box-shadow: 0 20px 50px rgba(31,28,25,.14); }
