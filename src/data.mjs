@@ -33,6 +33,7 @@ export const IMG = {
   // Foto invernali: Giorgio Galeotti, Wikimedia Commons, CC BY 4.0 (credito in pagina Val di Sole)
   skiMap: 'assets/img/val-di-sole/mappa-piste-skiarea-campiglio.webp',
   skiMapSm: 'assets/img/val-di-sole/mappa-piste-skiarea-campiglio-sm.webp',
+  winterSlope: 'assets/img/val-di-sole/inverno-pista-seggiovia.webp',
   winterHero: 'assets/img/val-di-sole/inverno-brenta-malghet-aut.webp',
 };
 

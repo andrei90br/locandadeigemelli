@@ -509,12 +509,13 @@ export function valdisole(c) {
   const w = v.winter;
   const winter = `
     <section class="section">
-      <div class="wrap section-head">
+      <div class="wrap winter-intro">
         <div>
           <p class="eyebrow">${e(w.eyebrow)}</p>
           <h2>${e(w.title)}</h2>
           <p class="lead">${e(w.lead)}</p>
         </div>
+        <img src="${c.asset(IMG.winterSlope)}" alt="${e(w.photoAlt)}" width="924" height="690" loading="lazy">
       </div>
       <div class="wrap">
         <p class="eyebrow">${e(w.ski.eyebrow)}</p>
