@@ -32,7 +32,6 @@ export const IMG = {
   illustration: 'assets/img/prodotti-genuini.jpg',
   // Foto invernali: Giorgio Galeotti, Wikimedia Commons, CC BY 4.0 (credito in pagina Val di Sole)
   winterHero: 'assets/img/val-di-sole/inverno-brenta-malghet-aut.webp',
-  winterBand: 'assets/img/val-di-sole/inverno-cime-malghet-aut.webp',
 };
 
 // Ordine delle foto in galleria: per tipo di stanza, poi per numero.

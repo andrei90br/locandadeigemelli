@@ -490,6 +490,8 @@ export function restaurant(c) {
   return layout(c, { title: r.meta.title, description: r.meta.description, image: IMG.restaurant, body, jsonld: baseJsonLd(c) });
 }
 
+const SKI_MAP_URL = 'https://www.visitvaldisole.it/it/impianti-piste-in-inverno';
+
 export function valdisole(c) {
   const t = c.t, v = t.valdisole;
   const season = (s, cls) => `
@@ -526,7 +528,16 @@ export function valdisole(c) {
         </div>
       </div>
     </section>
-    <section class="photo-band" style="--bg: url('${c.bg(IMG.winterBand)}')" role="img" aria-label="${e(v.photos.bandAlt)}"></section>
+    <section class="section ski-map">
+      <div class="wrap ski-map-inner">
+        <div>
+          <p class="eyebrow">${e(w.map.eyebrow)}</p>
+          <h2>${e(w.map.title)}</h2>
+          <p class="lead">${e(w.map.text)}</p>
+          <a class="btn btn-accent" href="${SKI_MAP_URL}" target="_blank" rel="noopener">${e(w.map.button)}</a>
+        </div>
+      </div>
+    </section>
 ${season(w.beyond, 'section-alt')}`;
   const body = `${pageHero(c, v.hero, IMG.winterHero)}
 ${winter}

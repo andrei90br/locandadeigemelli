@@ -255,6 +255,7 @@
           "text": "Kolej Trento–Malè–Mezzana zatrzymuje się w Dimaro i w Daolasie, gdzie stacja łączy się bezpośrednio z gondolą na stok. Zostawiasz samochód na miejscu i wjeżdżasz w góry z nartami na ramieniu."
         }
       ],
+      "map": {"eyebrow": "Mapa tras", "title": "Cały ośrodek w jednym spojrzeniu.", "text": "Folgarida-Marilleva, Madonna di Campiglio i Pinzolo są połączone na nartach. Oficjalna, aktualna mapa z otwartymi wyciągami i trasami jest na portalu Val di Sole.", "button": "Otwórz oficjalną mapę"},
       "beyond": {
         "eyebrow": "Nie tylko narty",
         "title": "Dolina zimą, także bez nart.",
@@ -286,7 +287,7 @@
         ]
       }
     },
-    "photos": {"bandAlt": "Ośnieżone szczyty nad Folgaridą, widok z Malghet Aut", "credit": "Zdjęcia zimowe: Giorgio Galeotti, Malghet Aut (Folgarida), <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_05.jpg\" target=\"_blank\" rel=\"noopener\">1</a>, <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_07.jpg\" target=\"_blank\" rel=\"noopener\">2</a>, Wikimedia Commons, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>"},
+    "photos": {"credit": "Zdjęcie zimowe: Giorgio Galeotti, Malghet Aut (Folgarida), <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_05.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>"},
     "summer": {
       "eyebrow": "Lato · czerwiec – październik",
       "title": "Rzeki, szlaki i dwa kółka.",

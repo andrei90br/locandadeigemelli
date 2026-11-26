@@ -255,6 +255,7 @@
           "text": "Die Bahn Trento–Malè–Mezzana hält in Dimaro und in Daolasa, wo der Bahnhof direkt mit der Gondel zu den Pisten verbunden ist. Das Auto bleibt stehen, und Sie kommen mit den Skiern auf der Schulter in die Höhe."
         }
       ],
+      "map": {"eyebrow": "Pistenplan", "title": "Das ganze Skigebiet auf einen Blick.", "text": "Folgarida-Marilleva, Madonna di Campiglio und Pinzolo sind auf Skiern verbunden. Den offiziellen, aktuellen Plan mit geöffneten Liften und Pisten finden Sie auf dem Portal des Val di Sole.", "button": "Offiziellen Plan öffnen"},
       "beyond": {
         "eyebrow": "Mehr als Skifahren",
         "title": "Das Tal im Winter, auch ohne Ski.",
@@ -286,7 +287,7 @@
         ]
       }
     },
-    "photos": {"bandAlt": "Verschneite Gipfel über Folgarida, gesehen von der Malghet Aut", "credit": "Winterfotos: Giorgio Galeotti, Malghet Aut (Folgarida), <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_05.jpg\" target=\"_blank\" rel=\"noopener\">1</a>, <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_07.jpg\" target=\"_blank\" rel=\"noopener\">2</a>, Wikimedia Commons, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>"},
+    "photos": {"credit": "Winterfoto: Giorgio Galeotti, Malghet Aut (Folgarida), <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_05.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>"},
     "summer": {
       "eyebrow": "Sommer · Juni – Oktober",
       "title": "Flüsse, Wege und zwei Räder.",
