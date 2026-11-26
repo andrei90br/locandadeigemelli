@@ -255,7 +255,7 @@
           "text": "Kolej Trento–Malè–Mezzana zatrzymuje się w Dimaro i w Daolasie, gdzie stacja łączy się bezpośrednio z gondolą na stok. Zostawiasz samochód na miejscu i wjeżdżasz w góry z nartami na ramieniu."
         }
       ],
-      "map": {"eyebrow": "Mapa tras", "title": "Cały ośrodek w jednym spojrzeniu.", "text": "Folgarida-Marilleva, Madonna di Campiglio i Pinzolo są połączone na nartach. Oficjalna, aktualna mapa z otwartymi wyciągami i trasami jest na portalu Val di Sole.", "button": "Otwórz oficjalną mapę"},
+      "map": {"eyebrow": "Mapa tras", "title": "Cały ośrodek w jednym spojrzeniu.", "text": "Folgarida-Marilleva, Madonna di Campiglio i Pinzolo są połączone na nartach. Oficjalna, aktualna mapa z otwartymi wyciągami i trasami jest na portalu Val di Sole.", "button": "Otwórz oficjalną mapę", "alt": "Mapa tras Skiarea Campiglio Dolomiti di Brenta, od Folgaridy i Marillevy po Madonna di Campiglio i Pinzolo", "caption": "Kliknij, aby powiększyć. Mapa © Cormar, Skiarea Campiglio Dolomiti di Brenta."},
       "beyond": {
         "eyebrow": "Nie tylko narty",
         "title": "Dolina zimą, także bez nart.",

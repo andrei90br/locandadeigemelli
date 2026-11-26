@@ -265,6 +265,11 @@ address + .link-arrow { display: inline-block; margin-top: .6em; }
 .ski-map .lead { color: rgba(255,255,255,.8); max-width: 62ch; }
 .ski-map .eyebrow { color: #e7caa2; }
 .ski-map h2 { margin-top: 0; }
+.ski-map-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 56px; align-items: center; }
+.ski-map-figure { margin: 0; }
+.ski-map-figure img { width: 100%; height: auto; display: block; border-radius: var(--radius); }
+.ski-map-figure figcaption { font-size: .75rem; color: rgba(255,255,255,.6); margin-top: 10px; }
+@media (max-width: 860px) { .ski-map-inner { grid-template-columns: minmax(0, 1fr); gap: 32px; } }
 .photo-credit { font-size: .75rem; color: var(--muted); padding-bottom: 24px; margin: 0 auto; }
 .photo-credit a { color: inherit; }
 @media (max-width: 860px) { .ski-grid, .tip-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; } }

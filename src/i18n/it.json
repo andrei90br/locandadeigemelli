@@ -255,7 +255,7 @@
           "text": "La ferrovia Trento–Malè–Mezzana ferma a Dimaro e a Daolasa, dove la stazione è collegata direttamente alla telecabina verso le piste. Lasci l'auto ferma e arrivi in quota con gli sci in spalla."
         }
       ],
-      "map": {"eyebrow": "Mappa delle piste", "title": "Tutta la skiarea in un colpo d'occhio.", "text": "Folgarida-Marilleva, Madonna di Campiglio e Pinzolo sono collegate sci ai piedi. La mappa ufficiale aggiornata, con impianti e piste aperte, è sul portale della Val di Sole.", "button": "Apri la mappa ufficiale"},
+      "map": {"eyebrow": "Mappa delle piste", "title": "Tutta la skiarea in un colpo d'occhio.", "text": "Folgarida-Marilleva, Madonna di Campiglio e Pinzolo sono collegate sci ai piedi. La mappa ufficiale aggiornata, con impianti e piste aperte, è sul portale della Val di Sole.", "button": "Apri la mappa ufficiale", "alt": "Mappa delle piste della Skiarea Campiglio Dolomiti di Brenta, da Folgarida e Marilleva a Madonna di Campiglio e Pinzolo", "caption": "Clicca per ingrandire. Cartina © Cormar, Skiarea Campiglio Dolomiti di Brenta."},
       "beyond": {
         "eyebrow": "Oltre lo sci",
         "title": "La valle d'inverno, anche senza sci ai piedi.",
