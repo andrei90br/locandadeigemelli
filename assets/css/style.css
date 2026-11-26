@@ -252,6 +252,16 @@ address + .link-arrow { display: inline-block; margin-top: .6em; }
 /* Val di Sole */
 .exp-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
 @media (max-width: 860px) { .exp-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+.sub-title { font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin: 0 0 32px; }
+.ski-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 56px; }
+.facts { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.facts li { font-size: .82rem; letter-spacing: .02em; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; color: var(--ink); background: #fff; }
+.facts-note { font-size: .85rem; color: var(--muted); margin: 32px 0 0; }
+.tip-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 56px; }
+.tip { background: var(--ink); color: #fff; padding: clamp(24px, 3.5vw, 40px); border-radius: var(--radius); }
+.tip h3 { margin-top: 0; }
+.tip p { color: rgba(255,255,255,.82); margin: 0; }
+@media (max-width: 860px) { .ski-grid, .tip-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
 
 /* Pagina richiesta */
 .page-title { padding: 88px 0 24px; }

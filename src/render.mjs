@@ -504,9 +504,32 @@ export function valdisole(c) {
         ${s.items.map((x, i) => `<article class="exp-card"><span class="num">0${i + 1}</span><h3>${e(x.title)}</h3><p>${e(x.text)}</p></article>`).join('\n        ')}
       </div>
     </section>`;
+  const w = v.winter;
+  const winter = `
+    <section class="section">
+      <div class="wrap section-head">
+        <div>
+          <p class="eyebrow">${e(w.eyebrow)}</p>
+          <h2>${e(w.title)}</h2>
+          <p class="lead">${e(w.lead)}</p>
+        </div>
+      </div>
+      <div class="wrap">
+        <p class="eyebrow">${e(w.ski.eyebrow)}</p>
+        <h3 class="sub-title">${e(w.ski.title)}</h3>
+        <div class="ski-grid">
+          ${w.ski.items.map((x, i) => `<article class="exp-card ski-card"><span class="num">0${i + 1}</span><h3>${e(x.title)}</h3><p>${e(x.text)}</p><ul class="facts">${x.facts.map((f) => `<li>${e(f)}</li>`).join('')}</ul></article>`).join('\n          ')}
+        </div>
+        <p class="facts-note">${e(w.ski.note)}</p>
+        <div class="tip-grid">
+          ${w.tips.map((x) => `<article class="tip"><h3>${e(x.title)}</h3><p>${e(x.text)}</p></article>`).join('\n          ')}
+        </div>
+      </div>
+    </section>
+${season(w.beyond, 'section-alt')}`;
   const body = `${pageHero(c, v.hero, IMG.hero)}
-${season(v.winter, '')}
-${season(v.summer, 'section-alt')}
+${winter}
+${season(v.summer, '')}
 
     <section class="cta-final">
       <div class="wrap narrow center">

@@ -188,7 +188,7 @@
   "valdisole": {
     "meta": {
       "title": "Cosa fare in Val di Sole, inverno ed estate | Locanda dei Gemelli",
-      "description": "Sci a Folgarida-Marilleva e Madonna di Campiglio, ciclabile della Val di Sole, rafting sul Noce, trekking nei parchi. Tutto a pochi minuti dalla Locanda dei Gemelli."
+      "description": "Sci a Folgarida-Marilleva, Madonna di Campiglio, Passo Tonale e Pejo, sci di fondo, ciaspole, terme e mercatini di Natale, e d'estate tutta la valle da vivere. Tutto a pochi minuti dalla Locanda dei Gemelli a Dimaro."
     },
     "hero": {
       "eyebrow": "Esperienze",
@@ -197,12 +197,94 @@
     },
     "winter": {
       "eyebrow": "Inverno · dicembre – aprile",
-      "title": "Neve a pochi minuti.",
-      "items": [
-        { "title": "Folgarida-Marilleva", "text": "Gli impianti sono a pochi minuti dalla Locanda. Da qui scii fino a Madonna di Campiglio nello Skiarea Campiglio Dolomiti di Brenta." },
-        { "title": "Passo del Tonale", "text": "Piste in quota e il ghiacciaio Presena, per chi cerca neve sicura per tutta la stagione." },
-        { "title": "Fondo e ciaspole", "text": "Anelli di fondo e percorsi con le ciaspole nei boschi della valle, per chi preferisce il silenzio alla velocità." }
-      ]
+      "title": "Neve a pochi minuti dalla porta.",
+      "lead": "Dimaro Folgarida si trova nel cuore di uno dei comprensori sciistici più estesi del Trentino. Gli impianti sono a una manciata di minuti, Madonna di Campiglio si raggiunge con gli sci ai piedi e i ghiacciai del Tonale e di Pejo sono a meno di un'ora di strada.",
+      "ski": {
+        "eyebrow": "Le skiarea",
+        "title": "Quattro comprensori, una sola base.",
+        "note": "Distanze indicative in auto dalla Locanda. Dati dei comprensori riferiti alla stagione in corso: possono variare con l'apertura degli impianti.",
+        "items": [
+          {
+            "title": "Folgarida-Marilleva",
+            "text": "Il comprensorio di casa. Le cabinovie di Folgarida partono a pochi minuti dalla Locanda e salgono su piste disegnate tra i boschi, con due tracciati illuminati per sciare anche dopo il tramonto. Da Daolasa la telecabina porta a 2000 metri in dodici minuti.",
+            "facts": [
+              "circa 60 km di piste",
+              "25 impianti",
+              "4 snowpark nel comprensorio",
+              "circa 10 minuti"
+            ]
+          },
+          {
+            "title": "Madonna di Campiglio",
+            "text": "Collegata sci ai piedi con Folgarida-Marilleva e Pinzolo: insieme formano la Skiarea Campiglio Dolomiti di Brenta. Piste fino a 2500 metri davanti alle Dolomiti di Brenta, patrimonio UNESCO, e discese lunghe come la Graffer, quasi cinque chilometri. In auto si arriva percorrendo la stessa strada della Locanda.",
+            "facts": [
+              "oltre 150 km con Folgarida e Pinzolo",
+              "fino a 2500 m",
+              "circa 25 minuti"
+            ]
+          },
+          {
+            "title": "Passo del Tonale e Ghiacciaio Presena",
+            "text": "Il comprensorio Pontedilegno-Tonale unisce Trentino e Lombardia. Con il ghiacciaio Presena si sale fino a 3000 metri, con neve affidabile per tutta la stagione e sci fino alla primavera inoltrata. A 2000 metri lo snowpark con pista da skicross.",
+            "facts": [
+              "circa 100 km di piste",
+              "30 impianti",
+              "fino a 3000 m",
+              "circa 45 minuti"
+            ]
+          },
+          {
+            "title": "Pejo3000",
+            "text": "Una skiarea più raccolta, dentro il Parco Nazionale dello Stelvio. Piste meno affollate, una scuola sci attenta ai bambini e la funivia che sale verso i 3000 metri. Si presenta come la prima ski area plastic free al mondo.",
+            "facts": [
+              "20 km di piste",
+              "7 impianti",
+              "fino a 3000 m",
+              "circa 40 minuti"
+            ]
+          }
+        ]
+      },
+      "tips": [
+        {
+          "title": "Un solo skipass, otto località.",
+          "text": "Lo skipass Skirama Dolomiti Adamello Brenta apre 380 km di piste e 150 impianti: oltre alle skiarea della Val di Sole include Paganella, Monte Bondone e Alpe Cimbra. Una settimana intera senza mai ripetere la stessa pista."
+        },
+        {
+          "title": "In treno fino agli impianti.",
+          "text": "La ferrovia Trento–Malè–Mezzana ferma a Dimaro e a Daolasa, dove la stazione è collegata direttamente alla telecabina verso le piste. Lasci l'auto ferma e arrivi in quota con gli sci in spalla."
+        }
+      ],
+      "beyond": {
+        "eyebrow": "Oltre lo sci",
+        "title": "La valle d'inverno, anche senza sci ai piedi.",
+        "items": [
+          {
+            "title": "Sci di fondo",
+            "text": "Circa 45 km di piste nordiche tra Passo Tonale, Vermiglio, Cogolo, Ossana, Mezzana, Commezzadura e Rabbi, con due centri fondo attrezzati a Vermiglio e in Val di Rabbi. Quella di Commezzadura è la pista più vicina alla Locanda."
+          },
+          {
+            "title": "Ciaspole",
+            "text": "Decine di itinerari segnalati tra boschi, masi e malghe, dai più facili ai più impegnativi. Due partono proprio da Dimaro Folgarida: la salita al Malghet Aut e la Via degli Imperatori. Le ciaspole si noleggiano anche in paese."
+          },
+          {
+            "title": "Scialpinismo e freeride",
+            "text": "Salite verso Malga Saviana, il Monte Sole in Val di Rabbi o il Ghiacciaio Presena, da affrontare con le guide della Scuola di Alpinismo e Scialpinismo Val di Sole. Sempre con ARTVA, pala e sonda."
+          },
+          {
+            "title": "Terme di Pejo",
+            "text": "Dopo la neve, il caldo. A Peio Fonti le acque delle tre storiche fonti della valle, la piscina e l'area wellness, aperte anche d'inverno. Il modo migliore per sciogliere le gambe a fine giornata."
+          },
+          {
+            "title": "Mercatini e presepi",
+            "text": "A Natale Ossana diventa il borgo dei presepi, con oltre mille natività lungo vicoli e cortili ai piedi del castello di San Michele. La Val di Rabbi risponde con la sua Valle dei Presepi, mentre Malè e la Val di Pejo accendono le casette natalizie."
+          },
+          {
+            "title": "Esperienze sulla neve",
+            "text": "Slitte trainate dagli husky al Passo del Tonale, fat bike sui percorsi innevati, arrampicata su cascate di ghiaccio e la pista da slittino Fevri a Madonna di Campiglio, quasi tre chilometri di discesa."
+          }
+        ]
+      }
     },
     "summer": {
       "eyebrow": "Estate · giugno – ottobre",

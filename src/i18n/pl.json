@@ -188,7 +188,7 @@
   "valdisole": {
     "meta": {
       "title": "Co robić w Val di Sole zimą i latem | Locanda dei Gemelli",
-      "description": "Narty w Folgarida-Marilleva i Madonna di Campiglio, ścieżka rowerowa Val di Sole, rafting na Noce, trekking w parkach. Wszystko kilka minut od Locanda dei Gemelli."
+      "description": "Narty w Folgarida-Marilleva, Madonna di Campiglio, na Passo Tonale i w Pejo, biegówki, rakiety śnieżne, termy i jarmarki bożonarodzeniowe, a latem cała dolina. Wszystko kilka minut od Locanda dei Gemelli w Dimaro."
     },
     "hero": {
       "eyebrow": "Atrakcje",
@@ -197,12 +197,94 @@
     },
     "winter": {
       "eyebrow": "Zima · grudzień – kwiecień",
-      "title": "Śnieg kilka minut stąd.",
-      "items": [
-        { "title": "Folgarida-Marilleva", "text": "Wyciągi są kilka minut od Locandy. Stąd zjedziesz na nartach aż do Madonna di Campiglio w Skiarea Campiglio Dolomiti di Brenta." },
-        { "title": "Przełęcz Tonale", "text": "Wysoko położone trasy i lodowiec Presena, dla pewnego śniegu przez cały sezon." },
-        { "title": "Biegówki i rakiety śnieżne", "text": "Trasy biegowe i szlaki na rakietach śnieżnych w lasach doliny, dla tych, którzy wolą ciszę od prędkości." }
-      ]
+      "title": "Śnieg kilka minut od drzwi.",
+      "lead": "Dimaro Folgarida leży w sercu jednego z największych ośrodków narciarskich Trentino. Wyciągi są kilka minut stąd, do Madonna di Campiglio dojedziesz na nartach, a lodowce Tonale i Pejo są niecałą godzinę drogi.",
+      "ski": {
+        "eyebrow": "Ośrodki narciarskie",
+        "title": "Cztery ośrodki, jedna baza.",
+        "note": "Orientacyjny czas dojazdu samochodem z Locanda. Dane ośrodków dotyczą bieżącego sezonu i mogą się zmieniać w zależności od pracy wyciągów.",
+        "items": [
+          {
+            "title": "Folgarida-Marilleva",
+            "text": "Nasz domowy ośrodek. Gondole w Folgaridzie startują kilka minut od Locanda i prowadzą na trasy wytyczone wśród lasów, z dwiema oświetlonymi trasami do jazdy po zmroku. Z Daolasy gondola wjeżdża na 2000 metrów w dwanaście minut.",
+            "facts": [
+              "ok. 60 km tras",
+              "25 wyciągów",
+              "4 snowparki w ośrodku",
+              "ok. 10 minut"
+            ]
+          },
+          {
+            "title": "Madonna di Campiglio",
+            "text": "Połączona na nartach z Folgarida-Marilleva i Pinzolo: razem tworzą Skiarea Campiglio Dolomiti di Brenta. Trasy do 2500 metrów z widokiem na Dolomity Brenta, wpisane na listę UNESCO, i długie zjazdy, takie jak Graffer, prawie pięć kilometrów. Samochodem jedziesz tą samą drogą, przy której stoi Locanda.",
+            "facts": [
+              "ponad 150 km z Folgaridą i Pinzolo",
+              "do 2500 m",
+              "ok. 25 minut"
+            ]
+          },
+          {
+            "title": "Passo del Tonale i lodowiec Presena",
+            "text": "Ośrodek Pontedilegno-Tonale łączy Trentino i Lombardię. Lodowiec Presena pozwala wjechać na 3000 metrów, z pewnym śniegiem przez cały sezon i jazdą aż do późnej wiosny. Na wysokości 2000 metrów snowpark z trasą skicrossową.",
+            "facts": [
+              "ok. 100 km tras",
+              "30 wyciągów",
+              "do 3000 m",
+              "ok. 45 minut"
+            ]
+          },
+          {
+            "title": "Pejo3000",
+            "text": "Spokojniejszy, kameralny ośrodek w Parku Narodowym Stelvio. Mniej zatłoczone trasy, szkoła narciarska przyjazna dzieciom i kolejka linowa wjeżdżająca w stronę 3000 metrów. Przedstawia się jako pierwszy na świecie ośrodek narciarski wolny od plastiku.",
+            "facts": [
+              "20 km tras",
+              "7 wyciągów",
+              "do 3000 m",
+              "ok. 40 minut"
+            ]
+          }
+        ]
+      },
+      "tips": [
+        {
+          "title": "Jeden skipass, osiem miejscowości.",
+          "text": "Skipass Skirama Dolomiti Adamello Brenta otwiera 380 km tras i 150 wyciągów: oprócz ośrodków Val di Sole obejmuje Paganellę, Monte Bondone i Alpe Cimbra. Cały tydzień bez powtarzania tej samej trasy."
+        },
+        {
+          "title": "Pociągiem pod wyciąg.",
+          "text": "Kolej Trento–Malè–Mezzana zatrzymuje się w Dimaro i w Daolasie, gdzie stacja łączy się bezpośrednio z gondolą na stok. Zostawiasz samochód na miejscu i wjeżdżasz w góry z nartami na ramieniu."
+        }
+      ],
+      "beyond": {
+        "eyebrow": "Nie tylko narty",
+        "title": "Dolina zimą, także bez nart.",
+        "items": [
+          {
+            "title": "Narciarstwo biegowe",
+            "text": "Około 45 km tras biegowych między Passo Tonale, Vermiglio, Cogolo, Ossaną, Mezzaną, Commezzadurą i Rabbi, z dwoma wyposażonymi centrami biegowymi w Vermiglio i w Val di Rabbi. Trasa w Commezzadurze jest najbliżej Locanda."
+          },
+          {
+            "title": "Rakiety śnieżne",
+            "text": "Dziesiątki oznakowanych szlaków przez lasy, stare zagrody i hale, od łatwych po wymagające. Dwa zaczynają się w samym Dimaro Folgarida: podejście na Malghet Aut i Via degli Imperatori. Rakiety można wypożyczyć na miejscu."
+          },
+          {
+            "title": "Skitury i freeride",
+            "text": "Podejścia na Malga Saviana, Monte Sole w Val di Rabbi czy lodowiec Presena, najlepiej z przewodnikami szkoły alpinizmu i skiturów Val di Sole. Zawsze z detektorem lawinowym, łopatą i sondą."
+          },
+          {
+            "title": "Termy Pejo",
+            "text": "Po śniegu ciepło. W Peio Fonti czekają wody trzech historycznych źródeł doliny, basen i strefa wellness, czynne także zimą. Najlepszy sposób, by rozluźnić zmęczone nogi na koniec dnia."
+          },
+          {
+            "title": "Jarmarki i szopki",
+            "text": "W Boże Narodzenie Ossana staje się wioską szopek, z ponad tysiącem szopek w uliczkach i na podwórzach u stóp zamku San Michele. Val di Rabbi odpowiada swoją Doliną Szopek, a Malè i Val di Pejo rozświetlają świąteczne domki."
+          },
+          {
+            "title": "Przygody na śniegu",
+            "text": "Psie zaprzęgi z huskymi na Passo del Tonale, fat bike na zaśnieżonych trasach, wspinaczka na zamarznięte wodospady i tor saneczkowy Fevri w Madonna di Campiglio, prawie trzy kilometry zjazdu."
+          }
+        ]
+      }
     },
     "summer": {
       "eyebrow": "Lato · czerwiec – październik",

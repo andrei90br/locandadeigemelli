@@ -188,7 +188,7 @@
   "valdisole": {
     "meta": {
       "title": "Things to do in Val di Sole, winter and summer | Locanda dei Gemelli",
-      "description": "Skiing at Folgarida-Marilleva and Madonna di Campiglio, the Val di Sole cycle path, rafting on the Noce, hiking in the parks. All minutes from Locanda dei Gemelli."
+      "description": "Skiing in Folgarida-Marilleva, Madonna di Campiglio, Passo Tonale and Pejo, cross-country, snowshoeing, thermal spa and Christmas markets, plus summer in the valley. All a few minutes from Locanda dei Gemelli in Dimaro."
     },
     "hero": {
       "eyebrow": "Experiences",
@@ -197,12 +197,94 @@
     },
     "winter": {
       "eyebrow": "Winter · December – April",
-      "title": "Snow minutes away.",
-      "items": [
-        { "title": "Folgarida-Marilleva", "text": "The lifts are minutes from the Locanda. From here you can ski all the way to Madonna di Campiglio in the Skiarea Campiglio Dolomiti di Brenta." },
-        { "title": "Tonale Pass", "text": "High-altitude slopes and the Presena glacier, for reliable snow all season long." },
-        { "title": "Cross-country and snowshoeing", "text": "Cross-country loops and snowshoe trails through the valley's woods, for those who prefer silence to speed." }
-      ]
+      "title": "Snow just minutes from the door.",
+      "lead": "Dimaro Folgarida sits at the heart of one of the largest ski areas in Trentino. The lifts are a handful of minutes away, Madonna di Campiglio can be reached on skis, and the glaciers of Tonale and Pejo are less than an hour's drive.",
+      "ski": {
+        "eyebrow": "The ski areas",
+        "title": "Four ski areas, one base.",
+        "note": "Approximate driving times from the Locanda. Ski area figures refer to the current season and may vary with lift openings.",
+        "items": [
+          {
+            "title": "Folgarida-Marilleva",
+            "text": "Our home ski area. The Folgarida gondolas start a few minutes from the Locanda and climb to runs carved through the forest, with two floodlit slopes for skiing after sunset. From Daolasa the gondola reaches 2,000 metres in twelve minutes.",
+            "facts": [
+              "approx. 60 km of slopes",
+              "25 lifts",
+              "4 snowparks in the area",
+              "approx. 10 minutes"
+            ]
+          },
+          {
+            "title": "Madonna di Campiglio",
+            "text": "Linked on skis with Folgarida-Marilleva and Pinzolo: together they form the Skiarea Campiglio Dolomiti di Brenta. Slopes up to 2,500 metres facing the UNESCO-listed Brenta Dolomites, and long descents such as the Graffer, almost five kilometres. By car, you simply follow the same road the Locanda is on.",
+            "facts": [
+              "over 150 km with Folgarida and Pinzolo",
+              "up to 2,500 m",
+              "approx. 25 minutes"
+            ]
+          },
+          {
+            "title": "Passo del Tonale and Presena Glacier",
+            "text": "The Pontedilegno-Tonale ski area joins Trentino and Lombardy. The Presena glacier takes you up to 3,000 metres, with reliable snow all season long and skiing well into spring. At 2,000 metres, a snowpark with a skicross course.",
+            "facts": [
+              "approx. 100 km of slopes",
+              "30 lifts",
+              "up to 3,000 m",
+              "approx. 45 minutes"
+            ]
+          },
+          {
+            "title": "Pejo3000",
+            "text": "A quieter, more intimate ski area inside the Stelvio National Park. Less crowded slopes, a ski school that looks after children, and a cable car rising towards 3,000 metres. It presents itself as the world's first plastic-free ski area.",
+            "facts": [
+              "20 km of slopes",
+              "7 lifts",
+              "up to 3,000 m",
+              "approx. 40 minutes"
+            ]
+          }
+        ]
+      },
+      "tips": [
+        {
+          "title": "One ski pass, eight resorts.",
+          "text": "The Skirama Dolomiti Adamello Brenta ski pass opens up 380 km of slopes and 150 lifts: besides the Val di Sole ski areas it includes Paganella, Monte Bondone and Alpe Cimbra. A full week without skiing the same run twice."
+        },
+        {
+          "title": "By train to the lifts.",
+          "text": "The Trento–Malè–Mezzana railway stops in Dimaro and in Daolasa, where the station connects directly to the gondola up to the slopes. Leave the car parked and reach the mountain with your skis on your shoulder."
+        }
+      ],
+      "beyond": {
+        "eyebrow": "Beyond skiing",
+        "title": "The valley in winter, even without skis.",
+        "items": [
+          {
+            "title": "Cross-country skiing",
+            "text": "Around 45 km of Nordic trails across Passo Tonale, Vermiglio, Cogolo, Ossana, Mezzana, Commezzadura and Rabbi, with two equipped cross-country centres in Vermiglio and Val di Rabbi. The Commezzadura trail is the closest to the Locanda."
+          },
+          {
+            "title": "Snowshoeing",
+            "text": "Dozens of marked routes through forests, old farmsteads and mountain huts, from easy to demanding. Two start right in Dimaro Folgarida: the climb to Malghet Aut and the Via degli Imperatori. Snowshoes can be rented in the village."
+          },
+          {
+            "title": "Ski touring and freeride",
+            "text": "Ascents to Malga Saviana, Monte Sole in Val di Rabbi or the Presena Glacier, best tackled with the guides of the Val di Sole mountaineering and ski touring school. Always carry a transceiver, shovel and probe."
+          },
+          {
+            "title": "Pejo thermal spa",
+            "text": "After the snow, the warmth. In Peio Fonti, the waters of the valley's three historic springs, a pool and a wellness area, open in winter too. The best way to loosen tired legs at the end of the day."
+          },
+          {
+            "title": "Christmas markets and nativity scenes",
+            "text": "At Christmas, Ossana becomes the village of nativity scenes, with more than a thousand cribs along its lanes and courtyards beneath San Michele castle. Val di Rabbi answers with its Valley of Nativity Scenes, while Malè and Val di Pejo light up their Christmas stalls."
+          },
+          {
+            "title": "Snow experiences",
+            "text": "Husky sledding at Passo del Tonale, fat biking on snowy trails, ice climbing on frozen waterfalls and the Fevri toboggan run in Madonna di Campiglio, almost three kilometres of descent."
+          }
+        ]
+      }
     },
     "summer": {
       "eyebrow": "Summer · June – October",

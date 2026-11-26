@@ -188,7 +188,7 @@
   "valdisole": {
     "meta": {
       "title": "Was tun im Val di Sole, Winter und Sommer | Locanda dei Gemelli",
-      "description": "Skifahren in Folgarida-Marilleva und Madonna di Campiglio, der Radweg des Val di Sole, Rafting auf dem Noce, Wandern in den Parks. Alles wenige Minuten von der Locanda dei Gemelli."
+      "description": "Skifahren in Folgarida-Marilleva, Madonna di Campiglio, am Tonalepass und in Pejo, Langlauf, Schneeschuhwandern, Therme und Weihnachtsmärkte, dazu der Sommer im Tal. Alles nur wenige Minuten von der Locanda dei Gemelli in Dimaro."
     },
     "hero": {
       "eyebrow": "Erlebnisse",
@@ -197,12 +197,94 @@
     },
     "winter": {
       "eyebrow": "Winter · Dezember – April",
-      "title": "Schnee in wenigen Minuten.",
-      "items": [
-        { "title": "Folgarida-Marilleva", "text": "Die Lifte sind wenige Minuten von der Locanda entfernt. Von hier fährst du auf Skiern bis nach Madonna di Campiglio in der Skiarea Campiglio Dolomiti di Brenta." },
-        { "title": "Tonalepass", "text": "Hochgelegene Pisten und der Presena-Gletscher, für schneesichere Abfahrten die ganze Saison." },
-        { "title": "Langlauf und Schneeschuhe", "text": "Loipen und Schneeschuhwege durch die Wälder des Tals, für alle, die Stille der Geschwindigkeit vorziehen." }
-      ]
+      "title": "Schnee wenige Minuten vor der Tür.",
+      "lead": "Dimaro Folgarida liegt im Herzen eines der größten Skigebiete des Trentino. Die Lifte sind nur wenige Minuten entfernt, Madonna di Campiglio erreichen Sie auf Skiern, und die Gletscher am Tonale und in Pejo liegen weniger als eine Autostunde entfernt.",
+      "ski": {
+        "eyebrow": "Die Skigebiete",
+        "title": "Vier Skigebiete, ein Ausgangspunkt.",
+        "note": "Ungefähre Fahrzeiten mit dem Auto ab der Locanda. Die Angaben zu den Skigebieten beziehen sich auf die laufende Saison und können je nach Liftbetrieb variieren.",
+        "items": [
+          {
+            "title": "Folgarida-Marilleva",
+            "text": "Unser Hausskigebiet. Die Kabinenbahnen von Folgarida starten wenige Minuten von der Locanda entfernt und führen zu Pisten, die sich durch den Wald ziehen, mit zwei beleuchteten Abfahrten für das Skifahren nach Sonnenuntergang. Von Daolasa bringt die Gondel Sie in zwölf Minuten auf 2.000 Meter.",
+            "facts": [
+              "ca. 60 km Pisten",
+              "25 Lifte",
+              "4 Snowparks im Gebiet",
+              "ca. 10 Minuten"
+            ]
+          },
+          {
+            "title": "Madonna di Campiglio",
+            "text": "Auf Skiern mit Folgarida-Marilleva und Pinzolo verbunden: Zusammen bilden sie die Skiarea Campiglio Dolomiti di Brenta. Pisten bis auf 2.500 Meter vor der Kulisse der Brenta-Dolomiten, UNESCO-Welterbe, und lange Abfahrten wie die Graffer mit fast fünf Kilometern. Mit dem Auto folgen Sie einfach der Straße, an der die Locanda liegt.",
+            "facts": [
+              "über 150 km mit Folgarida und Pinzolo",
+              "bis 2.500 m",
+              "ca. 25 Minuten"
+            ]
+          },
+          {
+            "title": "Tonalepass und Presena-Gletscher",
+            "text": "Das Skigebiet Pontedilegno-Tonale verbindet das Trentino mit der Lombardei. Mit dem Presena-Gletscher geht es bis auf 3.000 Meter, mit schneesicheren Pisten die ganze Saison und Skifahren bis weit in den Frühling. Auf 2.000 Metern ein Snowpark mit Skicross-Strecke.",
+            "facts": [
+              "ca. 100 km Pisten",
+              "30 Lifte",
+              "bis 3.000 m",
+              "ca. 45 Minuten"
+            ]
+          },
+          {
+            "title": "Pejo3000",
+            "text": "Ein ruhigeres, überschaubares Skigebiet im Nationalpark Stilfserjoch. Weniger volle Pisten, eine Skischule mit viel Gespür für Kinder und eine Seilbahn, die Richtung 3.000 Meter führt. Es bezeichnet sich als erstes plastikfreies Skigebiet der Welt.",
+            "facts": [
+              "20 km Pisten",
+              "7 Lifte",
+              "bis 3.000 m",
+              "ca. 40 Minuten"
+            ]
+          }
+        ]
+      },
+      "tips": [
+        {
+          "title": "Ein Skipass, acht Orte.",
+          "text": "Der Skipass Skirama Dolomiti Adamello Brenta öffnet 380 km Pisten und 150 Lifte: Neben den Skigebieten des Val di Sole gehören Paganella, Monte Bondone und Alpe Cimbra dazu. Eine ganze Woche, ohne zweimal dieselbe Piste zu fahren."
+        },
+        {
+          "title": "Mit dem Zug zum Lift.",
+          "text": "Die Bahn Trento–Malè–Mezzana hält in Dimaro und in Daolasa, wo der Bahnhof direkt mit der Gondel zu den Pisten verbunden ist. Das Auto bleibt stehen, und Sie kommen mit den Skiern auf der Schulter in die Höhe."
+        }
+      ],
+      "beyond": {
+        "eyebrow": "Mehr als Skifahren",
+        "title": "Das Tal im Winter, auch ohne Ski.",
+        "items": [
+          {
+            "title": "Langlauf",
+            "text": "Rund 45 km Loipen zwischen Tonalepass, Vermiglio, Cogolo, Ossana, Mezzana, Commezzadura und Rabbi, mit zwei ausgestatteten Langlaufzentren in Vermiglio und im Val di Rabbi. Die Loipe in Commezzadura ist der Locanda am nächsten."
+          },
+          {
+            "title": "Schneeschuhwandern",
+            "text": "Dutzende markierte Touren durch Wälder, alte Höfe und Almen, von leicht bis anspruchsvoll. Zwei beginnen direkt in Dimaro Folgarida: der Aufstieg zur Malghet Aut und die Via degli Imperatori. Schneeschuhe kann man auch im Ort leihen."
+          },
+          {
+            "title": "Skitouren und Freeride",
+            "text": "Aufstiege zur Malga Saviana, zum Monte Sole im Val di Rabbi oder zum Presena-Gletscher, am besten mit den Bergführern der Alpin- und Skitourenschule Val di Sole. Immer mit LVS-Gerät, Schaufel und Sonde."
+          },
+          {
+            "title": "Therme Pejo",
+            "text": "Nach dem Schnee die Wärme. In Peio Fonti warten die Wasser der drei historischen Quellen des Tals, ein Schwimmbad und ein Wellnessbereich, auch im Winter geöffnet. Die beste Art, müde Beine am Ende des Tages zu entspannen."
+          },
+          {
+            "title": "Weihnachtsmärkte und Krippen",
+            "text": "Zu Weihnachten wird Ossana zum Krippendorf, mit über tausend Krippen in Gassen und Höfen unterhalb der Burg San Michele. Das Val di Rabbi antwortet mit seinem Tal der Krippen, während Malè und das Val di Pejo ihre Weihnachtshütten erleuchten."
+          },
+          {
+            "title": "Erlebnisse im Schnee",
+            "text": "Hundeschlittenfahrten mit Huskys am Tonalepass, Fatbike auf verschneiten Wegen, Eisklettern an gefrorenen Wasserfällen und die Rodelbahn Fevri in Madonna di Campiglio mit fast drei Kilometern Abfahrt."
+          }
+        ]
+      }
     },
     "summer": {
       "eyebrow": "Sommer · Juni – Oktober",
