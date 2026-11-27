@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartina piste interattiva · Madonna di Campiglio · Pinzolo · Folgarida · Marilleva</title>
+<meta name="robots" content="noindex">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--blu:#0b3d6e;--blu2:#1565c0;--bianco:#fff;--grigio:#eef3f8;--testo:#16202b}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--testo);background:#fff}
+  .mappa-app{position:relative;width:100%;height:100vh;min-height:520px;overflow:hidden;background:#cfe6f7;user-select:none;-webkit-user-select:none}
+  .viewport{position:absolute;inset:0;cursor:grab;touch-action:none}
+  .viewport.drag{cursor:grabbing}
+  .scena{position:absolute;top:0;left:0;transform-origin:0 0;will-change:transform}
+  .scena img{display:block;width:100%;height:auto;pointer-events:none}
+
+  /* Punti */
+  .punto{position:absolute;width:0;height:0}
+  .punto button{position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;
+    border:3px solid #fff;background:var(--c,#1565c0);cursor:pointer;
+    transform:translate(-50%,-50%) scale(var(--inv,1));box-shadow:0 2px 8px rgba(0,0,0,.45);
+    display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800;transition:background .15s}
+  .punto button::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--c,#1565c0);opacity:.6;animation:pulsa 2s infinite}
+  .punto button:hover,.punto.attivo button{background:#e53935}
+  .punto.attivo button::after{border-color:#e53935}
+  @keyframes pulsa{0%{transform:scale(.8);opacity:.7}100%{transform:scale(1.5);opacity:0}}
+  .etichetta{position:absolute;left:0;top:0;transform:translate(-50%,calc(-100% - 22px)) scale(var(--inv,1));transform-origin:50% 100%;
+    background:rgba(11,61,110,.92);color:#fff;font-size:12px;font-weight:700;padding:3px 8px;border-radius:4px;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .15s}
+  .punto:hover .etichetta,.punto.attivo .etichetta,.mostra-nomi .etichetta{opacity:1}
+
+  /* Barra superiore */
+  .barra{position:absolute;top:12px;left:12px;right:12px;display:flex;gap:10px;align-items:flex-start;z-index:20;pointer-events:none}
+  .titolo{background:rgba(255,255,255,.95);padding:10px 16px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.15);pointer-events:auto}
+  .titolo h1{font-size:17px;color:var(--blu)}
+  .titolo p{font-size:12px;opacity:.75}
+  .cerca{margin-left:auto;position:relative;pointer-events:auto}
+  .cerca input{width:240px;padding:11px 14px;border-radius:10px;border:none;box-shadow:0 2px 10px rgba(0,0,0,.15);font-size:14px;font-family:inherit}
+  .risultati{position:absolute;top:46px;right:0;width:280px;max-height:320px;overflow:auto;background:#fff;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.2);display:none}
+  .risultati.vis{display:block}
+  .risultati div{padding:10px 14px;cursor:pointer;font-size:14px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;gap:10px}
+  .risultati div:hover{background:var(--grigio)}
+  .risultati small{opacity:.6;white-space:nowrap}
+
+  /* Controlli zoom */
+  .controlli{position:absolute;right:12px;bottom:24px;display:flex;flex-direction:column;gap:8px;z-index:20}
+  .controlli button{width:46px;height:46px;border-radius:10px;border:none;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.2);font-size:22px;font-weight:700;cursor:pointer;color:var(--blu)}
+  .controlli button:hover{background:var(--grigio)}
+  .controlli button.on{background:var(--blu);color:#fff}
+
+  /* Legenda */
+  .legenda{position:absolute;left:12px;bottom:24px;background:rgba(255,255,255,.95);padding:10px 14px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.15);font-size:12px;z-index:20}
+  .legenda div{display:flex;align-items:center;gap:8px;margin:3px 0;cursor:pointer}
+  .legenda div.off{opacity:.35}
+  .legenda i{width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+  .aiuto{font-size:11px;opacity:.65;margin-top:6px;border-top:1px solid #ddd;padding-top:6px}
+
+  /* Scheda dettagli */
+  .scheda{position:absolute;top:0;right:0;height:100%;width:min(380px,100%);background:#fff;z-index:30;
+    box-shadow:-6px 0 24px rgba(0,0,0,.2);transform:translateX(105%);transition:transform .3s;display:flex;flex-direction:column}
+  .scheda.aperta{transform:translateX(0)}
+  .scheda-top{background:linear-gradient(135deg,var(--blu),var(--blu2));color:#fff;padding:22px 20px 20px;position:relative}
+  .scheda-top .tipo{font-size:11px;text-transform:uppercase;letter-spacing:.1em;opacity:.85;font-weight:700}
+  .scheda-top h2{font-size:24px;margin:4px 0 12px;line-height:1.15;padding-right:30px}
+  .quota{display:inline-flex;align-items:baseline;gap:6px;background:rgba(255,255,255,.18);padding:8px 14px;border-radius:8px}
+  .quota b{font-size:28px}
+  .quota span{font-size:13px;opacity:.9}
+  .chiudi{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(255,255,255,.2);color:#fff;font-size:22px;cursor:pointer}
+  .scheda-corpo{padding:20px;overflow:auto;flex:1;font-size:15px;line-height:1.55}
+  .scheda-corpo p{margin-bottom:16px}
+  .scheda-corpo h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--blu2);margin:6px 0 10px}
+  .servizi{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .servizi span{background:var(--grigio);padding:6px 10px;border-radius:6px;font-size:13px;font-weight:600}
+  .barra-quota{margin:6px 0 18px}
+  .barra-quota .scala{height:10px;border-radius:5px;background:linear-gradient(90deg,#4caf50,#ffc107,#ff7043,#8e24aa);position:relative}
+  .barra-quota .seg{position:absolute;top:-5px;width:4px;height:20px;background:#16202b;border-radius:2px;transform:translateX(-50%)}
+  .barra-quota .lab{display:flex;justify-content:space-between;font-size:11px;opacity:.6;margin-top:6px}
+  .nav-punti{display:flex;gap:10px;padding:14px 20px;border-top:1px solid #eee}
+  .nav-punti button{flex:1;padding:12px;border-radius:8px;border:1px solid #d6dee8;background:#fff;font-weight:700;cursor:pointer;font-family:inherit;color:var(--blu)}
+  .nav-punti button:hover{background:var(--grigio)}
+  .crediti{font-size:11px;opacity:.55;padding:0 20px 14px}
+
+  /* Dentro il sito (iframe): niente titolo e legenda, che coprirebbero Dimaro e Folgarida */
+  .incorporata .titolo,.incorporata .legenda{display:none}
+  .incorporata .cerca{margin-left:0}
+
+  @media(max-width:700px){
+    .titolo{display:none}
+    .cerca{margin-left:0;width:100%}
+    .cerca input{width:100%}
+    .risultati{width:100%}
+    .legenda{display:none}
+    .scheda{top:auto;bottom:0;height:62%;width:100%;border-radius:16px 16px 0 0;transform:translateY(105%)}
+    .scheda.aperta{transform:translateY(0)}
+    .controlli{bottom:16px}
+    .punto button{width:24px;height:24px;font-size:11px}
+  }
+</style>
+</head>
+<body>
+
+<div class="mappa-app" id="app">
+  <div class="viewport" id="viewport">
+    <div class="scena" id="scena">
+      <img id="img" src="../../assets/img/val-di-sole/mappa-piste-skiarea-campiglio.webp" alt="Cartina piste Madonna di Campiglio, Pinzolo, Folgarida e Marilleva">
+    </div>
+  </div>
+
+  <div class="barra">
+    <div class="titolo">
+      <h1>Cartina piste interattiva</h1>
+      <p>Madonna di Campiglio · Pinzolo · Folgarida · Marilleva</p>
+    </div>
+    <div class="cerca">
+      <input id="cerca" type="search" placeholder="🔍 Cerca una località..." autocomplete="off">
+      <div class="risultati" id="risultati"></div>
+    </div>
+  </div>
+
+  <div class="legenda" id="legenda">
+    <div data-tipo="paese"><i style="background:#1565c0"></i>Paesi e partenze</div>
+    <div data-tipo="vetta"><i style="background:#ef6c00"></i>Vette e cime</div>
+    <div data-tipo="rifugio"><i style="background:#6d4c41"></i>Rifugi e ristoro</div>
+    <div data-tipo="zona"><i style="background:#2e7d32"></i>Zone, laghi e snowpark</div>
+    <div class="aiuto">Rotellina / pizzica per zoomare<br>Trascina per spostarti · Tocca un punto</div>
+  </div>
+
+  <div class="controlli">
+    <button id="zoomIn" title="Ingrandisci">+</button>
+    <button id="zoomOut" title="Riduci">−</button>
+    <button id="reset" title="Vista intera">⤢</button>
+    <button id="nomi" title="Mostra tutti i nomi" style="font-size:15px">Aa</button>
+  </div>
+
+  <aside class="scheda" id="scheda">
+    <div class="scheda-top">
+      <button class="chiudi" id="chiudi" aria-label="Chiudi">×</button>
+      <div class="tipo" id="sTipo"></div>
+      <h2 id="sNome"></h2>
+      <div class="quota" id="sQuota"><b id="sAlt"></b><span>m s.l.m.</span></div>
+    </div>
+    <div class="scheda-corpo">
+      <div class="barra-quota" id="sBarra">
+        <div class="scala"><div class="seg" id="sSeg"></div></div>
+        <div class="lab"><span>700 m</span><span>Quota sulla cartina</span><span>2800 m</span></div>
+      </div>
+      <p id="sDesc"></p>
+      <h3>Cosa trovi</h3>
+      <div class="servizi" id="sServ"></div>
+    </div>
+    <div class="nav-punti">
+      <button id="prec">‹ Precedente</button>
+      <button id="succ">Successivo ›</button>
+    </div>
+    <div class="crediti">Cartina © Cormar – www.cormar.info</div>
+  </aside>
+</div>
+
+<script>
+// ===== PUNTI DELLA CARTINA =====
+// x e y sono in percentuale sulla cartina (0–100). alt = quota in metri (null se non indicata).
+const PUNTI = [{"id":"groste-passo","tipo":"vetta","alt":2444,"x":15.5,"y":21.4,"nome":"Passo Grostè","desc":"La zona più alta del comprensorio di Madonna di Campiglio, ai piedi delle Dolomiti di Brenta. Gli impianti arrivano fino a 2504 m. Neve sicura per tutta la stagione e piste larghe con vista sulle guglie del Brenta.","serv":["Arrivo impianti 2504 m","Bar Rist. Stoppani","Rif. Graffer","Ursus Snowpark","Vista Dolomiti di Brenta"]},{"id":"vagliana","tipo":"vetta","alt":2080,"x":11.25,"y":39,"nome":"Vagliana","desc":"Zona sciistica sul lato ovest del Grostè, servita da seggiovia. Piste panoramiche che scendono verso la zona del Boch.","serv":["Seggiovia","Bar Rist. Boch nelle vicinanze","Piste rosse e blu"]},{"id":"spinale","tipo":"vetta","alt":2101,"x":36,"y":30,"nome":"Monte Spinale","desc":"Il monte che domina Madonna di Campiglio, raggiungibile in cabinovia direttamente dal paese. In cima si trova lo Chalet Fiat con una delle viste più belle sul Brenta.","serv":["Cabinovia dal paese","Bar Rist. Chalet Fiat","Pista Fevri","Panorama sul Brenta"]},{"id":"valbrenta","tipo":"zona","alt":null,"x":42.25,"y":26.8,"nome":"Val Brenta","desc":"Valle naturale che sale verso il cuore delle Dolomiti di Brenta (patrimonio UNESCO). Non è servita da impianti: è la zona selvaggia tra Spinale e il versante di Pinzolo.","serv":["Natura","Dolomiti di Brenta UNESCO","Escursioni"]},{"id":"campiglio","tipo":"paese","alt":1524,"x":47.75,"y":40.4,"nome":"Madonna di Campiglio","desc":"Il centro del comprensorio e una delle località sciistiche più famose delle Alpi. Dal paese partono le cabinovie per Spinale, 5 Laghi e Pradalago. Qui si trova lo Stadio Slalom Miramonti, sede della gara di Coppa del Mondo 3Tre.","serv":["Cabinovie","Parcheggi","Noleggio / Ski service","Ufficio informazioni","Pronto soccorso","Stadio Slalom Miramonti","Après-ski"]},{"id":"montagnoli","tipo":"zona","alt":1805,"x":32.75,"y":44.4,"nome":"Lago Montagnoli","desc":"Piccolo lago alpino sopra Campiglio, sul percorso delle piste che scendono dal Grostè. Accanto c'è il Bar Ristorante Montagnoli.","serv":["Bar Rist. Montagnoli 1805 m","Lago alpino","Piste verso Campiglio"]},{"id":"groste-base","tipo":"paese","alt":null,"x":39,"y":51.1,"nome":"Grostè – partenza","desc":"Partenza della cabinovia del Grostè, poco sopra Madonna di Campiglio verso Campo Carlo Magno. Punto d'accesso principale per salire al Passo Grostè.","serv":["Cabinovia Grostè","Parcheggio","Après-ski","Campo scuola"]},{"id":"carlomagno","tipo":"paese","alt":1680,"x":34.5,"y":56.2,"nome":"Campo Carlo Magno","desc":"Valico tra Madonna di Campiglio e la Val di Sole. Qui si collegano i due grandi comprensori: Campiglio da una parte, Folgarida-Marilleva dall'altra. Famoso anche per lo sci di fondo.","serv":["Centro fondo","Bar ristorante","Agritur Malga Mondifrà","Collegamento Folgarida-Marilleva"]},{"id":"patascoss","tipo":"rifugio","alt":1745,"x":59.75,"y":41.6,"nome":"Patascoss","desc":"Zona di ristoro sopra Campiglio lungo le piste che scendono dai 5 Laghi, vicino allo Stadio Slalom Miramonti.","serv":["Bar Rist. 1745 m","Piste verso Campiglio"]},{"id":"cinquelaghi","tipo":"zona","alt":null,"x":72.5,"y":33.1,"nome":"Cinque Laghi","desc":"Area sciistica sopra Campiglio raggiungibile con la cabinovia 5 Laghi. Da qui scendono alcune delle piste più impegnative del comprensorio.","serv":["Cabinovia","Bar ristorante","Piste nere e rosse"]},{"id":"pancugolo","tipo":"vetta","alt":2276,"x":83.25,"y":34.3,"nome":"Monte Pancugolo","desc":"Cima sopra la zona dei 5 Laghi, sul lato est di Madonna di Campiglio.","serv":["Vetta","Panorama"]},{"id":"mavignola","tipo":"paese","alt":1123,"x":72.4,"y":29.7,"nome":"S. Antonio di Mavignola","desc":"Piccolo paese nella valle tra Pinzolo e Madonna di Campiglio, a metà strada tra le due località.","serv":["Paese","Collegamento stradale Pinzolo–Campiglio"]},{"id":"sabion","tipo":"vetta","alt":2100,"x":75.75,"y":17.2,"nome":"Dos del Sabion","desc":"Punto più alto del comprensorio di Pinzolo, raggiungibile in cabinovia. Vista spettacolare sulle Dolomiti di Brenta e sulla Val Rendena.","serv":["Arrivo cabinovia","Rifugio","Panorama sul Brenta","Brenta Snowpark nelle vicinanze"]},{"id":"cioca","tipo":"rifugio","alt":null,"x":74.5,"y":23.8,"nome":"Malga Cioca","desc":"Punto di ristoro e snodo delle piste nella zona di Pinzolo, tra il Dos del Sabion e Pra Rodont.","serv":["Bar ristorante","Incrocio piste","Collegamento Pinzolo–Campiglio"]},{"id":"rodont","tipo":"zona","alt":1508,"x":80,"y":19.4,"nome":"Pra Rodont","desc":"Zona intermedia sopra Pinzolo, ideale per famiglie e principianti.","serv":["Bar Rist. 1508 m","Family Park","Piste facili"]},{"id":"tulot","tipo":"paese","alt":null,"x":89.5,"y":29.4,"nome":"Tulot","desc":"Partenza degli impianti nella zona di Pinzolo. Arrivo della pista Tulot Audi slope.","serv":["Parcheggio","Noleggio / Ski service","Bar après-ski","Pista Tulot"]},{"id":"pinzolo","tipo":"paese","alt":770,"x":96.25,"y":27.8,"nome":"Pinzolo","desc":"Paese principale della Val Rendena. Dalla cabinovia si sale al Dos del Sabion e si può arrivare sugli sci fino a Madonna di Campiglio.","serv":["Cabinovia","Parcheggio","Noleggio / Ski service","Ufficio informazioni"]},{"id":"pradalago","tipo":"vetta","alt":2100,"x":74,"y":51.8,"nome":"Pradalago","desc":"Zona sciistica sul versante nord di Madonna di Campiglio, raggiungibile in cabinovia dal paese. Da qui si scende verso Campo Carlo Magno e Folgarida-Marilleva.","serv":["Bar Rist. Pradalago","Rif. Viviani 2080 m","Mini Snowpark","Ursus area","Collegamento Val di Sole"]},{"id":"zeledria","tipo":"vetta","alt":2426,"x":86.75,"y":49,"nome":"Monte Zeledria","desc":"Cima sopra la zona di Pradalago. Le piste del versante Zeledria portano verso Campo Carlo Magno.","serv":["Vetta","Panorama"]},{"id":"laste","tipo":"vetta","alt":2770,"x":90.75,"y":58.9,"nome":"Cima Laste","desc":"La cima più alta segnata sulla cartina. Non è servita da impianti.","serv":["Vetta","Fuori pista – zona non servita"]},{"id":"vigo","tipo":"vetta","alt":2179,"x":47.25,"y":62.6,"nome":"Monte Vigo","desc":"Snodo centrale del comprensorio Folgarida-Marilleva. Da qui partono le piste verso Folgarida, Marilleva, Daolasa e verso Campiglio.","serv":["Rif. Orso Bruno","Collegamento tra le valli","Piste rosse e nere"]},{"id":"solander","tipo":"rifugio","alt":2040,"x":42,"y":64.5,"nome":"Rifugio Solander","desc":"Rifugio sotto il Monte Vigo, all'arrivo della cabinovia che sale da Daolasa.","serv":["Rifugio","Family Park","Arrivo impianti da Daolasa"]},{"id":"spolverino","tipo":"vetta","alt":2092,"x":34,"y":65.6,"nome":"Monte Spolverino","desc":"Cima sopra Folgarida, collegata al Monte Vigo. Da qui scendono numerose piste verso Malghet Aut.","serv":["Bar / ristoro","Seggiovie","Piste rosse e blu"]},{"id":"malghet","tipo":"zona","alt":1855,"x":20.5,"y":68.8,"nome":"Malghet Aut","desc":"Zona centrale di Folgarida, raggiungibile in cabinovia dal paese. Molto adatta a famiglie e principianti.","serv":["Family Park","Noleggio / Ski service","Bar ristorante","Arrivo cabinovie"]},{"id":"folgarida1400","tipo":"paese","alt":1400,"x":8,"y":80.3,"nome":"Folgarida 1400","desc":"Parte alta del paese di Folgarida, con partenza della cabinovia verso Malghet Aut.","serv":["Cabinovia","Parcheggio","Noleggio / Ski service"]},{"id":"folgarida1300","tipo":"paese","alt":1300,"x":19.5,"y":83.5,"nome":"Folgarida 1300","desc":"Centro di Folgarida con impianti, servizi e pista illuminata per lo sci serale.","serv":["Cabinovia","Parcheggio","Noleggio / Ski service","Ufficio informazioni","Pronto soccorso","Pista illuminata"]},{"id":"panciana","tipo":"zona","alt":1886,"x":61.5,"y":69.9,"nome":"Val Panciana","desc":"Zona sopra Marilleva con lo Snowpark e la Malga Panciana. Molto frequentata da snowboarder e famiglie.","serv":["Snowpark Marilleva","Family Park","Malga Panciana","Seggiovie"]},{"id":"pesa","tipo":"vetta","alt":2155,"x":76.75,"y":65.2,"nome":"Doss della Pesa","desc":"Cima più alta del settore di Marilleva, con piste che scendono verso Orti e Marilleva 1400.","serv":["Arrivo seggiovie","Piste rosse e nere"]},{"id":"orti","tipo":"rifugio","alt":1886,"x":75.75,"y":73.2,"nome":"Orti","desc":"Rifugio lungo le piste sopra Marilleva 1400.","serv":["Rifugio 1886 m","Piste verso Marilleva"]},{"id":"marilleva1400","tipo":"paese","alt":1400,"x":76.25,"y":85.7,"nome":"Marilleva 1400","desc":"Località sciistica costruita direttamente sulle piste: si esce da casa con gli sci ai piedi. Ha anche una pista illuminata per sciare la sera.","serv":["Seggiovie e cabinovia","Noleggio / Ski service","Ufficio informazioni","Pronto soccorso","Pista illuminata","Sci ai piedi"]},{"id":"marilleva900","tipo":"paese","alt":900,"x":71.2,"y":93.8,"nome":"Marilleva 900","desc":"Stazione a valle in Val di Sole, accanto alla ferrovia. Con la cabinovia si sale a Marilleva 1400.","serv":["Stazione treno","Cabinovia","Parcheggio","Noleggio / Ski service","Ufficio informazioni"]},{"id":"mezzana","tipo":"paese","alt":941,"x":71.2,"y":98.5,"nome":"Mezzana","desc":"Paese della Val di Sole vicino a Marilleva 900.","serv":["Paese","Collegamento con Marilleva 900"]},{"id":"daolasa","tipo":"paese","alt":814,"x":41.2,"y":94.2,"nome":"Daolasa","desc":"Partenza in Val di Sole della cabinovia che sale verso il Rifugio Solander, con una stazione intermedia a 1370 m. Fermata del treno e parcheggio.","serv":["Stazione treno","Cabinovia","Stazione intermedia 1370 m","Parcheggio","Noleggio / Ski service"]},{"id":"dimaro","tipo":"paese","alt":766,"x":16,"y":91.2,"nome":"Dimaro","desc":"Paese della Val di Sole sotto Folgarida, con stazione ferroviaria. Qui si trova la Locanda dei Gemelli: appartamenti e ristorante pizzeria a pochi minuti dagli impianti di Folgarida.","serv":["Stazione treno","Paese","Locanda dei Gemelli"]},{"id":"male","tipo":"paese","alt":736,"x":3.2,"y":97.6,"nome":"Malè","desc":"Capoluogo della Val di Sole, all'ingresso della valle dalla direzione di Trento.","serv":["Stazione treno","Ufficio informazioni","Strada per Trento / A22"]}];
+
+const COLORI = {paese:'#1565c0', vetta:'#ef6c00', rifugio:'#6d4c41', zona:'#2e7d32'};
+const NOMI_TIPO = {"paese":"Paese / partenza impianti","vetta":"Vetta / cima","rifugio":"Rifugio / ristoro","zona":"Zona / snowpark"};
+
+// ===== ZOOM E SPOSTAMENTO =====
+const vp = document.getElementById('viewport');
+const scena = document.getElementById('scena');
+const img = document.getElementById('img');
+const app = document.getElementById('app');
+if (window.self !== window.top) app.classList.add('incorporata');
+const W = 2500, H = 2335; // dimensioni originali cartina
+let scala = 1, minScala = 1, maxScala = 6, tx = 0, ty = 0, margineBasso = 0, margineDx = 0;
+const tipiNascosti = new Set();
+
+function adatta(){
+  const r = vp.getBoundingClientRect();
+  minScala = Math.min(r.width / W, r.height / H);
+  maxScala = Math.max(minScala * 8, 2);
+  scena.style.width = W + 'px';
+  return r;
+}
+function vistaIntera(anim){
+  const r = adatta();
+  scala = minScala;
+  tx = (r.width - W * scala) / 2;
+  ty = (r.height - H * scala) / 2;
+  applica(anim);
+}
+function limita(){
+  const r = vp.getBoundingClientRect();
+  const w = W * scala, h = H * scala;
+  const vw = r.width - margineDx, vh = r.height - margineBasso;
+  tx = w <= vw ? (vw - w) / 2 : Math.min(0, Math.max(vw - w, tx));
+  ty = h <= vh ? (vh - h) / 2 : Math.min(0, Math.max(vh - h, ty));
+}
+function applica(anim){
+  limita();
+  scena.style.transition = anim ? 'transform .45s ease' : 'none';
+  scena.style.transform = `translate(${tx}px,${ty}px) scale(${scala})`;
+  scena.style.setProperty('--inv', 1 / scala);
+}
+function zoomA(nuova, cx, cy, anim){
+  nuova = Math.min(maxScala, Math.max(minScala, nuova));
+  tx = cx - (cx - tx) * (nuova / scala);
+  ty = cy - (cy - ty) * (nuova / scala);
+  scala = nuova;
+  applica(anim);
+}
+function centro(){ const r = vp.getBoundingClientRect(); return [r.width/2, r.height/2]; }
+
+vp.addEventListener('wheel', e => {
+  e.preventDefault();
+  const r = vp.getBoundingClientRect();
+  zoomA(scala * Math.exp(-e.deltaY * 0.0015), e.clientX - r.left, e.clientY - r.top);
+}, {passive:false});
+
+vp.addEventListener('dblclick', e => {
+  if(e.target.closest('.punto')) return;
+  const r = vp.getBoundingClientRect();
+  zoomA(scala * 2, e.clientX - r.left, e.clientY - r.top, true);
+});
+
+// Trascinamento e pizzico (mouse + touch)
+const puntatori = new Map();
+let ultimo = null, distIniz = 0, scalaIniz = 1, mosso = 0;
+vp.addEventListener('pointerdown', e => {
+  puntatori.set(e.pointerId, {x:e.clientX, y:e.clientY});
+  vp.setPointerCapture(e.pointerId);
+  mosso = 0;
+  if(puntatori.size === 1){ ultimo = {x:e.clientX, y:e.clientY}; vp.classList.add('drag'); }
+  if(puntatori.size === 2){
+    const [a,b] = [...puntatori.values()];
+    distIniz = Math.hypot(a.x-b.x, a.y-b.y); scalaIniz = scala;
+  }
+});
+vp.addEventListener('pointermove', e => {
+  if(!puntatori.has(e.pointerId)) return;
+  puntatori.set(e.pointerId, {x:e.clientX, y:e.clientY});
+  if(puntatori.size === 1 && ultimo){
+    const dx = e.clientX - ultimo.x, dy = e.clientY - ultimo.y;
+    mosso += Math.abs(dx) + Math.abs(dy);
+    tx += dx; ty += dy; ultimo = {x:e.clientX, y:e.clientY};
+    applica();
+  } else if(puntatori.size === 2){
+    const [a,b] = [...puntatori.values()];
+    const r = vp.getBoundingClientRect();
+    const d = Math.hypot(a.x-b.x, a.y-b.y);
+    mosso += 10;
+    zoomA(scalaIniz * d / distIniz, (a.x+b.x)/2 - r.left, (a.y+b.y)/2 - r.top);
+  }
+});
+function fine(e){
+  puntatori.delete(e.pointerId);
+  if(puntatori.size === 1){ const p=[...puntatori.values()][0]; ultimo = {x:p.x,y:p.y}; }
+  if(puntatori.size === 0){ ultimo = null; vp.classList.remove('drag'); }
+}
+vp.addEventListener('pointerup', fine);
+vp.addEventListener('pointercancel', fine);
+
+document.getElementById('zoomIn').onclick = () => { const [x,y]=centro(); zoomA(scala*1.6,x,y,true); };
+document.getElementById('zoomOut').onclick = () => { const [x,y]=centro(); zoomA(scala/1.6,x,y,true); };
+document.getElementById('reset').onclick = () => { chiudiScheda(); vistaIntera(true); };
+document.getElementById('nomi').onclick = e => {
+  scena.classList.toggle('mostra-nomi');
+  e.currentTarget.classList.toggle('on');
+};
+
+// ===== PUNTI =====
+PUNTI.forEach((p, i) => {
+  const el = document.createElement('div');
+  el.className = 'punto';
+  el.dataset.tipo = p.tipo;
+  el.id = 'p-' + p.id;
+  el.style.left = p.x + '%';
+  el.style.top = p.y + '%';
+  el.style.setProperty('--c', COLORI[p.tipo]);
+  el.innerHTML = `<span class="etichetta">${p.nome}${p.alt ? ' · ' + p.alt + ' m' : ''}</span><button aria-label="${p.nome}">i</button>`;
+  el.querySelector('button').addEventListener('pointerdown', e => e.stopPropagation());
+  el.querySelector('button').addEventListener('click', e => { e.stopPropagation(); apri(i); });
+  scena.appendChild(el);
+});
+// I punti sono in % dell'altezza: la scena ha altezza = immagine
+img.addEventListener('load', () => { scena.style.height = H + 'px'; vistaIntera(); });
+scena.style.height = H + 'px';
+
+// ===== SCHEDA DETTAGLI =====
+let corrente = -1;
+const scheda = document.getElementById('scheda');
+function apri(i){
+  corrente = i;
+  const p = PUNTI[i];
+  document.querySelectorAll('.punto.attivo').forEach(x => x.classList.remove('attivo'));
+  document.getElementById('p-' + p.id).classList.add('attivo');
+  document.getElementById('sTipo').textContent = NOMI_TIPO[p.tipo];
+  document.getElementById('sNome').textContent = p.nome;
+  document.getElementById('sQuota').style.display = p.alt ? '' : 'none';
+  document.getElementById('sBarra').style.display = p.alt ? '' : 'none';
+  if(p.alt){
+    document.getElementById('sAlt').textContent = p.alt.toLocaleString('it-IT');
+    document.getElementById('sSeg').style.left = Math.min(100, Math.max(0, (p.alt - 700) / 2100 * 100)) + '%';
+  }
+  document.getElementById('sDesc').textContent = p.desc;
+  document.getElementById('sServ').innerHTML = p.serv.map(s => `<span>${s}</span>`).join('');
+  scheda.classList.add('aperta');
+  vaiA(p);
+}
+function vaiA(p){
+  const r = vp.getBoundingClientRect();
+  const mobile = r.width <= 700;
+  const target = Math.max(scala, Math.min(maxScala, minScala * 3));
+  scala = target;
+  const px = p.x / 100 * W * scala, py = p.y / 100 * H * scala;
+  margineDx = mobile ? 0 : Math.min(380, r.width);
+  margineBasso = mobile ? r.height * 0.62 : 0;
+  const areaW = r.width - margineDx;
+  const areaH = r.height - margineBasso;
+  tx = areaW / 2 - px;
+  ty = areaH / 2 - py;
+  applica(true);
+}
+function chiudiScheda(){
+  scheda.classList.remove('aperta');
+  margineBasso = 0; margineDx = 0; applica(true);
+  document.querySelectorAll('.punto.attivo').forEach(x => x.classList.remove('attivo'));
+  corrente = -1;
+}
+document.getElementById('chiudi').onclick = chiudiScheda;
+document.getElementById('prec').onclick = () => apri((corrente - 1 + PUNTI.length) % PUNTI.length);
+document.getElementById('succ').onclick = () => apri((corrente + 1) % PUNTI.length);
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape') chiudiScheda();
+  if(corrente >= 0 && e.key === 'ArrowRight') apri((corrente + 1) % PUNTI.length);
+  if(corrente >= 0 && e.key === 'ArrowLeft') apri((corrente - 1 + PUNTI.length) % PUNTI.length);
+});
+
+// ===== LEGENDA (filtra per tipo) =====
+document.querySelectorAll('#legenda [data-tipo]').forEach(d => {
+  d.onclick = () => {
+    const t = d.dataset.tipo;
+    tipiNascosti.has(t) ? tipiNascosti.delete(t) : tipiNascosti.add(t);
+    d.classList.toggle('off');
+    document.querySelectorAll(`.punto[data-tipo="${t}"]`).forEach(x => x.style.display = tipiNascosti.has(t) ? 'none' : '');
+  };
+});
+
+// ===== RICERCA =====
+const cerca = document.getElementById('cerca'), ris = document.getElementById('risultati');
+function mostraRisultati(){
+  const q = cerca.value.trim().toLowerCase();
+  const lista = PUNTI.map((p,i)=>({p,i})).filter(({p}) => !q || p.nome.toLowerCase().includes(q) || p.serv.join(' ').toLowerCase().includes(q));
+  ris.innerHTML = lista.map(({p,i}) => `<div data-i="${i}">${p.nome}<small>${p.alt ? p.alt + ' m' : ''}</small></div>`).join('') || '<div>Nessun risultato</div>';
+  ris.classList.add('vis');
+}
+cerca.addEventListener('input', mostraRisultati);
+cerca.addEventListener('focus', mostraRisultati);
+ris.addEventListener('click', e => {
+  const d = e.target.closest('[data-i]'); if(!d) return;
+  apri(+d.dataset.i); ris.classList.remove('vis'); cerca.blur();
+});
+document.addEventListener('click', e => { if(!e.target.closest('.cerca')) ris.classList.remove('vis'); });
+
+window.addEventListener('resize', () => { adatta(); applica(); });
+vistaIntera();
+</script>
+</body>
+</html>

@@ -538,8 +538,8 @@ export function valdisole(c) {
           <a class="btn btn-accent" href="${SKI_MAP_URL}" target="_blank" rel="noopener">${e(w.map.button)}</a>
         </div>
         <figure class="ski-map-figure">
-          <a href="${c.asset(IMG.skiMap)}" target="_blank" rel="noopener"><img src="${c.asset(IMG.skiMapSm)}" alt="${e(w.map.alt)}" width="1400" height="1307" loading="lazy"></a>
-          <figcaption>${e(w.map.caption)}</figcaption>
+          <iframe src="mappa-piste/" title="${e(w.map.alt)}" loading="lazy"></iframe>
+          <figcaption><a href="mappa-piste/" target="_blank" rel="noopener">${e(w.map.fullscreen)}</a> · ${e(w.map.caption)}</figcaption>
         </figure>
       </div>
     </section>
