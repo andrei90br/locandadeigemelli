@@ -39,10 +39,10 @@
     "stay": "Wohnen",
     "dine": "Essen",
     "discover": "Entdecken",
-    "hours": "Restaurant 11–14 und 18–21:30 Uhr · Pizzeria 18–22 Uhr · Dienstag Ruhetag"
+    "hours": "Restaurant 12–14:30 und 17:30–22 Uhr · Pizzeria 17:30–22:30 Uhr · Dienstag Ruhetag"
   },
   "home": {
-    "notice": "Neue Führung · ehemals Locanda Elisa",
+    "notice": "Neue Führung",
     "meta": {
       "title": "Locanda dei Gemelli | Ferienwohnungen, Restaurant & Pizzeria in Dimaro Folgarida, Val di Sole",
       "description": "6 Ferienwohnungen mit Küche und ein Restaurant mit Pizzeria im Erdgeschoss, in Dimaro Folgarida im Val di Sole. Regionale Trentiner Küche, Pizza vom Meisterpizzaiolo, Pisten und Wege in wenigen Minuten."
@@ -158,14 +158,14 @@
       "eyebrow": "Das Restaurant",
       "title": "Tradition, wie man sie heute kocht.",
       "text": "Trentiner Gerichte, modern interpretiert, und einige internationale Vorschläge für alle, die neue Wege gehen wollen. Frische Zutaten, ehrliche Portionen, klare Aromen. Das Mittagessen zwischen zwei Abfahrten und das Abendessen, an das du dich am Ende des Urlaubs erinnerst.",
-      "hours": "Mittag 11:00 – 14:00 · Abend 18:00 – 21:30 Uhr",
+      "hours": "Mittag 12:00 – 14:30 · Abend 17:30 – 22:00 Uhr",
       "menu": "Die vollständige Speisekarte ist bald auf dieser Seite verfügbar."
     },
     "pizza": {
       "eyebrow": "Die Pizzeria",
       "title": "Pizza ist ein Handwerk. Unser Meister beherrscht es.",
       "text": "Jede Pizza kommt aus den Händen unseres Meisterpizzaiolo. Sorgfältig zubereiteter Teig, hochwertige saisonale Zutaten, durchdachte Kombinationen. Du findest die Klassiker, die du liebst, und besondere Kreationen aus unserer Küche, die es sonst nirgends gibt.",
-      "hours": "Jeden Abend 18:00 – 22:00 Uhr, außer dienstags"
+      "hours": "Jeden Abend 17:30 – 22:30 Uhr, außer dienstags"
     },
     "services": {
       "eyebrow": "Mehr als Abendessen",

@@ -39,10 +39,10 @@
     "stay": "Soggiorno",
     "dine": "Ristorazione",
     "discover": "Scopri",
-    "hours": "Ristorante 11–14 e 18–21:30 · Pizzeria 18–22 · Chiuso il martedì"
+    "hours": "Ristorante 12–14:30 e 17:30–22 · Pizzeria 17:30–22:30 · Chiuso il martedì"
   },
   "home": {
-    "notice": "Nuova gestione · ex Locanda Elisa",
+    "notice": "Nuova gestione",
     "meta": {
       "title": "Locanda dei Gemelli | Appartamenti, Ristorante e Pizzeria a Dimaro Folgarida, Val di Sole",
       "description": "6 appartamenti con cucina e un ristorante pizzeria al piano terra, a Dimaro Folgarida in Val di Sole. Cucina trentina a km zero, pizza del maestro pizzaiolo, piste e sentieri a pochi minuti."
@@ -158,14 +158,14 @@
       "eyebrow": "Il ristorante",
       "title": "La tradizione, fatta oggi.",
       "text": "Piatti della cucina trentina riletti con mano moderna, e qualche proposta internazionale per chi vuole uscire dal sentiero. Ingredienti freschi, porzioni oneste, sapori netti. È il pranzo che ti serve tra una pista e l'altra e la cena che ricordi a fine vacanza.",
-      "hours": "Pranzo 11:00 – 14:00 · Cena 18:00 – 21:30",
+      "hours": "Pranzo 12:00 – 14:30 · Cena 17:30 – 22:00",
       "menu": "Il menu completo sarà presto disponibile su questa pagina."
     },
     "pizza": {
       "eyebrow": "La pizzeria",
       "title": "La pizza è un mestiere. Il nostro maestro lo sa.",
       "text": "Ogni pizza esce dalle mani del nostro maestro pizzaiolo. Impasti curati, ingredienti di stagione e di qualità, abbinamenti studiati. Trovi le classiche che ami e le combinazioni speciali nate nella nostra cucina, che non trovi altrove.",
-      "hours": "Tutte le sere 18:00 – 22:00, martedì escluso"
+      "hours": "Tutte le sere 17:30 – 22:30, martedì escluso"
     },
     "services": {
       "eyebrow": "Oltre la cena",

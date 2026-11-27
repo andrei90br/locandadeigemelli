@@ -199,8 +199,8 @@ function hoursBox(c) {
           <div class="hours">
             <h3>${e(t.hoursTitle)}</h3>
             <dl>
-              <div><dt>${e(t.restaurant)}</dt><dd>11:00 – 14:00<br>18:00 – 21:30</dd></div>
-              <div><dt>${e(t.pizzeria)}</dt><dd>18:00 – 22:00</dd></div>
+              <div><dt>${e(t.restaurant)}</dt><dd>12:00 – 14:30<br>17:30 – 22:00</dd></div>
+              <div><dt>${e(t.pizzeria)}</dt><dd>17:30 – 22:30</dd></div>
               <div class="closed"><dt>${e(t.closedDay)}</dt><dd>${e(t.closed)}</dd></div>
             </dl>
             <p class="hours-season">${e(t.season)}</p>
@@ -240,8 +240,8 @@ function baseJsonLd(c) {
     sameAs: [GOOGLE_PLACE_URL],
     address: { '@type': 'PostalAddress', streetAddress: 'Via Campiglio 59', postalCode: '38025', addressLocality: 'Dimaro Folgarida', addressRegion: 'TN', addressCountry: 'IT' },
     openingHoursSpecification: [
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '11:00', closes: '14:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '18:00', closes: '22:00' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '12:00', closes: '14:30' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '17:30', closes: '22:30' },
     ],
   };
 }
