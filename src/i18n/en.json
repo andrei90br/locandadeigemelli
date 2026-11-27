@@ -256,7 +256,7 @@
           "text": "The Trento–Malè–Mezzana railway stops in Dimaro and in Daolasa, where the station connects directly to the gondola up to the slopes. Leave the car parked and reach the mountain with your skis on your shoulder."
         }
       ],
-      "map": {"eyebrow": "Piste map", "title": "The whole ski area at a glance.", "text": "Folgarida-Marilleva, Madonna di Campiglio and Pinzolo are linked on skis. The official, up-to-date map with open lifts and slopes is on the Val di Sole website.", "button": "Open the official map", "alt": "Piste map of the Skiarea Campiglio Dolomiti di Brenta, from Folgarida and Marilleva to Madonna di Campiglio and Pinzolo", "caption": "Interactive map: tap the points to discover villages, peaks and huts. Map © Cormar, Skiarea Campiglio Dolomiti di Brenta.", "fullscreen": "Open full screen"},
+      "map": {"eyebrow": "Piste map", "title": "The whole ski area at a glance.", "text": "Folgarida-Marilleva, Madonna di Campiglio and Pinzolo are linked on skis. Explore the map: tap a point to discover altitudes, huts and services.", "alt": "Piste map of the Skiarea Campiglio Dolomiti di Brenta, from Folgarida and Marilleva to Madonna di Campiglio and Pinzolo", "caption": "Interactive map: tap the points to discover villages, peaks and huts. Map © Cormar, Skiarea Campiglio Dolomiti di Brenta.", "fullscreen": "Open full screen"},
       "beyond": {
         "eyebrow": "Beyond skiing",
         "title": "The valley in winter, even without skis.",

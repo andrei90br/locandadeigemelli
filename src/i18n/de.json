@@ -256,7 +256,7 @@
           "text": "Die Bahn Trento–Malè–Mezzana hält in Dimaro und in Daolasa, wo der Bahnhof direkt mit der Gondel zu den Pisten verbunden ist. Das Auto bleibt stehen, und Sie kommen mit den Skiern auf der Schulter in die Höhe."
         }
       ],
-      "map": {"eyebrow": "Pistenplan", "title": "Das ganze Skigebiet auf einen Blick.", "text": "Folgarida-Marilleva, Madonna di Campiglio und Pinzolo sind auf Skiern verbunden. Den offiziellen, aktuellen Plan mit geöffneten Liften und Pisten finden Sie auf dem Portal des Val di Sole.", "button": "Offiziellen Plan öffnen", "alt": "Pistenplan der Skiarea Campiglio Dolomiti di Brenta, von Folgarida und Marilleva bis Madonna di Campiglio und Pinzolo", "caption": "Interaktive Karte: Tippen Sie auf die Punkte, um Orte, Gipfel und Hütten zu entdecken. Karte © Cormar, Skiarea Campiglio Dolomiti di Brenta.", "fullscreen": "Im Vollbild öffnen"},
+      "map": {"eyebrow": "Pistenplan", "title": "Das ganze Skigebiet auf einen Blick.", "text": "Folgarida-Marilleva, Madonna di Campiglio und Pinzolo sind auf Skiern verbunden. Entdecken Sie die Karte: Tippen Sie auf einen Punkt für Höhen, Hütten und Services.", "alt": "Pistenplan der Skiarea Campiglio Dolomiti di Brenta, von Folgarida und Marilleva bis Madonna di Campiglio und Pinzolo", "caption": "Interaktive Karte: Tippen Sie auf die Punkte, um Orte, Gipfel und Hütten zu entdecken. Karte © Cormar, Skiarea Campiglio Dolomiti di Brenta.", "fullscreen": "Im Vollbild öffnen"},
       "beyond": {
         "eyebrow": "Mehr als Skifahren",
         "title": "Das Tal im Winter, auch ohne Ski.",

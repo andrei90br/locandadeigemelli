@@ -490,8 +490,6 @@ export function restaurant(c) {
   return layout(c, { title: r.meta.title, description: r.meta.description, image: IMG.restaurant, body, jsonld: baseJsonLd(c) });
 }
 
-const SKI_MAP_URL = 'https://www.visitvaldisole.it/it/impianti-piste-in-inverno';
-
 export function valdisole(c) {
   const t = c.t, v = t.valdisole;
   const season = (s, cls) => `
@@ -530,12 +528,11 @@ export function valdisole(c) {
       </div>
     </section>
     <section class="section ski-map">
-      <div class="wrap ski-map-inner">
-        <div>
+      <div class="wrap">
+        <div class="ski-map-head">
           <p class="eyebrow">${e(w.map.eyebrow)}</p>
           <h2>${e(w.map.title)}</h2>
           <p class="lead">${e(w.map.text)}</p>
-          <a class="btn btn-accent" href="${SKI_MAP_URL}" target="_blank" rel="noopener">${e(w.map.button)}</a>
         </div>
         <figure class="ski-map-figure">
           <iframe src="mappa-piste/" title="${e(w.map.alt)}" loading="lazy"></iframe>
