@@ -535,8 +535,8 @@ export function valdisole(c) {
           <p class="lead">${e(w.map.text)}</p>
         </div>
         <figure class="ski-map-figure">
-          <iframe src="mappa-piste/" title="${e(w.map.alt)}" loading="lazy"></iframe>
-          <figcaption><a href="mappa-piste/" target="_blank" rel="noopener">${e(w.map.fullscreen)}</a> · ${e(w.map.caption)}</figcaption>
+          <iframe src="mappa-piste/?v=${ver('src/mappa-piste/template.html')}${ver('src/mappa-piste/dati.json')}" title="${e(w.map.alt)}" loading="lazy"></iframe>
+          <figcaption><a href="mappa-piste/?v=${ver('src/mappa-piste/template.html')}${ver('src/mappa-piste/dati.json')}" target="_blank" rel="noopener">${e(w.map.fullscreen)}</a> · ${e(w.map.caption)}</figcaption>
         </figure>
       </div>
     </section>
