@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { SITE_URL, LANGS, APARTMENTS, PAGES } from './src/data.mjs';
-import { context, home, apartments, apartment, restaurant, valdisole, request, privacy } from './src/render.mjs';
+import { context, home, apartments, apartment, restaurant, valdisole, request, privacy, notFound } from './src/render.mjs';
 
 const pages = [
   [PAGES.home, home],
@@ -25,6 +25,14 @@ for (const lang of LANGS) {
     urls.push(SITE_URL + lang.path + path);
   }
   console.log(`✓ ${lang.code}: ${pages.length} pagine`);
+}
+
+// Pagina 404 con percorsi assoluti (vale per qualsiasi indirizzo)
+{
+  const t = JSON.parse(readFileSync('src/i18n/it.json', 'utf8'));
+  const c = { ...context(LANGS[0], t, ''), root: '/', href: (p) => '/' + p, asset: (s) => (/^https?:/.test(s) ? s : '/' + s) };
+  writeFileSync('404.html', notFound(c));
+  console.log('✓ 404.html');
 }
 
 // Cartina piste interattiva (pagina incorporata in val-di-sole/, non in sitemap)

@@ -53,8 +53,8 @@
   "home": {
     "notice": "Nowe kierownictwo",
     "meta": {
-      "title": "Locanda dei Gemelli | Apartamenty, restauracja i pizzeria w Dimaro Folgarida, Val di Sole",
-      "description": "6 apartamentów z kuchnią oraz restauracja i pizzeria na parterze, w Dimaro Folgarida w Val di Sole. Lokalna kuchnia trydencka, pizza mistrza pizzaiolo, stoki i szlaki kilka minut stąd."
+      "title": "Locanda dei Gemelli · Apartamenty i pizzeria w Dimaro",
+      "description": "6 apartamentów z kuchnią oraz restauracja i pizzeria na parterze, w Dimaro Folgarida w Val di Sole. Kuchnia trydencka, stoki kilka minut stąd."
     },
     "hero": {
       "eyebrow": "Dimaro Folgarida · Val di Sole · Trydent",
@@ -115,8 +115,8 @@
   },
   "apartments": {
     "meta": {
-      "title": "Apartamenty w Dimaro Folgarida, Val di Sole | Locanda dei Gemelli",
-      "description": "6 niezależnych apartamentów od 46 do 60 m² z kuchnią, prywatną łazienką i Wi-Fi, od 4 do 7 miejsc. Zwierzęta mile widziane. Restauracja i pizzeria na parterze."
+      "title": "Apartamenty w Dimaro Folgarida | Locanda dei Gemelli",
+      "description": "6 apartamentów od 46 do 60 m² z kuchnią, prywatną łazienką i Wi-Fi, od 4 do 7 osób, w Dimaro w Val di Sole. Zwierzęta mile widziane."
     },
     "hero": {
       "eyebrow": "Pobyt",
@@ -154,8 +154,8 @@
     ]
   },
   "apartment": {
-    "metaTitle": "Apartament {name} · {size} m², {beds} miejsc | Locanda dei Gemelli, Val di Sole",
-    "metaDescription": "Apartament {name} w Dimaro Folgarida: {size} m², {beds} miejsc noclegowych, {rooms}. Kuchnia, prywatna łazienka, Wi-Fi. Restauracja i pizzeria na parterze.",
+    "metaTitle": "Apartament {name} w Dimaro, {beds} osób | Locanda dei Gemelli",
+    "metaDescription": "Apartament {name} w Dimaro Folgarida, Val di Sole: {size} m², {beds} miejsc noclegowych, kuchnia, łazienka i Wi-Fi. Restauracja i pizzeria na parterze.",
     "eyebrow": "Apartament",
     "text": "Niezależny apartament o powierzchni {size} m²: {rooms}. Wyposażona kuchnia, część dzienna, prywatna łazienka, Wi-Fi i TV: wszystko, czego potrzebujesz, by poczuć się w Val di Sole jak w domu. A gdy chcesz odpocząć od gotowania, restauracja i pizzeria są na parterze.",
     "factsTitle": "W skrócie",
@@ -181,8 +181,8 @@
   },
   "restaurant": {
     "meta": {
-      "title": "Restauracja i pizzeria w Dimaro Folgarida, Val di Sole | Locanda dei Gemelli",
-      "description": "Nowoczesna osteria w Val di Sole: kuchnia trydencka z lokalnych składników i pizza mistrza pizzaiolo. Obiady i kolacje w Dimaro Folgarida, we wtorki nieczynne."
+      "title": "Restauracja i pizzeria w Dimaro | Locanda dei Gemelli",
+      "description": "Kuchnia trydencka z lokalnych składników i pizza mistrza pizzaiolo w Dimaro Folgarida, Val di Sole. Obiady i kolacje, we wtorki nieczynne."
     },
     "hero": {
       "eyebrow": "Restauracja i pizzeria",
@@ -250,8 +250,8 @@
   },
   "valdisole": {
     "meta": {
-      "title": "Co robić w Val di Sole zimą i latem | Locanda dei Gemelli",
-      "description": "Narty w Folgarida-Marilleva, Madonna di Campiglio, na Passo Tonale i w Pejo, biegówki, rakiety śnieżne, termy i jarmarki bożonarodzeniowe, a latem cała dolina. Wszystko kilka minut od Locanda dei Gemelli w Dimaro."
+      "title": "Co robić w Val di Sole | Locanda dei Gemelli",
+      "description": "Narty w Folgarida-Marilleva, Campiglio, na Tonale i w Pejo, rakiety śnieżne, termy i jarmarki świąteczne, a latem cała dolina, kilka minut od Dimaro."
     },
     "hero": {
       "eyebrow": "Atrakcje",
@@ -474,7 +474,6 @@
         "h": "Cookies i usługi zewnętrzne",
         "p": [
           "Ta strona nie używa własnych plików cookie, cookies profilujących ani narzędzi statystycznych.",
-          "Czcionki są ładowane z Google Fonts: w tym celu Twoja przeglądarka przekazuje Google Twój adres IP.",
           "Mapa Google Maps ładuje się dopiero po kliknięciu \"Pokaż mapę\": od tego momentu Google może zapisywać własne cookies. Linki do Google Maps otwierają stronę Google, z jej polityką prywatności."
         ]
       },
