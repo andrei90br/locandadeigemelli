@@ -1,7 +1,7 @@
 // Layout e pagine del sito. Ogni funzione riceve il contesto della lingua e restituisce HTML.
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
-import { SITE_URL, REQUEST_EMAIL, MAPS_URL, DIRECTIONS_URL, GOOGLE_PLACE_URL, MAP_EMBED_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
+import { LEGAL, SITE_URL, REQUEST_EMAIL, MAPS_URL, DIRECTIONS_URL, GOOGLE_PLACE_URL, MAP_EMBED_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
 
 export const e = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -95,8 +95,8 @@ function footer(c) {
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <!-- TODO: ragione sociale, P.IVA, CIN, Privacy e Cookie Policy -->
-      <p>© ${new Date().getFullYear()} Locanda dei Gemelli</p>
+      <!-- TODO: CIN degli appartamenti -->
+      <p class="footer-legal">© ${new Date().getFullYear()} ${e(LEGAL.company)} · ${e(t.footer.legal)} ${e(LEGAL.address)} · ${e(t.footer.vat)} ${LEGAL.vat} · ${t.footer.rea} ${LEGAL.rea} · ${t.footer.pec} <a href="mailto:${LEGAL.pec}">${LEGAL.pec}</a> · <a href="${href(PAGES.privacy)}">${e(t.footer.privacy)}</a></p>
     </div>
   </footer>`;
 }
@@ -229,6 +229,10 @@ function baseJsonLd(c) {
     '@type': ['LodgingBusiness', 'Restaurant'],
     name: 'La Locanda dei Gemelli',
     alternateName: 'Locanda dei Gemelli',
+    legalName: LEGAL.company,
+    vatID: 'IT' + LEGAL.vat,
+    taxID: LEGAL.vat,
+    email: REQUEST_EMAIL,
     url: SITE_URL + c.lang.path,
     image: IMG.hero,
     servesCuisine: ['Trentina', 'Italiana', 'Pizza'],
@@ -611,7 +615,7 @@ export function request(c) {
             </div>
             <div class="rf-group rf-single">
               <textarea name="Richiesta" rows="5" placeholder="${e(f.message)}" aria-label="${e(f.message)}"></textarea>
-              <label class="rf-check"><input type="checkbox" name="Privacy" value="ok" required> <span>${e(f.privacy)}</span></label>
+              <label class="rf-check"><input type="checkbox" name="Privacy" value="ok" required> <span>${e(f.privacy).replace(e(f.privacyLink), `<a href="${c.href(PAGES.privacy)}" target="_blank">${e(f.privacyLink)}</a>`)}</span></label>
               <button class="btn btn-accent" type="submit">${e(f.submit)}</button>
             </div>
           </form>
@@ -626,4 +630,27 @@ export function request(c) {
       </div>
     </section>`;
   return layout(c, { title: q.meta.title, description: q.meta.description, body });
+}
+
+export function privacy(c) {
+  const t = c.t, p = t.privacy;
+  const email = `<a href="mailto:${REQUEST_EMAIL}">${REQUEST_EMAIL}</a>`;
+  const pec = `<a href="mailto:${LEGAL.pec}">${LEGAL.pec}</a>`;
+  const fillHtml = (s) => e(s).replace('{company}', e(LEGAL.company)).replace('{address}', e(LEGAL.address)).replace('{vat}', LEGAL.vat).replaceAll('{email}', email).replaceAll('{pec}', pec);
+  const body = `
+    <section class="page-title">
+      <div class="wrap narrow">
+        <p class="eyebrow">${e(p.eyebrow)}</p>
+        <h1>${e(p.title)}</h1>
+        <p class="lead">${e(p.lead)}</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="wrap narrow legal-text">
+        ${p.sections.map((s) => `<h2 class="h3">${e(s.h)}</h2>\n        ${s.p.map((x) => `<p>${fillHtml(x)}</p>`).join('\n        ')}`).join('\n        ')}
+        <p class="muted">${e(p.updated)}</p>
+      </div>
+    </section>`;
+  return layout(c, { title: p.meta.title, description: p.meta.description, body });
 }

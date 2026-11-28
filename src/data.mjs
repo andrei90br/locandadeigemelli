@@ -12,6 +12,15 @@ export const MAPS_URL = GOOGLE_PLACE_URL;
 export const MAP_EMBED_URL = 'https://maps.google.com/maps?q=La+Locanda+dei+Gemelli%2C+Via+Campiglio+59%2C+38025+Dimaro+TN&z=15&output=embed';
 export const DIRECTIONS_URL = 'https://www.google.com/maps/dir/?api=1&destination=La+Locanda+dei+Gemelli%2C+Via+Campiglio+59%2C+38025+Dimaro+TN';
 
+// Dati legali (visura camerale). CIN degli appartamenti: da aggiungere quando arriva.
+export const LEGAL = {
+  company: 'Bulla Brothers S.a.s. di Manushaqe Bulla & C.',
+  address: 'Via Milano 13, 38027 Malè (TN)',
+  vat: '02857660225',
+  rea: 'TN-254820',
+  pec: 'bullabrothers@legalmail.it',
+};
+
 export const LANGS = [
   { code: 'it', path: '', label: 'IT' },
   { code: 'en', path: 'en/', label: 'EN' },
@@ -67,4 +76,5 @@ export const PAGES = {
   restaurant: 'ristorante/',
   valdisole: 'val-di-sole/',
   request: 'richiesta/',
+  privacy: 'privacy/',
 };

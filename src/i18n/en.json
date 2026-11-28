@@ -26,7 +26,11 @@
     "address": "Via Campiglio 59, 38025 Dimaro Folgarida (TN), Italy",
     "map": "Open in Google Maps",
     "directions": "Get directions",
-    "mapEmbed": { "title": "Map: La Locanda dei Gemelli in Dimaro", "button": "Show the map", "note": "The map is loaded from Google Maps, which may set cookies." },
+    "mapEmbed": {
+      "title": "Map: La Locanda dei Gemelli in Dimaro",
+      "button": "Show the map",
+      "note": "The map is loaded from Google Maps, which may set cookies."
+    },
     "hoursTitle": "Restaurant hours",
     "restaurant": "Restaurant",
     "pizzeria": "Pizzeria",
@@ -39,7 +43,12 @@
     "stay": "Stay",
     "dine": "Dine",
     "discover": "Discover",
-    "hours": "Restaurant 12–2:30 pm and 5:30–10 pm · Pizzeria 5:30–10:30 pm · Closed on Tuesdays"
+    "hours": "Restaurant 12–2:30 pm and 5:30–10 pm · Pizzeria 5:30–10:30 pm · Closed on Tuesdays",
+    "legal": "Registered office",
+    "vat": "Tax code and VAT no.",
+    "rea": "REA",
+    "pec": "PEC",
+    "privacy": "Privacy and cookies"
   },
   "home": {
     "notice": "New management",
@@ -53,10 +62,22 @@
       "lead": "6 independent apartments and a restaurant pizzeria on the ground floor, minutes from the Folgarida-Marilleva slopes and the trails of Val di Sole."
     },
     "proof": [
-      { "title": "6 apartments", "text": "46 to 60 m², sleeping 4 to 7" },
-      { "title": "Restaurant & pizzeria", "text": "On the ground floor, lunch and dinner" },
-      { "title": "Locally sourced", "text": "Ingredients from Val di Sole, Val di Non and the Adige valley" },
-      { "title": "Two seasons", "text": "December to April and June to October" }
+      {
+        "title": "6 apartments",
+        "text": "46 to 60 m², sleeping 4 to 7"
+      },
+      {
+        "title": "Restaurant & pizzeria",
+        "text": "On the ground floor, lunch and dinner"
+      },
+      {
+        "title": "Locally sourced",
+        "text": "Ingredients from Val di Sole, Val di Non and the Adige valley"
+      },
+      {
+        "title": "Two seasons",
+        "text": "December to April and June to October"
+      }
     ],
     "intro": {
       "eyebrow": "The Locanda",
@@ -114,9 +135,23 @@
       "dblBunkSingleSofa": "1 double bedroom, 1 bedroom with bunk beds and a single bed, 1 sofa bed"
     },
     "servicesTitle": "In every apartment",
-    "services": ["Wi-Fi", "Private bathroom", "Kitchen and dining area", "Living area", "TV", "Public parking (cannot be reserved)", "Restaurant and pizzeria on the ground floor", "Extra cots on request"],
+    "services": [
+      "Wi-Fi",
+      "Private bathroom",
+      "Kitchen and dining area",
+      "Living area",
+      "TV",
+      "Public parking (cannot be reserved)",
+      "Restaurant and pizzeria on the ground floor",
+      "Extra cots on request"
+    ],
     "goodTitle": "Good to know",
-    "good": ["Check-in from 2 pm to 11 pm", "Check-out by 11 am", "Pets welcome", "Non-smoking"]
+    "good": [
+      "Check-in from 2 pm to 11 pm",
+      "Check-out by 11 am",
+      "Pets welcome",
+      "Non-smoking"
+    ]
   },
   "apartment": {
     "metaTitle": "{name} apartment · {size} m², sleeps {beds} | Locanda dei Gemelli, Val di Sole",
@@ -131,8 +166,18 @@
     "cta": "Enquire about this apartment",
     "others": "Other apartments",
     "photo": "Photo {n} of the {name} apartment",
-    "roomNames": { "salotto": "Living room", "soggiorno": "Living room", "cucina": "Kitchen", "stanza": "Bedroom", "bagno": "Bathroom", "entrata": "Entrance", "corridoio": "Hallway" },
-    "lbClose": "Close", "lbPrev": "Previous photo", "lbNext": "Next photo"
+    "roomNames": {
+      "salotto": "Living room",
+      "soggiorno": "Living room",
+      "cucina": "Kitchen",
+      "stanza": "Bedroom",
+      "bagno": "Bathroom",
+      "entrata": "Entrance",
+      "corridoio": "Hallway"
+    },
+    "lbClose": "Close",
+    "lbPrev": "Previous photo",
+    "lbNext": "Next photo"
   },
   "restaurant": {
     "meta": {
@@ -150,9 +195,18 @@
       "text": "A restaurant isn't judged by its furniture. It's judged by the plate. That's why we start with the produce: mountain ingredients that are seasonal and traceable, chosen from producers in our valleys. Then we treat them with respect, using the traditional recipes of Val di Sole and Trentino and today's technique."
     },
     "pillars": [
-      { "title": "Roots", "text": "The recipes we grew up with, from the traditions of Val di Sole and Trentino. Every dish starts there." },
-      { "title": "Season", "text": "The menu follows the mountain. We use what the valleys give at that moment, at its best." },
-      { "title": "Craft", "text": "Modern technique in service of flavour, not effect. Nothing superfluous on the plate." }
+      {
+        "title": "Roots",
+        "text": "The recipes we grew up with, from the traditions of Val di Sole and Trentino. Every dish starts there."
+      },
+      {
+        "title": "Season",
+        "text": "The menu follows the mountain. We use what the valleys give at that moment, at its best."
+      },
+      {
+        "title": "Craft",
+        "text": "Modern technique in service of flavour, not effect. Nothing superfluous on the plate."
+      }
     ],
     "kitchen": {
       "eyebrow": "The restaurant",
@@ -171,9 +225,18 @@
       "eyebrow": "Beyond dinner",
       "title": "The same standard, wherever you want to eat.",
       "items": [
-        { "title": "Takeaway and home delivery", "text": "Our cooking and our pizza, at your home or in your holiday apartment. Same care, same taste." },
-        { "title": "Garden and events", "text": "Summer evenings outdoors, birthdays, group dinners and parties. The garden is ready for your event." },
-        { "title": "Business lunches and meetings", "text": "A private room, presentation equipment, coffee breaks, buffet or light lunch. You focus on the meeting, we handle the rest." }
+        {
+          "title": "Takeaway and home delivery",
+          "text": "Our cooking and our pizza, at your home or in your holiday apartment. Same care, same taste."
+        },
+        {
+          "title": "Garden and events",
+          "text": "Summer evenings outdoors, birthdays, group dinners and parties. The garden is ready for your event."
+        },
+        {
+          "title": "Business lunches and meetings",
+          "text": "A private room, presentation equipment, coffee breaks, buffet or light lunch. You focus on the meeting, we handle the rest."
+        }
       ]
     },
     "quote": "The valleys provide the ingredients. We bring the craft.",
@@ -256,7 +319,14 @@
           "text": "The Trento–Malè–Mezzana railway stops in Dimaro and in Daolasa, where the station connects directly to the gondola up to the slopes. Leave the car parked and reach the mountain with your skis on your shoulder."
         }
       ],
-      "map": {"eyebrow": "Piste map", "title": "The whole ski area at a glance.", "text": "Folgarida-Marilleva, Madonna di Campiglio and Pinzolo are linked on skis. Explore the map: tap a point to discover altitudes, huts and services.", "alt": "Piste map of the Skiarea Campiglio Dolomiti di Brenta, from Folgarida and Marilleva to Madonna di Campiglio and Pinzolo", "caption": "Interactive map: tap the points to discover villages, peaks and huts. Map © Cormar, Skiarea Campiglio Dolomiti di Brenta.", "fullscreen": "Open full screen"},
+      "map": {
+        "eyebrow": "Piste map",
+        "title": "The whole ski area at a glance.",
+        "text": "Folgarida-Marilleva, Madonna di Campiglio and Pinzolo are linked on skis. Explore the map: tap a point to discover altitudes, huts and services.",
+        "alt": "Piste map of the Skiarea Campiglio Dolomiti di Brenta, from Folgarida and Marilleva to Madonna di Campiglio and Pinzolo",
+        "caption": "Interactive map: tap the points to discover villages, peaks and huts. Map © Cormar, Skiarea Campiglio Dolomiti di Brenta.",
+        "fullscreen": "Open full screen"
+      },
       "beyond": {
         "eyebrow": "Beyond skiing",
         "title": "The valley in winter, even without skis.",
@@ -288,14 +358,25 @@
         ]
       }
     },
-    "photos": {"credit": "Winter photo: Giorgio Galeotti, Malghet Aut (Folgarida), <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_05.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>"},
+    "photos": {
+      "credit": "Winter photo: Giorgio Galeotti, Malghet Aut (Folgarida), <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_05.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>"
+    },
     "summer": {
       "eyebrow": "Summer · June – October",
       "title": "Rivers, trails and two wheels.",
       "items": [
-        { "title": "Val di Sole cycle path", "text": "The cycle path runs through Dimaro and follows the Noce river along the valley. Perfect for families, e-bikes included." },
-        { "title": "Rafting on the Noce", "text": "The Noce is one of Europe's best-loved rivers for rafting and kayaking, with routes for beginners and experts." },
-        { "title": "Hiking in the parks", "text": "Stelvio National Park and Adamello Brenta Nature Park: trails, mountain huts and alpine lakes for every level." }
+        {
+          "title": "Val di Sole cycle path",
+          "text": "The cycle path runs through Dimaro and follows the Noce river along the valley. Perfect for families, e-bikes included."
+        },
+        {
+          "title": "Rafting on the Noce",
+          "text": "The Noce is one of Europe's best-loved rivers for rafting and kayaking, with routes for beginners and experts."
+        },
+        {
+          "title": "Hiking in the parks",
+          "text": "Stelvio National Park and Adamello Brenta Nature Park: trails, mountain huts and alpine lakes for every level."
+        }
       ]
     },
     "base": {
@@ -333,11 +414,77 @@
       "no": "No",
       "yes": "Yes",
       "message": "Your request",
-      "privacy": "I consent to the processing of my data in order to receive a reply to this request. *",
+      "privacy": "I have read the privacy notice and consent to the processing of my data to receive a reply to this request. *",
       "submit": "Send request",
-      "sent": "Thank you! We have received your request and will reply by email as soon as possible."
+      "sent": "Thank you! We have received your request and will reply by email as soon as possible.",
+      "privacyLink": "privacy notice"
     },
     "asideTitle": "Why enquire here",
-    "aside": ["A direct reply from the people who run the Locanda", "No payment required now", "Restaurant and pizzeria on the ground floor"]
+    "aside": [
+      "A direct reply from the people who run the Locanda",
+      "No payment required now",
+      "Restaurant and pizzeria on the ground floor"
+    ]
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy and cookies | Locanda dei Gemelli",
+      "description": "How we handle the personal data of visitors to the Locanda dei Gemelli website and of guests who send us a booking request."
+    },
+    "eyebrow": "Privacy notice",
+    "title": "Privacy and cookies",
+    "lead": "How we handle your data when you visit this website or send us a request (Art. 13 of EU Regulation 2016/679, GDPR).",
+    "updated": "Last updated: 28 November 2026",
+    "sections": [
+      {
+        "h": "Data controller",
+        "p": [
+          "{company}, registered office {address}, tax code and VAT no. {vat}. For any privacy question write to {email} or to the certified email (PEC) {pec}."
+        ]
+      },
+      {
+        "h": "What data we collect",
+        "p": [
+          "Data you send us with the request form: first name, last name, email, phone, dates of stay, number of guests and children's ages, pets, preferred apartment and any message.",
+          "Technical browsing data: the website host (GitHub Pages) automatically logs IP address, browser and pages visited, for security and operation."
+        ]
+      },
+      {
+        "h": "Why we use it and on what legal basis",
+        "p": [
+          "To reply to your request and, if you wish, arrange your stay: a pre-contractual step taken at your request (Art. 6.1.b GDPR). Without this data we cannot reply.",
+          "To meet legal obligations if the stay is confirmed, such as tax rules and the registration of guests with the police authorities (Art. 6.1.c GDPR).",
+          "We do not use your data for advertising and we never sell it."
+        ]
+      },
+      {
+        "h": "Who we share it with",
+        "p": [
+          "FormSubmit (formsubmit.co), the service that forwards the form to our mailbox; Google (Gmail), which runs the mailbox; GitHub (Microsoft), which hosts the website. They process data on our behalf. Some are based in the United States: transfers take place with the safeguards required by the GDPR (EU-US Data Privacy Framework or standard contractual clauses).",
+          "We do not share data with anyone else unless required by law."
+        ]
+      },
+      {
+        "h": "How long we keep it",
+        "p": [
+          "Requests that do not turn into a booking: up to 24 months, then deleted. Data of a confirmed stay: for the period required by law (for example 10 years for tax records)."
+        ]
+      },
+      {
+        "h": "Cookies and third-party services",
+        "p": [
+          "This website does not use its own cookies, profiling cookies or analytics tools.",
+          "Fonts are loaded from Google Fonts: to do so, your browser shares your IP address with Google.",
+          "The Google Maps map loads only if you click \"Show the map\": from then on Google may set its own cookies. Links to Google Maps open Google's website, under its own privacy policy."
+        ]
+      },
+      {
+        "h": "Your rights",
+        "p": [
+          "You can ask us at any time to access, correct or delete your data, restrict or object to its processing, or receive it in a portable format (Arts. 15-22 GDPR), by writing to {email} or to the PEC {pec}.",
+          "If you believe your data is not handled correctly you can lodge a complaint with the Italian Data Protection Authority (www.garanteprivacy.it) or the authority of your country."
+        ]
+      }
+    ]
   }
 }

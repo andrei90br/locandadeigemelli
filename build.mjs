@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { SITE_URL, LANGS, APARTMENTS, PAGES } from './src/data.mjs';
-import { context, home, apartments, apartment, restaurant, valdisole, request } from './src/render.mjs';
+import { context, home, apartments, apartment, restaurant, valdisole, request, privacy } from './src/render.mjs';
 
 const pages = [
   [PAGES.home, home],
@@ -12,6 +12,7 @@ const pages = [
   [PAGES.restaurant, restaurant],
   [PAGES.valdisole, valdisole],
   [PAGES.request, request],
+  [PAGES.privacy, privacy],
 ];
 
 const urls = [];

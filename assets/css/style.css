@@ -334,3 +334,11 @@ address + .link-arrow { display: inline-block; margin-top: .6em; }
 .map-consent-title { font-family: var(--serif, Georgia, serif); font-size: 1.35rem; color: var(--ink, #1c1a17); margin: 8px 0 18px; }
 .map-consent-note { font-size: .8rem; color: var(--muted); margin-top: 14px; }
 @media (max-width: 600px) { .map-embed { height: 320px; margin-top: 40px; } }
+
+/* Dati legali nel footer e pagina privacy */
+.footer-legal { line-height: 1.7; opacity: .85; }
+.footer-bottom a { color: inherit; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+.rf-check a { color: inherit; text-decoration: underline; }
+.legal-text h2 { margin: 1.8em 0 .5em; }
+.legal-text h2:first-child { margin-top: 0; }
+.legal-text a { overflow-wrap: anywhere; }
