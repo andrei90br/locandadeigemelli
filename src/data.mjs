@@ -38,7 +38,8 @@ const up = (list, dir) => list.map((f) => SRC + dir + f);
 export const IMG = {
   hero: SRC + '2024/01/161-Locanda-Elisa-Dic-2023-jpg.webp',
   restaurant: SRC + '2022/06/bistrot.png',
-  takeaway: SRC + '2022/06/Asporto-e-consegna-a-domicilio.jpg',
+  // Asporto: la foto di locandaelisa.it aveva il sacchetto con il vecchio logo; ora la zona pranzo di Morgana.
+  takeaway: 'assets/img/appartamenti/morgana/cucina-01-sm.webp',
   garden: SRC + '2022/07/servizio-giardino-eventi.jpg',
   products: 'assets/img/prodotti-genuini-senza-logo.jpg',
   stay: 'assets/img/appartamenti/golden/cucina-02.webp',
