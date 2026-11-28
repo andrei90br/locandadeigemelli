@@ -26,7 +26,11 @@
     "address": "Via Campiglio 59, 38025 Dimaro Folgarida (TN)",
     "map": "Apri in Google Maps",
     "directions": "Come arrivare",
-    "mapEmbed": { "title": "Mappa: La Locanda dei Gemelli a Dimaro", "button": "Mostra la mappa", "note": "La mappa viene caricata da Google Maps, che può impostare cookie." },
+    "mapEmbed": {
+      "title": "Mappa: La Locanda dei Gemelli a Dimaro",
+      "button": "Mostra la mappa",
+      "note": "La mappa viene caricata da Google Maps, che può impostare cookie."
+    },
     "hoursTitle": "Orari del ristorante",
     "restaurant": "Ristorante",
     "pizzeria": "Pizzeria",
@@ -39,7 +43,12 @@
     "stay": "Soggiorno",
     "dine": "Ristorazione",
     "discover": "Scopri",
-    "hours": "Ristorante 12–14:30 e 17:30–22 · Pizzeria 17:30–22:30 · Chiuso il martedì"
+    "hours": "Ristorante 12–14:30 e 17:30–22 · Pizzeria 17:30–22:30 · Chiuso il martedì",
+    "legal": "Sede legale",
+    "vat": "C.F. e P.IVA",
+    "rea": "REA",
+    "pec": "PEC",
+    "privacy": "Privacy e cookie"
   },
   "home": {
     "notice": "Nuova gestione",
@@ -53,10 +62,22 @@
       "lead": "6 appartamenti indipendenti e un ristorante pizzeria al piano terra, a pochi minuti dalle piste di Folgarida-Marilleva e dai sentieri della Val di Sole."
     },
     "proof": [
-      { "title": "6 appartamenti", "text": "Da 46 a 60 m², da 4 a 7 posti letto" },
-      { "title": "Ristorante e pizzeria", "text": "Al piano terra, a pranzo e a cena" },
-      { "title": "Km zero", "text": "Ingredienti di Val di Sole, Val di Non e Valle dell'Adige" },
-      { "title": "Due stagioni", "text": "Da dicembre ad aprile e da giugno a ottobre" }
+      {
+        "title": "6 appartamenti",
+        "text": "Da 46 a 60 m², da 4 a 7 posti letto"
+      },
+      {
+        "title": "Ristorante e pizzeria",
+        "text": "Al piano terra, a pranzo e a cena"
+      },
+      {
+        "title": "Km zero",
+        "text": "Ingredienti di Val di Sole, Val di Non e Valle dell'Adige"
+      },
+      {
+        "title": "Due stagioni",
+        "text": "Da dicembre ad aprile e da giugno a ottobre"
+      }
     ],
     "intro": {
       "eyebrow": "La Locanda",
@@ -114,9 +135,23 @@
       "dblBunkSingleSofa": "1 camera matrimoniale, 1 camera con letto a castello e letto singolo, 1 divano letto"
     },
     "servicesTitle": "In tutti gli appartamenti",
-    "services": ["Wi-Fi", "Bagno privato", "Cucina e zona pranzo", "Zona giorno", "TV", "Parcheggio pubblico (non prenotabile)", "Ristorante e pizzeria al piano terra", "Brandine aggiuntive su richiesta"],
+    "services": [
+      "Wi-Fi",
+      "Bagno privato",
+      "Cucina e zona pranzo",
+      "Zona giorno",
+      "TV",
+      "Parcheggio pubblico (non prenotabile)",
+      "Ristorante e pizzeria al piano terra",
+      "Brandine aggiuntive su richiesta"
+    ],
     "goodTitle": "Buono a sapersi",
-    "good": ["Check-in dalle 14:00 alle 23:00", "Check-out entro le 11:00", "Animali benvenuti", "Ambienti non fumatori"]
+    "good": [
+      "Check-in dalle 14:00 alle 23:00",
+      "Check-out entro le 11:00",
+      "Animali benvenuti",
+      "Ambienti non fumatori"
+    ]
   },
   "apartment": {
     "metaTitle": "Appartamento {name} · {size} m², {beds} posti letto | Locanda dei Gemelli, Val di Sole",
@@ -131,8 +166,18 @@
     "cta": "Richiedi questo appartamento",
     "others": "Gli altri appartamenti",
     "photo": "Foto {n} dell'appartamento {name}",
-    "roomNames": { "salotto": "Soggiorno", "soggiorno": "Soggiorno", "cucina": "Cucina", "stanza": "Camera", "bagno": "Bagno", "entrata": "Ingresso", "corridoio": "Corridoio" },
-    "lbClose": "Chiudi", "lbPrev": "Foto precedente", "lbNext": "Foto successiva"
+    "roomNames": {
+      "salotto": "Soggiorno",
+      "soggiorno": "Soggiorno",
+      "cucina": "Cucina",
+      "stanza": "Camera",
+      "bagno": "Bagno",
+      "entrata": "Ingresso",
+      "corridoio": "Corridoio"
+    },
+    "lbClose": "Chiudi",
+    "lbPrev": "Foto precedente",
+    "lbNext": "Foto successiva"
   },
   "restaurant": {
     "meta": {
@@ -150,9 +195,18 @@
       "text": "Un ristorante non si giudica dall'arredamento. Si giudica dal piatto. Per questo partiamo dalla materia prima: prodotti di montagna, stagionali e tracciabili, scelti dai produttori delle nostre valli. Poi li trattiamo con rispetto, con le ricette della tradizione solandra e trentina e la tecnica di oggi."
     },
     "pillars": [
-      { "title": "Radici", "text": "Le ricette con cui siamo cresciuti, dalla tradizione solandra e trentina. È da lì che parte ogni piatto." },
-      { "title": "Stagione", "text": "Il menu segue la montagna. Usiamo quello che le valli danno in quel momento, al suo meglio." },
-      { "title": "Mestiere", "text": "Tecnica moderna al servizio del sapore, non dell'effetto. Niente di superfluo nel piatto." }
+      {
+        "title": "Radici",
+        "text": "Le ricette con cui siamo cresciuti, dalla tradizione solandra e trentina. È da lì che parte ogni piatto."
+      },
+      {
+        "title": "Stagione",
+        "text": "Il menu segue la montagna. Usiamo quello che le valli danno in quel momento, al suo meglio."
+      },
+      {
+        "title": "Mestiere",
+        "text": "Tecnica moderna al servizio del sapore, non dell'effetto. Niente di superfluo nel piatto."
+      }
     ],
     "kitchen": {
       "eyebrow": "Il ristorante",
@@ -171,9 +225,18 @@
       "eyebrow": "Oltre la cena",
       "title": "Lo stesso standard, ovunque tu voglia mangiare.",
       "items": [
-        { "title": "Asporto e consegna a domicilio", "text": "La nostra cucina e la nostra pizza, a casa tua o nel tuo appartamento in vacanza. Stessa cura, stesso sapore." },
-        { "title": "Giardino ed eventi", "text": "Serate estive all'aperto, compleanni, cene di gruppo e feste. Il giardino è pronto ad accogliere il tuo evento." },
-        { "title": "Pranzi e meeting di lavoro", "text": "Sala riservata, tecnologia per presentare, coffee break, buffet o light lunch. Tu pensi alla riunione, al resto pensiamo noi." }
+        {
+          "title": "Asporto e consegna a domicilio",
+          "text": "La nostra cucina e la nostra pizza, a casa tua o nel tuo appartamento in vacanza. Stessa cura, stesso sapore."
+        },
+        {
+          "title": "Giardino ed eventi",
+          "text": "Serate estive all'aperto, compleanni, cene di gruppo e feste. Il giardino è pronto ad accogliere il tuo evento."
+        },
+        {
+          "title": "Pranzi e meeting di lavoro",
+          "text": "Sala riservata, tecnologia per presentare, coffee break, buffet o light lunch. Tu pensi alla riunione, al resto pensiamo noi."
+        }
       ]
     },
     "quote": "Le valli forniscono gli ingredienti. Noi ci mettiamo il mestiere.",
@@ -256,7 +319,14 @@
           "text": "La ferrovia Trento–Malè–Mezzana ferma a Dimaro e a Daolasa, dove la stazione è collegata direttamente alla telecabina verso le piste. Lasci l'auto ferma e arrivi in quota con gli sci in spalla."
         }
       ],
-      "map": {"eyebrow": "Mappa delle piste", "title": "Tutta la skiarea in un colpo d'occhio.", "text": "Folgarida-Marilleva, Madonna di Campiglio e Pinzolo sono collegate sci ai piedi. Esplora la cartina: tocca un punto per scoprire quote, rifugi e servizi.", "alt": "Mappa delle piste della Skiarea Campiglio Dolomiti di Brenta, da Folgarida e Marilleva a Madonna di Campiglio e Pinzolo", "caption": "Cartina interattiva: tocca i punti per scoprire paesi, cime e rifugi. Cartina © Cormar, Skiarea Campiglio Dolomiti di Brenta.", "fullscreen": "Apri a schermo intero"},
+      "map": {
+        "eyebrow": "Mappa delle piste",
+        "title": "Tutta la skiarea in un colpo d'occhio.",
+        "text": "Folgarida-Marilleva, Madonna di Campiglio e Pinzolo sono collegate sci ai piedi. Esplora la cartina: tocca un punto per scoprire quote, rifugi e servizi.",
+        "alt": "Mappa delle piste della Skiarea Campiglio Dolomiti di Brenta, da Folgarida e Marilleva a Madonna di Campiglio e Pinzolo",
+        "caption": "Cartina interattiva: tocca i punti per scoprire paesi, cime e rifugi. Cartina © Cormar, Skiarea Campiglio Dolomiti di Brenta.",
+        "fullscreen": "Apri a schermo intero"
+      },
       "beyond": {
         "eyebrow": "Oltre lo sci",
         "title": "La valle d'inverno, anche senza sci ai piedi.",
@@ -288,14 +358,25 @@
         ]
       }
     },
-    "photos": {"credit": "Foto: Giorgio Galeotti, Malghet Aut (Folgarida), <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_05.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>"},
+    "photos": {
+      "credit": "Foto: Giorgio Galeotti, Malghet Aut (Folgarida), <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_05.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>"
+    },
     "summer": {
       "eyebrow": "Estate · giugno – ottobre",
       "title": "Fiumi, sentieri e due ruote.",
       "items": [
-        { "title": "Ciclabile della Val di Sole", "text": "La pista ciclabile passa da Dimaro e segue il torrente Noce lungo la valle. Perfetta in famiglia, anche in e-bike." },
-        { "title": "Rafting sul Noce", "text": "Il Noce è uno dei fiumi più apprezzati d'Europa per rafting e kayak, con percorsi per principianti ed esperti." },
-        { "title": "Trekking nei parchi", "text": "Il Parco Nazionale dello Stelvio e il Parco Naturale Adamello Brenta: sentieri, malghe e laghi alpini per ogni livello." }
+        {
+          "title": "Ciclabile della Val di Sole",
+          "text": "La pista ciclabile passa da Dimaro e segue il torrente Noce lungo la valle. Perfetta in famiglia, anche in e-bike."
+        },
+        {
+          "title": "Rafting sul Noce",
+          "text": "Il Noce è uno dei fiumi più apprezzati d'Europa per rafting e kayak, con percorsi per principianti ed esperti."
+        },
+        {
+          "title": "Trekking nei parchi",
+          "text": "Il Parco Nazionale dello Stelvio e il Parco Naturale Adamello Brenta: sentieri, malghe e laghi alpini per ogni livello."
+        }
       ]
     },
     "base": {
@@ -333,11 +414,77 @@
       "no": "No",
       "yes": "Sì",
       "message": "Richiesta",
-      "privacy": "Acconsento al trattamento dei miei dati per ricevere una risposta a questa richiesta. *",
+      "privacy": "Ho letto l'informativa privacy e acconsento al trattamento dei miei dati per ricevere una risposta a questa richiesta. *",
       "submit": "Invia la richiesta",
-      "sent": "Grazie! Abbiamo ricevuto la tua richiesta e ti rispondiamo via email al più presto."
+      "sent": "Grazie! Abbiamo ricevuto la tua richiesta e ti rispondiamo via email al più presto.",
+      "privacyLink": "informativa privacy"
     },
     "asideTitle": "Perché richiedere qui",
-    "aside": ["Risposta diretta da chi gestisce la Locanda", "Nessun pagamento richiesto ora", "Ristorante e pizzeria al piano terra"]
+    "aside": [
+      "Risposta diretta da chi gestisce la Locanda",
+      "Nessun pagamento richiesto ora",
+      "Ristorante e pizzeria al piano terra"
+    ]
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy e cookie | Locanda dei Gemelli",
+      "description": "Come trattiamo i dati personali di chi visita il sito della Locanda dei Gemelli e di chi ci invia una richiesta di prenotazione."
+    },
+    "eyebrow": "Informativa",
+    "title": "Privacy e cookie",
+    "lead": "Come trattiamo i tuoi dati quando visiti questo sito o ci invii una richiesta (art. 13 del Regolamento UE 2016/679, GDPR).",
+    "updated": "Ultimo aggiornamento: 28 novembre 2026",
+    "sections": [
+      {
+        "h": "Titolare del trattamento",
+        "p": [
+          "{company}, sede legale {address}, C.F. e P.IVA {vat}. Per qualsiasi domanda sulla privacy scrivi a {email} o alla PEC {pec}."
+        ]
+      },
+      {
+        "h": "Quali dati raccogliamo",
+        "p": [
+          "Dati che ci invii con il modulo di richiesta: nome, cognome, email, telefono, date del soggiorno, numero di ospiti ed età dei bambini, presenza di animali, appartamento preferito ed eventuale messaggio.",
+          "Dati tecnici di navigazione: chi ospita il sito (GitHub Pages) registra in automatico indirizzo IP, browser e pagine visitate, per motivi di sicurezza e funzionamento."
+        ]
+      },
+      {
+        "h": "Perché li usiamo e su quale base",
+        "p": [
+          "Per rispondere alla tua richiesta e, se lo vorrai, organizzare il soggiorno: è una misura precontrattuale richiesta da te (art. 6.1.b GDPR). Senza questi dati non possiamo risponderti.",
+          "Per adempiere agli obblighi di legge se il soggiorno viene confermato, per esempio fiscali e di comunicazione degli ospiti all'autorità di pubblica sicurezza (art. 6.1.c GDPR).",
+          "Non usiamo i tuoi dati per pubblicità e non li vendiamo a nessuno."
+        ]
+      },
+      {
+        "h": "A chi li comunichiamo",
+        "p": [
+          "FormSubmit (formsubmit.co), il servizio che inoltra il modulo alla nostra casella email; Google (Gmail), che gestisce la casella email; GitHub (Microsoft), che ospita il sito. Sono fornitori che trattano i dati per nostro conto. Alcuni hanno sede negli Stati Uniti: in quel caso il trasferimento avviene con le garanzie previste dal GDPR (EU-US Data Privacy Framework o clausole contrattuali standard).",
+          "Non comunichiamo i dati ad altri, salvo quando lo richiede la legge."
+        ]
+      },
+      {
+        "h": "Per quanto tempo li conserviamo",
+        "p": [
+          "Le richieste che non diventano una prenotazione: al massimo 24 mesi, poi le cancelliamo. I dati di un soggiorno confermato: per il tempo richiesto dalla legge (per esempio 10 anni per i documenti fiscali)."
+        ]
+      },
+      {
+        "h": "Cookie e servizi esterni",
+        "p": [
+          "Questo sito non usa cookie propri, cookie di profilazione né strumenti di statistica.",
+          "I caratteri tipografici sono caricati da Google Fonts: per farlo il tuo browser comunica a Google il tuo indirizzo IP.",
+          "La mappa di Google Maps viene caricata solo se clicchi su \"Mostra la mappa\": da quel momento Google può impostare i suoi cookie. I link a Google Maps aprono il sito di Google, con la sua informativa."
+        ]
+      },
+      {
+        "h": "I tuoi diritti",
+        "p": [
+          "Puoi chiederci in ogni momento di accedere ai tuoi dati, correggerli, cancellarli, limitarne il trattamento, opporti o riceverli in un formato leggibile (artt. 15-22 GDPR), scrivendo a {email} o alla PEC {pec}.",
+          "Se ritieni che il trattamento non sia corretto puoi presentare reclamo al Garante per la protezione dei dati personali (www.garanteprivacy.it)."
+        ]
+      }
+    ]
   }
 }

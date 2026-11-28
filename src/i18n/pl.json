@@ -26,7 +26,11 @@
     "address": "Via Campiglio 59, 38025 Dimaro Folgarida (TN), Włochy",
     "map": "Otwórz w Google Maps",
     "directions": "Wyznacz trasę",
-    "mapEmbed": { "title": "Mapa: La Locanda dei Gemelli w Dimaro", "button": "Pokaż mapę", "note": "Mapa jest ładowana z Google Maps, które może zapisywać pliki cookie." },
+    "mapEmbed": {
+      "title": "Mapa: La Locanda dei Gemelli w Dimaro",
+      "button": "Pokaż mapę",
+      "note": "Mapa jest ładowana z Google Maps, które może zapisywać pliki cookie."
+    },
     "hoursTitle": "Godziny otwarcia restauracji",
     "restaurant": "Restauracja",
     "pizzeria": "Pizzeria",
@@ -39,7 +43,12 @@
     "stay": "Pobyt",
     "dine": "Jedzenie",
     "discover": "Odkryj",
-    "hours": "Restauracja 12–14:30 i 17:30–22 · Pizzeria 17:30–22:30 · We wtorki nieczynne"
+    "hours": "Restauracja 12–14:30 i 17:30–22 · Pizzeria 17:30–22:30 · We wtorki nieczynne",
+    "legal": "Siedziba",
+    "vat": "NIP (C.F. i P.IVA)",
+    "rea": "REA",
+    "pec": "PEC",
+    "privacy": "Prywatność i cookies"
   },
   "home": {
     "notice": "Nowe kierownictwo",
@@ -53,10 +62,22 @@
       "lead": "6 niezależnych apartamentów oraz restauracja i pizzeria na parterze, kilka minut od stoków Folgarida-Marilleva i szlaków Val di Sole."
     },
     "proof": [
-      { "title": "6 apartamentów", "text": "Od 46 do 60 m², od 4 do 7 miejsc" },
-      { "title": "Restauracja i pizzeria", "text": "Na parterze, w porze obiadu i kolacji" },
-      { "title": "Produkty lokalne", "text": "Składniki z Val di Sole, Val di Non i doliny Adygi" },
-      { "title": "Dwa sezony", "text": "Od grudnia do kwietnia i od czerwca do października" }
+      {
+        "title": "6 apartamentów",
+        "text": "Od 46 do 60 m², od 4 do 7 miejsc"
+      },
+      {
+        "title": "Restauracja i pizzeria",
+        "text": "Na parterze, w porze obiadu i kolacji"
+      },
+      {
+        "title": "Produkty lokalne",
+        "text": "Składniki z Val di Sole, Val di Non i doliny Adygi"
+      },
+      {
+        "title": "Dwa sezony",
+        "text": "Od grudnia do kwietnia i od czerwca do października"
+      }
     ],
     "intro": {
       "eyebrow": "Locanda",
@@ -114,9 +135,23 @@
       "dblBunkSingleSofa": "1 sypialnia z łóżkiem małżeńskim, 1 pokój z łóżkiem piętrowym i pojedynczym, 1 rozkładana sofa"
     },
     "servicesTitle": "W każdym apartamencie",
-    "services": ["Wi-Fi", "Prywatna łazienka", "Kuchnia z jadalnią", "Część dzienna", "TV", "Parking publiczny (bez rezerwacji)", "Restauracja i pizzeria na parterze", "Dodatkowe łóżka na życzenie"],
+    "services": [
+      "Wi-Fi",
+      "Prywatna łazienka",
+      "Kuchnia z jadalnią",
+      "Część dzienna",
+      "TV",
+      "Parking publiczny (bez rezerwacji)",
+      "Restauracja i pizzeria na parterze",
+      "Dodatkowe łóżka na życzenie"
+    ],
     "goodTitle": "Warto wiedzieć",
-    "good": ["Zameldowanie od 14:00 do 23:00", "Wymeldowanie do 11:00", "Zwierzęta mile widziane", "Zakaz palenia"]
+    "good": [
+      "Zameldowanie od 14:00 do 23:00",
+      "Wymeldowanie do 11:00",
+      "Zwierzęta mile widziane",
+      "Zakaz palenia"
+    ]
   },
   "apartment": {
     "metaTitle": "Apartament {name} · {size} m², {beds} miejsc | Locanda dei Gemelli, Val di Sole",
@@ -131,8 +166,18 @@
     "cta": "Zapytaj o ten apartament",
     "others": "Pozostałe apartamenty",
     "photo": "Zdjęcie {n} apartamentu {name}",
-    "roomNames": { "salotto": "Salon", "soggiorno": "Salon", "cucina": "Kuchnia", "stanza": "Sypialnia", "bagno": "Łazienka", "entrata": "Wejście", "corridoio": "Korytarz" },
-    "lbClose": "Zamknij", "lbPrev": "Poprzednie zdjęcie", "lbNext": "Następne zdjęcie"
+    "roomNames": {
+      "salotto": "Salon",
+      "soggiorno": "Salon",
+      "cucina": "Kuchnia",
+      "stanza": "Sypialnia",
+      "bagno": "Łazienka",
+      "entrata": "Wejście",
+      "corridoio": "Korytarz"
+    },
+    "lbClose": "Zamknij",
+    "lbPrev": "Poprzednie zdjęcie",
+    "lbNext": "Następne zdjęcie"
   },
   "restaurant": {
     "meta": {
@@ -150,9 +195,18 @@
       "text": "Restauracji nie ocenia się po wystroju. Ocenia się ją po talerzu. Dlatego zaczynamy od surowca: górskich produktów sezonowych i identyfikowalnych, od producentów z naszych dolin. Potem traktujemy je z szacunkiem, według przepisów z Val di Sole i Trydentu, z dzisiejszą techniką."
     },
     "pillars": [
-      { "title": "Korzenie", "text": "Przepisy, na których się wychowaliśmy, z tradycji Val di Sole i Trydentu. Od nich zaczyna się każde danie." },
-      { "title": "Sezon", "text": "Karta podąża za górami. Używamy tego, co doliny dają w danym momencie, w najlepszej formie." },
-      { "title": "Rzemiosło", "text": "Nowoczesna technika w służbie smaku, nie efektu. Nic zbędnego na talerzu." }
+      {
+        "title": "Korzenie",
+        "text": "Przepisy, na których się wychowaliśmy, z tradycji Val di Sole i Trydentu. Od nich zaczyna się każde danie."
+      },
+      {
+        "title": "Sezon",
+        "text": "Karta podąża za górami. Używamy tego, co doliny dają w danym momencie, w najlepszej formie."
+      },
+      {
+        "title": "Rzemiosło",
+        "text": "Nowoczesna technika w służbie smaku, nie efektu. Nic zbędnego na talerzu."
+      }
     ],
     "kitchen": {
       "eyebrow": "Restauracja",
@@ -171,9 +225,18 @@
       "eyebrow": "Nie tylko kolacja",
       "title": "Ten sam standard, gdziekolwiek chcesz zjeść.",
       "items": [
-        { "title": "Na wynos i z dostawą", "text": "Nasza kuchnia i nasza pizza w Twoim domu lub apartamencie wakacyjnym. Ta sama troska, ten sam smak." },
-        { "title": "Ogród i wydarzenia", "text": "Letnie wieczory na świeżym powietrzu, urodziny, kolacje grupowe i przyjęcia. Ogród jest gotowy na Twoje wydarzenie." },
-        { "title": "Lunche i spotkania biznesowe", "text": "Osobna sala, sprzęt do prezentacji, przerwy kawowe, bufet lub lekki lunch. Ty skupiasz się na spotkaniu, resztą zajmujemy się my." }
+        {
+          "title": "Na wynos i z dostawą",
+          "text": "Nasza kuchnia i nasza pizza w Twoim domu lub apartamencie wakacyjnym. Ta sama troska, ten sam smak."
+        },
+        {
+          "title": "Ogród i wydarzenia",
+          "text": "Letnie wieczory na świeżym powietrzu, urodziny, kolacje grupowe i przyjęcia. Ogród jest gotowy na Twoje wydarzenie."
+        },
+        {
+          "title": "Lunche i spotkania biznesowe",
+          "text": "Osobna sala, sprzęt do prezentacji, przerwy kawowe, bufet lub lekki lunch. Ty skupiasz się na spotkaniu, resztą zajmujemy się my."
+        }
       ]
     },
     "quote": "Doliny dają składniki. My dajemy rzemiosło.",
@@ -256,7 +319,14 @@
           "text": "Kolej Trento–Malè–Mezzana zatrzymuje się w Dimaro i w Daolasie, gdzie stacja łączy się bezpośrednio z gondolą na stok. Zostawiasz samochód na miejscu i wjeżdżasz w góry z nartami na ramieniu."
         }
       ],
-      "map": {"eyebrow": "Mapa tras", "title": "Cały ośrodek w jednym spojrzeniu.", "text": "Folgarida-Marilleva, Madonna di Campiglio i Pinzolo są połączone na nartach. Poznaj mapę: dotknij punktu, aby zobaczyć wysokości, schroniska i usługi.", "alt": "Mapa tras Skiarea Campiglio Dolomiti di Brenta, od Folgaridy i Marillevy po Madonna di Campiglio i Pinzolo", "caption": "Mapa interaktywna: dotknij punktów, aby poznać miejscowości, szczyty i schroniska. Mapa © Cormar, Skiarea Campiglio Dolomiti di Brenta.", "fullscreen": "Otwórz na pełnym ekranie"},
+      "map": {
+        "eyebrow": "Mapa tras",
+        "title": "Cały ośrodek w jednym spojrzeniu.",
+        "text": "Folgarida-Marilleva, Madonna di Campiglio i Pinzolo są połączone na nartach. Poznaj mapę: dotknij punktu, aby zobaczyć wysokości, schroniska i usługi.",
+        "alt": "Mapa tras Skiarea Campiglio Dolomiti di Brenta, od Folgaridy i Marillevy po Madonna di Campiglio i Pinzolo",
+        "caption": "Mapa interaktywna: dotknij punktów, aby poznać miejscowości, szczyty i schroniska. Mapa © Cormar, Skiarea Campiglio Dolomiti di Brenta.",
+        "fullscreen": "Otwórz na pełnym ekranie"
+      },
       "beyond": {
         "eyebrow": "Nie tylko narty",
         "title": "Dolina zimą, także bez nart.",
@@ -288,14 +358,25 @@
         ]
       }
     },
-    "photos": {"credit": "Zdjęcie zimowe: Giorgio Galeotti, Malghet Aut (Folgarida), <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_05.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>"},
+    "photos": {
+      "credit": "Zdjęcie zimowe: Giorgio Galeotti, Malghet Aut (Folgarida), <a href=\"https://commons.wikimedia.org/wiki/File:Winter_Landscape_-_Malghet_Haut,_Folgarida,_Trento,_Italy_-_January_1,_2010_05.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a>, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>"
+    },
     "summer": {
       "eyebrow": "Lato · czerwiec – październik",
       "title": "Rzeki, szlaki i dwa kółka.",
       "items": [
-        { "title": "Ścieżka rowerowa Val di Sole", "text": "Ścieżka biegnie przez Dimaro i wzdłuż rzeki Noce przez całą dolinę. Idealna dla rodzin, także na e-bike'u." },
-        { "title": "Rafting na Noce", "text": "Noce to jedna z najbardziej cenionych rzek w Europie do raftingu i kajakarstwa, z trasami dla początkujących i zaawansowanych." },
-        { "title": "Trekking w parkach", "text": "Park Narodowy Stelvio i Park Przyrody Adamello Brenta: szlaki, górskie schroniska i alpejskie jeziora na każdym poziomie." }
+        {
+          "title": "Ścieżka rowerowa Val di Sole",
+          "text": "Ścieżka biegnie przez Dimaro i wzdłuż rzeki Noce przez całą dolinę. Idealna dla rodzin, także na e-bike'u."
+        },
+        {
+          "title": "Rafting na Noce",
+          "text": "Noce to jedna z najbardziej cenionych rzek w Europie do raftingu i kajakarstwa, z trasami dla początkujących i zaawansowanych."
+        },
+        {
+          "title": "Trekking w parkach",
+          "text": "Park Narodowy Stelvio i Park Przyrody Adamello Brenta: szlaki, górskie schroniska i alpejskie jeziora na każdym poziomie."
+        }
       ]
     },
     "base": {
@@ -333,11 +414,77 @@
       "no": "Nie",
       "yes": "Tak",
       "message": "Twoje zapytanie",
-      "privacy": "Wyrażam zgodę na przetwarzanie moich danych w celu otrzymania odpowiedzi na to zapytanie. *",
+      "privacy": "Zapoznałem(-am) się z polityką prywatności i wyrażam zgodę na przetwarzanie moich danych w celu otrzymania odpowiedzi na to zapytanie. *",
       "submit": "Wyślij zapytanie",
-      "sent": "Dziękujemy! Otrzymaliśmy Twoje zapytanie i odpowiemy e-mailem najszybciej, jak to możliwe."
+      "sent": "Dziękujemy! Otrzymaliśmy Twoje zapytanie i odpowiemy e-mailem najszybciej, jak to możliwe.",
+      "privacyLink": "polityką prywatności"
     },
     "asideTitle": "Dlaczego warto zapytać tutaj",
-    "aside": ["Bezpośrednia odpowiedź od gospodarzy Locandy", "Teraz bez żadnej płatności", "Restauracja i pizzeria na parterze"]
+    "aside": [
+      "Bezpośrednia odpowiedź od gospodarzy Locandy",
+      "Teraz bez żadnej płatności",
+      "Restauracja i pizzeria na parterze"
+    ]
+  },
+  "privacy": {
+    "meta": {
+      "title": "Prywatność i cookies | Locanda dei Gemelli",
+      "description": "Jak przetwarzamy dane osobowe osób odwiedzających stronę Locanda dei Gemelli i gości, którzy wysyłają zapytanie o rezerwację."
+    },
+    "eyebrow": "Polityka prywatności",
+    "title": "Prywatność i cookies",
+    "lead": "Jak przetwarzamy Twoje dane, gdy odwiedzasz tę stronę lub wysyłasz nam zapytanie (art. 13 Rozporządzenia UE 2016/679, RODO).",
+    "updated": "Ostatnia aktualizacja: 28 listopada 2026",
+    "sections": [
+      {
+        "h": "Administrator danych",
+        "p": [
+          "{company}, siedziba {address}, numer podatkowy i VAT {vat}. W sprawach prywatności napisz na {email} lub na certyfikowany adres e-mail (PEC) {pec}."
+        ]
+      },
+      {
+        "h": "Jakie dane zbieramy",
+        "p": [
+          "Dane przesłane przez formularz zapytania: imię, nazwisko, e-mail, telefon, daty pobytu, liczba gości i wiek dzieci, zwierzęta, preferowany apartament i ewentualna wiadomość.",
+          "Dane techniczne: firma hostująca stronę (GitHub Pages) automatycznie zapisuje adres IP, przeglądarkę i odwiedzone strony ze względów bezpieczeństwa i działania serwisu."
+        ]
+      },
+      {
+        "h": "Cel i podstawa prawna",
+        "p": [
+          "Aby odpowiedzieć na Twoje zapytanie i, jeśli zechcesz, zorganizować pobyt: działanie przed zawarciem umowy na Twoje żądanie (art. 6 ust. 1 lit. b RODO). Bez tych danych nie możemy odpowiedzieć.",
+          "Aby wypełnić obowiązki prawne, jeśli pobyt zostanie potwierdzony, np. podatkowe i zgłoszenie gości organom policji (art. 6 ust. 1 lit. c RODO).",
+          "Nie używamy Twoich danych do reklamy i nigdy ich nie sprzedajemy."
+        ]
+      },
+      {
+        "h": "Komu przekazujemy dane",
+        "p": [
+          "FormSubmit (formsubmit.co), usługa przekazująca formularz do naszej skrzynki; Google (Gmail), który obsługuje skrzynkę e-mail; GitHub (Microsoft), który hostuje stronę. Przetwarzają dane w naszym imieniu. Niektórzy mają siedzibę w USA: przekazanie odbywa się z zabezpieczeniami wymaganymi przez RODO (EU-US Data Privacy Framework lub standardowe klauzule umowne).",
+          "Nie przekazujemy danych nikomu innemu, chyba że wymaga tego prawo."
+        ]
+      },
+      {
+        "h": "Jak długo przechowujemy dane",
+        "p": [
+          "Zapytania, które nie kończą się rezerwacją: maksymalnie 24 miesiące, potem je usuwamy. Dane potwierdzonego pobytu: przez okres wymagany prawem (np. 10 lat dla dokumentów podatkowych)."
+        ]
+      },
+      {
+        "h": "Cookies i usługi zewnętrzne",
+        "p": [
+          "Ta strona nie używa własnych plików cookie, cookies profilujących ani narzędzi statystycznych.",
+          "Czcionki są ładowane z Google Fonts: w tym celu Twoja przeglądarka przekazuje Google Twój adres IP.",
+          "Mapa Google Maps ładuje się dopiero po kliknięciu \"Pokaż mapę\": od tego momentu Google może zapisywać własne cookies. Linki do Google Maps otwierają stronę Google, z jej polityką prywatności."
+        ]
+      },
+      {
+        "h": "Twoje prawa",
+        "p": [
+          "W każdej chwili możesz zażądać dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, sprzeciwu lub przeniesienia danych (art. 15-22 RODO), pisząc na {email} lub na PEC {pec}.",
+          "Masz prawo złożyć skargę do włoskiego organu ochrony danych (www.garanteprivacy.it) lub do organu w swoim kraju, np. PUODO."
+        ]
+      }
+    ]
   }
 }
