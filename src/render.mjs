@@ -101,8 +101,9 @@ function footer(c) {
   </footer>`;
 }
 
-export function layout(c, { title, description, image, body, jsonld }) {
+export function layout(c, { title, description, og = 'assets/img/og/home.jpg', hero, body, jsonld, crumbs }) {
   const canonical = SITE_URL + c.lang.path + c.pagePath;
+  const ld = [jsonld, crumbs && breadcrumbs(c, crumbs)].filter(Boolean);
   const alternates = LANGS.map((l) => `  <link rel="alternate" hreflang="${l.code}" href="${SITE_URL}${l.path}${c.pagePath}">`).join('\n');
   return `<!doctype html>
 <html lang="${c.lang.code}">
@@ -115,17 +116,22 @@ ${process.env.PREVIEW ? '  <meta name="robots" content="noindex, nofollow">\n' :
 ${alternates}
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}${c.pagePath}">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="La Locanda dei Gemelli">
+  <meta property="og:url" content="${canonical}">
   <meta property="og:title" content="${e(title)}">
   <meta property="og:description" content="${e(description)}">
-  <meta property="og:image" content="${e(isExternal(image || IMG.hero) ? image || IMG.hero : SITE_URL + image)}">
+  <meta property="og:image" content="${SITE_URL}${og}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="${c.t.locale}">
+${LANGS.filter((l) => l.code !== c.lang.code).map((l) => `  <meta property="og:locale:alternate" content="${JSON.parse(readFileSync(`src/i18n/${l.code}.json`, 'utf8')).locale}">`).join('\n')}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#000000">
   <link rel="icon" type="image/png" href="${c.root}assets/img/favicon.png">
   <link rel="apple-touch-icon" href="${c.root}assets/img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+${hero ? `  <link rel="preload" as="image" href="${c.asset(hero)}" fetchpriority="high">\n` : ''}  <link rel="preload" as="font" type="font/woff2" href="${c.root}assets/fonts/inter-latin-400-normal.woff2" crossorigin>
   <link rel="stylesheet" href="${c.root}assets/css/style.css?v=${ver('assets/css/style.css')}">
-${jsonld ? `  <script type="application/ld+json">${JSON.stringify(jsonld)}</script>\n` : ''}</head>
+${ld.map((j) => `  <script type="application/ld+json">${JSON.stringify(j)}</script>\n`).join('')}</head>
 <body>${header(c)}
   <main id="main">${body}
   </main>${footer(c)}
@@ -223,10 +229,28 @@ function mapEmbed(c) {
       </div>`;
 }
 
+// Briciole di pane per i dati strutturati: [[nome, percorso], ...] dopo la home.
+function breadcrumbs(c, crumbs) {
+  const items = [['La Locanda dei Gemelli', ''], ...crumbs];
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map(([name, path], i) => ({ '@type': 'ListItem', position: i + 1, name, item: SITE_URL + c.lang.path + path })),
+  };
+}
+
+const BUSINESS_ID = SITE_URL + '#locanda';
+
 function baseJsonLd(c) {
   return {
     '@context': 'https://schema.org',
     '@type': ['LodgingBusiness', 'Restaurant'],
+    '@id': BUSINESS_ID,
+    description: c.t.home.meta.description,
+    inLanguage: c.lang.code,
+    logo: SITE_URL + 'assets/img/logo.png',
+    acceptsReservations: true,
+    amenityFeature: ['Wi-Fi', 'Restaurant', 'Pizzeria'].map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })),
     name: 'La Locanda dei Gemelli',
     alternateName: 'Locanda dei Gemelli',
     legalName: LEGAL.company,
@@ -234,7 +258,7 @@ function baseJsonLd(c) {
     taxID: LEGAL.vat,
     email: REQUEST_EMAIL,
     url: SITE_URL + c.lang.path,
-    image: IMG.hero,
+    image: [SITE_URL + 'assets/img/og/home.jpg', SITE_URL + 'assets/img/og/ristorante.jpg'],
     servesCuisine: ['Trentina', 'Italiana', 'Pizza'],
     numberOfRooms: APARTMENTS.length,
     petsAllowed: true,
@@ -328,7 +352,7 @@ ${feature(c, h.dine, c.href(PAGES.restaurant), IMG.restaurant, true)}
         <a class="btn btn-accent" href="${c.href(PAGES.request)}">${e(h.final.cta)}</a>
       </div>
     </section>`;
-  return layout(c, { title: h.meta.title, description: h.meta.description, body, jsonld: baseJsonLd(c) });
+  return layout(c, { title: h.meta.title, description: h.meta.description, hero: IMG.hero, body, jsonld: baseJsonLd(c) });
 }
 
 export function apartments(c) {
@@ -361,7 +385,7 @@ export function apartments(c) {
         </div>
       </div>
     </section>`;
-  return layout(c, { title: p.meta.title, description: p.meta.description, image: IMG.stay, body, jsonld: baseJsonLd(c) });
+  return layout(c, { title: p.meta.title, description: p.meta.description, hero: IMG.stay, body, jsonld: baseJsonLd(c), crumbs: [[t.nav.apartments, PAGES.apartments]] });
 }
 
 export function apartment(c, a) {
@@ -421,7 +445,20 @@ export function apartment(c, a) {
       <button type="button" class="lb-nav lb-prev" aria-label="${e(p.lbPrev)}" data-prev>‹</button>
       <button type="button" class="lb-nav lb-next" aria-label="${e(p.lbNext)}" data-next>›</button>
     </dialog>`;
-  return layout(c, { title: fill(p.metaTitle, vars), description: fill(p.metaDescription, vars), image: a.photos[0].src, body });
+  const jsonld = {
+    '@context': 'https://schema.org',
+    '@type': 'Apartment',
+    name: `${p.eyebrow} ${a.name}`,
+    description: fill(p.metaDescription, vars),
+    url: SITE_URL + c.lang.path + PAGES.apartments + a.slug + '/',
+    image: a.photos.slice(0, 6).map((ph) => SITE_URL + ph.src),
+    floorSize: { '@type': 'QuantitativeValue', value: a.size, unitCode: 'MTK' },
+    occupancy: { '@type': 'QuantitativeValue', maxValue: a.beds },
+    petsAllowed: true,
+    amenityFeature: t.apartments.services.map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })),
+    containedInPlace: { '@id': BUSINESS_ID },
+  };
+  return layout(c, { title: fill(p.metaTitle, vars), description: fill(p.metaDescription, vars), og: `assets/img/og/${a.slug}.jpg`, hero: a.photos[0].src, body, jsonld, crumbs: [[t.nav.apartments, PAGES.apartments], [a.name, PAGES.apartments + a.slug + '/']] });
 }
 
 export function restaurant(c) {
@@ -491,7 +528,7 @@ export function restaurant(c) {
         </div>${hoursBox(c)}
       </div>${mapEmbed(c)}
     </section>`;
-  return layout(c, { title: r.meta.title, description: r.meta.description, image: IMG.restaurant, body, jsonld: baseJsonLd(c) });
+  return layout(c, { title: r.meta.title, description: r.meta.description, og: 'assets/img/og/ristorante.jpg', hero: IMG.restaurant, body, jsonld: baseJsonLd(c), crumbs: [[t.nav.restaurant, PAGES.restaurant]] });
 }
 
 export function valdisole(c) {
@@ -560,7 +597,7 @@ ${season(v.summer, '')}
         </div>
       </div>
     </section>`;
-  return layout(c, { title: v.meta.title, description: v.meta.description, body });
+  return layout(c, { title: v.meta.title, description: v.meta.description, og: 'assets/img/og/val-di-sole.jpg', hero: IMG.winterHero, body, crumbs: [[t.nav.valdisole, PAGES.valdisole]] });
 }
 
 export function request(c) {
@@ -629,7 +666,7 @@ export function request(c) {
         </aside>
       </div>
     </section>`;
-  return layout(c, { title: q.meta.title, description: q.meta.description, body });
+  return layout(c, { title: q.meta.title, description: q.meta.description, body, crumbs: [[t.nav.request, PAGES.request]] });
 }
 
 export function privacy(c) {
@@ -652,5 +689,32 @@ export function privacy(c) {
         <p class="muted">${e(p.updated)}</p>
       </div>
     </section>`;
-  return layout(c, { title: p.meta.title, description: p.meta.description, body });
+  return layout(c, { title: p.meta.title, description: p.meta.description, body, crumbs: [[p.title, PAGES.privacy]] });
+}
+
+// Pagina 404 (GitHub Pages la mostra per ogni indirizzo inesistente): link assoluti, non indicizzata.
+export function notFound(c) {
+  const t = c.t;
+  const body = `
+    <section class="page-title">
+      <div class="wrap narrow">
+        <p class="eyebrow">404</p>
+        <h1>Pagina non trovata</h1>
+        <p class="lead">L'indirizzo che hai aperto non esiste o è cambiato. Page not found · Seite nicht gefunden · Nie znaleziono strony.</p>
+        <div class="actions">
+          <a class="btn btn-accent" href="${c.href(PAGES.request)}">${e(t.nav.request)}</a>
+          <a class="btn btn-outline" href="${c.href('')}">Home</a>
+        </div>
+        <ul class="footer-links nf-links">
+          <li><a class="link-arrow" href="${c.href(PAGES.apartments)}">${e(t.nav.apartments)}</a></li>
+          <li><a class="link-arrow" href="${c.href(PAGES.restaurant)}">${e(t.nav.restaurant)}</a></li>
+          <li><a class="link-arrow" href="${c.href(PAGES.valdisole)}">${e(t.nav.valdisole)}</a></li>
+          <li><a class="link-arrow" href="/en/">English</a> · <a class="link-arrow" href="/de/">Deutsch</a> · <a class="link-arrow" href="/pl/">Polski</a></li>
+        </ul>
+      </div>
+    </section>`;
+  return layout(c, { title: 'Pagina non trovata | Locanda dei Gemelli', description: t.home.meta.description, body })
+    .replace(/\n  <link rel="(canonical|alternate)"[^>]*>/g, '')
+    .replace(/\n  <meta property="og:url"[^>]*>/, '')
+    .replace('<title>', '<meta name="robots" content="noindex">\n  <title>');
 }

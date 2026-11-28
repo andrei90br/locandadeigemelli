@@ -30,7 +30,7 @@ jobs:
       - name: Prepara i file da pubblicare
         run: |
           mkdir _site
-          cp -r CNAME .nojekyll index.html robots.txt sitemap.xml en de pl appartamenti ristorante val-di-sole richiesta privacy assets _site/
+          cp -r CNAME .nojekyll index.html 404.html robots.txt sitemap.xml en de pl appartamenti ristorante val-di-sole richiesta privacy assets _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

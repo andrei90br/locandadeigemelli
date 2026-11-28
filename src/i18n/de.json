@@ -53,8 +53,8 @@
   "home": {
     "notice": "Neue Führung",
     "meta": {
-      "title": "Locanda dei Gemelli | Ferienwohnungen, Restaurant & Pizzeria in Dimaro Folgarida, Val di Sole",
-      "description": "6 Ferienwohnungen mit Küche und ein Restaurant mit Pizzeria im Erdgeschoss, in Dimaro Folgarida im Val di Sole. Regionale Trentiner Küche, Pizza vom Meisterpizzaiolo, Pisten und Wege in wenigen Minuten."
+      "title": "Locanda dei Gemelli · Ferienwohnungen & Pizzeria in Dimaro",
+      "description": "6 Ferienwohnungen mit Küche, Restaurant und Pizzeria im Erdgeschoss, in Dimaro Folgarida im Val di Sole. Trentiner Küche, Pisten in wenigen Minuten."
     },
     "hero": {
       "eyebrow": "Dimaro Folgarida · Val di Sole · Trentino",
@@ -115,8 +115,8 @@
   },
   "apartments": {
     "meta": {
-      "title": "Ferienwohnungen in Dimaro Folgarida, Val di Sole | Locanda dei Gemelli",
-      "description": "6 unabhängige Ferienwohnungen von 46 bis 60 m² mit Küche, eigenem Bad und WLAN, für 4 bis 7 Personen. Haustiere willkommen. Restaurant und Pizzeria im Erdgeschoss."
+      "title": "Ferienwohnungen in Dimaro Folgarida | Locanda dei Gemelli",
+      "description": "6 Ferienwohnungen von 46 bis 60 m² mit Küche, eigenem Bad und WLAN, für 4 bis 7 Personen, in Dimaro im Val di Sole. Haustiere willkommen."
     },
     "hero": {
       "eyebrow": "Wohnen",
@@ -154,8 +154,8 @@
     ]
   },
   "apartment": {
-    "metaTitle": "Ferienwohnung {name} · {size} m², {beds} Schlafplätze | Locanda dei Gemelli, Val di Sole",
-    "metaDescription": "Ferienwohnung {name} in Dimaro Folgarida: {size} m², {beds} Schlafplätze, {rooms}. Küche, eigenes Bad, WLAN. Restaurant und Pizzeria im Erdgeschoss.",
+    "metaTitle": "Ferienwohnung {name} in Dimaro, {beds} Pers. | Locanda dei Gemelli",
+    "metaDescription": "Ferienwohnung {name} in Dimaro Folgarida, Val di Sole: {size} m², {beds} Schlafplätze, Küche, eigenes Bad und WLAN. Restaurant und Pizzeria im Haus.",
     "eyebrow": "Ferienwohnung",
     "text": "Eine unabhängige Ferienwohnung mit {size} m² und {rooms}. Ausgestattete Küche, Wohnbereich, eigenes Bad, WLAN und TV: alles, was du brauchst, um dich im Val di Sole zu Hause zu fühlen. Und wenn du abends nicht kochen willst, sind Restaurant und Pizzeria im Erdgeschoss.",
     "factsTitle": "Auf einen Blick",
@@ -181,8 +181,8 @@
   },
   "restaurant": {
     "meta": {
-      "title": "Restaurant & Pizzeria in Dimaro Folgarida, Val di Sole | Locanda dei Gemelli",
-      "description": "Moderne Osteria im Val di Sole: Trentiner Küche mit regionalen Zutaten und Pizza vom Meisterpizzaiolo. Mittag- und Abendessen in Dimaro Folgarida, Dienstag Ruhetag."
+      "title": "Restaurant und Pizzeria in Dimaro | Locanda dei Gemelli",
+      "description": "Trentiner Küche mit regionalen Zutaten und Pizza vom Meisterpizzaiolo in Dimaro Folgarida, Val di Sole. Mittag- und Abendessen, Dienstag Ruhetag."
     },
     "hero": {
       "eyebrow": "Restaurant & Pizzeria",
@@ -250,8 +250,8 @@
   },
   "valdisole": {
     "meta": {
-      "title": "Was tun im Val di Sole, Winter und Sommer | Locanda dei Gemelli",
-      "description": "Skifahren in Folgarida-Marilleva, Madonna di Campiglio, am Tonalepass und in Pejo, Langlauf, Schneeschuhwandern, Therme und Weihnachtsmärkte, dazu der Sommer im Tal. Alles nur wenige Minuten von der Locanda dei Gemelli in Dimaro."
+      "title": "Was tun im Val di Sole | Locanda dei Gemelli",
+      "description": "Skifahren in Folgarida-Marilleva, Campiglio, am Tonale und in Pejo, Schneeschuhwandern, Therme und Weihnachtsmärkte, dazu der Sommer im Tal."
     },
     "hero": {
       "eyebrow": "Erlebnisse",
@@ -474,7 +474,6 @@
         "h": "Cookies und externe Dienste",
         "p": [
           "Diese Website verwendet keine eigenen Cookies, keine Profiling-Cookies und keine Statistik-Tools.",
-          "Die Schriftarten werden von Google Fonts geladen: Dabei übermittelt Ihr Browser Ihre IP-Adresse an Google.",
           "Die Google-Maps-Karte wird nur geladen, wenn Sie auf \"Karte anzeigen\" klicken: Ab dann kann Google eigene Cookies setzen. Links zu Google Maps öffnen die Website von Google mit deren Datenschutzerklärung."
         ]
       },
