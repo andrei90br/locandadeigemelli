@@ -37,6 +37,5 @@ In `assets/img/`:
 
 ## Sviluppo e pubblicazione
 
-Il lavoro si fa sul branch `sviluppo`. Su `main` per ora è online solo la pagina "in arrivo" (`in-arrivo/`).
-Al lancio: aprire una pull request da `sviluppo` a `main` e, nel workflow `.github/workflows/pages.yml`,
-ripristinare il passo `node build.mjs` e `path: .` al posto di `path: in-arrivo`.
+Il sito è online dal 28/11/2026: ogni push su `main` esegue `.github/workflows/pages.yml`
+(`node build.mjs`, poi pubblica le pagine generate, `assets/`, `CNAME`, `sitemap.xml` e `robots.txt`).
