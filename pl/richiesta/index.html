@@ -25,10 +25,14 @@
   <meta property="og:locale:alternate" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://locandaelisa.it; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; frame-src 'self' https://maps.google.com https://www.google.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png" sizes="512x512">
+  <link rel="manifest" href="../../site.webmanifest">
   <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin-400-normal.woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/style.css?v=9a4dc50c">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=2e13aa67">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"La Locanda dei Gemelli","item":"https://locandadeigemelli.com/pl/"},{"@type":"ListItem","position":2,"name":"Zapytaj o dostępność","item":"https://locandadeigemelli.com/pl/richiesta/"}]}</script>
 </head>
 <body>
@@ -36,16 +40,16 @@
   <header class="site-header" data-header>
     <div class="wrap header-inner">
       <a class="brand" href="../../pl/"><img src="../../assets/img/logo.svg" alt="La Locanda dei Gemelli" width="539" height="568"></a>
-      <nav class="nav" aria-label="Nawigacja główna" data-nav>
+      <a class="btn btn-accent btn-sm header-cta" href="../../pl/richiesta/">Zapytaj o dostępność</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz menu" data-label-open="Otwórz menu" data-label-close="Zamknij menu" data-menu-toggle><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Nawigacja główna" data-nav>
           <a href="../../pl/appartamenti/">Apartamenty</a>
           <a href="../../pl/ristorante/">Restauracja i pizzeria</a>
           <a href="../../pl/val-di-sole/">Val di Sole</a>
           <a href="../../pl/#dove">Lokalizacja</a>
-        <div class="langs" aria-label="Język"><a href="../../richiesta/" hreflang="it" lang="it">IT</a><a href="../../en/richiesta/" hreflang="en" lang="en">EN</a><a href="../../de/richiesta/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
+        <div class="langs" role="group" aria-label="Język"><a href="../../richiesta/" hreflang="it" lang="it">IT</a><a href="../../en/richiesta/" hreflang="en" lang="en">EN</a><a href="../../de/richiesta/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
         <a class="btn btn-accent nav-cta" href="../../pl/richiesta/">Zapytaj o dostępność</a>
       </nav>
-      <a class="btn btn-accent btn-sm header-cta" href="../../pl/richiesta/">Zapytaj o dostępność</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Otwórz menu" data-menu-toggle><span></span><span></span></button>
     </div>
   </header>
   <main id="main">
@@ -60,29 +64,29 @@
     <section class="section section-tight">
       <div class="wrap request-grid" id="richiesta">
         <div>
-          <p class="request-sent" role="status" hidden data-request-sent>Dziękujemy! Otrzymaliśmy Twoje zapytanie i odpowiemy e-mailem najszybciej, jak to możliwe.</p>
-          <form class="request-form" action="https://formsubmit.co/lalocandadeigemelli@gmail.com" method="POST" data-request-form>
+          <div class="request-sent" role="status" tabindex="-1" hidden data-request-sent><p>Dziękujemy! Otrzymaliśmy Twoje zapytanie i odpowiemy e-mailem najszybciej, jak to możliwe.</p><a class="link-arrow" href="../../pl/">Wróć na stronę główną</a></div>
+          <form class="request-form" action="https://formsubmit.co/lalocandadeigemelli@gmail.com" method="POST" novalidate data-msg-required="Wypełnij to pole." data-msg-choose="Wybierz jedną z opcji." data-msg-email="Wpisz poprawny adres e-mail." data-msg-departure="Wyjazd musi być po przyjeździe." data-msg-past="Wybierz datę od dzisiaj." data-msg-tuesday="We wtorki jesteśmy nieczynni: wybierz inny dzień." data-msg-privacy="Zaznacz pole, aby kontynuować." data-msg-sending="Wysyłanie…" data-msg-back="Wróć na stronę główną" data-msg-imgError="Zdjęcie niedostępne" data-request-form data-validate data-sent-param="richiesta">
             <input type="hidden" name="_subject" value="Zapytanie o apartament – strona Locanda dei Gemelli (PL)">
             <input type="hidden" name="_next" value="https://locandadeigemelli.com/pl/richiesta/?richiesta=inviata">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="Lingua" value="pl">
-            <input type="hidden" name="Notti" data-nights-input>
-            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="Soggiorno" data-stay-input>
+            <div class="hp" aria-hidden="true"><label>Lascia vuoto <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
             <p class="rf-head"><strong>Zapytanie niewiążące</strong><span>* pola obowiązkowe</span></p>
             <div class="rf-group">
               <input type="text" name="Nome" placeholder="Imię *" aria-label="Imię" required autocomplete="given-name">
-              <input type="email" name="email" placeholder="E-mail *" aria-label="E-mail" required autocomplete="email">
               <input type="text" name="Cognome" placeholder="Nazwisko *" aria-label="Nazwisko" required autocomplete="family-name">
+              <input type="email" name="email" placeholder="E-mail *" aria-label="E-mail" required autocomplete="email">
               <input type="tel" name="Telefono" placeholder="Telefon *" aria-label="Telefon" required autocomplete="tel">
             </div>
             <div class="rf-group">
-              <input type="text" class="rf-date" name="Arrivo" placeholder="Przyjazd *" aria-label="Przyjazd" required data-date data-arrival>
+              <label class="rf-field"><span>Przyjazd *</span><input type="date" name="Arrivo" required data-date data-arrival></label>
+              <label class="rf-field"><span>Wyjazd *</span><input type="date" name="Partenza" required data-date data-departure></label>
               <select name="Adulti" aria-label="Dorośli" required data-adults><option value="" disabled selected>Dorośli *</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
-              <input type="text" class="rf-date" name="Partenza" placeholder="Wyjazd *" aria-label="Wyjazd" required data-date data-departure>
-              <select name="Bambini" aria-label="Dzieci" data-children><option value="" disabled selected>Dzieci</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
-              <select name="Appartamento" aria-label="Apartament" data-apt-select><option value="">Apartament: Bez preferencji</option><option>Jonagold</option><option>Pink Lady</option><option>Renetta</option><option>Fuji</option><option>Golden</option><option>Morgana</option></select>
-              <select name="Animali" aria-label="Zwierzęta"><option value="" disabled selected>Zwierzęta</option><option>Nie</option><option>Tak</option></select>
+              <select name="Bambini" aria-label="Dzieci" data-children data-default="0"><option value="" disabled selected>Dzieci</option><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+              <select name="Appartamento" aria-label="Apartament" data-apt-select><option value="Nessuna preferenza">Apartament: Bez preferencji</option><option>Jonagold</option><option>Pink Lady</option><option>Renetta</option><option>Fuji</option><option>Golden</option><option>Morgana</option></select>
+              <select name="Animali" aria-label="Zwierzęta" data-default="Non indicato"><option value="" disabled selected>Zwierzęta</option><option value="No">Nie</option><option value="Sì">Tak</option></select>
             </div>
             <div class="rf-group rf-ages" hidden data-ages>
               <p class="rf-note">Podaj wiek każdego dziecka w dniu przyjazdu.</p>
@@ -95,14 +99,15 @@
             </div>
             <div class="rf-group rf-single">
               <textarea name="Richiesta" rows="5" placeholder="Twoje zapytanie" aria-label="Twoje zapytanie"></textarea>
-              <label class="rf-check"><input type="checkbox" name="Privacy" value="ok" required> <span>Zapoznałem(-am) się z <a href="../../pl/privacy/" target="_blank">polityką prywatności</a> i wyrażam zgodę na przetwarzanie moich danych w celu otrzymania odpowiedzi na to zapytanie. *</span></label>
+              <label class="rf-check"><input type="checkbox" name="Privacy" value="ok" required> <span>Zapoznałem(-am) się z <a href="../../pl/privacy/" target="_blank" rel="noopener">polityką prywatności</a> *</span></label>
               <button class="btn btn-accent" type="submit">Wyślij zapytanie</button>
             </div>
           </form>
         </div>
         <aside class="info-card">
-          <h3>Dlaczego warto zapytać tutaj</h3>
+          <h2 class="h3">Dlaczego warto zapytać tutaj</h2>
           <ul class="checklist"><li>Bezpośrednia odpowiedź od gospodarzy Locandy</li><li>Teraz bez żadnej płatności</li><li>Restauracja i pizzeria na parterze</li><li>Zameldowanie od 14:00 do 23:00</li><li>Wymeldowanie do 11:00</li></ul>
+          <p class="payment-note">Dla Twojego bezpieczeństwa: dane do płatności wysyłamy wyłącznie z adresu lalocandadeigemelli@gmail.com. Jeśli otrzymasz inne dane bankowe z innego adresu, nie płać i skontaktuj się z nami.</p>
           <p class="hours-season">Otwarte od grudnia do kwietnia i od czerwca do października</p>
           <address>Via Campiglio 59, 38025 Dimaro Folgarida (TN), Włochy</address>
           <a class="link-arrow" href="https://www.google.com/maps/dir/?api=1&destination=La+Locanda+dei+Gemelli%2C+Via+Campiglio+59%2C+38025+Dimaro+TN" target="_blank" rel="noopener">Wyznacz trasę</a>
@@ -134,6 +139,8 @@
         <p class="footer-title">Jedzenie</p>
         <ul class="footer-links">
           <li><a href="../../pl/ristorante/">Restauracja i pizzeria</a></li>
+          <li><a href="../../pl/ristorante/#tavolo">Zarezerwuj stolik</a></li>
+          <li><a href="https://wa.me/393289839761?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20zarezerwowa%C4%87%20stolik%20w%20Locanda%20dei%20Gemelli." target="_blank" rel="noopener">WhatsApp: rezerwacja stolików: +39 328 983 9761</a></li>
         </ul>
         <p class="footer-small">Restauracja 12–14:30 i 17:30–22 · Pizzeria 17:30–22:30 · We wtorki nieczynne</p>
         <p class="footer-title">Odkryj</p>
@@ -144,14 +151,13 @@
       </div>
       <div>
         <p class="footer-title">Język</p>
-        <div class="langs"><a href="../../richiesta/" hreflang="it" lang="it">IT</a><a href="../../en/richiesta/" hreflang="en" lang="en">EN</a><a href="../../de/richiesta/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
+        <div class="langs" role="group" aria-label="Język"><a href="../../richiesta/" hreflang="it" lang="it">IT</a><a href="../../en/richiesta/" hreflang="en" lang="en">EN</a><a href="../../de/richiesta/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <!-- TODO: CIN degli appartamenti -->
       <p class="footer-legal">© 2026 Bulla Brothers S.a.s. di Manushaqe Bulla &amp; C. · Siedziba Via Milano 13, 38027 Malè (TN) · NIP (C.F. i P.IVA) 02857660225 · REA TN-254820 · PEC <a href="mailto:bullabrothers@legalmail.it">bullabrothers@legalmail.it</a> · <a href="../../pl/privacy/">Prywatność i cookies</a></p>
     </div>
   </footer>
-  <script src="../../assets/js/main.js?v=e3c3fd52" defer></script>
+  <script src="../../assets/js/main.js?v=52414356" defer></script>
 </body>
 </html>

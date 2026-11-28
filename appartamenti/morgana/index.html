@@ -25,11 +25,15 @@
   <meta property="og:locale:alternate" content="pl_PL">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://locandaelisa.it; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; frame-src 'self' https://maps.google.com https://www.google.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png" sizes="512x512">
+  <link rel="manifest" href="../../site.webmanifest">
   <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
   <link rel="preload" as="image" href="../../assets/img/appartamenti/morgana/salotto-01.webp" fetchpriority="high">
   <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin-400-normal.woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/style.css?v=9a4dc50c">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=2e13aa67">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Apartment","name":"Appartamento Morgana","description":"Appartamento Morgana a Dimaro Folgarida, Val di Sole: 60 m², 7 posti letto, cucina, bagno privato e Wi-Fi. Ristorante pizzeria al piano terra.","url":"https://locandadeigemelli.com/appartamenti/morgana/","image":["https://locandadeigemelli.com/assets/img/appartamenti/morgana/salotto-01.webp","https://locandadeigemelli.com/assets/img/appartamenti/morgana/salotto-02.webp","https://locandadeigemelli.com/assets/img/appartamenti/morgana/salotto-03.webp","https://locandadeigemelli.com/assets/img/appartamenti/morgana/salotto-04.webp","https://locandadeigemelli.com/assets/img/appartamenti/morgana/cucina-01.webp","https://locandadeigemelli.com/assets/img/appartamenti/morgana/cucina-02.webp"],"floorSize":{"@type":"QuantitativeValue","value":60,"unitCode":"MTK"},"occupancy":{"@type":"QuantitativeValue","maxValue":7},"petsAllowed":true,"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Wi-Fi","value":true},{"@type":"LocationFeatureSpecification","name":"Bagno privato","value":true},{"@type":"LocationFeatureSpecification","name":"Cucina e zona pranzo","value":true},{"@type":"LocationFeatureSpecification","name":"Zona giorno","value":true},{"@type":"LocationFeatureSpecification","name":"TV","value":true},{"@type":"LocationFeatureSpecification","name":"Parcheggio pubblico (non prenotabile)","value":true},{"@type":"LocationFeatureSpecification","name":"Ristorante e pizzeria al piano terra","value":true},{"@type":"LocationFeatureSpecification","name":"Brandine aggiuntive su richiesta","value":true}],"containedInPlace":{"@id":"https://locandadeigemelli.com/#locanda"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"La Locanda dei Gemelli","item":"https://locandadeigemelli.com/"},{"@type":"ListItem","position":2,"name":"Appartamenti","item":"https://locandadeigemelli.com/appartamenti/"},{"@type":"ListItem","position":3,"name":"Morgana","item":"https://locandadeigemelli.com/appartamenti/morgana/"}]}</script>
 </head>
@@ -38,16 +42,16 @@
   <header class="site-header" data-header>
     <div class="wrap header-inner">
       <a class="brand" href="../../"><img src="../../assets/img/logo.svg" alt="La Locanda dei Gemelli" width="539" height="568"></a>
-      <nav class="nav" aria-label="Navigazione principale" data-nav>
+      <a class="btn btn-accent btn-sm header-cta" href="../../richiesta/?apt=Morgana">Richiedi disponibilità</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Apri il menu" data-label-open="Apri il menu" data-label-close="Chiudi il menu" data-menu-toggle><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Navigazione principale" data-nav>
           <a href="../../appartamenti/" aria-current="page">Appartamenti</a>
           <a href="../../ristorante/">Ristorante e Pizzeria</a>
           <a href="../../val-di-sole/">Val di Sole</a>
           <a href="../../#dove">Dove siamo</a>
-        <div class="langs" aria-label="Lingua"><span aria-current="true">IT</span><a href="../../en/appartamenti/morgana/" hreflang="en" lang="en">EN</a><a href="../../de/appartamenti/morgana/" hreflang="de" lang="de">DE</a><a href="../../pl/appartamenti/morgana/" hreflang="pl" lang="pl">PL</a></div>
-        <a class="btn btn-accent nav-cta" href="../../richiesta/">Richiedi disponibilità</a>
+        <div class="langs" role="group" aria-label="Lingua"><span aria-current="true">IT</span><a href="../../en/appartamenti/morgana/" hreflang="en" lang="en">EN</a><a href="../../de/appartamenti/morgana/" hreflang="de" lang="de">DE</a><a href="../../pl/appartamenti/morgana/" hreflang="pl" lang="pl">PL</a></div>
+        <a class="btn btn-accent nav-cta" href="../../richiesta/?apt=Morgana">Richiedi disponibilità</a>
       </nav>
-      <a class="btn btn-accent btn-sm header-cta" href="../../richiesta/">Richiedi disponibilità</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Apri il menu" data-menu-toggle><span></span><span></span></button>
     </div>
   </header>
   <main id="main">
@@ -149,7 +153,7 @@
         </article>
       </div>
     </section>
-    <dialog class="lightbox" data-lightbox-dialog>
+    <dialog class="lightbox" aria-label="Galleria fotografica" data-img-error="Foto non disponibile" data-lightbox-dialog>
       <figure><img alt=""><figcaption data-caption></figcaption></figure>
       <button type="button" class="lb-close" aria-label="Chiudi" data-close>×</button>
       <button type="button" class="lb-nav lb-prev" aria-label="Foto precedente" data-prev>‹</button>
@@ -180,6 +184,8 @@
         <p class="footer-title">Ristorazione</p>
         <ul class="footer-links">
           <li><a href="../../ristorante/">Ristorante e Pizzeria</a></li>
+          <li><a href="../../ristorante/#tavolo">Prenota un tavolo</a></li>
+          <li><a href="https://wa.me/393289839761?text=Buongiorno%2C%20vorrei%20prenotare%20un%20tavolo%20alla%20Locanda%20dei%20Gemelli." target="_blank" rel="noopener">WhatsApp per i tavoli: +39 328 983 9761</a></li>
         </ul>
         <p class="footer-small">Ristorante 12–14:30 e 17:30–22 · Pizzeria 17:30–22:30 · Chiuso il martedì</p>
         <p class="footer-title">Scopri</p>
@@ -190,14 +196,13 @@
       </div>
       <div>
         <p class="footer-title">Lingua</p>
-        <div class="langs"><span aria-current="true">IT</span><a href="../../en/appartamenti/morgana/" hreflang="en" lang="en">EN</a><a href="../../de/appartamenti/morgana/" hreflang="de" lang="de">DE</a><a href="../../pl/appartamenti/morgana/" hreflang="pl" lang="pl">PL</a></div>
+        <div class="langs" role="group" aria-label="Lingua"><span aria-current="true">IT</span><a href="../../en/appartamenti/morgana/" hreflang="en" lang="en">EN</a><a href="../../de/appartamenti/morgana/" hreflang="de" lang="de">DE</a><a href="../../pl/appartamenti/morgana/" hreflang="pl" lang="pl">PL</a></div>
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <!-- TODO: CIN degli appartamenti -->
       <p class="footer-legal">© 2026 Bulla Brothers S.a.s. di Manushaqe Bulla &amp; C. · Sede legale Via Milano 13, 38027 Malè (TN) · C.F. e P.IVA 02857660225 · REA TN-254820 · PEC <a href="mailto:bullabrothers@legalmail.it">bullabrothers@legalmail.it</a> · <a href="../../privacy/">Privacy e cookie</a></p>
     </div>
   </footer>
-  <script src="../../assets/js/main.js?v=e3c3fd52" defer></script>
+  <script src="../../assets/js/main.js?v=52414356" defer></script>
 </body>
 </html>

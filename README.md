@@ -18,8 +18,8 @@ Sito della Locanda dei Gemelli (6 appartamenti + ristorante e pizzeria), Dimaro 
 
 ## Da completare
 
-- Logo, contatti, menu, storia
-- Prenotazioni TheFork e WhatsApp
+- CIN degli appartamenti (footer)
+- Menu del ristorante, storia
 - Foto definitive (ora sono prese da locandaelisa.it, vedi `IMG` e `APARTMENTS` in `src/data.mjs`)
 - Ragione sociale, P.IVA, Privacy e Cookie Policy
 - Dominio `locandadeigemelli.com`: DNS su IONOS (A su GitHub Pages, CNAME www), dominio impostato in Settings → Pages
@@ -28,12 +28,14 @@ Sito della Locanda dei Gemelli (6 appartamenti + ristorante e pizzeria), Dimaro 
 
 In `assets/img/`:
 - `logo.svg`: logo vettoriale bianco (usato nel sito), nitido a qualsiasi dimensione
-- `logo-nero.svg`: stesso logo in nero, per sfondi chiari
-- `logo.png`: PNG trasparente ad alta risoluzione (2365 × 2495)
-- `logo-sfondo-nero.png`: PNG su sfondo nero
+- `logo-512.png`: logo su nero 512 px (dati strutturati per Google)
 - `favicon.png`, `apple-touch-icon.png`: monogramma AH
 - `prodotti-genuini.jpg`: illustrazione ingredienti con il logo al centro (usata nella sezione Pizzeria)
-- `prodotti-genuini-senza-logo.jpg`: la stessa illustrazione con il cerchio bianco vuoto, per usi futuri
+- `prodotti-genuini-senza-logo.jpg`: la stessa illustrazione con il cerchio bianco vuoto (card "Il sapore del territorio" del ristorante)
+
+In `brand/` (non pubblicata): `logo-nero.svg` (logo nero per sfondi chiari), `logo.png` (PNG trasparente 2365 × 2495), `logo-sfondo-nero.png` (PNG su sfondo nero).
+
+Stile, colori e componenti: vedi `DESIGN.md`.
 
 ## Sviluppo e pubblicazione
 

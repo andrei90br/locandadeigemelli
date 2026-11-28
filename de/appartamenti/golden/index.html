@@ -25,11 +25,15 @@
   <meta property="og:locale:alternate" content="pl_PL">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://locandaelisa.it; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; frame-src 'self' https://maps.google.com https://www.google.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="../../../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png" sizes="512x512">
+  <link rel="manifest" href="../../../site.webmanifest">
   <link rel="apple-touch-icon" href="../../../assets/img/apple-touch-icon.png">
   <link rel="preload" as="image" href="../../../assets/img/appartamenti/golden/cucina-02.webp" fetchpriority="high">
   <link rel="preload" as="font" type="font/woff2" href="../../../assets/fonts/inter-latin-400-normal.woff2" crossorigin>
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=9a4dc50c">
+  <link rel="stylesheet" href="../../../assets/css/style.css?v=2e13aa67">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Apartment","name":"Ferienwohnung Golden","description":"Ferienwohnung Golden in Dimaro Folgarida, Val di Sole: 60 m², 6 Schlafplätze, Küche, eigenes Bad und WLAN. Restaurant und Pizzeria im Haus.","url":"https://locandadeigemelli.com/de/appartamenti/golden/","image":["https://locandadeigemelli.com/assets/img/appartamenti/golden/cucina-02.webp","https://locandadeigemelli.com/assets/img/appartamenti/golden/salotto-01.webp","https://locandadeigemelli.com/assets/img/appartamenti/golden/salotto-02.webp","https://locandadeigemelli.com/assets/img/appartamenti/golden/cucina-01.webp","https://locandadeigemelli.com/assets/img/appartamenti/golden/stanza-1-01.webp","https://locandadeigemelli.com/assets/img/appartamenti/golden/stanza-1-02.webp"],"floorSize":{"@type":"QuantitativeValue","value":60,"unitCode":"MTK"},"occupancy":{"@type":"QuantitativeValue","maxValue":6},"petsAllowed":true,"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"WLAN","value":true},{"@type":"LocationFeatureSpecification","name":"Eigenes Bad","value":true},{"@type":"LocationFeatureSpecification","name":"Küche und Essbereich","value":true},{"@type":"LocationFeatureSpecification","name":"Wohnbereich","value":true},{"@type":"LocationFeatureSpecification","name":"TV","value":true},{"@type":"LocationFeatureSpecification","name":"Öffentlicher Parkplatz (nicht reservierbar)","value":true},{"@type":"LocationFeatureSpecification","name":"Restaurant und Pizzeria im Erdgeschoss","value":true},{"@type":"LocationFeatureSpecification","name":"Zusatzbetten auf Anfrage","value":true}],"containedInPlace":{"@id":"https://locandadeigemelli.com/#locanda"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"La Locanda dei Gemelli","item":"https://locandadeigemelli.com/de/"},{"@type":"ListItem","position":2,"name":"Ferienwohnungen","item":"https://locandadeigemelli.com/de/appartamenti/"},{"@type":"ListItem","position":3,"name":"Golden","item":"https://locandadeigemelli.com/de/appartamenti/golden/"}]}</script>
 </head>
@@ -38,16 +42,16 @@
   <header class="site-header" data-header>
     <div class="wrap header-inner">
       <a class="brand" href="../../../de/"><img src="../../../assets/img/logo.svg" alt="La Locanda dei Gemelli" width="539" height="568"></a>
-      <nav class="nav" aria-label="Hauptnavigation" data-nav>
+      <a class="btn btn-accent btn-sm header-cta" href="../../../de/richiesta/?apt=Golden">Verfügbarkeit anfragen</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen" data-label-open="Menü öffnen" data-label-close="Menü schließen" data-menu-toggle><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Hauptnavigation" data-nav>
           <a href="../../../de/appartamenti/" aria-current="page">Ferienwohnungen</a>
           <a href="../../../de/ristorante/">Restaurant &amp; Pizzeria</a>
           <a href="../../../de/val-di-sole/">Val di Sole</a>
           <a href="../../../de/#dove">Lage</a>
-        <div class="langs" aria-label="Sprache"><a href="../../../appartamenti/golden/" hreflang="it" lang="it">IT</a><a href="../../../en/appartamenti/golden/" hreflang="en" lang="en">EN</a><span aria-current="true">DE</span><a href="../../../pl/appartamenti/golden/" hreflang="pl" lang="pl">PL</a></div>
-        <a class="btn btn-accent nav-cta" href="../../../de/richiesta/">Verfügbarkeit anfragen</a>
+        <div class="langs" role="group" aria-label="Sprache"><a href="../../../appartamenti/golden/" hreflang="it" lang="it">IT</a><a href="../../../en/appartamenti/golden/" hreflang="en" lang="en">EN</a><span aria-current="true">DE</span><a href="../../../pl/appartamenti/golden/" hreflang="pl" lang="pl">PL</a></div>
+        <a class="btn btn-accent nav-cta" href="../../../de/richiesta/?apt=Golden">Verfügbarkeit anfragen</a>
       </nav>
-      <a class="btn btn-accent btn-sm header-cta" href="../../../de/richiesta/">Verfügbarkeit anfragen</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Menü öffnen" data-menu-toggle><span></span><span></span></button>
     </div>
   </header>
   <main id="main">
@@ -62,7 +66,7 @@
     <section class="section">
       <div class="wrap apt-detail">
         <div>
-          <p class="lead">Eine unabhängige Ferienwohnung mit 60 m² und 1 Doppelzimmer, 1 Zimmer mit Etagenbett und 1 Schlafsofa. Ausgestattete Küche, Wohnbereich, eigenes Bad, WLAN und TV: alles, was du brauchst, um dich im Val di Sole zu Hause zu fühlen. Und wenn du abends nicht kochen willst, sind Restaurant und Pizzeria im Erdgeschoss.</p>
+          <p class="lead">Eine unabhängige Ferienwohnung mit 60 m² und 1 Doppelzimmer, 1 Zimmer mit Etagenbett und 1 Schlafsofa. Ausgestattete Küche, Wohnbereich, eigenes Bad, WLAN und TV: alles, was Sie brauchen, um sich im Val di Sole zu Hause zu fühlen. Und wenn Sie abends nicht kochen möchten, sind Restaurant und Pizzeria im Erdgeschoss.</p>
           <h2 class="h3">In allen Ferienwohnungen</h2>
           <ul class="checklist cols"><li>WLAN</li><li>Eigenes Bad</li><li>Küche und Essbereich</li><li>Wohnbereich</li><li>TV</li><li>Öffentlicher Parkplatz (nicht reservierbar)</li><li>Restaurant und Pizzeria im Erdgeschoss</li><li>Zusatzbetten auf Anfrage</li></ul>
         </div>
@@ -147,7 +151,7 @@
         </article>
       </div>
     </section>
-    <dialog class="lightbox" data-lightbox-dialog>
+    <dialog class="lightbox" aria-label="Fotogalerie" data-img-error="Foto nicht verfügbar" data-lightbox-dialog>
       <figure><img alt=""><figcaption data-caption></figcaption></figure>
       <button type="button" class="lb-close" aria-label="Schließen" data-close>×</button>
       <button type="button" class="lb-nav lb-prev" aria-label="Vorheriges Foto" data-prev>‹</button>
@@ -178,6 +182,8 @@
         <p class="footer-title">Essen</p>
         <ul class="footer-links">
           <li><a href="../../../de/ristorante/">Restaurant &amp; Pizzeria</a></li>
+          <li><a href="../../../de/ristorante/#tavolo">Tisch reservieren</a></li>
+          <li><a href="https://wa.me/393289839761?text=Guten%20Tag%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Tisch%20in%20der%20Locanda%20dei%20Gemelli%20reservieren." target="_blank" rel="noopener">WhatsApp für Tischreservierungen: +39 328 983 9761</a></li>
         </ul>
         <p class="footer-small">Restaurant 12–14:30 und 17:30–22 Uhr · Pizzeria 17:30–22:30 Uhr · Dienstag Ruhetag</p>
         <p class="footer-title">Entdecken</p>
@@ -188,14 +194,13 @@
       </div>
       <div>
         <p class="footer-title">Sprache</p>
-        <div class="langs"><a href="../../../appartamenti/golden/" hreflang="it" lang="it">IT</a><a href="../../../en/appartamenti/golden/" hreflang="en" lang="en">EN</a><span aria-current="true">DE</span><a href="../../../pl/appartamenti/golden/" hreflang="pl" lang="pl">PL</a></div>
+        <div class="langs" role="group" aria-label="Sprache"><a href="../../../appartamenti/golden/" hreflang="it" lang="it">IT</a><a href="../../../en/appartamenti/golden/" hreflang="en" lang="en">EN</a><span aria-current="true">DE</span><a href="../../../pl/appartamenti/golden/" hreflang="pl" lang="pl">PL</a></div>
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <!-- TODO: CIN degli appartamenti -->
       <p class="footer-legal">© 2026 Bulla Brothers S.a.s. di Manushaqe Bulla &amp; C. · Firmensitz Via Milano 13, 38027 Malè (TN) · Steuernr. und USt-IdNr. 02857660225 · REA TN-254820 · PEC <a href="mailto:bullabrothers@legalmail.it">bullabrothers@legalmail.it</a> · <a href="../../../de/privacy/">Datenschutz und Cookies</a></p>
     </div>
   </footer>
-  <script src="../../../assets/js/main.js?v=e3c3fd52" defer></script>
+  <script src="../../../assets/js/main.js?v=52414356" defer></script>
 </body>
 </html>

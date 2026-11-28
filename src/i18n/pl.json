@@ -9,15 +9,17 @@
     "where": "Lokalizacja",
     "languages": "Język",
     "open": "Otwórz menu",
-    "request": "Zapytaj o dostępność"
+    "request": "Zapytaj o dostępność",
+    "close": "Zamknij menu",
+    "table": "Zarezerwuj stolik"
   },
   "booking": {
-    "label": "Sprawdź dostępność apartamentów",
+    "label": "Zapytaj o dostępność apartamentów",
     "arrival": "Przyjazd",
     "departure": "Wyjazd",
     "adults": "Dorośli",
     "children": "Dzieci",
-    "submit": "Sprawdź dostępność"
+    "submit": "Zapytaj o dostępność"
   },
   "common": {
     "explore": "Zobacz",
@@ -37,7 +39,19 @@
     "closedDay": "Wtorek",
     "closed": "Nieczynne",
     "beds": "{n} miejsc noclegowych",
-    "allApartments": "Wszystkie apartamenty"
+    "allApartments": "Wszystkie apartamenty",
+    "form": {
+      "required": "Wypełnij to pole.",
+      "choose": "Wybierz jedną z opcji.",
+      "email": "Wpisz poprawny adres e-mail.",
+      "departure": "Wyjazd musi być po przyjeździe.",
+      "past": "Wybierz datę od dzisiaj.",
+      "tuesday": "We wtorki jesteśmy nieczynni: wybierz inny dzień.",
+      "privacy": "Zaznacz pole, aby kontynuować.",
+      "sending": "Wysyłanie…",
+      "back": "Wróć na stronę główną",
+      "imgError": "Zdjęcie niedostępne"
+    }
   },
   "footer": {
     "stay": "Pobyt",
@@ -48,7 +62,9 @@
     "vat": "NIP (C.F. i P.IVA)",
     "rea": "REA",
     "pec": "PEC",
-    "privacy": "Prywatność i cookies"
+    "privacy": "Prywatność i cookies",
+    "whatsapp": "WhatsApp: rezerwacja stolików",
+    "table": "Zarezerwuj stolik"
   },
   "home": {
     "notice": "Nowe kierownictwo",
@@ -59,7 +75,7 @@
     "hero": {
       "eyebrow": "Dimaro Folgarida · Val di Sole · Trydent",
       "title": "Dobrze śpij. Jedz jeszcze lepiej. Pod jednym dachem.",
-      "lead": "6 niezależnych apartamentów oraz restauracja i pizzeria na parterze, kilka minut od stoków Folgarida-Marilleva i szlaków Val di Sole."
+      "lead": "6 niezależnych apartamentów oraz restauracja i pizzeria na parterze, kilka minut od stoków Folgarida-Marilleva i szlaków Val di Sole. We dwoje, z rodziną, z przyjaciółmi czy w pojedynkę: każdy jest tu mile widziany."
     },
     "proof": [
       {
@@ -68,11 +84,11 @@
       },
       {
         "title": "Restauracja i pizzeria",
-        "text": "Na parterze, w porze obiadu i kolacji"
+        "text": "Restauracja w porze obiadu i kolacji, pizzeria wieczorem"
       },
       {
         "title": "Produkty lokalne",
-        "text": "Składniki z Val di Sole, Val di Non i doliny Adygi"
+        "text": "Składniki z Val di Sole i Val di Non"
       },
       {
         "title": "Dwa sezony",
@@ -86,14 +102,14 @@
     },
     "stay": {
       "eyebrow": "Pobyt",
-      "title": "Sześć apartamentów. Zero kompromisów.",
-      "text": "Każdy apartament jest niezależny, z w pełni wyposażoną kuchnią, częścią dzienną i prywatną łazienką. Prawdziwa przestrzeń dla par, rodzin i grup przyjaciół, ze swobodą domu i restauracją tuż pod spodem.",
+      "title": "Sześć apartamentów. Miejsce dla każdego.",
+      "text": "Każdy apartament jest niezależny, z w pełni wyposażoną kuchnią, częścią dzienną i prywatną łazienką. Prawdziwa przestrzeń dla podróżujących w pojedynkę, par, rodzin i przyjaciół, ze swobodą domu i restauracją tuż pod spodem.",
       "cta": "Zobacz apartamenty"
     },
     "dine": {
       "eyebrow": "Jedzenie",
-      "title": "Prawdziwa kuchnia trydencka. Pizza od mistrza.",
-      "text": "W porze obiadu i kolacji dania z tradycji Val di Sole, ze składników z naszych dolin. Wieczorem pizza naszego mistrza pizzaiolo. Otwarte dla wszystkich, nie tylko dla gości.",
+      "title": "Prawdziwa kuchnia trydencka. Pizza od mistrzyni.",
+      "text": "W porze obiadu i kolacji dania z tradycji Val di Sole, ze składników z naszych dolin. Wieczorem pizza Barbary, naszej mistrzyni pizzaioli. Otwarte dla wszystkich, nie tylko dla gości.",
       "cta": "Zobacz restaurację"
     },
     "exp": {
@@ -108,7 +124,7 @@
       "text": "Jesteśmy w Dimaro Folgarida, kilka minut od wyciągów Folgarida-Marilleva, przy ścieżce rowerowej Val di Sole. Madonna di Campiglio i przełęcz Tonale są w zasięgu ręki."
     },
     "final": {
-      "title": "Najlepsze terminy znikają pierwsze.",
+      "title": "Wybierz daty. Resztą zajmiemy się my.",
       "text": "Wyślij nam swoje daty: odpowiemy z informacją o dostępności i cenie. Zapytanie jest niewiążące.",
       "cta": "Zapytaj o dostępność"
     }
@@ -182,12 +198,12 @@
   "restaurant": {
     "meta": {
       "title": "Restauracja i pizzeria w Dimaro | Locanda dei Gemelli",
-      "description": "Kuchnia trydencka z lokalnych składników i pizza mistrza pizzaiolo w Dimaro Folgarida, Val di Sole. Obiady i kolacje, we wtorki nieczynne."
+      "description": "Kuchnia trydencka z lokalnych składników i pizza mistrzyni pizzaioli Barbary w Dimaro Folgarida, Val di Sole. Obiady i kolacje, we wtorki nieczynne."
     },
     "hero": {
       "eyebrow": "Restauracja i pizzeria",
-      "title": "Prawdziwa kuchnia trydencka. Pizza od mistrza. Bez dróg na skróty.",
-      "lead": "Nowoczesna osteria Val di Sole: składniki z naszych dolin, tradycyjne lokalne przepisy i pizza warta podróży. Otwarte dla wszystkich, w porze obiadu i kolacji."
+      "title": "Prawdziwa kuchnia trydencka. Pizza od mistrzyni.",
+      "lead": "Nowoczesna osteria Val di Sole: składniki z naszych dolin, tradycyjne lokalne przepisy i pizza Barbary, naszej mistrzyni pizzaioli. Otwarte dla wszystkich, w porze obiadu i kolacji."
     },
     "manifesto": {
       "eyebrow": "Nowoczesna osteria",
@@ -212,13 +228,12 @@
       "eyebrow": "Restauracja",
       "title": "Tradycja w dzisiejszym wydaniu.",
       "text": "Dania kuchni trydenckiej w nowoczesnej odsłonie i kilka propozycji międzynarodowych dla tych, którzy chcą zboczyć ze szlaku. Świeże składniki, uczciwe porcje, wyraziste smaki. Obiad, którego potrzebujesz między zjazdami, i kolacja, którą zapamiętasz na koniec wakacji.",
-      "hours": "Obiad 12:00 – 14:30 · Kolacja 17:30 – 22:00",
-      "menu": "Pełna karta będzie wkrótce dostępna na tej stronie."
+      "hours": "Obiad 12:00 – 14:30 · Kolacja 17:30 – 22:00"
     },
     "pizza": {
       "eyebrow": "Pizzeria",
-      "title": "Pizza to rzemiosło. Nasz mistrz to wie.",
-      "text": "Każda pizza wychodzi spod rąk naszego mistrza pizzaiolo. Starannie przygotowane ciasto, sezonowe składniki najwyższej jakości, przemyślane połączenia. Znajdziesz klasyki, które kochasz, i wyjątkowe kompozycje z naszej kuchni, których nie ma nigdzie indziej.",
+      "title": "Pizza to rzemiosło. Barbara to wie.",
+      "text": "Każda pizza wychodzi spod rąk Barbary, naszej mistrzyni pizzaioli. Starannie przygotowane ciasto, dobre sezonowe składniki, przemyślane połączenia. Znajdziesz klasyki, które kochasz, i kompozycje stworzone w naszej kuchni.",
       "hours": "Codziennie wieczorem 17:30 – 22:30, oprócz wtorków"
     },
     "services": {
@@ -226,16 +241,16 @@
       "title": "Ten sam standard, gdziekolwiek chcesz zjeść.",
       "items": [
         {
-          "title": "Na wynos i z dostawą",
-          "text": "Nasza kuchnia i nasza pizza w Twoim domu lub apartamencie wakacyjnym. Ta sama troska, ten sam smak."
+          "title": "Na wynos",
+          "text": "Nasza kuchnia i nasza pizza na wynos, na kolację w apartamencie lub w domu. Ta sama troska, ten sam smak."
         },
         {
-          "title": "Ogród i wydarzenia",
-          "text": "Letnie wieczory na świeżym powietrzu, urodziny, kolacje grupowe i przyjęcia. Ogród jest gotowy na Twoje wydarzenie."
+          "title": "Ogród latem",
+          "text": "Od czerwca do października podajemy w ogrodzie: letnie wieczory, urodziny, kolacje w gronie bliskich i przyjęcia."
         },
         {
-          "title": "Lunche i spotkania biznesowe",
-          "text": "Osobna sala, sprzęt do prezentacji, przerwy kawowe, bufet lub lekki lunch. Ty skupiasz się na spotkaniu, resztą zajmujemy się my."
+          "title": "Smak naszej doliny",
+          "text": "Sery, wędliny, jabłka, mąka i warzywa z Trydentu, wybrane od producentów z naszych dolin. Wiemy, skąd pochodzi każdy składnik. I to czuć na talerzu."
         }
       ]
     },
@@ -243,9 +258,29 @@
     "book": {
       "eyebrow": "Rezerwacje",
       "title": "Twój stolik czeka.",
-      "text": "Wkrótce zarezerwujesz online przez TheFork lub napiszesz do nas na WhatsApp. Tymczasem czekamy na Ciebie przy Via Campiglio 59.",
-      "thefork": "TheFork · wkrótce",
-      "whatsapp": "WhatsApp · wkrótce"
+      "text": "Napisz do nas na WhatsApp lub wypełnij formularz poniżej: potwierdzimy stolik najszybciej, jak to możliwe. We wtorki jesteśmy nieczynni.",
+      "whatsapp": "Napisz na WhatsApp",
+      "form": "Zarezerwuj stolik",
+      "waText": "Dzień dobry, chciałbym/chciałabym zarezerwować stolik w Locanda dei Gemelli."
+    },
+    "table": {
+      "eyebrow": "Zarezerwuj stolik",
+      "title": "Prośba o rezerwację stolika",
+      "lead": "Podaj dzień, godzinę i liczbę osób. Rezerwacja jest potwierdzona, gdy odpowiemy telefonicznie, przez WhatsApp lub e-mailem.",
+      "name": "Imię i nazwisko",
+      "phone": "Telefon (także WhatsApp)",
+      "email": "E-mail",
+      "date": "Dzień",
+      "time": "Godzina",
+      "lunch": "Obiad",
+      "dinner": "Kolacja",
+      "people": "Osoby",
+      "more": "Więcej niż 12",
+      "notes": "Uwagi: alergie, krzesełko dla dziecka, specjalne okazje",
+      "subject": "Rezerwacja stolika (PL) – strona Locanda dei Gemelli",
+      "submit": "Wyślij zapytanie",
+      "sent": "Dziękujemy! Otrzymaliśmy Twoje zapytanie i potwierdzimy stolik najszybciej, jak to możliwe.",
+      "orWhatsapp": "Wolisz WhatsApp?"
     }
   },
   "valdisole": {
@@ -371,7 +406,7 @@
         },
         {
           "title": "Rafting na Noce",
-          "text": "Noce to jedna z najbardziej cenionych rzek w Europie do raftingu i kajakarstwa, z trasami dla początkujących i zaawansowanych."
+          "text": "Na rzece Noce można uprawiać rafting i kajakarstwo, z trasami dla początkujących i zaawansowanych."
         },
         {
           "title": "Trekking w parkach",
@@ -414,7 +449,7 @@
       "no": "Nie",
       "yes": "Tak",
       "message": "Twoje zapytanie",
-      "privacy": "Zapoznałem(-am) się z polityką prywatności i wyrażam zgodę na przetwarzanie moich danych w celu otrzymania odpowiedzi na to zapytanie. *",
+      "privacy": "Zapoznałem(-am) się z polityką prywatności *",
       "submit": "Wyślij zapytanie",
       "sent": "Dziękujemy! Otrzymaliśmy Twoje zapytanie i odpowiemy e-mailem najszybciej, jak to możliwe.",
       "privacyLink": "polityką prywatności"
@@ -424,7 +459,8 @@
       "Bezpośrednia odpowiedź od gospodarzy Locandy",
       "Teraz bez żadnej płatności",
       "Restauracja i pizzeria na parterze"
-    ]
+    ],
+    "paymentNote": "Dla Twojego bezpieczeństwa: dane do płatności wysyłamy wyłącznie z adresu lalocandadeigemelli@gmail.com. Jeśli otrzymasz inne dane bankowe z innego adresu, nie płać i skontaktuj się z nami."
   },
   "privacy": {
     "meta": {
@@ -445,14 +481,14 @@
       {
         "h": "Jakie dane zbieramy",
         "p": [
-          "Dane przesłane przez formularz zapytania: imię, nazwisko, e-mail, telefon, daty pobytu, liczba gości i wiek dzieci, zwierzęta, preferowany apartament i ewentualna wiadomość.",
+          "Dane przesłane przez formularze. Apartamenty: imię, nazwisko, e-mail, telefon, daty pobytu, liczba gości i wiek dzieci, zwierzęta, preferowany apartament i ewentualna wiadomość. Stoliki: imię i nazwisko, telefon, e-mail jeśli go podasz, dzień, godzina, liczba osób i ewentualne uwagi.",
           "Dane techniczne: firma hostująca stronę (GitHub Pages) automatycznie zapisuje adres IP, przeglądarkę i odwiedzone strony ze względów bezpieczeństwa i działania serwisu."
         ]
       },
       {
         "h": "Cel i podstawa prawna",
         "p": [
-          "Aby odpowiedzieć na Twoje zapytanie i, jeśli zechcesz, zorganizować pobyt: działanie przed zawarciem umowy na Twoje żądanie (art. 6 ust. 1 lit. b RODO). Bez tych danych nie możemy odpowiedzieć.",
+          "Aby odpowiedzieć na Twoje zapytanie i, jeśli zechcesz, zorganizować pobyt lub stolik: działanie przed zawarciem umowy na Twoje żądanie (art. 6 ust. 1 lit. b RODO). Bez tych danych nie możemy odpowiedzieć.",
           "Aby wypełnić obowiązki prawne, jeśli pobyt zostanie potwierdzony, np. podatkowe i zgłoszenie gości organom policji (art. 6 ust. 1 lit. c RODO).",
           "Nie używamy Twoich danych do reklamy i nigdy ich nie sprzedajemy."
         ]
@@ -460,7 +496,7 @@
       {
         "h": "Komu przekazujemy dane",
         "p": [
-          "FormSubmit (formsubmit.co), usługa przekazująca formularz do naszej skrzynki; Google (Gmail), który obsługuje skrzynkę e-mail; GitHub (Microsoft), który hostuje stronę. Przetwarzają dane w naszym imieniu. Niektórzy mają siedzibę w USA: przekazanie odbywa się z zabezpieczeniami wymaganymi przez RODO (EU-US Data Privacy Framework lub standardowe klauzule umowne).",
+          "FormSubmit (formsubmit.co), usługa przekazująca formularze do naszej skrzynki; Google (Gmail), który obsługuje skrzynkę e-mail; GitHub (Microsoft), który hostuje stronę. To usługi techniczne, z których korzystamy dla strony i poczty. Niektóre mają siedzibę poza Unią Europejską, np. w USA, więc dane mogą być tam przekazywane. Google i Microsoft uczestniczą w EU-US Data Privacy Framework.",
           "Nie przekazujemy danych nikomu innemu, chyba że wymaga tego prawo."
         ]
       },
@@ -474,7 +510,8 @@
         "h": "Cookies i usługi zewnętrzne",
         "p": [
           "Ta strona nie używa własnych plików cookie, cookies profilujących ani narzędzi statystycznych.",
-          "Mapa Google Maps ładuje się dopiero po kliknięciu \"Pokaż mapę\": od tego momentu Google może zapisywać własne cookies. Linki do Google Maps otwierają stronę Google, z jej polityką prywatności."
+          "Mapa Google Maps ładuje się dopiero po kliknięciu \"Pokaż mapę\": od tego momentu Google może zapisywać własne cookies. Linki do Google Maps otwierają stronę Google, a link WhatsApp otwiera WhatsApp (Meta), każdy z własną polityką prywatności.",
+          "Niektóre zdjęcia na stronie głównej i stronie restauracji są obecnie ładowane ze strony locandaelisa.it: otwierając te strony, Twoja przeglądarka przekazuje tej stronie Twój adres IP. Zastąpimy je zdjęciami z naszego serwera."
         ]
       },
       {

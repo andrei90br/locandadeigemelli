@@ -25,10 +25,14 @@
   <meta property="og:locale:alternate" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://locandaelisa.it; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; frame-src 'self' https://maps.google.com https://www.google.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png" sizes="512x512">
+  <link rel="manifest" href="../../site.webmanifest">
   <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
   <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin-400-normal.woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/style.css?v=9a4dc50c">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=2e13aa67">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"La Locanda dei Gemelli","item":"https://locandadeigemelli.com/pl/"},{"@type":"ListItem","position":2,"name":"Prywatność i cookies","item":"https://locandadeigemelli.com/pl/privacy/"}]}</script>
 </head>
 <body>
@@ -36,16 +40,16 @@
   <header class="site-header" data-header>
     <div class="wrap header-inner">
       <a class="brand" href="../../pl/"><img src="../../assets/img/logo.svg" alt="La Locanda dei Gemelli" width="539" height="568"></a>
-      <nav class="nav" aria-label="Nawigacja główna" data-nav>
+      <a class="btn btn-accent btn-sm header-cta" href="../../pl/richiesta/">Zapytaj o dostępność</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz menu" data-label-open="Otwórz menu" data-label-close="Zamknij menu" data-menu-toggle><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Nawigacja główna" data-nav>
           <a href="../../pl/appartamenti/">Apartamenty</a>
           <a href="../../pl/ristorante/">Restauracja i pizzeria</a>
           <a href="../../pl/val-di-sole/">Val di Sole</a>
           <a href="../../pl/#dove">Lokalizacja</a>
-        <div class="langs" aria-label="Język"><a href="../../privacy/" hreflang="it" lang="it">IT</a><a href="../../en/privacy/" hreflang="en" lang="en">EN</a><a href="../../de/privacy/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
+        <div class="langs" role="group" aria-label="Język"><a href="../../privacy/" hreflang="it" lang="it">IT</a><a href="../../en/privacy/" hreflang="en" lang="en">EN</a><a href="../../de/privacy/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
         <a class="btn btn-accent nav-cta" href="../../pl/richiesta/">Zapytaj o dostępność</a>
       </nav>
-      <a class="btn btn-accent btn-sm header-cta" href="../../pl/richiesta/">Zapytaj o dostępność</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Otwórz menu" data-menu-toggle><span></span><span></span></button>
     </div>
   </header>
   <main id="main">
@@ -62,20 +66,21 @@
         <h2 class="h3">Administrator danych</h2>
         <p>Bulla Brothers S.a.s. di Manushaqe Bulla &amp; C., siedziba Via Milano 13, 38027 Malè (TN), numer podatkowy i VAT 02857660225. W sprawach prywatności napisz na <a href="mailto:lalocandadeigemelli@gmail.com">lalocandadeigemelli@gmail.com</a> lub na certyfikowany adres e-mail (PEC) <a href="mailto:bullabrothers@legalmail.it">bullabrothers@legalmail.it</a>.</p>
         <h2 class="h3">Jakie dane zbieramy</h2>
-        <p>Dane przesłane przez formularz zapytania: imię, nazwisko, e-mail, telefon, daty pobytu, liczba gości i wiek dzieci, zwierzęta, preferowany apartament i ewentualna wiadomość.</p>
+        <p>Dane przesłane przez formularze. Apartamenty: imię, nazwisko, e-mail, telefon, daty pobytu, liczba gości i wiek dzieci, zwierzęta, preferowany apartament i ewentualna wiadomość. Stoliki: imię i nazwisko, telefon, e-mail jeśli go podasz, dzień, godzina, liczba osób i ewentualne uwagi.</p>
         <p>Dane techniczne: firma hostująca stronę (GitHub Pages) automatycznie zapisuje adres IP, przeglądarkę i odwiedzone strony ze względów bezpieczeństwa i działania serwisu.</p>
         <h2 class="h3">Cel i podstawa prawna</h2>
-        <p>Aby odpowiedzieć na Twoje zapytanie i, jeśli zechcesz, zorganizować pobyt: działanie przed zawarciem umowy na Twoje żądanie (art. 6 ust. 1 lit. b RODO). Bez tych danych nie możemy odpowiedzieć.</p>
+        <p>Aby odpowiedzieć na Twoje zapytanie i, jeśli zechcesz, zorganizować pobyt lub stolik: działanie przed zawarciem umowy na Twoje żądanie (art. 6 ust. 1 lit. b RODO). Bez tych danych nie możemy odpowiedzieć.</p>
         <p>Aby wypełnić obowiązki prawne, jeśli pobyt zostanie potwierdzony, np. podatkowe i zgłoszenie gości organom policji (art. 6 ust. 1 lit. c RODO).</p>
         <p>Nie używamy Twoich danych do reklamy i nigdy ich nie sprzedajemy.</p>
         <h2 class="h3">Komu przekazujemy dane</h2>
-        <p>FormSubmit (formsubmit.co), usługa przekazująca formularz do naszej skrzynki; Google (Gmail), który obsługuje skrzynkę e-mail; GitHub (Microsoft), który hostuje stronę. Przetwarzają dane w naszym imieniu. Niektórzy mają siedzibę w USA: przekazanie odbywa się z zabezpieczeniami wymaganymi przez RODO (EU-US Data Privacy Framework lub standardowe klauzule umowne).</p>
+        <p>FormSubmit (formsubmit.co), usługa przekazująca formularze do naszej skrzynki; Google (Gmail), który obsługuje skrzynkę e-mail; GitHub (Microsoft), który hostuje stronę. To usługi techniczne, z których korzystamy dla strony i poczty. Niektóre mają siedzibę poza Unią Europejską, np. w USA, więc dane mogą być tam przekazywane. Google i Microsoft uczestniczą w EU-US Data Privacy Framework.</p>
         <p>Nie przekazujemy danych nikomu innemu, chyba że wymaga tego prawo.</p>
         <h2 class="h3">Jak długo przechowujemy dane</h2>
         <p>Zapytania, które nie kończą się rezerwacją: maksymalnie 24 miesiące, potem je usuwamy. Dane potwierdzonego pobytu: przez okres wymagany prawem (np. 10 lat dla dokumentów podatkowych).</p>
         <h2 class="h3">Cookies i usługi zewnętrzne</h2>
         <p>Ta strona nie używa własnych plików cookie, cookies profilujących ani narzędzi statystycznych.</p>
-        <p>Mapa Google Maps ładuje się dopiero po kliknięciu &quot;Pokaż mapę&quot;: od tego momentu Google może zapisywać własne cookies. Linki do Google Maps otwierają stronę Google, z jej polityką prywatności.</p>
+        <p>Mapa Google Maps ładuje się dopiero po kliknięciu &quot;Pokaż mapę&quot;: od tego momentu Google może zapisywać własne cookies. Linki do Google Maps otwierają stronę Google, a link WhatsApp otwiera WhatsApp (Meta), każdy z własną polityką prywatności.</p>
+        <p>Niektóre zdjęcia na stronie głównej i stronie restauracji są obecnie ładowane ze strony locandaelisa.it: otwierając te strony, Twoja przeglądarka przekazuje tej stronie Twój adres IP. Zastąpimy je zdjęciami z naszego serwera.</p>
         <h2 class="h3">Twoje prawa</h2>
         <p>W każdej chwili możesz zażądać dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, sprzeciwu lub przeniesienia danych (art. 15-22 RODO), pisząc na <a href="mailto:lalocandadeigemelli@gmail.com">lalocandadeigemelli@gmail.com</a> lub na PEC <a href="mailto:bullabrothers@legalmail.it">bullabrothers@legalmail.it</a>.</p>
         <p>Masz prawo złożyć skargę do włoskiego organu ochrony danych (www.garanteprivacy.it) lub do organu w swoim kraju, np. PUODO.</p>
@@ -107,6 +112,8 @@
         <p class="footer-title">Jedzenie</p>
         <ul class="footer-links">
           <li><a href="../../pl/ristorante/">Restauracja i pizzeria</a></li>
+          <li><a href="../../pl/ristorante/#tavolo">Zarezerwuj stolik</a></li>
+          <li><a href="https://wa.me/393289839761?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20zarezerwowa%C4%87%20stolik%20w%20Locanda%20dei%20Gemelli." target="_blank" rel="noopener">WhatsApp: rezerwacja stolików: +39 328 983 9761</a></li>
         </ul>
         <p class="footer-small">Restauracja 12–14:30 i 17:30–22 · Pizzeria 17:30–22:30 · We wtorki nieczynne</p>
         <p class="footer-title">Odkryj</p>
@@ -117,14 +124,13 @@
       </div>
       <div>
         <p class="footer-title">Język</p>
-        <div class="langs"><a href="../../privacy/" hreflang="it" lang="it">IT</a><a href="../../en/privacy/" hreflang="en" lang="en">EN</a><a href="../../de/privacy/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
+        <div class="langs" role="group" aria-label="Język"><a href="../../privacy/" hreflang="it" lang="it">IT</a><a href="../../en/privacy/" hreflang="en" lang="en">EN</a><a href="../../de/privacy/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <!-- TODO: CIN degli appartamenti -->
       <p class="footer-legal">© 2026 Bulla Brothers S.a.s. di Manushaqe Bulla &amp; C. · Siedziba Via Milano 13, 38027 Malè (TN) · NIP (C.F. i P.IVA) 02857660225 · REA TN-254820 · PEC <a href="mailto:bullabrothers@legalmail.it">bullabrothers@legalmail.it</a> · <a href="../../pl/privacy/">Prywatność i cookies</a></p>
     </div>
   </footer>
-  <script src="../../assets/js/main.js?v=e3c3fd52" defer></script>
+  <script src="../../assets/js/main.js?v=52414356" defer></script>
 </body>
 </html>

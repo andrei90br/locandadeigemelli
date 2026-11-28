@@ -1,7 +1,7 @@
 // Layout e pagine del sito. Ogni funzione riceve il contesto della lingua e restituisce HTML.
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
-import { LEGAL, SITE_URL, REQUEST_EMAIL, MAPS_URL, DIRECTIONS_URL, GOOGLE_PLACE_URL, MAP_EMBED_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
+import { LEGAL, SITE_URL, REQUEST_EMAIL, WHATSAPP, MAPS_URL, DIRECTIONS_URL, GOOGLE_PLACE_URL, MAP_EMBED_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
 
 export const e = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -14,7 +14,7 @@ const isExternal = (src) => /^https?:/.test(src);
 export function context(lang, t, pagePath) {
   const depth = (lang.path + pagePath).split('/').filter(Boolean).length;
   const root = '../'.repeat(depth);
-  const href = (path) => root + lang.path + path;
+  const href = (path) => root + lang.path + path || './';
   const asset = (src) => (isExternal(src) ? src : root + src);
   // Nei var(--bg) l'url() è risolto rispetto a assets/css/style.css, non alla pagina.
   const bg = (src) => (isExternal(src) ? src : '../../' + src);
@@ -23,9 +23,15 @@ export function context(lang, t, pagePath) {
 
 const aptHref = (c, a) => c.href(`${PAGES.apartments}${a.slug}/`);
 const requestHref = (c, a) => c.href(PAGES.request) + (a ? `?apt=${encodeURIComponent(a.name)}` : '');
+const waHref = (c) => `https://wa.me/${WHATSAPP.number}?text=${encodeURIComponent(c.t.restaurant.book.waText)}`;
+// Attributi con i messaggi d'errore dei moduli (letti da main.js).
+const formMsgs = (c) => Object.entries(c.t.common.form).map(([k, v]) => `data-msg-${k}="${e(v)}"`).join(' ');
 
 function header(c) {
   const { t, href } = c;
+  // CTA principale: sulla pagina ristorante prenota un tavolo, nella scheda appartamento lo preseleziona.
+  const apt = APARTMENTS.find((a) => c.pagePath === `${PAGES.apartments}${a.slug}/`);
+  const cta = c.pagePath === PAGES.restaurant ? ['#tavolo', t.nav.table] : [requestHref(c, apt), t.nav.request];
   const nav = [
     ['apartments', PAGES.apartments],
     ['restaurant', PAGES.restaurant],
@@ -39,14 +45,14 @@ function header(c) {
   <header class="site-header" data-header>
     <div class="wrap header-inner">
       <a class="brand" href="${href('')}"><img src="${c.root}assets/img/logo.svg" alt="La Locanda dei Gemelli" width="539" height="568"></a>
-      <nav class="nav" aria-label="${e(t.nav.label)}" data-nav>
+      <a class="btn btn-accent btn-sm header-cta" href="${cta[0]}">${e(cta[1])}</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="${e(t.nav.open)}" data-label-open="${e(t.nav.open)}" data-label-close="${e(t.nav.close)}" data-menu-toggle><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="${e(t.nav.label)}" data-nav>
           ${links}
           <a href="${href('')}#dove">${e(t.nav.where)}</a>
-        <div class="langs" aria-label="${e(t.nav.languages)}">${langSwitch(c)}</div>
-        <a class="btn btn-accent nav-cta" href="${href(PAGES.request)}">${e(t.nav.request)}</a>
+        <div class="langs" role="group" aria-label="${e(t.nav.languages)}">${langSwitch(c)}</div>
+        <a class="btn btn-accent nav-cta" href="${cta[0]}">${e(cta[1])}</a>
       </nav>
-      <a class="btn btn-accent btn-sm header-cta" href="${href(PAGES.request)}">${e(t.nav.request)}</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="${e(t.nav.open)}" data-menu-toggle><span></span><span></span></button>
     </div>
   </header>`;
 }
@@ -81,6 +87,8 @@ function footer(c) {
         <p class="footer-title">${e(t.footer.dine)}</p>
         <ul class="footer-links">
           <li><a href="${href(PAGES.restaurant)}">${e(t.nav.restaurant)}</a></li>
+          <li><a href="${href(PAGES.restaurant)}#tavolo">${e(t.footer.table)}</a></li>
+          <li><a href="${waHref(c)}" target="_blank" rel="noopener">${e(t.footer.whatsapp)}: ${WHATSAPP.display}</a></li>
         </ul>
         <p class="footer-small">${e(t.footer.hours)}</p>
         <p class="footer-title">${e(t.footer.discover)}</p>
@@ -91,15 +99,27 @@ function footer(c) {
       </div>
       <div>
         <p class="footer-title">${e(t.nav.languages)}</p>
-        <div class="langs">${langSwitch(c)}</div>
+        <div class="langs" role="group" aria-label="${e(t.nav.languages)}">${langSwitch(c)}</div>
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <!-- TODO: CIN degli appartamenti -->
-      <p class="footer-legal">© ${new Date().getFullYear()} ${e(LEGAL.company)} · ${e(t.footer.legal)} ${e(LEGAL.address)} · ${e(t.footer.vat)} ${LEGAL.vat} · ${t.footer.rea} ${LEGAL.rea} · ${t.footer.pec} <a href="mailto:${LEGAL.pec}">${LEGAL.pec}</a> · <a href="${href(PAGES.privacy)}">${e(t.footer.privacy)}</a></p>
+      <p class="footer-legal">© 2026 ${e(LEGAL.company)} · ${e(t.footer.legal)} ${e(LEGAL.address)} · ${e(t.footer.vat)} ${LEGAL.vat} · ${t.footer.rea} ${LEGAL.rea} · ${t.footer.pec} <a href="mailto:${LEGAL.pec}">${LEGAL.pec}</a> · <a href="${href(PAGES.privacy)}">${e(t.footer.privacy)}</a></p>
     </div>
   </footer>`;
 }
+
+// Content Security Policy (GitHub Pages non permette header: va nel meta). Le foto di locandaelisa.it sono provvisorie.
+const CSP = [
+  "default-src 'self'",
+  "img-src 'self' data: https://locandaelisa.it",
+  "style-src 'self' 'unsafe-inline'",
+  "script-src 'self'",
+  "font-src 'self'",
+  "frame-src 'self' https://maps.google.com https://www.google.com",
+  "form-action 'self' https://formsubmit.co",
+  "base-uri 'self'",
+  "object-src 'none'",
+].join('; ');
 
 export function layout(c, { title, description, og = 'assets/img/og/home.jpg', hero, body, jsonld, crumbs }) {
   const canonical = SITE_URL + c.lang.path + c.pagePath;
@@ -127,7 +147,11 @@ ${alternates}
 ${LANGS.filter((l) => l.code !== c.lang.code).map((l) => `  <meta property="og:locale:alternate" content="${JSON.parse(readFileSync(`src/i18n/${l.code}.json`, 'utf8')).locale}">`).join('\n')}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" type="image/png" href="${c.root}assets/img/favicon.png">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="${CSP}">
+  <link rel="icon" href="${c.root}favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="${c.root}assets/img/favicon.png" sizes="512x512">
+  <link rel="manifest" href="${c.root}site.webmanifest">
   <link rel="apple-touch-icon" href="${c.root}assets/img/apple-touch-icon.png">
 ${hero ? `  <link rel="preload" as="image" href="${c.asset(hero)}" fetchpriority="high">\n` : ''}  <link rel="preload" as="font" type="font/woff2" href="${c.root}assets/fonts/inter-latin-400-normal.woff2" crossorigin>
   <link rel="stylesheet" href="${c.root}assets/css/style.css?v=${ver('assets/css/style.css')}">
@@ -159,9 +183,9 @@ function bookingBar(c) {
   const adults = [1, 2, 3, 4, 5, 6, 7].map((n) => `<option${n === 2 ? ' selected' : ''}>${n}</option>`).join('');
   const kids = [0, 1, 2, 3, 4, 5, 6].map((n) => `<option>${n}</option>`).join('');
   return `
-    <form class="booking-bar wrap" action="${c.href(PAGES.request)}" method="get" aria-label="${e(b.label)}" data-booking-bar>
-      <label class="bb-field"><span>${e(b.arrival)}</span><input type="text" name="arrivo" placeholder="–" data-date data-arrival required></label>
-      <label class="bb-field"><span>${e(b.departure)}</span><input type="text" name="partenza" placeholder="–" data-date data-departure required></label>
+    <form class="booking-bar wrap" action="${c.href(PAGES.request)}" method="get" aria-label="${e(b.label)}" novalidate ${formMsgs(c)} data-booking-bar data-validate>
+      <label class="bb-field"><span>${e(b.arrival)}</span><input type="date" name="arrivo" data-date data-arrival required></label>
+      <label class="bb-field"><span>${e(b.departure)}</span><input type="date" name="partenza" data-date data-departure required></label>
       <label class="bb-field bb-small"><span>${e(b.adults)}</span><select name="adulti">${adults}</select></label>
       <label class="bb-field bb-small"><span>${e(b.children)}</span><select name="bambini">${kids}</select></label>
       <label class="bb-field bb-apt"><span>${e(c.t.request.form.apartment)}</span><select name="apt"><option value="">${e(c.t.request.form.any)}</option>${APARTMENTS.map((a) => `<option>${e(a.name)}</option>`).join('')}</select></label>
@@ -241,6 +265,21 @@ function breadcrumbs(c, crumbs) {
 
 const BUSINESS_ID = SITE_URL + '#locanda';
 
+// Orari solo nelle due stagioni (dicembre–aprile, giugno–ottobre): la stagione in corso e la successiva,
+// calcolate alla data della build. Chiuso il martedì; pizzeria fino alle 22:30.
+function openingHours(now = new Date()) {
+  const y = now.getUTCFullYear();
+  const seasons = [
+    [`${y - 1}-12-01`, `${y}-04-30`], [`${y}-06-01`, `${y}-10-31`],
+    [`${y}-12-01`, `${y + 1}-04-30`], [`${y + 1}-06-01`, `${y + 1}-10-31`],
+  ].filter(([, end]) => end >= now.toISOString().slice(0, 10)).slice(0, 2);
+  const days = ['Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  return seasons.flatMap(([validFrom, validThrough]) => [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: days, opens: '12:00', closes: '14:30', validFrom, validThrough },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: days, opens: '17:30', closes: '22:30', validFrom, validThrough },
+  ]);
+}
+
 function baseJsonLd(c) {
   return {
     '@context': 'https://schema.org',
@@ -248,7 +287,7 @@ function baseJsonLd(c) {
     '@id': BUSINESS_ID,
     description: c.t.home.meta.description,
     inLanguage: c.lang.code,
-    logo: SITE_URL + 'assets/img/logo.png',
+    logo: SITE_URL + 'assets/img/logo-512.png',
     acceptsReservations: true,
     amenityFeature: ['Wi-Fi', 'Restaurant', 'Pizzeria'].map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })),
     name: 'La Locanda dei Gemelli',
@@ -267,10 +306,7 @@ function baseJsonLd(c) {
     hasMap: GOOGLE_PLACE_URL,
     sameAs: [GOOGLE_PLACE_URL],
     address: { '@type': 'PostalAddress', streetAddress: 'Via Campiglio 59', postalCode: '38025', addressLocality: 'Dimaro Folgarida', addressRegion: 'TN', addressCountry: 'IT' },
-    openingHoursSpecification: [
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '12:00', closes: '14:30' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '17:30', closes: '22:30' },
-    ],
+    openingHoursSpecification: openingHours(),
   };
 }
 
@@ -338,8 +374,8 @@ ${feature(c, h.dine, c.href(PAGES.restaurant), IMG.restaurant, true)}
           <p>${e(h.where.text)}</p>
           <address>${e(t.common.address)}</address>
           <div class="actions">
-            <a class="btn btn-accent" href="${DIRECTIONS_URL}" target="_blank" rel="noopener">${e(t.common.directions)}</a>
-            <a class="btn btn-outline" href="${MAPS_URL}" target="_blank" rel="noopener">${e(t.common.map)}</a>
+            <a class="btn btn-outline" href="${DIRECTIONS_URL}" target="_blank" rel="noopener">${e(t.common.directions)}</a>
+            <a class="link-arrow" href="${MAPS_URL}" target="_blank" rel="noopener">${e(t.common.map)}</a>
           </div>
         </div>${hoursBox(c)}
       </div>${mapEmbed(c)}
@@ -439,7 +475,7 @@ export function apartment(c, a) {
       <div class="wrap apt-grid">${others.slice(0, 3).map((o) => aptCard(c, o)).join('')}
       </div>
     </section>
-    <dialog class="lightbox" data-lightbox-dialog>
+    <dialog class="lightbox" aria-label="${e(p.gallery)}" data-img-error="${e(t.common.form.imgError)}" data-lightbox-dialog>
       <figure><img alt=""><figcaption data-caption></figcaption></figure>
       <button type="button" class="lb-close" aria-label="${e(p.lbClose)}" data-close>×</button>
       <button type="button" class="lb-nav lb-prev" aria-label="${e(p.lbPrev)}" data-prev>‹</button>
@@ -463,7 +499,7 @@ export function apartment(c, a) {
 
 export function restaurant(c) {
   const t = c.t, r = t.restaurant;
-  const serviceImgs = [IMG.takeaway, IMG.garden, IMG.business];
+  const serviceImgs = [IMG.takeaway, IMG.garden, IMG.products];
   const body = `${pageHero(c, r.hero, IMG.restaurant)}
 
     <section class="section">
@@ -484,8 +520,6 @@ export function restaurant(c) {
         <h2>${e(r.kitchen.title)}</h2>
         <p>${e(r.kitchen.text)}</p>
         <p class="feature-note">${e(r.kitchen.hours)}</p>
-        <!-- TODO: collegare il menu quando disponibile -->
-        <p class="muted"><em>${e(r.kitchen.menu)}</em></p>
       </div>
     </section>
 
@@ -517,18 +551,72 @@ export function restaurant(c) {
           <p class="eyebrow">${e(r.book.eyebrow)}</p>
           <h2>${e(r.book.title)}</h2>
           <p>${e(r.book.text)}</p>
-          <!-- TODO: collegare TheFork e WhatsApp -->
           <div class="actions">
-            <span class="btn btn-accent is-soon" aria-disabled="true">${e(r.book.thefork)}</span>
-            <span class="btn btn-outline is-soon" aria-disabled="true">${e(r.book.whatsapp)}</span>
+            <a class="btn btn-accent" href="#tavolo">${e(r.book.form)}</a>
+            <a class="btn btn-outline" href="${waHref(c)}" target="_blank" rel="noopener">${e(r.book.whatsapp)}</a>
           </div>
+          <p class="wa-number">WhatsApp: <a href="${waHref(c)}" target="_blank" rel="noopener">${WHATSAPP.display}</a></p>
           <address>${e(t.common.address)}</address>
           <a class="link-arrow" href="${DIRECTIONS_URL}" target="_blank" rel="noopener">${e(t.common.directions)}</a>
           <a class="link-arrow" href="${MAPS_URL}" target="_blank" rel="noopener">${e(t.common.map)}</a>
         </div>${hoursBox(c)}
       </div>${mapEmbed(c)}
-    </section>`;
+    </section>
+${tableForm(c)}`;
   return layout(c, { title: r.meta.title, description: r.meta.description, og: 'assets/img/og/ristorante.jpg', hero: IMG.restaurant, body, jsonld: baseJsonLd(c), crumbs: [[t.nav.restaurant, PAGES.restaurant]] });
+}
+
+// Modulo di richiesta tavolo (pagina ristorante), inviato con FormSubmit come quello degli appartamenti.
+function tableForm(c) {
+  const t = c.t, f = t.restaurant.table, q = t.request.form;
+  const slot = (from, to) => {
+    const out = [];
+    for (let m = from; m <= to; m += 30) out.push(`${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`);
+    return out.map((h) => `<option>${h}</option>`).join('');
+  };
+  const people = [...Array.from({ length: 12 }, (_, i) => `<option>${i + 1}</option>`), `<option value="Più di 12">${e(f.more)}</option>`].join('');
+  const privacy = e(q.privacy).replace(e(q.privacyLink), `<a href="${c.href(PAGES.privacy)}" target="_blank" rel="noopener">${e(q.privacyLink)}</a>`);
+  return `
+    <section class="section section-alt" id="tavolo">
+      <div class="wrap request-grid">
+        <div>
+          <p class="eyebrow">${e(f.eyebrow)}</p>
+          <h2>${e(f.title)}</h2>
+          <p class="lead">${e(f.lead)}</p>
+          <div class="request-sent" role="status" tabindex="-1" hidden data-request-sent><p>${e(f.sent)}</p></div>
+          <form class="request-form" action="https://formsubmit.co/${REQUEST_EMAIL}" method="POST" novalidate ${formMsgs(c)} data-request-form data-validate data-closed-day="2" data-sent-param="tavolo">
+            <input type="hidden" name="_subject" value="${e(f.subject)}">
+            <input type="hidden" name="_next" value="${SITE_URL}${c.lang.path}${PAGES.restaurant}?tavolo=inviato#tavolo">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="Richiesta" value="Tavolo al ristorante">
+            <input type="hidden" name="Data" data-day-input>
+            <input type="hidden" name="Lingua" value="${c.lang.code}">
+            <div class="hp" aria-hidden="true"><label>Lascia vuoto <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+            <p class="rf-head"><span>${e(q.required)}</span></p>
+            <div class="rf-group">
+              <input type="text" name="Nome" placeholder="${e(f.name)} *" aria-label="${e(f.name)}" required autocomplete="name">
+              <input type="tel" name="Telefono" placeholder="${e(f.phone)} *" aria-label="${e(f.phone)}" required autocomplete="tel">
+              <input type="email" name="email" placeholder="${e(f.email)}" aria-label="${e(f.email)}" autocomplete="email">
+              <select name="Persone" aria-label="${e(f.people)}" required><option value="" disabled selected>${e(f.people)} *</option>${people}</select>
+              <label class="rf-field"><span>${e(f.date)} *</span><input type="date" name="Giorno" required data-date data-single-date></label>
+              <label class="rf-field"><span>${e(f.time)} *</span><select name="Ora" required><option value="" disabled selected>${e(f.time)}</option><optgroup label="${e(f.lunch)}">${slot(12 * 60, 14 * 60)}</optgroup><optgroup label="${e(f.dinner)}">${slot(17 * 60 + 30, 21 * 60 + 30)}</optgroup></select></label>
+            </div>
+            <div class="rf-group rf-single">
+              <textarea name="Note" rows="3" placeholder="${e(f.notes)}" aria-label="${e(f.notes)}"></textarea>
+              <label class="rf-check"><input type="checkbox" name="Privacy" value="ok" required> <span>${privacy}</span></label>
+              <button class="btn btn-accent" type="submit">${e(f.submit)}</button>
+            </div>
+          </form>
+        </div>
+        <aside class="info-card">
+          <h3>${e(f.orWhatsapp)}</h3>
+          <p>${e(t.restaurant.book.text)}</p>
+          <a class="btn btn-outline btn-block" href="${waHref(c)}" target="_blank" rel="noopener">${e(t.restaurant.book.whatsapp)}</a>
+          <p class="wa-number">${WHATSAPP.display}</p>
+        </aside>
+      </div>
+    </section>`;
 }
 
 export function valdisole(c) {
@@ -560,9 +648,9 @@ export function valdisole(c) {
         <p class="eyebrow">${e(w.ski.eyebrow)}</p>
         <h3 class="sub-title">${e(w.ski.title)}</h3>
         <div class="ski-grid">
-          ${w.ski.items.map((x, i) => `<article class="exp-card ski-card"><span class="num">0${i + 1}</span><h3>${e(x.title)}</h3><p>${e(x.text)}</p><ul class="facts">${x.facts.map((f) => `<li>${e(f)}</li>`).join('')}</ul></article>`).join('\n          ')}
+          ${w.ski.items.map((x, i) => `<article class="exp-card ski-card"><span class="num">0${i + 1}</span><h4 class="h3">${e(x.title)}</h4><p>${e(x.text)}</p><ul class="ski-facts">${x.facts.map((f) => `<li>${e(f)}</li>`).join('')}</ul></article>`).join('\n          ')}
         </div>
-        <p class="facts-note">${e(w.ski.note)}</p>
+        <p class="ski-facts-note">${e(w.ski.note)}</p>
         <div class="tip-grid">
           ${w.tips.map((x) => `<article class="tip"><h3>${e(x.title)}</h3><p>${e(x.text)}</p></article>`).join('\n          ')}
         </div>
@@ -622,29 +710,29 @@ export function request(c) {
     <section class="section section-tight">
       <div class="wrap request-grid" id="richiesta">
         <div>
-          <p class="request-sent" role="status" hidden data-request-sent>${e(f.sent)}</p>
-          <form class="request-form" action="https://formsubmit.co/${REQUEST_EMAIL}" method="POST" data-request-form>
+          <div class="request-sent" role="status" tabindex="-1" hidden data-request-sent><p>${e(f.sent)}</p><a class="link-arrow" href="${c.href('')}">${e(t.common.form.back)}</a></div>
+          <form class="request-form" action="https://formsubmit.co/${REQUEST_EMAIL}" method="POST" novalidate ${formMsgs(c)} data-request-form data-validate data-sent-param="richiesta">
             <input type="hidden" name="_subject" value="${e(f.subject)}">
             <input type="hidden" name="_next" value="${SITE_URL}${c.lang.path}${PAGES.request}?richiesta=inviata">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="Lingua" value="${c.lang.code}">
-            <input type="hidden" name="Notti" data-nights-input>
-            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="Soggiorno" data-stay-input>
+            <div class="hp" aria-hidden="true"><label>Lascia vuoto <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
             <p class="rf-head"><strong>${e(f.noCommitment)}</strong><span>${e(f.required)}</span></p>
             <div class="rf-group">
               <input type="text" name="Nome" placeholder="${e(f.firstName)} *" aria-label="${e(f.firstName)}" required autocomplete="given-name">
-              <input type="email" name="email" placeholder="${e(f.email)} *" aria-label="${e(f.email)}" required autocomplete="email">
               <input type="text" name="Cognome" placeholder="${e(f.lastName)} *" aria-label="${e(f.lastName)}" required autocomplete="family-name">
+              <input type="email" name="email" placeholder="${e(f.email)} *" aria-label="${e(f.email)}" required autocomplete="email">
               <input type="tel" name="Telefono" placeholder="${e(f.phone)} *" aria-label="${e(f.phone)}" required autocomplete="tel">
             </div>
             <div class="rf-group">
-              <input type="text" class="rf-date" name="Arrivo" placeholder="${e(f.arrival)} *" aria-label="${e(f.arrival)}" required data-date data-arrival>
+              <label class="rf-field"><span>${e(f.arrival)} *</span><input type="date" name="Arrivo" required data-date data-arrival></label>
+              <label class="rf-field"><span>${e(f.departure)} *</span><input type="date" name="Partenza" required data-date data-departure></label>
               <select name="Adulti" aria-label="${e(f.adults)}" required data-adults><option value="" disabled selected>${e(f.adults)} *</option>${adults}</select>
-              <input type="text" class="rf-date" name="Partenza" placeholder="${e(f.departure)} *" aria-label="${e(f.departure)}" required data-date data-departure>
-              <select name="Bambini" aria-label="${e(f.children)}" data-children><option value="" disabled selected>${e(f.children)}</option>${kids}</select>
-              <select name="Appartamento" aria-label="${e(f.apartment)}" data-apt-select><option value="">${e(f.apartment)}: ${e(f.any)}</option>${apts}</select>
-              <select name="Animali" aria-label="${e(f.pets)}"><option value="" disabled selected>${e(f.pets)}</option><option>${e(f.no)}</option><option>${e(f.yes)}</option></select>
+              <select name="Bambini" aria-label="${e(f.children)}" data-children data-default="0"><option value="" disabled selected>${e(f.children)}</option>${kids}</select>
+              <select name="Appartamento" aria-label="${e(f.apartment)}" data-apt-select><option value="Nessuna preferenza">${e(f.apartment)}: ${e(f.any)}</option>${apts}</select>
+              <select name="Animali" aria-label="${e(f.pets)}" data-default="Non indicato"><option value="" disabled selected>${e(f.pets)}</option><option value="No">${e(f.no)}</option><option value="Sì">${e(f.yes)}</option></select>
             </div>
             <div class="rf-group rf-ages" hidden data-ages>
               <p class="rf-note">${e(f.agesNote)}</p>
@@ -652,14 +740,15 @@ export function request(c) {
             </div>
             <div class="rf-group rf-single">
               <textarea name="Richiesta" rows="5" placeholder="${e(f.message)}" aria-label="${e(f.message)}"></textarea>
-              <label class="rf-check"><input type="checkbox" name="Privacy" value="ok" required> <span>${e(f.privacy).replace(e(f.privacyLink), `<a href="${c.href(PAGES.privacy)}" target="_blank">${e(f.privacyLink)}</a>`)}</span></label>
+              <label class="rf-check"><input type="checkbox" name="Privacy" value="ok" required> <span>${e(f.privacy).replace(e(f.privacyLink), `<a href="${c.href(PAGES.privacy)}" target="_blank" rel="noopener">${e(f.privacyLink)}</a>`)}</span></label>
               <button class="btn btn-accent" type="submit">${e(f.submit)}</button>
             </div>
           </form>
         </div>
         <aside class="info-card">
-          <h3>${e(q.asideTitle)}</h3>
+          <h2 class="h3">${e(q.asideTitle)}</h2>
           <ul class="checklist">${[...q.aside, ...t.apartments.good.slice(0, 2)].map((s) => `<li>${e(s)}</li>`).join('')}</ul>
+          <p class="payment-note">${e(q.paymentNote)}</p>
           <p class="hours-season">${e(t.common.season)}</p>
           <address>${e(t.common.address)}</address>
           <a class="link-arrow" href="${DIRECTIONS_URL}" target="_blank" rel="noopener">${e(t.common.directions)}</a>
@@ -709,7 +798,7 @@ export function notFound(c) {
           <li><a class="link-arrow" href="${c.href(PAGES.apartments)}">${e(t.nav.apartments)}</a></li>
           <li><a class="link-arrow" href="${c.href(PAGES.restaurant)}">${e(t.nav.restaurant)}</a></li>
           <li><a class="link-arrow" href="${c.href(PAGES.valdisole)}">${e(t.nav.valdisole)}</a></li>
-          <li><a class="link-arrow" href="/en/">English</a> · <a class="link-arrow" href="/de/">Deutsch</a> · <a class="link-arrow" href="/pl/">Polski</a></li>
+          <li class="nf-langs"><a class="link-arrow" href="/en/" lang="en">English</a><a class="link-arrow" href="/de/" lang="de">Deutsch</a><a class="link-arrow" href="/pl/" lang="pl">Polski</a></li>
         </ul>
       </div>
     </section>`;

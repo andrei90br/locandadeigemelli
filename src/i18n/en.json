@@ -9,15 +9,17 @@
     "where": "Location",
     "languages": "Language",
     "open": "Open menu",
-    "request": "Check availability"
+    "request": "Request availability",
+    "close": "Close menu",
+    "table": "Book a table"
   },
   "booking": {
-    "label": "Check apartment availability",
+    "label": "Request apartment availability",
     "arrival": "Arrival",
     "departure": "Departure",
     "adults": "Adults",
     "children": "Children",
-    "submit": "Check availability"
+    "submit": "Request availability"
   },
   "common": {
     "explore": "Discover",
@@ -37,18 +39,32 @@
     "closedDay": "Tuesday",
     "closed": "Closed",
     "beds": "sleeps {n}",
-    "allApartments": "All apartments"
+    "allApartments": "All apartments",
+    "form": {
+      "required": "Please fill in this field.",
+      "choose": "Please choose an option.",
+      "email": "Please enter a valid email address.",
+      "departure": "Departure must be after arrival.",
+      "past": "Please choose a date from today onwards.",
+      "tuesday": "We're closed on Tuesdays: please choose another day.",
+      "privacy": "Please tick the box to continue.",
+      "sending": "Sending…",
+      "back": "Back to home",
+      "imgError": "Photo not available"
+    }
   },
   "footer": {
     "stay": "Stay",
     "dine": "Dine",
     "discover": "Discover",
-    "hours": "Restaurant 12–2:30 pm and 5:30–10 pm · Pizzeria 5:30–10:30 pm · Closed on Tuesdays",
+    "hours": "Restaurant 12:00–14:30 and 17:30–22:00 · Pizzeria 17:30–22:30 · Closed on Tuesdays",
     "legal": "Registered office",
     "vat": "Tax code and VAT no.",
     "rea": "REA",
     "pec": "PEC",
-    "privacy": "Privacy and cookies"
+    "privacy": "Privacy and cookies",
+    "whatsapp": "WhatsApp for tables",
+    "table": "Book a table"
   },
   "home": {
     "notice": "New management",
@@ -59,7 +75,7 @@
     "hero": {
       "eyebrow": "Dimaro Folgarida · Val di Sole · Trentino",
       "title": "Sleep well. Eat better. Under one roof.",
-      "lead": "6 independent apartments and a restaurant pizzeria on the ground floor, minutes from the Folgarida-Marilleva slopes and the trails of Val di Sole."
+      "lead": "6 independent apartments and a restaurant pizzeria on the ground floor, minutes from the Folgarida-Marilleva slopes and the trails of Val di Sole. As a couple, with family, with friends or on your own: everyone is welcome here."
     },
     "proof": [
       {
@@ -68,11 +84,11 @@
       },
       {
         "title": "Restaurant & pizzeria",
-        "text": "On the ground floor, lunch and dinner"
+        "text": "Restaurant for lunch and dinner, pizzeria in the evening"
       },
       {
         "title": "Locally sourced",
-        "text": "Ingredients from Val di Sole, Val di Non and the Adige valley"
+        "text": "Ingredients from Val di Sole and Val di Non"
       },
       {
         "title": "Two seasons",
@@ -86,14 +102,14 @@
     },
     "stay": {
       "eyebrow": "Stay",
-      "title": "Six apartments. Zero compromises.",
-      "text": "Every apartment is independent, with a fully equipped kitchen, living area and private bathroom. Real space for couples, families and groups of friends, with the freedom of a home and a restaurant right downstairs.",
+      "title": "Six apartments. Room for everyone.",
+      "text": "Every apartment is independent, with a fully equipped kitchen, living area and private bathroom. Real space whether you travel alone, as a couple, with family or with friends, with the freedom of a home and a restaurant right downstairs.",
       "cta": "Discover the apartments"
     },
     "dine": {
       "eyebrow": "Dine",
-      "title": "Real Trentino cooking. Master-made pizza.",
-      "text": "Lunch and dinner built on the traditional recipes of Val di Sole and ingredients from our valleys. In the evening, pizza by our master pizzaiolo. Open to everyone, not just our guests.",
+      "title": "Real Trentino cooking. Pizza by a master.",
+      "text": "Lunch and dinner built on the traditional recipes of Val di Sole and ingredients from our valleys. In the evening, pizza by Barbara, our master pizzaiola. Open to everyone, not just our guests.",
       "cta": "Discover the restaurant"
     },
     "exp": {
@@ -108,9 +124,9 @@
       "text": "We are in Dimaro Folgarida, minutes from the Folgarida-Marilleva lifts and right on the Val di Sole cycle path. Madonna di Campiglio and the Tonale Pass are within easy reach."
     },
     "final": {
-      "title": "The best dates go first.",
+      "title": "Choose your dates. We'll take care of the rest.",
       "text": "Send us your dates and we'll reply with availability and price. The request is not binding.",
-      "cta": "Check availability"
+      "cta": "Request availability"
     }
   },
   "apartments": {
@@ -182,12 +198,12 @@
   "restaurant": {
     "meta": {
       "title": "Restaurant & Pizzeria in Dimaro | Locanda dei Gemelli",
-      "description": "Trentino cooking with local ingredients and pizza by our master pizzaiolo in Dimaro Folgarida, Val di Sole. Lunch and dinner, closed Tuesdays."
+      "description": "Trentino cooking with local ingredients and pizza by master pizzaiola Barbara in Dimaro Folgarida, Val di Sole. Lunch and dinner, closed Tuesdays."
     },
     "hero": {
       "eyebrow": "Restaurant & Pizzeria",
-      "title": "Real Trentino cooking. Master-made pizza. No shortcuts.",
-      "lead": "The modern osteria of Val di Sole: ingredients from our valleys, traditional local recipes and a pizza worth the trip. Open to everyone, for lunch and dinner."
+      "title": "Real Trentino cooking. Pizza by a master.",
+      "lead": "The modern osteria of Val di Sole: ingredients from our valleys, traditional local recipes and pizza by Barbara, our master pizzaiola. Open to everyone, for lunch and dinner."
     },
     "manifesto": {
       "eyebrow": "Modern osteria",
@@ -212,13 +228,12 @@
       "eyebrow": "The restaurant",
       "title": "Tradition, done today.",
       "text": "Trentino dishes reinterpreted with a modern touch, plus a few international options for those who want to leave the beaten path. Fresh ingredients, honest portions, clear flavours. The lunch you need between runs and the dinner you remember at the end of your holiday.",
-      "hours": "Lunch 12:00 – 14:30 · Dinner 17:30 – 22:00",
-      "menu": "The full menu will soon be available on this page."
+      "hours": "Lunch 12:00 – 14:30 · Dinner 17:30 – 22:00"
     },
     "pizza": {
       "eyebrow": "The pizzeria",
-      "title": "Pizza is a craft. Our master knows it.",
-      "text": "Every pizza comes from the hands of our master pizzaiolo. Carefully made dough, quality seasonal toppings, considered pairings. You'll find the classics you love and special combinations born in our kitchen that you won't find anywhere else.",
+      "title": "Pizza is a craft. Barbara knows it.",
+      "text": "Every pizza comes from the hands of Barbara, our master pizzaiola. Carefully made dough, quality seasonal toppings, considered pairings. You will find the classics you love and combinations created in our own kitchen.",
       "hours": "Every evening 17:30 – 22:30, except Tuesdays"
     },
     "services": {
@@ -226,16 +241,16 @@
       "title": "The same standard, wherever you want to eat.",
       "items": [
         {
-          "title": "Takeaway and home delivery",
-          "text": "Our cooking and our pizza, at your home or in your holiday apartment. Same care, same taste."
+          "title": "Takeaway",
+          "text": "Our cooking and our pizza to take away, for a dinner in your apartment or at home. Same care, same taste."
         },
         {
-          "title": "Garden and events",
-          "text": "Summer evenings outdoors, birthdays, group dinners and parties. The garden is ready for your event."
+          "title": "Summer garden",
+          "text": "From June to October we serve outdoors in the garden: summer evenings, birthdays, dinners with friends and parties."
         },
         {
-          "title": "Business lunches and meetings",
-          "text": "A private room, presentation equipment, coffee breaks, buffet or light lunch. You focus on the meeting, we handle the rest."
+          "title": "The taste of the valley",
+          "text": "Cheese, cured meats, apples, flour and vegetables from Trentino, chosen from producers in our valleys. We know where every ingredient comes from. And you can taste it."
         }
       ]
     },
@@ -243,9 +258,29 @@
     "book": {
       "eyebrow": "Reservations",
       "title": "Your table is waiting.",
-      "text": "Soon you'll be able to book online with TheFork or message us on WhatsApp. In the meantime, we look forward to welcoming you at Via Campiglio 59.",
-      "thefork": "TheFork · coming soon",
-      "whatsapp": "WhatsApp · coming soon"
+      "text": "Message us on WhatsApp or fill in the form below and we'll confirm your table as soon as possible. We're closed on Tuesdays.",
+      "whatsapp": "Message us on WhatsApp",
+      "form": "Book a table",
+      "waText": "Hello, I would like to book a table at Locanda dei Gemelli."
+    },
+    "table": {
+      "eyebrow": "Book a table",
+      "title": "Table reservation request",
+      "lead": "Tell us the day, time and number of people. Your booking is confirmed once we reply by phone, WhatsApp or email.",
+      "name": "Full name",
+      "phone": "Phone (WhatsApp too)",
+      "email": "Email",
+      "date": "Day",
+      "time": "Time",
+      "lunch": "Lunch",
+      "dinner": "Dinner",
+      "people": "People",
+      "more": "More than 12",
+      "notes": "Notes: allergies, high chair, special occasions",
+      "subject": "Table request (EN) – Locanda dei Gemelli website",
+      "submit": "Send request",
+      "sent": "Thank you! We've received your request and will confirm your table as soon as possible.",
+      "orWhatsapp": "Prefer WhatsApp?"
     }
   },
   "valdisole": {
@@ -371,7 +406,7 @@
         },
         {
           "title": "Rafting on the Noce",
-          "text": "The Noce is one of Europe's best-loved rivers for rafting and kayaking, with routes for beginners and experts."
+          "text": "The Noce river offers rafting and kayaking, with routes for beginners and experienced paddlers."
         },
         {
           "title": "Hiking in the parks",
@@ -414,7 +449,7 @@
       "no": "No",
       "yes": "Yes",
       "message": "Your request",
-      "privacy": "I have read the privacy notice and consent to the processing of my data to receive a reply to this request. *",
+      "privacy": "I have read the privacy notice *",
       "submit": "Send request",
       "sent": "Thank you! We have received your request and will reply by email as soon as possible.",
       "privacyLink": "privacy notice"
@@ -424,7 +459,8 @@
       "A direct reply from the people who run the Locanda",
       "No payment required now",
       "Restaurant and pizzeria on the ground floor"
-    ]
+    ],
+    "paymentNote": "For your safety: we only send payment details from lalocandadeigemelli@gmail.com. If you receive different bank details from any other address, do not pay and contact us."
   },
   "privacy": {
     "meta": {
@@ -445,14 +481,14 @@
       {
         "h": "What data we collect",
         "p": [
-          "Data you send us with the request form: first name, last name, email, phone, dates of stay, number of guests and children's ages, pets, preferred apartment and any message.",
+          "Data you send us with the forms. For apartments: first name, last name, email, phone, dates of stay, number of guests and children's ages, pets, preferred apartment and any message. For tables: name, phone, email if you provide it, day, time, number of people and any notes.",
           "Technical browsing data: the website host (GitHub Pages) automatically logs IP address, browser and pages visited, for security and operation."
         ]
       },
       {
         "h": "Why we use it and on what legal basis",
         "p": [
-          "To reply to your request and, if you wish, arrange your stay: a pre-contractual step taken at your request (Art. 6.1.b GDPR). Without this data we cannot reply.",
+          "To reply to your request and, if you wish, arrange your stay or your table: a pre-contractual step taken at your request (Art. 6.1.b GDPR). Without this data we cannot reply.",
           "To meet legal obligations if the stay is confirmed, such as tax rules and the registration of guests with the police authorities (Art. 6.1.c GDPR).",
           "We do not use your data for advertising and we never sell it."
         ]
@@ -460,7 +496,7 @@
       {
         "h": "Who we share it with",
         "p": [
-          "FormSubmit (formsubmit.co), the service that forwards the form to our mailbox; Google (Gmail), which runs the mailbox; GitHub (Microsoft), which hosts the website. They process data on our behalf. Some are based in the United States: transfers take place with the safeguards required by the GDPR (EU-US Data Privacy Framework or standard contractual clauses).",
+          "FormSubmit (formsubmit.co), the service that forwards the forms to our mailbox; Google (Gmail), which runs the mailbox; GitHub (Microsoft), which hosts the website. These are the technical services we use for the website and email. Some are based outside the European Union, for example in the United States, so data may be transferred there. Google and Microsoft participate in the EU-US Data Privacy Framework.",
           "We do not share data with anyone else unless required by law."
         ]
       },
@@ -474,7 +510,8 @@
         "h": "Cookies and third-party services",
         "p": [
           "This website does not use its own cookies, profiling cookies or analytics tools.",
-          "The Google Maps map loads only if you click \"Show the map\": from then on Google may set its own cookies. Links to Google Maps open Google's website, under its own privacy policy."
+          "The Google Maps map loads only if you click \"Show the map\": from then on Google may set its own cookies. Links to Google Maps open Google's website and the WhatsApp link opens WhatsApp (Meta), each under its own privacy policy.",
+          "Some photos on the home page and the restaurant page are currently loaded from the website locandaelisa.it: when you open those pages your browser sends your IP address to that website. We will replace them with photos hosted by us."
         ]
       },
       {
