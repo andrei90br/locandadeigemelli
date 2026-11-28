@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /anteprima/
+Allow: /
+
+Sitemap: https://locandadeigemelli.com/sitemap.xml
