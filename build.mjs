@@ -55,11 +55,14 @@ for (const lang of LANGS) {
 }
 console.log('✓ cartina piste interattiva');
 
+// Sitemap con le versioni nelle altre lingue (hreflang) per ogni pagina
+const pagePaths = pages.map(([path]) => path);
+const alt = (path) => [...LANGS.map((l) => `    <xhtml:link rel="alternate" hreflang="${l.code}" href="${SITE_URL}${l.path}${path}"/>`), `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${path}"/>`].join('\n');
 writeFileSync(
   'sitemap.xml',
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
-    .map((u) => `  <url><loc>${u}</loc></url>`)
-    .join('\n')}\n</urlset>\n`
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${LANGS.flatMap((l) =>
+    pagePaths.map((path) => `  <url>\n    <loc>${SITE_URL}${l.path}${path}</loc>\n${alt(path)}\n  </url>`)
+  ).join('\n')}\n</urlset>\n`
 );
 writeFileSync('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
 console.log('✓ sitemap.xml, robots.txt');
