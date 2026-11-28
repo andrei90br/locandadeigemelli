@@ -9,15 +9,17 @@
     "where": "Lage",
     "languages": "Sprache",
     "open": "Menü öffnen",
-    "request": "Verfügbarkeit anfragen"
+    "request": "Verfügbarkeit anfragen",
+    "close": "Menü schließen",
+    "table": "Tisch reservieren"
   },
   "booking": {
-    "label": "Verfügbarkeit der Ferienwohnungen prüfen",
+    "label": "Verfügbarkeit der Ferienwohnungen anfragen",
     "arrival": "Anreise",
     "departure": "Abreise",
     "adults": "Erwachsene",
     "children": "Kinder",
-    "submit": "Verfügbarkeit prüfen"
+    "submit": "Verfügbarkeit anfragen"
   },
   "common": {
     "explore": "Entdecken",
@@ -37,7 +39,19 @@
     "closedDay": "Dienstag",
     "closed": "Ruhetag",
     "beds": "{n} Schlafplätze",
-    "allApartments": "Alle Ferienwohnungen"
+    "allApartments": "Alle Ferienwohnungen",
+    "form": {
+      "required": "Bitte füllen Sie dieses Feld aus.",
+      "choose": "Bitte wählen Sie eine Option.",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "departure": "Die Abreise muss nach der Anreise liegen.",
+      "past": "Bitte wählen Sie ein Datum ab heute.",
+      "tuesday": "Dienstags ist Ruhetag: Bitte wählen Sie einen anderen Tag.",
+      "privacy": "Bitte setzen Sie das Häkchen, um fortzufahren.",
+      "sending": "Wird gesendet…",
+      "back": "Zur Startseite",
+      "imgError": "Foto nicht verfügbar"
+    }
   },
   "footer": {
     "stay": "Wohnen",
@@ -48,7 +62,9 @@
     "vat": "Steuernr. und USt-IdNr.",
     "rea": "REA",
     "pec": "PEC",
-    "privacy": "Datenschutz und Cookies"
+    "privacy": "Datenschutz und Cookies",
+    "whatsapp": "WhatsApp für Tischreservierungen",
+    "table": "Tisch reservieren"
   },
   "home": {
     "notice": "Neue Führung",
@@ -59,7 +75,7 @@
     "hero": {
       "eyebrow": "Dimaro Folgarida · Val di Sole · Trentino",
       "title": "Gut schlafen. Besser essen. Unter einem Dach.",
-      "lead": "6 unabhängige Ferienwohnungen und ein Restaurant mit Pizzeria im Erdgeschoss, wenige Minuten von den Pisten von Folgarida-Marilleva und den Wegen des Val di Sole."
+      "lead": "6 unabhängige Ferienwohnungen und ein Restaurant mit Pizzeria im Erdgeschoss, wenige Minuten von den Pisten von Folgarida-Marilleva und den Wegen des Val di Sole. Zu zweit, mit der Familie, mit Freunden oder allein: Bei uns ist jeder willkommen."
     },
     "proof": [
       {
@@ -68,11 +84,11 @@
       },
       {
         "title": "Restaurant & Pizzeria",
-        "text": "Im Erdgeschoss, mittags und abends"
+        "text": "Restaurant mittags und abends, Pizzeria am Abend"
       },
       {
         "title": "Regional",
-        "text": "Zutaten aus Val di Sole, Val di Non und dem Etschtal"
+        "text": "Zutaten aus dem Val di Sole und dem Val di Non"
       },
       {
         "title": "Zwei Saisons",
@@ -82,24 +98,24 @@
     "intro": {
       "eyebrow": "Die Locanda",
       "title": "Eine Adresse. Zwei Gründe, sie zu wählen.",
-      "text": "Die meisten Bergurlaube zwingen dich zur Wahl: ein guter Ort zum Schlafen oder ein guter Ort zum Essen. Hier musst du nicht wählen. Hinauf in die Wohnung, hinunter zum Abendessen. Dieselben Menschen, derselbe Anspruch, vom Check-in bis zur letzten Pizza."
+      "text": "Die meisten Bergurlaube zwingen zur Wahl: ein guter Ort zum Schlafen oder ein guter Ort zum Essen. Hier müssen Sie nicht wählen. Hinauf in die Wohnung, hinunter zum Abendessen. Dieselben Menschen, derselbe Anspruch, vom Check-in bis zur letzten Pizza."
     },
     "stay": {
       "eyebrow": "Wohnen",
-      "title": "Sechs Ferienwohnungen. Null Kompromisse.",
-      "text": "Jede Wohnung ist unabhängig, mit voll ausgestatteter Küche, Wohnbereich und eigenem Bad. Echter Platz für Paare, Familien und Freundesgruppen, mit der Freiheit eines Zuhauses und einem Restaurant direkt darunter.",
+      "title": "Sechs Ferienwohnungen. Platz für alle.",
+      "text": "Jede Wohnung ist unabhängig, mit voll ausgestatteter Küche, Wohnbereich und eigenem Bad. Echter Platz für Alleinreisende, Paare, Familien und Freunde, mit der Freiheit eines Zuhauses und einem Restaurant direkt darunter.",
       "cta": "Die Ferienwohnungen entdecken"
     },
     "dine": {
       "eyebrow": "Essen",
-      "title": "Echte Trentiner Küche. Pizza vom Meister.",
-      "text": "Mittags und abends Gerichte nach den Rezepten des Val di Sole, mit Zutaten aus unseren Tälern. Am Abend die Pizza unseres Meisterpizzaiolo. Offen für alle, nicht nur für unsere Gäste.",
+      "title": "Echte Trentiner Küche. Pizza von der Meisterin.",
+      "text": "Mittags und abends Gerichte nach den Rezepten des Val di Sole, mit Zutaten aus unseren Tälern. Am Abend die Pizza von Barbara, unserer Meisterpizzaiola. Offen für alle, nicht nur für unsere Gäste.",
       "cta": "Das Restaurant entdecken"
     },
     "exp": {
       "eyebrow": "Erlebnisse",
       "title": "Das Val di Sole direkt vor der Tür.",
-      "text": "Im Winter Skifahren in Folgarida-Marilleva und Madonna di Campiglio. Im Sommer der Radweg, Rafting auf dem Noce und die Wege zweier Naturparks. Du planst den Tag, wir kümmern uns um den Abend.",
+      "text": "Im Winter Skifahren in Folgarida-Marilleva und Madonna di Campiglio. Im Sommer der Radweg, Rafting auf dem Noce und die Wege zweier Naturparks. Sie planen den Tag, wir kümmern uns um den Abend.",
       "cta": "Das Val di Sole entdecken"
     },
     "where": {
@@ -108,8 +124,8 @@
       "text": "Wir liegen in Dimaro Folgarida, wenige Minuten von den Liften von Folgarida-Marilleva und direkt am Radweg des Val di Sole. Madonna di Campiglio und der Tonalepass sind schnell erreichbar."
     },
     "final": {
-      "title": "Die besten Termine sind zuerst weg.",
-      "text": "Schick uns deine Reisedaten: Wir antworten mit Verfügbarkeit und Preis. Die Anfrage ist unverbindlich.",
+      "title": "Wählen Sie Ihre Reisedaten. Um den Rest kümmern wir uns.",
+      "text": "Schicken Sie uns Ihre Reisedaten: Wir antworten mit Verfügbarkeit und Preis. Die Anfrage ist unverbindlich.",
       "cta": "Verfügbarkeit anfragen"
     }
   },
@@ -124,7 +140,7 @@
       "lead": "46 bis 60 m², 4 bis 7 Schlafplätze. Alle mit Küche, eigenem Bad und Wohnbereich. Haustiere willkommen, Nichtraucher."
     },
     "intro": {
-      "title": "Wähle deine Ferienwohnung",
+      "title": "Wählen Sie Ihre Ferienwohnung",
       "text": "Vier Wohnungen mit 46 m² für 4 Personen und zwei mit 60 m² für Gruppen und Familien bis 7 Personen. Gleiche Sorgfalt, gleiche Leistungen, gleiche Lage."
     },
     "rooms": {
@@ -157,7 +173,7 @@
     "metaTitle": "Ferienwohnung {name} in Dimaro, {beds} Pers. | Locanda dei Gemelli",
     "metaDescription": "Ferienwohnung {name} in Dimaro Folgarida, Val di Sole: {size} m², {beds} Schlafplätze, Küche, eigenes Bad und WLAN. Restaurant und Pizzeria im Haus.",
     "eyebrow": "Ferienwohnung",
-    "text": "Eine unabhängige Ferienwohnung mit {size} m² und {rooms}. Ausgestattete Küche, Wohnbereich, eigenes Bad, WLAN und TV: alles, was du brauchst, um dich im Val di Sole zu Hause zu fühlen. Und wenn du abends nicht kochen willst, sind Restaurant und Pizzeria im Erdgeschoss.",
+    "text": "Eine unabhängige Ferienwohnung mit {size} m² und {rooms}. Ausgestattete Küche, Wohnbereich, eigenes Bad, WLAN und TV: alles, was Sie brauchen, um sich im Val di Sole zu Hause zu fühlen. Und wenn Sie abends nicht kochen möchten, sind Restaurant und Pizzeria im Erdgeschoss.",
     "factsTitle": "Auf einen Blick",
     "size": "Fläche",
     "beds": "Schlafplätze",
@@ -182,16 +198,16 @@
   "restaurant": {
     "meta": {
       "title": "Restaurant und Pizzeria in Dimaro | Locanda dei Gemelli",
-      "description": "Trentiner Küche mit regionalen Zutaten und Pizza vom Meisterpizzaiolo in Dimaro Folgarida, Val di Sole. Mittag- und Abendessen, Dienstag Ruhetag."
+      "description": "Trentiner Küche mit regionalen Zutaten und die Pizza von Meisterpizzaiola Barbara in Dimaro Folgarida, Val di Sole. Mittag- und Abendessen, Dienstag Ruhetag."
     },
     "hero": {
       "eyebrow": "Restaurant & Pizzeria",
-      "title": "Echte Trentiner Küche. Pizza vom Meister. Keine Abkürzungen.",
-      "lead": "Die moderne Osteria des Val di Sole: Zutaten aus unseren Tälern, traditionelle Rezepte und eine Pizza, für die sich die Anreise lohnt. Offen für alle, mittags und abends."
+      "title": "Echte Trentiner Küche. Pizza von der Meisterin.",
+      "lead": "Die moderne Osteria des Val di Sole: Zutaten aus unseren Tälern, traditionelle Rezepte und die Pizza von Barbara, unserer Meisterpizzaiola. Offen für alle, mittags und abends."
     },
     "manifesto": {
       "eyebrow": "Moderne Osteria",
-      "title": "Was wir nicht unserer eigenen Familie servieren würden, kommt nicht auf deinen Tisch.",
+      "title": "Was wir nicht unserer eigenen Familie servieren würden, kommt nicht auf Ihren Tisch.",
       "text": "Ein Restaurant beurteilt man nicht nach der Einrichtung, sondern nach dem Teller. Deshalb beginnen wir beim Produkt: saisonale, rückverfolgbare Bergprodukte von Erzeugern aus unseren Tälern. Dann behandeln wir sie mit Respekt, mit den Rezepten des Val di Sole und des Trentino und der Technik von heute."
     },
     "pillars": [
@@ -211,41 +227,60 @@
     "kitchen": {
       "eyebrow": "Das Restaurant",
       "title": "Tradition, wie man sie heute kocht.",
-      "text": "Trentiner Gerichte, modern interpretiert, und einige internationale Vorschläge für alle, die neue Wege gehen wollen. Frische Zutaten, ehrliche Portionen, klare Aromen. Das Mittagessen zwischen zwei Abfahrten und das Abendessen, an das du dich am Ende des Urlaubs erinnerst.",
-      "hours": "Mittag 12:00 – 14:30 · Abend 17:30 – 22:00 Uhr",
-      "menu": "Die vollständige Speisekarte ist bald auf dieser Seite verfügbar."
+      "text": "Trentiner Gerichte, modern interpretiert, und einige internationale Vorschläge für alle, die neue Wege gehen wollen. Frische Zutaten, ehrliche Portionen, klare Aromen. Das Mittagessen zwischen zwei Abfahrten und das Abendessen, an das Sie sich am Ende des Urlaubs erinnern.",
+      "hours": "Mittag 12:00 – 14:30 · Abend 17:30 – 22:00 Uhr"
     },
     "pizza": {
       "eyebrow": "Die Pizzeria",
-      "title": "Pizza ist ein Handwerk. Unser Meister beherrscht es.",
-      "text": "Jede Pizza kommt aus den Händen unseres Meisterpizzaiolo. Sorgfältig zubereiteter Teig, hochwertige saisonale Zutaten, durchdachte Kombinationen. Du findest die Klassiker, die du liebst, und besondere Kreationen aus unserer Küche, die es sonst nirgends gibt.",
+      "title": "Pizza ist ein Handwerk. Barbara beherrscht es.",
+      "text": "Jede Pizza kommt aus den Händen von Barbara, unserer Meisterpizzaiola. Sorgfältig zubereiteter Teig, hochwertige saisonale Zutaten, durchdachte Kombinationen. Sie finden die Klassiker, die Sie lieben, und Kreationen aus unserer eigenen Küche.",
       "hours": "Jeden Abend 17:30 – 22:30 Uhr, außer dienstags"
     },
     "services": {
       "eyebrow": "Mehr als Abendessen",
-      "title": "Derselbe Anspruch, wo immer du essen willst.",
+      "title": "Derselbe Anspruch, wo immer Sie essen möchten.",
       "items": [
         {
-          "title": "Abholung und Lieferung",
-          "text": "Unsere Küche und unsere Pizza bei dir zu Hause oder in deiner Ferienwohnung. Gleiche Sorgfalt, gleicher Geschmack."
+          "title": "Zum Mitnehmen",
+          "text": "Unsere Küche und unsere Pizza zum Mitnehmen, für einen Abend in der Ferienwohnung oder zu Hause. Gleiche Sorgfalt, gleicher Geschmack."
         },
         {
-          "title": "Garten und Events",
-          "text": "Sommerabende im Freien, Geburtstage, Gruppenessen und Feiern. Der Garten ist bereit für dein Event."
+          "title": "Garten im Sommer",
+          "text": "Von Juni bis Oktober essen Sie bei uns im Garten: Sommerabende, Geburtstage, gesellige Abendessen und Feiern."
         },
         {
-          "title": "Geschäftsessen und Meetings",
-          "text": "Separater Raum, Präsentationstechnik, Kaffeepausen, Buffet oder Light Lunch. Du konzentrierst dich auf das Meeting, um den Rest kümmern wir uns."
+          "title": "Der Geschmack der Region",
+          "text": "Käse, Wurst, Äpfel, Mehl und Gemüse aus dem Trentino, ausgewählt bei Erzeugern aus unseren Tälern. Wir wissen, woher jede Zutat kommt. Und das schmeckt man."
         }
       ]
     },
     "quote": "Die Täler liefern die Zutaten. Wir bringen das Handwerk.",
     "book": {
       "eyebrow": "Reservierung",
-      "title": "Dein Tisch wartet.",
-      "text": "Bald kannst du online über TheFork reservieren oder uns per WhatsApp schreiben. Bis dahin freuen wir uns auf dich in der Via Campiglio 59.",
-      "thefork": "TheFork · demnächst",
-      "whatsapp": "WhatsApp · demnächst"
+      "title": "Ihr Tisch wartet.",
+      "text": "Schreiben Sie uns per WhatsApp oder nutzen Sie das Formular unten: Wir bestätigen Ihren Tisch so schnell wie möglich. Dienstag ist Ruhetag.",
+      "whatsapp": "Per WhatsApp schreiben",
+      "form": "Tisch reservieren",
+      "waText": "Guten Tag, ich möchte gerne einen Tisch in der Locanda dei Gemelli reservieren."
+    },
+    "table": {
+      "eyebrow": "Tisch reservieren",
+      "title": "Anfrage für eine Tischreservierung",
+      "lead": "Nennen Sie uns Tag, Uhrzeit und Personenzahl. Die Reservierung ist bestätigt, sobald wir Ihnen per Telefon, WhatsApp oder E-Mail antworten.",
+      "name": "Vor- und Nachname",
+      "phone": "Telefon (auch WhatsApp)",
+      "email": "E-Mail",
+      "date": "Tag",
+      "time": "Uhrzeit",
+      "lunch": "Mittagessen",
+      "dinner": "Abendessen",
+      "people": "Personen",
+      "more": "Mehr als 12",
+      "notes": "Hinweise: Allergien, Kinderstuhl, besondere Anlässe",
+      "subject": "Tischanfrage (DE) – Website Locanda dei Gemelli",
+      "submit": "Anfrage senden",
+      "sent": "Danke! Wir haben Ihre Anfrage erhalten und bestätigen Ihren Tisch so bald wie möglich.",
+      "orWhatsapp": "Lieber per WhatsApp?"
     }
   },
   "valdisole": {
@@ -256,7 +291,7 @@
     "hero": {
       "eyebrow": "Erlebnisse",
       "title": "Zwei Saisons. Ein Tal, das nie stillsteht.",
-      "lead": "Dimaro Folgarida ist der ideale Ausgangspunkt: Pisten im Winter, Flüsse und Wege im Sommer. Du wählst den Tag, um den Abend kümmern wir uns."
+      "lead": "Dimaro Folgarida ist der ideale Ausgangspunkt: Pisten im Winter, Flüsse und Wege im Sommer. Sie wählen den Tag, um den Abend kümmern wir uns."
     },
     "winter": {
       "eyebrow": "Winter · Dezember – April",
@@ -380,8 +415,8 @@
       ]
     },
     "base": {
-      "title": "Der Tag gehört dir. Der Abend gehört uns.",
-      "text": "Zurück von der Piste oder vom Weg, hinauf in die Wohnung und hinunter zum Abendessen. Kein Auto, kein Tisch, den du suchen musst."
+      "title": "Der Tag gehört Ihnen. Der Abend gehört uns.",
+      "text": "Zurück von der Piste oder vom Weg, hinauf in die Wohnung und hinunter zum Abendessen. Kein Auto, kein Tisch, den Sie suchen müssen."
     }
   },
   "request": {
@@ -392,7 +427,7 @@
     "hero": {
       "eyebrow": "Buchung",
       "title": "Anfrage und Buchung",
-      "lead": "Nenne uns Reisedaten, Anzahl der Gäste und, wenn du möchtest, deine Wunschwohnung. Wir antworten per E-Mail mit Verfügbarkeit und Preis."
+      "lead": "Nennen Sie uns Reisedaten, Anzahl der Gäste und, wenn Sie möchten, Ihre Wunschwohnung. Wir antworten per E-Mail mit Verfügbarkeit und Preis."
     },
     "form": {
       "subject": "Buchungsanfrage Ferienwohnung – Website Locanda dei Gemelli (DE)",
@@ -407,16 +442,16 @@
       "adults": "Erwachsene",
       "children": "Kinder",
       "childAge": "Alter Kind {n}",
-      "agesNote": "Bitte gib das Alter jedes Kindes am Anreisetag an.",
+      "agesNote": "Bitte geben Sie das Alter jedes Kindes am Anreisetag an.",
       "apartment": "Ferienwohnung",
       "any": "Keine Präferenz",
       "pets": "Haustiere",
       "no": "Nein",
       "yes": "Ja",
-      "message": "Deine Anfrage",
-      "privacy": "Ich habe die Datenschutzerklärung gelesen und willige in die Verarbeitung meiner Daten zur Beantwortung dieser Anfrage ein. *",
+      "message": "Ihre Anfrage",
+      "privacy": "Ich habe die Datenschutzerklärung gelesen *",
       "submit": "Anfrage senden",
-      "sent": "Danke! Wir haben deine Anfrage erhalten und antworten dir so schnell wie möglich per E-Mail.",
+      "sent": "Danke! Wir haben Ihre Anfrage erhalten und antworten Ihnen so schnell wie möglich per E-Mail.",
       "privacyLink": "Datenschutzerklärung"
     },
     "asideTitle": "Warum hier anfragen",
@@ -424,7 +459,8 @@
       "Direkte Antwort von den Gastgebern der Locanda",
       "Jetzt keine Zahlung erforderlich",
       "Restaurant und Pizzeria im Erdgeschoss"
-    ]
+    ],
+    "paymentNote": "Zu Ihrer Sicherheit: Zahlungsdaten senden wir nur von lalocandadeigemelli@gmail.com. Wenn Sie von einer anderen Adresse abweichende Bankdaten erhalten, zahlen Sie nicht und kontaktieren Sie uns."
   },
   "privacy": {
     "meta": {
@@ -445,14 +481,14 @@
       {
         "h": "Welche Daten wir erheben",
         "p": [
-          "Daten, die Sie uns mit dem Anfrageformular senden: Vorname, Nachname, E-Mail, Telefon, Reisedaten, Anzahl der Gäste und Alter der Kinder, Haustiere, gewünschte Wohnung und eine eventuelle Nachricht.",
+          "Daten, die Sie uns über die Formulare senden. Für Ferienwohnungen: Vorname, Nachname, E-Mail, Telefon, Reisedaten, Anzahl der Gäste und Alter der Kinder, Haustiere, Wunschwohnung und eventuelle Nachricht. Für Tische: Name, Telefon, E-Mail falls angegeben, Tag, Uhrzeit, Personenzahl und eventuelle Hinweise.",
           "Technische Nutzungsdaten: Der Hoster der Website (GitHub Pages) speichert automatisch IP-Adresse, Browser und aufgerufene Seiten, aus Sicherheits- und Betriebsgründen."
         ]
       },
       {
         "h": "Zweck und Rechtsgrundlage",
         "p": [
-          "Um Ihre Anfrage zu beantworten und auf Wunsch Ihren Aufenthalt zu organisieren: eine vorvertragliche Maßnahme auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Ohne diese Daten können wir nicht antworten.",
+          "Um Ihre Anfrage zu beantworten und auf Wunsch Ihren Aufenthalt oder Ihren Tisch zu organisieren: eine vorvertragliche Maßnahme auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Ohne diese Daten können wir nicht antworten.",
           "Um gesetzliche Pflichten zu erfüllen, wenn der Aufenthalt bestätigt wird, z. B. steuerliche Pflichten und die Meldung der Gäste an die Polizeibehörden (Art. 6 Abs. 1 lit. c DSGVO).",
           "Wir verwenden Ihre Daten nicht für Werbung und verkaufen sie nicht."
         ]
@@ -460,7 +496,7 @@
       {
         "h": "Empfänger",
         "p": [
-          "FormSubmit (formsubmit.co), der Dienst, der das Formular an unser Postfach weiterleitet; Google (Gmail), das das Postfach betreibt; GitHub (Microsoft), das die Website hostet. Sie verarbeiten die Daten in unserem Auftrag. Einige haben ihren Sitz in den USA: Die Übermittlung erfolgt mit den Garantien der DSGVO (EU-US Data Privacy Framework oder Standardvertragsklauseln).",
+          "FormSubmit (formsubmit.co), der Dienst, der die Formulare an unser Postfach weiterleitet; Google (Gmail), das unser E-Mail-Postfach betreibt; GitHub (Microsoft), das die Website hostet. Das sind die technischen Dienste, die wir für Website und E-Mail nutzen. Einige haben ihren Sitz außerhalb der Europäischen Union, zum Beispiel in den USA, daher können Daten dorthin übermittelt werden. Google und Microsoft nehmen am EU-US Data Privacy Framework teil.",
           "Darüber hinaus geben wir keine Daten weiter, außer wenn das Gesetz es verlangt."
         ]
       },
@@ -474,7 +510,8 @@
         "h": "Cookies und externe Dienste",
         "p": [
           "Diese Website verwendet keine eigenen Cookies, keine Profiling-Cookies und keine Statistik-Tools.",
-          "Die Google-Maps-Karte wird nur geladen, wenn Sie auf \"Karte anzeigen\" klicken: Ab dann kann Google eigene Cookies setzen. Links zu Google Maps öffnen die Website von Google mit deren Datenschutzerklärung."
+          "Die Google-Maps-Karte wird nur geladen, wenn Sie auf \"Karte anzeigen\" klicken: Ab dann kann Google eigene Cookies setzen. Links zu Google Maps öffnen die Website von Google und der WhatsApp-Link öffnet WhatsApp (Meta), jeweils mit eigener Datenschutzerklärung.",
+          "Einige Fotos auf der Startseite und der Restaurantseite werden derzeit von der Website locandaelisa.it geladen: Beim Öffnen dieser Seiten übermittelt Ihr Browser Ihre IP-Adresse an diese Website. Wir werden sie durch Fotos auf unserem eigenen Server ersetzen."
         ]
       },
       {

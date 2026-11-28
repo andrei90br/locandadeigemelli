@@ -25,11 +25,15 @@
   <meta property="og:locale:alternate" content="pl_PL">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://locandaelisa.it; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; frame-src 'self' https://maps.google.com https://www.google.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="../../../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png" sizes="512x512">
+  <link rel="manifest" href="../../../site.webmanifest">
   <link rel="apple-touch-icon" href="../../../assets/img/apple-touch-icon.png">
   <link rel="preload" as="image" href="../../../assets/img/appartamenti/jonagold/salotto-02.webp" fetchpriority="high">
   <link rel="preload" as="font" type="font/woff2" href="../../../assets/fonts/inter-latin-400-normal.woff2" crossorigin>
-  <link rel="stylesheet" href="../../../assets/css/style.css?v=9a4dc50c">
+  <link rel="stylesheet" href="../../../assets/css/style.css?v=2e13aa67">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Apartment","name":"Apartment Jonagold","description":"Jonagold apartment in Dimaro Folgarida, Val di Sole: 46 m², sleeps 4, kitchen, private bathroom and Wi-Fi. Restaurant and pizzeria downstairs.","url":"https://locandadeigemelli.com/en/appartamenti/jonagold/","image":["https://locandadeigemelli.com/assets/img/appartamenti/jonagold/salotto-02.webp","https://locandadeigemelli.com/assets/img/appartamenti/jonagold/salotto-01.webp","https://locandadeigemelli.com/assets/img/appartamenti/jonagold/cucina-01.webp","https://locandadeigemelli.com/assets/img/appartamenti/jonagold/cucina-02.webp","https://locandadeigemelli.com/assets/img/appartamenti/jonagold/cucina-03.webp","https://locandadeigemelli.com/assets/img/appartamenti/jonagold/stanza-1-01.webp"],"floorSize":{"@type":"QuantitativeValue","value":46,"unitCode":"MTK"},"occupancy":{"@type":"QuantitativeValue","maxValue":4},"petsAllowed":true,"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Wi-Fi","value":true},{"@type":"LocationFeatureSpecification","name":"Private bathroom","value":true},{"@type":"LocationFeatureSpecification","name":"Kitchen and dining area","value":true},{"@type":"LocationFeatureSpecification","name":"Living area","value":true},{"@type":"LocationFeatureSpecification","name":"TV","value":true},{"@type":"LocationFeatureSpecification","name":"Public parking (cannot be reserved)","value":true},{"@type":"LocationFeatureSpecification","name":"Restaurant and pizzeria on the ground floor","value":true},{"@type":"LocationFeatureSpecification","name":"Extra cots on request","value":true}],"containedInPlace":{"@id":"https://locandadeigemelli.com/#locanda"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"La Locanda dei Gemelli","item":"https://locandadeigemelli.com/en/"},{"@type":"ListItem","position":2,"name":"Apartments","item":"https://locandadeigemelli.com/en/appartamenti/"},{"@type":"ListItem","position":3,"name":"Jonagold","item":"https://locandadeigemelli.com/en/appartamenti/jonagold/"}]}</script>
 </head>
@@ -38,16 +42,16 @@
   <header class="site-header" data-header>
     <div class="wrap header-inner">
       <a class="brand" href="../../../en/"><img src="../../../assets/img/logo.svg" alt="La Locanda dei Gemelli" width="539" height="568"></a>
-      <nav class="nav" aria-label="Main navigation" data-nav>
+      <a class="btn btn-accent btn-sm header-cta" href="../../../en/richiesta/?apt=Jonagold">Request availability</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu" data-menu-toggle><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Main navigation" data-nav>
           <a href="../../../en/appartamenti/" aria-current="page">Apartments</a>
           <a href="../../../en/ristorante/">Restaurant &amp; Pizzeria</a>
           <a href="../../../en/val-di-sole/">Val di Sole</a>
           <a href="../../../en/#dove">Location</a>
-        <div class="langs" aria-label="Language"><a href="../../../appartamenti/jonagold/" hreflang="it" lang="it">IT</a><span aria-current="true">EN</span><a href="../../../de/appartamenti/jonagold/" hreflang="de" lang="de">DE</a><a href="../../../pl/appartamenti/jonagold/" hreflang="pl" lang="pl">PL</a></div>
-        <a class="btn btn-accent nav-cta" href="../../../en/richiesta/">Check availability</a>
+        <div class="langs" role="group" aria-label="Language"><a href="../../../appartamenti/jonagold/" hreflang="it" lang="it">IT</a><span aria-current="true">EN</span><a href="../../../de/appartamenti/jonagold/" hreflang="de" lang="de">DE</a><a href="../../../pl/appartamenti/jonagold/" hreflang="pl" lang="pl">PL</a></div>
+        <a class="btn btn-accent nav-cta" href="../../../en/richiesta/?apt=Jonagold">Request availability</a>
       </nav>
-      <a class="btn btn-accent btn-sm header-cta" href="../../../en/richiesta/">Check availability</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu" data-menu-toggle><span></span><span></span></button>
     </div>
   </header>
   <main id="main">
@@ -146,7 +150,7 @@
         </article>
       </div>
     </section>
-    <dialog class="lightbox" data-lightbox-dialog>
+    <dialog class="lightbox" aria-label="Photo gallery" data-img-error="Photo not available" data-lightbox-dialog>
       <figure><img alt=""><figcaption data-caption></figcaption></figure>
       <button type="button" class="lb-close" aria-label="Close" data-close>×</button>
       <button type="button" class="lb-nav lb-prev" aria-label="Previous photo" data-prev>‹</button>
@@ -177,24 +181,25 @@
         <p class="footer-title">Dine</p>
         <ul class="footer-links">
           <li><a href="../../../en/ristorante/">Restaurant &amp; Pizzeria</a></li>
+          <li><a href="../../../en/ristorante/#tavolo">Book a table</a></li>
+          <li><a href="https://wa.me/393289839761?text=Hello%2C%20I%20would%20like%20to%20book%20a%20table%20at%20Locanda%20dei%20Gemelli." target="_blank" rel="noopener">WhatsApp for tables: +39 328 983 9761</a></li>
         </ul>
-        <p class="footer-small">Restaurant 12–2:30 pm and 5:30–10 pm · Pizzeria 5:30–10:30 pm · Closed on Tuesdays</p>
+        <p class="footer-small">Restaurant 12:00–14:30 and 17:30–22:00 · Pizzeria 17:30–22:30 · Closed on Tuesdays</p>
         <p class="footer-title">Discover</p>
         <ul class="footer-links">
           <li><a href="../../../en/val-di-sole/">Val di Sole</a></li>
-          <li><a href="../../../en/richiesta/">Check availability</a></li>
+          <li><a href="../../../en/richiesta/">Request availability</a></li>
         </ul>
       </div>
       <div>
         <p class="footer-title">Language</p>
-        <div class="langs"><a href="../../../appartamenti/jonagold/" hreflang="it" lang="it">IT</a><span aria-current="true">EN</span><a href="../../../de/appartamenti/jonagold/" hreflang="de" lang="de">DE</a><a href="../../../pl/appartamenti/jonagold/" hreflang="pl" lang="pl">PL</a></div>
+        <div class="langs" role="group" aria-label="Language"><a href="../../../appartamenti/jonagold/" hreflang="it" lang="it">IT</a><span aria-current="true">EN</span><a href="../../../de/appartamenti/jonagold/" hreflang="de" lang="de">DE</a><a href="../../../pl/appartamenti/jonagold/" hreflang="pl" lang="pl">PL</a></div>
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <!-- TODO: CIN degli appartamenti -->
       <p class="footer-legal">© 2026 Bulla Brothers S.a.s. di Manushaqe Bulla &amp; C. · Registered office Via Milano 13, 38027 Malè (TN) · Tax code and VAT no. 02857660225 · REA TN-254820 · PEC <a href="mailto:bullabrothers@legalmail.it">bullabrothers@legalmail.it</a> · <a href="../../../en/privacy/">Privacy and cookies</a></p>
     </div>
   </footer>
-  <script src="../../../assets/js/main.js?v=e3c3fd52" defer></script>
+  <script src="../../../assets/js/main.js?v=52414356" defer></script>
 </body>
 </html>

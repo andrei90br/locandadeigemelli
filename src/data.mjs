@@ -5,6 +5,8 @@ import { readdirSync } from 'node:fs';
 
 export const SITE_URL = 'https://locandadeigemelli.com/';
 export const REQUEST_EMAIL = 'lalocandadeigemelli@gmail.com';
+// Cellulare per le richieste di tavolo su WhatsApp (da Andrei, 2026-11-28).
+export const WHATSAPP = { number: '393289839761', display: '+39 328 983 9761' };
 // Scheda Google Business Profile "La Locanda dei Gemelli" (CID dalla scheda creata il 2026-11-26).
 export const GOOGLE_PLACE_URL = 'https://maps.google.com/?cid=524019156597058033';
 export const MAPS_URL = GOOGLE_PLACE_URL;
@@ -12,7 +14,7 @@ export const MAPS_URL = GOOGLE_PLACE_URL;
 export const MAP_EMBED_URL = 'https://maps.google.com/maps?q=La+Locanda+dei+Gemelli%2C+Via+Campiglio+59%2C+38025+Dimaro+TN&z=15&output=embed';
 export const DIRECTIONS_URL = 'https://www.google.com/maps/dir/?api=1&destination=La+Locanda+dei+Gemelli%2C+Via+Campiglio+59%2C+38025+Dimaro+TN';
 
-// Dati legali (visura camerale). CIN degli appartamenti: da aggiungere quando arriva.
+// Dati legali (visura camerale). TODO: CIN degli appartamenti, da aggiungere nel footer quando arriva.
 export const LEGAL = {
   company: 'Bulla Brothers S.a.s. di Manushaqe Bulla & C.',
   address: 'Via Milano 13, 38027 Malè (TN)',
@@ -36,7 +38,7 @@ export const IMG = {
   restaurant: SRC + '2022/06/bistrot.png',
   takeaway: SRC + '2022/06/Asporto-e-consegna-a-domicilio.jpg',
   garden: SRC + '2022/07/servizio-giardino-eventi.jpg',
-  business: SRC + '2022/06/Business-Locanda-Elisa-2.jpg',
+  products: 'assets/img/prodotti-genuini-senza-logo.jpg',
   stay: 'assets/img/appartamenti/golden/cucina-02.webp',
   illustration: 'assets/img/prodotti-genuini.jpg',
   // Foto invernali: Giorgio Galeotti, Wikimedia Commons, CC BY 4.0 (credito in pagina Val di Sole)

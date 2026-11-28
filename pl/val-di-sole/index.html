@@ -25,11 +25,15 @@
   <meta property="og:locale:alternate" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://locandaelisa.it; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; frame-src 'self' https://maps.google.com https://www.google.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="../../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png" sizes="512x512">
+  <link rel="manifest" href="../../site.webmanifest">
   <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
   <link rel="preload" as="image" href="../../assets/img/val-di-sole/inverno-brenta-malghet-aut.webp" fetchpriority="high">
   <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin-400-normal.woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/style.css?v=9a4dc50c">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=2e13aa67">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"La Locanda dei Gemelli","item":"https://locandadeigemelli.com/pl/"},{"@type":"ListItem","position":2,"name":"Val di Sole","item":"https://locandadeigemelli.com/pl/val-di-sole/"}]}</script>
 </head>
 <body>
@@ -37,16 +41,16 @@
   <header class="site-header" data-header>
     <div class="wrap header-inner">
       <a class="brand" href="../../pl/"><img src="../../assets/img/logo.svg" alt="La Locanda dei Gemelli" width="539" height="568"></a>
-      <nav class="nav" aria-label="Nawigacja główna" data-nav>
+      <a class="btn btn-accent btn-sm header-cta" href="../../pl/richiesta/">Zapytaj o dostępność</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz menu" data-label-open="Otwórz menu" data-label-close="Zamknij menu" data-menu-toggle><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Nawigacja główna" data-nav>
           <a href="../../pl/appartamenti/">Apartamenty</a>
           <a href="../../pl/ristorante/">Restauracja i pizzeria</a>
           <a href="../../pl/val-di-sole/" aria-current="page">Val di Sole</a>
           <a href="../../pl/#dove">Lokalizacja</a>
-        <div class="langs" aria-label="Język"><a href="../../val-di-sole/" hreflang="it" lang="it">IT</a><a href="../../en/val-di-sole/" hreflang="en" lang="en">EN</a><a href="../../de/val-di-sole/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
+        <div class="langs" role="group" aria-label="Język"><a href="../../val-di-sole/" hreflang="it" lang="it">IT</a><a href="../../en/val-di-sole/" hreflang="en" lang="en">EN</a><a href="../../de/val-di-sole/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
         <a class="btn btn-accent nav-cta" href="../../pl/richiesta/">Zapytaj o dostępność</a>
       </nav>
-      <a class="btn btn-accent btn-sm header-cta" href="../../pl/richiesta/">Zapytaj o dostępność</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Otwórz menu" data-menu-toggle><span></span><span></span></button>
     </div>
   </header>
   <main id="main">
@@ -71,12 +75,12 @@
         <p class="eyebrow">Ośrodki narciarskie</p>
         <h3 class="sub-title">Cztery ośrodki, jedna baza.</h3>
         <div class="ski-grid">
-          <article class="exp-card ski-card"><span class="num">01</span><h3>Folgarida-Marilleva</h3><p>Nasz domowy ośrodek. Gondole w Folgaridzie startują kilka minut od Locanda i prowadzą na trasy wytyczone wśród lasów, z dwiema oświetlonymi trasami do jazdy po zmroku. Z Daolasy gondola wjeżdża na 2000 metrów w dwanaście minut.</p><ul class="facts"><li>ok. 60 km tras</li><li>25 wyciągów</li><li>4 snowparki w ośrodku</li><li>ok. 10 minut</li></ul></article>
-          <article class="exp-card ski-card"><span class="num">02</span><h3>Madonna di Campiglio</h3><p>Połączona na nartach z Folgarida-Marilleva i Pinzolo: razem tworzą Skiarea Campiglio Dolomiti di Brenta. Trasy do 2500 metrów z widokiem na Dolomity Brenta, wpisane na listę UNESCO, i długie zjazdy, takie jak Graffer, prawie pięć kilometrów. Samochodem jedziesz tą samą drogą, przy której stoi Locanda.</p><ul class="facts"><li>ponad 150 km z Folgaridą i Pinzolo</li><li>do 2500 m</li><li>ok. 25 minut</li></ul></article>
-          <article class="exp-card ski-card"><span class="num">03</span><h3>Passo del Tonale i lodowiec Presena</h3><p>Ośrodek Pontedilegno-Tonale łączy Trentino i Lombardię. Lodowiec Presena pozwala wjechać na 3000 metrów, z pewnym śniegiem przez cały sezon i jazdą aż do późnej wiosny. Na wysokości 2000 metrów snowpark z trasą skicrossową.</p><ul class="facts"><li>ok. 100 km tras</li><li>30 wyciągów</li><li>do 3000 m</li><li>ok. 45 minut</li></ul></article>
-          <article class="exp-card ski-card"><span class="num">04</span><h3>Pejo3000</h3><p>Spokojniejszy, kameralny ośrodek w Parku Narodowym Stelvio. Mniej zatłoczone trasy, szkoła narciarska przyjazna dzieciom i kolejka linowa wjeżdżająca w stronę 3000 metrów. Przedstawia się jako pierwszy na świecie ośrodek narciarski wolny od plastiku.</p><ul class="facts"><li>20 km tras</li><li>7 wyciągów</li><li>do 3000 m</li><li>ok. 40 minut</li></ul></article>
+          <article class="exp-card ski-card"><span class="num">01</span><h4 class="h3">Folgarida-Marilleva</h4><p>Nasz domowy ośrodek. Gondole w Folgaridzie startują kilka minut od Locanda i prowadzą na trasy wytyczone wśród lasów, z dwiema oświetlonymi trasami do jazdy po zmroku. Z Daolasy gondola wjeżdża na 2000 metrów w dwanaście minut.</p><ul class="ski-facts"><li>ok. 60 km tras</li><li>25 wyciągów</li><li>4 snowparki w ośrodku</li><li>ok. 10 minut</li></ul></article>
+          <article class="exp-card ski-card"><span class="num">02</span><h4 class="h3">Madonna di Campiglio</h4><p>Połączona na nartach z Folgarida-Marilleva i Pinzolo: razem tworzą Skiarea Campiglio Dolomiti di Brenta. Trasy do 2500 metrów z widokiem na Dolomity Brenta, wpisane na listę UNESCO, i długie zjazdy, takie jak Graffer, prawie pięć kilometrów. Samochodem jedziesz tą samą drogą, przy której stoi Locanda.</p><ul class="ski-facts"><li>ponad 150 km z Folgaridą i Pinzolo</li><li>do 2500 m</li><li>ok. 25 minut</li></ul></article>
+          <article class="exp-card ski-card"><span class="num">03</span><h4 class="h3">Passo del Tonale i lodowiec Presena</h4><p>Ośrodek Pontedilegno-Tonale łączy Trentino i Lombardię. Lodowiec Presena pozwala wjechać na 3000 metrów, z pewnym śniegiem przez cały sezon i jazdą aż do późnej wiosny. Na wysokości 2000 metrów snowpark z trasą skicrossową.</p><ul class="ski-facts"><li>ok. 100 km tras</li><li>30 wyciągów</li><li>do 3000 m</li><li>ok. 45 minut</li></ul></article>
+          <article class="exp-card ski-card"><span class="num">04</span><h4 class="h3">Pejo3000</h4><p>Spokojniejszy, kameralny ośrodek w Parku Narodowym Stelvio. Mniej zatłoczone trasy, szkoła narciarska przyjazna dzieciom i kolejka linowa wjeżdżająca w stronę 3000 metrów. Przedstawia się jako pierwszy na świecie ośrodek narciarski wolny od plastiku.</p><ul class="ski-facts"><li>20 km tras</li><li>7 wyciągów</li><li>do 3000 m</li><li>ok. 40 minut</li></ul></article>
         </div>
-        <p class="facts-note">Orientacyjny czas dojazdu samochodem z Locanda. Dane ośrodków dotyczą bieżącego sezonu i mogą się zmieniać w zależności od pracy wyciągów.</p>
+        <p class="ski-facts-note">Orientacyjny czas dojazdu samochodem z Locanda. Dane ośrodków dotyczą bieżącego sezonu i mogą się zmieniać w zależności od pracy wyciągów.</p>
         <div class="tip-grid">
           <article class="tip"><h3>Jeden skipass, osiem miejscowości.</h3><p>Skipass Skirama Dolomiti Adamello Brenta otwiera 380 km tras i 150 wyciągów: oprócz ośrodków Val di Sole obejmuje Paganellę, Monte Bondone i Alpe Cimbra. Cały tydzień bez powtarzania tej samej trasy.</p></article>
           <article class="tip"><h3>Pociągiem pod wyciąg.</h3><p>Kolej Trento–Malè–Mezzana zatrzymuje się w Dimaro i w Daolasie, gdzie stacja łączy się bezpośrednio z gondolą na stok. Zostawiasz samochód na miejscu i wjeżdżasz w góry z nartami na ramieniu.</p></article>
@@ -91,8 +95,8 @@
           <p class="lead">Folgarida-Marilleva, Madonna di Campiglio i Pinzolo są połączone na nartach. Poznaj mapę: dotknij punktu, aby zobaczyć wysokości, schroniska i usługi.</p>
         </div>
         <figure class="ski-map-figure">
-          <iframe src="mappa-piste/?v=82472182bd7b7876" title="Mapa tras Skiarea Campiglio Dolomiti di Brenta, od Folgaridy i Marillevy po Madonna di Campiglio i Pinzolo" loading="lazy"></iframe>
-          <figcaption><a href="mappa-piste/?v=82472182bd7b7876" target="_blank" rel="noopener">Otwórz na pełnym ekranie</a> · Mapa interaktywna: dotknij punktów, aby poznać miejscowości, szczyty i schroniska. Mapa © Cormar, Skiarea Campiglio Dolomiti di Brenta.</figcaption>
+          <iframe src="mappa-piste/?v=80f4b39ebd7b7876" title="Mapa tras Skiarea Campiglio Dolomiti di Brenta, od Folgaridy i Marillevy po Madonna di Campiglio i Pinzolo" loading="lazy"></iframe>
+          <figcaption><a href="mappa-piste/?v=80f4b39ebd7b7876" target="_blank" rel="noopener">Otwórz na pełnym ekranie</a> · Mapa interaktywna: dotknij punktów, aby poznać miejscowości, szczyty i schroniska. Mapa © Cormar, Skiarea Campiglio Dolomiti di Brenta.</figcaption>
         </figure>
       </div>
     </section>
@@ -164,6 +168,8 @@
         <p class="footer-title">Jedzenie</p>
         <ul class="footer-links">
           <li><a href="../../pl/ristorante/">Restauracja i pizzeria</a></li>
+          <li><a href="../../pl/ristorante/#tavolo">Zarezerwuj stolik</a></li>
+          <li><a href="https://wa.me/393289839761?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20zarezerwowa%C4%87%20stolik%20w%20Locanda%20dei%20Gemelli." target="_blank" rel="noopener">WhatsApp: rezerwacja stolików: +39 328 983 9761</a></li>
         </ul>
         <p class="footer-small">Restauracja 12–14:30 i 17:30–22 · Pizzeria 17:30–22:30 · We wtorki nieczynne</p>
         <p class="footer-title">Odkryj</p>
@@ -174,14 +180,13 @@
       </div>
       <div>
         <p class="footer-title">Język</p>
-        <div class="langs"><a href="../../val-di-sole/" hreflang="it" lang="it">IT</a><a href="../../en/val-di-sole/" hreflang="en" lang="en">EN</a><a href="../../de/val-di-sole/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
+        <div class="langs" role="group" aria-label="Język"><a href="../../val-di-sole/" hreflang="it" lang="it">IT</a><a href="../../en/val-di-sole/" hreflang="en" lang="en">EN</a><a href="../../de/val-di-sole/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <!-- TODO: CIN degli appartamenti -->
       <p class="footer-legal">© 2026 Bulla Brothers S.a.s. di Manushaqe Bulla &amp; C. · Siedziba Via Milano 13, 38027 Malè (TN) · NIP (C.F. i P.IVA) 02857660225 · REA TN-254820 · PEC <a href="mailto:bullabrothers@legalmail.it">bullabrothers@legalmail.it</a> · <a href="../../pl/privacy/">Prywatność i cookies</a></p>
     </div>
   </footer>
-  <script src="../../assets/js/main.js?v=e3c3fd52" defer></script>
+  <script src="../../assets/js/main.js?v=52414356" defer></script>
 </body>
 </html>

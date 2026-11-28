@@ -9,15 +9,17 @@
     "where": "Dove siamo",
     "languages": "Lingua",
     "open": "Apri il menu",
-    "request": "Richiedi disponibilità"
+    "request": "Richiedi disponibilità",
+    "close": "Chiudi il menu",
+    "table": "Prenota un tavolo"
   },
   "booking": {
-    "label": "Verifica la disponibilità degli appartamenti",
+    "label": "Richiedi la disponibilità degli appartamenti",
     "arrival": "Arrivo",
     "departure": "Partenza",
     "adults": "Adulti",
     "children": "Bambini",
-    "submit": "Verifica disponibilità"
+    "submit": "Richiedi disponibilità"
   },
   "common": {
     "explore": "Scopri",
@@ -37,7 +39,19 @@
     "closedDay": "Martedì",
     "closed": "Chiuso",
     "beds": "{n} posti letto",
-    "allApartments": "Tutti gli appartamenti"
+    "allApartments": "Tutti gli appartamenti",
+    "form": {
+      "required": "Compila questo campo.",
+      "choose": "Scegli un'opzione.",
+      "email": "Inserisci un indirizzo email valido.",
+      "departure": "La partenza deve essere dopo l'arrivo.",
+      "past": "Scegli una data da oggi in poi.",
+      "tuesday": "Il martedì siamo chiusi: scegli un altro giorno.",
+      "privacy": "Spunta la casella per continuare.",
+      "sending": "Invio in corso…",
+      "back": "Torna alla home",
+      "imgError": "Foto non disponibile"
+    }
   },
   "footer": {
     "stay": "Soggiorno",
@@ -48,18 +62,20 @@
     "vat": "C.F. e P.IVA",
     "rea": "REA",
     "pec": "PEC",
-    "privacy": "Privacy e cookie"
+    "privacy": "Privacy e cookie",
+    "whatsapp": "WhatsApp per i tavoli",
+    "table": "Prenota un tavolo"
   },
   "home": {
     "notice": "Nuova gestione",
     "meta": {
       "title": "Locanda dei Gemelli · Appartamenti e Pizzeria a Dimaro",
-      "description": "6 appartamenti con cucina e ristorante pizzeria al piano terra a Dimaro Folgarida, Val di Sole. Cucina trentina a km zero, piste a pochi minuti."
+      "description": "6 appartamenti con cucina e ristorante pizzeria al piano terra a Dimaro Folgarida, Val di Sole. Cucina trentina con prodotti del territorio, piste a pochi minuti."
     },
     "hero": {
       "eyebrow": "Dimaro Folgarida · Val di Sole · Trentino",
       "title": "Dormi bene. Mangia meglio. Sotto lo stesso tetto.",
-      "lead": "6 appartamenti indipendenti e un ristorante pizzeria al piano terra, a pochi minuti dalle piste di Folgarida-Marilleva e dai sentieri della Val di Sole."
+      "lead": "6 appartamenti indipendenti e un ristorante pizzeria al piano terra, a pochi minuti dalle piste di Folgarida-Marilleva e dai sentieri della Val di Sole. In coppia, in famiglia, con gli amici o da soli: qui tutti sono i benvenuti."
     },
     "proof": [
       {
@@ -68,11 +84,11 @@
       },
       {
         "title": "Ristorante e pizzeria",
-        "text": "Al piano terra, a pranzo e a cena"
+        "text": "Ristorante a pranzo e a cena, pizzeria la sera"
       },
       {
-        "title": "Km zero",
-        "text": "Ingredienti di Val di Sole, Val di Non e Valle dell'Adige"
+        "title": "Prodotti del territorio",
+        "text": "Ingredienti della Val di Sole e della Val di Non"
       },
       {
         "title": "Due stagioni",
@@ -86,14 +102,14 @@
     },
     "stay": {
       "eyebrow": "Soggiorno",
-      "title": "Sei appartamenti. Zero compromessi.",
-      "text": "Ogni appartamento è indipendente, con cucina attrezzata, zona giorno e bagno privato. Spazio vero per coppie, famiglie e gruppi di amici, con la libertà di una casa e la comodità di un ristorante sotto.",
+      "title": "Sei appartamenti. Spazio per tutti.",
+      "text": "Ogni appartamento è indipendente, con cucina attrezzata, zona giorno e bagno privato. Spazio vero per chi viaggia da solo, in coppia, in famiglia o con gli amici, con la libertà di una casa e la comodità di un ristorante sotto.",
       "cta": "Scopri gli appartamenti"
     },
     "dine": {
       "eyebrow": "Ristorazione",
-      "title": "Cucina trentina vera. Pizza da maestro.",
-      "text": "A pranzo e a cena, piatti della tradizione solandra con gli ingredienti delle nostre valli. La sera, la pizza del nostro maestro pizzaiolo. Aperto a tutti, non solo agli ospiti.",
+      "title": "Cucina trentina vera. Pizza da maestra.",
+      "text": "A pranzo e a cena, piatti della tradizione solandra con gli ingredienti delle nostre valli. La sera, la pizza di Barbara, la nostra maestra pizzaiola. Aperto a tutti, non solo agli ospiti.",
       "cta": "Scopri il ristorante"
     },
     "exp": {
@@ -108,7 +124,7 @@
       "text": "Siamo a Dimaro Folgarida, a pochi minuti dagli impianti di Folgarida-Marilleva e lungo la ciclabile della Val di Sole. Madonna di Campiglio e il Passo del Tonale sono a portata di mano."
     },
     "final": {
-      "title": "Le date migliori vanno via per prime.",
+      "title": "Scegli le date. Al resto pensiamo noi.",
       "text": "Inviaci le tue date: ti rispondiamo con disponibilità e prezzo. La richiesta non è vincolante.",
       "cta": "Richiedi disponibilità"
     }
@@ -182,12 +198,12 @@
   "restaurant": {
     "meta": {
       "title": "Ristorante Pizzeria a Dimaro | Locanda dei Gemelli",
-      "description": "Cucina trentina a km zero e pizza del maestro pizzaiolo a Dimaro Folgarida, Val di Sole. Pranzo e cena, chiuso il martedì."
+      "description": "Cucina trentina con prodotti del territorio e la pizza della maestra pizzaiola Barbara a Dimaro Folgarida, Val di Sole. Pranzo e cena, chiuso il martedì."
     },
     "hero": {
       "eyebrow": "Ristorante e Pizzeria",
-      "title": "Cucina trentina vera. Pizza da maestro. Zero scorciatoie.",
-      "lead": "L'osteria moderna della Val di Sole: ingredienti delle nostre valli, ricette della tradizione solandra e una pizza che vale il viaggio. Aperto a tutti, a pranzo e a cena."
+      "title": "Cucina trentina vera. Pizza da maestra.",
+      "lead": "L'osteria moderna della Val di Sole: ingredienti delle nostre valli, ricette della tradizione solandra e la pizza di Barbara, la nostra maestra pizzaiola. Aperto a tutti, a pranzo e a cena."
     },
     "manifesto": {
       "eyebrow": "Osteria moderna",
@@ -212,13 +228,12 @@
       "eyebrow": "Il ristorante",
       "title": "La tradizione, fatta oggi.",
       "text": "Piatti della cucina trentina riletti con mano moderna, e qualche proposta internazionale per chi vuole uscire dal sentiero. Ingredienti freschi, porzioni oneste, sapori netti. È il pranzo che ti serve tra una pista e l'altra e la cena che ricordi a fine vacanza.",
-      "hours": "Pranzo 12:00 – 14:30 · Cena 17:30 – 22:00",
-      "menu": "Il menu completo sarà presto disponibile su questa pagina."
+      "hours": "Pranzo 12:00 – 14:30 · Cena 17:30 – 22:00"
     },
     "pizza": {
       "eyebrow": "La pizzeria",
-      "title": "La pizza è un mestiere. Il nostro maestro lo sa.",
-      "text": "Ogni pizza esce dalle mani del nostro maestro pizzaiolo. Impasti curati, ingredienti di stagione e di qualità, abbinamenti studiati. Trovi le classiche che ami e le combinazioni speciali nate nella nostra cucina, che non trovi altrove.",
+      "title": "La pizza è un mestiere. Barbara lo sa.",
+      "text": "Ogni pizza esce dalle mani di Barbara, la nostra maestra pizzaiola. Impasti curati, ingredienti di stagione e di qualità, abbinamenti studiati. Trovi le classiche che ami e le combinazioni nate nella nostra cucina.",
       "hours": "Tutte le sere 17:30 – 22:30, martedì escluso"
     },
     "services": {
@@ -226,16 +241,16 @@
       "title": "Lo stesso standard, ovunque tu voglia mangiare.",
       "items": [
         {
-          "title": "Asporto e consegna a domicilio",
-          "text": "La nostra cucina e la nostra pizza, a casa tua o nel tuo appartamento in vacanza. Stessa cura, stesso sapore."
+          "title": "Asporto",
+          "text": "La nostra cucina e la nostra pizza da portare via, per una cena in appartamento o a casa. Stessa cura, stesso sapore."
         },
         {
-          "title": "Giardino ed eventi",
-          "text": "Serate estive all'aperto, compleanni, cene di gruppo e feste. Il giardino è pronto ad accogliere il tuo evento."
+          "title": "Giardino d'estate",
+          "text": "Da giugno a ottobre si mangia all'aperto, in giardino: serate estive, compleanni, cene in compagnia e feste."
         },
         {
-          "title": "Pranzi e meeting di lavoro",
-          "text": "Sala riservata, tecnologia per presentare, coffee break, buffet o light lunch. Tu pensi alla riunione, al resto pensiamo noi."
+          "title": "Il sapore del territorio",
+          "text": "Formaggi, salumi, mele, farine e verdure del Trentino, scelti dai produttori delle nostre valli. Sappiamo da dove arriva ogni ingrediente. E nel piatto si sente."
         }
       ]
     },
@@ -243,9 +258,29 @@
     "book": {
       "eyebrow": "Prenotazioni",
       "title": "Il tuo tavolo ti aspetta.",
-      "text": "A breve potrai prenotare online con TheFork o scriverci su WhatsApp in un attimo. Nel frattempo ti aspettiamo in Via Campiglio 59.",
-      "thefork": "TheFork · in arrivo",
-      "whatsapp": "WhatsApp · in arrivo"
+      "text": "Scrivici su WhatsApp o compila il modulo qui sotto: ti confermiamo il tavolo il prima possibile. Il martedì siamo chiusi.",
+      "whatsapp": "Scrivici su WhatsApp",
+      "form": "Prenota un tavolo",
+      "waText": "Buongiorno, vorrei prenotare un tavolo alla Locanda dei Gemelli."
+    },
+    "table": {
+      "eyebrow": "Prenota un tavolo",
+      "title": "Richiesta di prenotazione tavolo",
+      "lead": "Indicaci giorno, ora e numero di persone. La prenotazione è confermata quando ti rispondiamo per telefono, WhatsApp o email.",
+      "name": "Nome e cognome",
+      "phone": "Telefono (anche WhatsApp)",
+      "email": "Email",
+      "date": "Giorno",
+      "time": "Ora",
+      "lunch": "Pranzo",
+      "dinner": "Cena",
+      "people": "Persone",
+      "more": "Più di 12",
+      "notes": "Note: allergie, seggiolone, occasioni speciali",
+      "subject": "Richiesta tavolo – sito Locanda dei Gemelli",
+      "submit": "Invia la richiesta",
+      "sent": "Grazie! Abbiamo ricevuto la tua richiesta e ti confermiamo il tavolo al più presto.",
+      "orWhatsapp": "Preferisci WhatsApp?"
     }
   },
   "valdisole": {
@@ -414,7 +449,7 @@
       "no": "No",
       "yes": "Sì",
       "message": "Richiesta",
-      "privacy": "Ho letto l'informativa privacy e acconsento al trattamento dei miei dati per ricevere una risposta a questa richiesta. *",
+      "privacy": "Ho letto l'informativa privacy *",
       "submit": "Invia la richiesta",
       "sent": "Grazie! Abbiamo ricevuto la tua richiesta e ti rispondiamo via email al più presto.",
       "privacyLink": "informativa privacy"
@@ -424,7 +459,8 @@
       "Risposta diretta da chi gestisce la Locanda",
       "Nessun pagamento richiesto ora",
       "Ristorante e pizzeria al piano terra"
-    ]
+    ],
+    "paymentNote": "Per la tua sicurezza: i dati per il pagamento te li inviamo solo da lalocandadeigemelli@gmail.com. Se ricevi coordinate diverse da altri indirizzi, non pagare e contattaci."
   },
   "privacy": {
     "meta": {
@@ -445,14 +481,14 @@
       {
         "h": "Quali dati raccogliamo",
         "p": [
-          "Dati che ci invii con il modulo di richiesta: nome, cognome, email, telefono, date del soggiorno, numero di ospiti ed età dei bambini, presenza di animali, appartamento preferito ed eventuale messaggio.",
+          "Dati che ci invii con i moduli. Per gli appartamenti: nome, cognome, email, telefono, date del soggiorno, numero di ospiti ed età dei bambini, presenza di animali, appartamento preferito ed eventuale messaggio. Per i tavoli: nome, telefono, email se la indichi, giorno, ora, numero di persone ed eventuali note.",
           "Dati tecnici di navigazione: chi ospita il sito (GitHub Pages) registra in automatico indirizzo IP, browser e pagine visitate, per motivi di sicurezza e funzionamento."
         ]
       },
       {
         "h": "Perché li usiamo e su quale base",
         "p": [
-          "Per rispondere alla tua richiesta e, se lo vorrai, organizzare il soggiorno: è una misura precontrattuale richiesta da te (art. 6.1.b GDPR). Senza questi dati non possiamo risponderti.",
+          "Per rispondere alla tua richiesta e, se lo vorrai, organizzare il soggiorno o il tavolo: è una misura precontrattuale richiesta da te (art. 6.1.b GDPR). Senza questi dati non possiamo risponderti.",
           "Per adempiere agli obblighi di legge se il soggiorno viene confermato, per esempio fiscali e di comunicazione degli ospiti all'autorità di pubblica sicurezza (art. 6.1.c GDPR).",
           "Non usiamo i tuoi dati per pubblicità e non li vendiamo a nessuno."
         ]
@@ -460,7 +496,7 @@
       {
         "h": "A chi li comunichiamo",
         "p": [
-          "FormSubmit (formsubmit.co), il servizio che inoltra il modulo alla nostra casella email; Google (Gmail), che gestisce la casella email; GitHub (Microsoft), che ospita il sito. Sono fornitori che trattano i dati per nostro conto. Alcuni hanno sede negli Stati Uniti: in quel caso il trasferimento avviene con le garanzie previste dal GDPR (EU-US Data Privacy Framework o clausole contrattuali standard).",
+          "FormSubmit (formsubmit.co), il servizio che inoltra i moduli alla nostra casella email; Google (Gmail), che gestisce la casella email; GitHub (Microsoft), che ospita il sito. Sono i servizi tecnici che usiamo per il sito e per la posta. Alcuni hanno sede fuori dall'Unione europea, per esempio negli Stati Uniti, e i dati possono quindi essere trasferiti lì. Google e Microsoft aderiscono all'EU-US Data Privacy Framework.",
           "Non comunichiamo i dati ad altri, salvo quando lo richiede la legge."
         ]
       },
@@ -474,7 +510,8 @@
         "h": "Cookie e servizi esterni",
         "p": [
           "Questo sito non usa cookie propri, cookie di profilazione né strumenti di statistica.",
-          "La mappa di Google Maps viene caricata solo se clicchi su \"Mostra la mappa\": da quel momento Google può impostare i suoi cookie. I link a Google Maps aprono il sito di Google, con la sua informativa."
+          "La mappa di Google Maps viene caricata solo se clicchi su \"Mostra la mappa\": da quel momento Google può impostare i suoi cookie. I link a Google Maps aprono il sito di Google e il link WhatsApp apre WhatsApp (Meta), ognuno con la sua informativa.",
+          "Alcune foto della home e della pagina del ristorante sono per ora caricate dal sito locandaelisa.it: aprendo quelle pagine il tuo browser comunica a quel sito il tuo indirizzo IP. Le sostituiremo con foto ospitate da noi."
         ]
       },
       {

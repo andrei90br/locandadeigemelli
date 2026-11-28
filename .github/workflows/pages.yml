@@ -22,6 +22,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -30,7 +32,7 @@ jobs:
       - name: Prepara i file da pubblicare
         run: |
           mkdir _site
-          cp -r CNAME .nojekyll index.html 404.html robots.txt sitemap.xml en de pl appartamenti ristorante val-di-sole richiesta privacy assets _site/
+          cp -r CNAME .nojekyll index.html 404.html favicon.ico site.webmanifest robots.txt sitemap.xml en de pl appartamenti ristorante val-di-sole richiesta privacy assets _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

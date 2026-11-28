@@ -25,28 +25,32 @@
   <meta property="og:locale:alternate" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://locandaelisa.it; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; frame-src 'self' https://maps.google.com https://www.google.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png" sizes="512x512">
+  <link rel="manifest" href="../site.webmanifest">
   <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
   <link rel="preload" as="image" href="https://locandaelisa.it/wp-content/uploads/2024/01/161-Locanda-Elisa-Dic-2023-jpg.webp" fetchpriority="high">
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-latin-400-normal.woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/css/style.css?v=9a4dc50c">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":["LodgingBusiness","Restaurant"],"@id":"https://locandadeigemelli.com/#locanda","description":"6 apartamentów z kuchnią oraz restauracja i pizzeria na parterze, w Dimaro Folgarida w Val di Sole. Kuchnia trydencka, stoki kilka minut stąd.","inLanguage":"pl","logo":"https://locandadeigemelli.com/assets/img/logo.png","acceptsReservations":true,"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Wi-Fi","value":true},{"@type":"LocationFeatureSpecification","name":"Restaurant","value":true},{"@type":"LocationFeatureSpecification","name":"Pizzeria","value":true}],"name":"La Locanda dei Gemelli","alternateName":"Locanda dei Gemelli","legalName":"Bulla Brothers S.a.s. di Manushaqe Bulla & C.","vatID":"IT02857660225","taxID":"02857660225","email":"lalocandadeigemelli@gmail.com","url":"https://locandadeigemelli.com/pl/","image":["https://locandadeigemelli.com/assets/img/og/home.jpg","https://locandadeigemelli.com/assets/img/og/ristorante.jpg"],"servesCuisine":["Trentina","Italiana","Pizza"],"numberOfRooms":6,"petsAllowed":true,"checkinTime":"14:00","checkoutTime":"11:00","hasMap":"https://maps.google.com/?cid=524019156597058033","sameAs":["https://maps.google.com/?cid=524019156597058033"],"address":{"@type":"PostalAddress","streetAddress":"Via Campiglio 59","postalCode":"38025","addressLocality":"Dimaro Folgarida","addressRegion":"TN","addressCountry":"IT"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"14:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:30","closes":"22:30"}]}</script>
+  <link rel="stylesheet" href="../assets/css/style.css?v=2e13aa67">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":["LodgingBusiness","Restaurant"],"@id":"https://locandadeigemelli.com/#locanda","description":"6 apartamentów z kuchnią oraz restauracja i pizzeria na parterze, w Dimaro Folgarida w Val di Sole. Kuchnia trydencka, stoki kilka minut stąd.","inLanguage":"pl","logo":"https://locandadeigemelli.com/assets/img/logo-512.png","acceptsReservations":true,"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Wi-Fi","value":true},{"@type":"LocationFeatureSpecification","name":"Restaurant","value":true},{"@type":"LocationFeatureSpecification","name":"Pizzeria","value":true}],"name":"La Locanda dei Gemelli","alternateName":"Locanda dei Gemelli","legalName":"Bulla Brothers S.a.s. di Manushaqe Bulla & C.","vatID":"IT02857660225","taxID":"02857660225","email":"lalocandadeigemelli@gmail.com","url":"https://locandadeigemelli.com/pl/","image":["https://locandadeigemelli.com/assets/img/og/home.jpg","https://locandadeigemelli.com/assets/img/og/ristorante.jpg"],"servesCuisine":["Trentina","Italiana","Pizza"],"numberOfRooms":6,"petsAllowed":true,"checkinTime":"14:00","checkoutTime":"11:00","hasMap":"https://maps.google.com/?cid=524019156597058033","sameAs":["https://maps.google.com/?cid=524019156597058033"],"address":{"@type":"PostalAddress","streetAddress":"Via Campiglio 59","postalCode":"38025","addressLocality":"Dimaro Folgarida","addressRegion":"TN","addressCountry":"IT"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"14:30","validFrom":"2026-12-01","validThrough":"2027-04-30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:30","closes":"22:30","validFrom":"2026-12-01","validThrough":"2027-04-30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"14:30","validFrom":"2027-06-01","validThrough":"2027-10-31"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"17:30","closes":"22:30","validFrom":"2027-06-01","validThrough":"2027-10-31"}]}</script>
 </head>
 <body>
   <a class="skip" href="#main">Przejdź do treści</a>
   <header class="site-header" data-header>
     <div class="wrap header-inner">
       <a class="brand" href="../pl/"><img src="../assets/img/logo.svg" alt="La Locanda dei Gemelli" width="539" height="568"></a>
-      <nav class="nav" aria-label="Nawigacja główna" data-nav>
+      <a class="btn btn-accent btn-sm header-cta" href="../pl/richiesta/">Zapytaj o dostępność</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otwórz menu" data-label-open="Otwórz menu" data-label-close="Zamknij menu" data-menu-toggle><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Nawigacja główna" data-nav>
           <a href="../pl/appartamenti/">Apartamenty</a>
           <a href="../pl/ristorante/">Restauracja i pizzeria</a>
           <a href="../pl/val-di-sole/">Val di Sole</a>
           <a href="../pl/#dove">Lokalizacja</a>
-        <div class="langs" aria-label="Język"><a href="../" hreflang="it" lang="it">IT</a><a href="../en/" hreflang="en" lang="en">EN</a><a href="../de/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
+        <div class="langs" role="group" aria-label="Język"><a href="../" hreflang="it" lang="it">IT</a><a href="../en/" hreflang="en" lang="en">EN</a><a href="../de/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
         <a class="btn btn-accent nav-cta" href="../pl/richiesta/">Zapytaj o dostępność</a>
       </nav>
-      <a class="btn btn-accent btn-sm header-cta" href="../pl/richiesta/">Zapytaj o dostępność</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Otwórz menu" data-menu-toggle><span></span><span></span></button>
     </div>
   </header>
   <main id="main">
@@ -55,24 +59,24 @@
       <div class="wrap hero-inner">
         <p class="eyebrow">Dimaro Folgarida · Val di Sole · Trydent</p>
         <h1>Dobrze śpij. Jedz jeszcze lepiej. Pod jednym dachem.</h1>
-        <p class="lead">6 niezależnych apartamentów oraz restauracja i pizzeria na parterze, kilka minut od stoków Folgarida-Marilleva i szlaków Val di Sole.</p>
+        <p class="lead">6 niezależnych apartamentów oraz restauracja i pizzeria na parterze, kilka minut od stoków Folgarida-Marilleva i szlaków Val di Sole. We dwoje, z rodziną, z przyjaciółmi czy w pojedynkę: każdy jest tu mile widziany.</p>
       </div>
     </section>
     
-    <form class="booking-bar wrap" action="../pl/richiesta/" method="get" aria-label="Sprawdź dostępność apartamentów" data-booking-bar>
-      <label class="bb-field"><span>Przyjazd</span><input type="text" name="arrivo" placeholder="–" data-date data-arrival required></label>
-      <label class="bb-field"><span>Wyjazd</span><input type="text" name="partenza" placeholder="–" data-date data-departure required></label>
+    <form class="booking-bar wrap" action="../pl/richiesta/" method="get" aria-label="Zapytaj o dostępność apartamentów" novalidate data-msg-required="Wypełnij to pole." data-msg-choose="Wybierz jedną z opcji." data-msg-email="Wpisz poprawny adres e-mail." data-msg-departure="Wyjazd musi być po przyjeździe." data-msg-past="Wybierz datę od dzisiaj." data-msg-tuesday="We wtorki jesteśmy nieczynni: wybierz inny dzień." data-msg-privacy="Zaznacz pole, aby kontynuować." data-msg-sending="Wysyłanie…" data-msg-back="Wróć na stronę główną" data-msg-imgError="Zdjęcie niedostępne" data-booking-bar data-validate>
+      <label class="bb-field"><span>Przyjazd</span><input type="date" name="arrivo" data-date data-arrival required></label>
+      <label class="bb-field"><span>Wyjazd</span><input type="date" name="partenza" data-date data-departure required></label>
       <label class="bb-field bb-small"><span>Dorośli</span><select name="adulti"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></label>
       <label class="bb-field bb-small"><span>Dzieci</span><select name="bambini"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
       <label class="bb-field bb-apt"><span>Apartament</span><select name="apt"><option value="">Bez preferencji</option><option>Jonagold</option><option>Pink Lady</option><option>Renetta</option><option>Fuji</option><option>Golden</option><option>Morgana</option></select></label>
-      <button class="btn btn-accent bb-submit" type="submit">Sprawdź dostępność</button>
+      <button class="btn btn-accent bb-submit" type="submit">Zapytaj o dostępność</button>
     </form>
 
     <section class="proof">
       <ul class="wrap proof-list">
         <li><strong>6 apartamentów</strong><span>Od 46 do 60 m², od 4 do 7 miejsc</span></li>
-        <li><strong>Restauracja i pizzeria</strong><span>Na parterze, w porze obiadu i kolacji</span></li>
-        <li><strong>Produkty lokalne</strong><span>Składniki z Val di Sole, Val di Non i doliny Adygi</span></li>
+        <li><strong>Restauracja i pizzeria</strong><span>Restauracja w porze obiadu i kolacji, pizzeria wieczorem</span></li>
+        <li><strong>Produkty lokalne</strong><span>Składniki z Val di Sole i Val di Non</span></li>
         <li><strong>Dwa sezony</strong><span>Od grudnia do kwietnia i od czerwca do października</span></li>
       </ul>
     </section>
@@ -89,8 +93,8 @@
       <div class="feature-media"><img src="../assets/img/appartamenti/golden/cucina-02.webp" alt="" loading="lazy"></div>
       <div class="feature-body">
         <p class="eyebrow">Pobyt</p>
-        <h2>Sześć apartamentów. Zero kompromisów.</h2>
-        <p>Każdy apartament jest niezależny, z w pełni wyposażoną kuchnią, częścią dzienną i prywatną łazienką. Prawdziwa przestrzeń dla par, rodzin i grup przyjaciół, ze swobodą domu i restauracją tuż pod spodem.</p>
+        <h2>Sześć apartamentów. Miejsce dla każdego.</h2>
+        <p>Każdy apartament jest niezależny, z w pełni wyposażoną kuchnią, częścią dzienną i prywatną łazienką. Prawdziwa przestrzeń dla podróżujących w pojedynkę, par, rodzin i przyjaciół, ze swobodą domu i restauracją tuż pod spodem.</p>
         <a class="link-arrow" href="../pl/appartamenti/">Zobacz apartamenty</a>
       </div>
     </section>
@@ -99,8 +103,8 @@
       <div class="feature-media"><img src="https://locandaelisa.it/wp-content/uploads/2022/06/bistrot.png" alt="" loading="lazy"></div>
       <div class="feature-body">
         <p class="eyebrow">Jedzenie</p>
-        <h2>Prawdziwa kuchnia trydencka. Pizza od mistrza.</h2>
-        <p>W porze obiadu i kolacji dania z tradycji Val di Sole, ze składników z naszych dolin. Wieczorem pizza naszego mistrza pizzaiolo. Otwarte dla wszystkich, nie tylko dla gości.</p>
+        <h2>Prawdziwa kuchnia trydencka. Pizza od mistrzyni.</h2>
+        <p>W porze obiadu i kolacji dania z tradycji Val di Sole, ze składników z naszych dolin. Wieczorem pizza Barbary, naszej mistrzyni pizzaioli. Otwarte dla wszystkich, nie tylko dla gości.</p>
         <a class="link-arrow" href="../pl/ristorante/">Zobacz restaurację</a>
       </div>
     </section>
@@ -210,8 +214,8 @@
           <p>Jesteśmy w Dimaro Folgarida, kilka minut od wyciągów Folgarida-Marilleva, przy ścieżce rowerowej Val di Sole. Madonna di Campiglio i przełęcz Tonale są w zasięgu ręki.</p>
           <address>Via Campiglio 59, 38025 Dimaro Folgarida (TN), Włochy</address>
           <div class="actions">
-            <a class="btn btn-accent" href="https://www.google.com/maps/dir/?api=1&destination=La+Locanda+dei+Gemelli%2C+Via+Campiglio+59%2C+38025+Dimaro+TN" target="_blank" rel="noopener">Wyznacz trasę</a>
-            <a class="btn btn-outline" href="https://maps.google.com/?cid=524019156597058033" target="_blank" rel="noopener">Otwórz w Google Maps</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=La+Locanda+dei+Gemelli%2C+Via+Campiglio+59%2C+38025+Dimaro+TN" target="_blank" rel="noopener">Wyznacz trasę</a>
+            <a class="link-arrow" href="https://maps.google.com/?cid=524019156597058033" target="_blank" rel="noopener">Otwórz w Google Maps</a>
           </div>
         </div>
           <div class="hours">
@@ -238,7 +242,7 @@
 
     <section class="cta-final">
       <div class="wrap narrow center">
-        <h2>Najlepsze terminy znikają pierwsze.</h2>
+        <h2>Wybierz daty. Resztą zajmiemy się my.</h2>
         <p class="lead">Wyślij nam swoje daty: odpowiemy z informacją o dostępności i cenie. Zapytanie jest niewiążące.</p>
         <a class="btn btn-accent" href="../pl/richiesta/">Zapytaj o dostępność</a>
       </div>
@@ -268,6 +272,8 @@
         <p class="footer-title">Jedzenie</p>
         <ul class="footer-links">
           <li><a href="../pl/ristorante/">Restauracja i pizzeria</a></li>
+          <li><a href="../pl/ristorante/#tavolo">Zarezerwuj stolik</a></li>
+          <li><a href="https://wa.me/393289839761?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20zarezerwowa%C4%87%20stolik%20w%20Locanda%20dei%20Gemelli." target="_blank" rel="noopener">WhatsApp: rezerwacja stolików: +39 328 983 9761</a></li>
         </ul>
         <p class="footer-small">Restauracja 12–14:30 i 17:30–22 · Pizzeria 17:30–22:30 · We wtorki nieczynne</p>
         <p class="footer-title">Odkryj</p>
@@ -278,14 +284,13 @@
       </div>
       <div>
         <p class="footer-title">Język</p>
-        <div class="langs"><a href="../" hreflang="it" lang="it">IT</a><a href="../en/" hreflang="en" lang="en">EN</a><a href="../de/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
+        <div class="langs" role="group" aria-label="Język"><a href="../" hreflang="it" lang="it">IT</a><a href="../en/" hreflang="en" lang="en">EN</a><a href="../de/" hreflang="de" lang="de">DE</a><span aria-current="true">PL</span></div>
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <!-- TODO: CIN degli appartamenti -->
       <p class="footer-legal">© 2026 Bulla Brothers S.a.s. di Manushaqe Bulla &amp; C. · Siedziba Via Milano 13, 38027 Malè (TN) · NIP (C.F. i P.IVA) 02857660225 · REA TN-254820 · PEC <a href="mailto:bullabrothers@legalmail.it">bullabrothers@legalmail.it</a> · <a href="../pl/privacy/">Prywatność i cookies</a></p>
     </div>
   </footer>
-  <script src="../assets/js/main.js?v=e3c3fd52" defer></script>
+  <script src="../assets/js/main.js?v=52414356" defer></script>
 </body>
 </html>
