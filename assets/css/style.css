@@ -43,7 +43,7 @@ body.no-scroll { overflow: hidden; }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 button, input, select, textarea { font-family: inherit; }
-h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.1; margin: 0 0 .5em; letter-spacing: -.01em; overflow-wrap: break-word; hyphens: auto; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.1; margin: 0 0 .5em; letter-spacing: -.01em; overflow-wrap: break-word; hyphens: manual; }
 h1, h2, h3, h4, .num, .proof-list strong { font-variant-numeric: lining-nums; }
 h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); }
 h2 { font-size: clamp(2rem, 4vw, 3.1rem); }
