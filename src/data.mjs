@@ -5,6 +5,8 @@ import { readdirSync } from 'node:fs';
 
 export const SITE_URL = 'https://locandadeigemelli.com/';
 export const REQUEST_EMAIL = 'lalocandadeigemelli@gmail.com';
+// Indirizzo dei moduli: codice casuale di FormSubmit al posto dell'email (non si legge l'indirizzo Gmail nel codice della pagina).
+export const FORM_ACTION = 'https://formsubmit.co/13802eca47949a67250f250a5d93c320';
 // Cellulare per le richieste di tavolo su WhatsApp (da Andrei, 2026-11-28).
 export const WHATSAPP = { number: '393289839761', display: '+39 328 983 9761' };
 // Scheda Google Business Profile "La Locanda dei Gemelli" (CID dalla scheda creata il 2026-11-26).

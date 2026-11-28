@@ -1,7 +1,7 @@
 // Layout e pagine del sito. Ogni funzione riceve il contesto della lingua e restituisce HTML.
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
-import { LEGAL, SITE_URL, REQUEST_EMAIL, WHATSAPP, MAPS_URL, DIRECTIONS_URL, GOOGLE_PLACE_URL, MAP_EMBED_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
+import { LEGAL, SITE_URL, REQUEST_EMAIL, FORM_ACTION, WHATSAPP, MAPS_URL, DIRECTIONS_URL, GOOGLE_PLACE_URL, MAP_EMBED_URL, LANGS, IMG, APARTMENTS, PAGES } from './data.mjs';
 
 export const e = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -584,7 +584,7 @@ function tableForm(c) {
           <h2>${e(f.title)}</h2>
           <p class="lead">${e(f.lead)}</p>
           <div class="request-sent" role="status" tabindex="-1" hidden data-request-sent><p>${e(f.sent)}</p></div>
-          <form class="request-form" action="https://formsubmit.co/${REQUEST_EMAIL}" method="POST" novalidate ${formMsgs(c)} data-request-form data-validate data-closed-day="2" data-sent-param="tavolo">
+          <form class="request-form" action="${FORM_ACTION}" method="POST" novalidate ${formMsgs(c)} data-request-form data-validate data-closed-day="2" data-sent-param="tavolo">
             <input type="hidden" name="_subject" value="${e(f.subject)}">
             <input type="hidden" name="_next" value="${SITE_URL}${c.lang.path}${PAGES.restaurant}?tavolo=inviato#tavolo">
             <input type="hidden" name="_template" value="table">
@@ -711,7 +711,7 @@ export function request(c) {
       <div class="wrap request-grid" id="richiesta">
         <div>
           <div class="request-sent" role="status" tabindex="-1" hidden data-request-sent><p>${e(f.sent)}</p><a class="link-arrow" href="${c.href('')}">${e(t.common.form.back)}</a></div>
-          <form class="request-form" action="https://formsubmit.co/${REQUEST_EMAIL}" method="POST" novalidate ${formMsgs(c)} data-request-form data-validate data-sent-param="richiesta">
+          <form class="request-form" action="${FORM_ACTION}" method="POST" novalidate ${formMsgs(c)} data-request-form data-validate data-sent-param="richiesta">
             <input type="hidden" name="_subject" value="${e(f.subject)}">
             <input type="hidden" name="_next" value="${SITE_URL}${c.lang.path}${PAGES.request}?richiesta=inviata">
             <input type="hidden" name="_template" value="table">
